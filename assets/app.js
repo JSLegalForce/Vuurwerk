@@ -1,4 +1,4 @@
-const ASSET_V='vw260920b';
+const ASSET_V='vw260920c';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -142,14 +142,14 @@ function bdInline(root){
   });
 }
 const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
-"0.1":{"t":"casus","a":"scene-plein-knal"},
+"0.1":{"t":"casus","a":{"icon":"knal","orbit":["mensen","vuurwerk","oog"]}},
 "0.2":{"t":"praktijk","a":"boa-observeer","ic":"vraag"},
 "0.3":{"t":"split","a":"boa-uitleg","rows":["kalender","domein","boek"]},
 "0.4":{"t":"split","a":{"icon":"vuurwerk","orbit":["vink","kruis","vraag"]},
 "rev":1,"rows":["lijst","vink","lamp"]},
 "0.5":{"t":"split","a":{"vis":"bestanddelen"},
 "rows":["route","lijst","vink"]},
-"0.6":{"t":"split","a":"weegschaal","rev":1,"rows":["schild","wet","waarschuwing"]},
+"0.6":{"t":"split","a":"weegschaal","rev":1,"rows":["lijst","lamp"]},
 "0.7":{"t":"info","v":"opzet"},
 "0.8":{"t":"onthoud","a":"boa-armen","icons":["kalender","vuurwerk","route"]},
 "1.0":{"t":"lo","a":"boa-armen"},
@@ -157,96 +157,122 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "rows":["lagen","oog"]},
 "1.2":{"t":"wet","art":"Art. 1A.1.3 Vuurwerkbesluit"},
 "1.3":{"t":"info","v":"categorieen"},
-"1.4":{"t":"split","a":"scene-vuurwerk-f1","rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.5":{"t":"split","a":"scene-vuurwerk-f2","rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.6":{"t":"split","a":"scene-vuurwerk-f3","rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.7":{"t":"split","a":"scene-vuurwerk-professioneel","rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
+"1.4":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","vink"]},
+"rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
+"1.5":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
+"rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
+"1.6":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
+"rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
+"1.7":{"t":"split","a":{"icon":"vuurwerk","orbit":["waarschuwing","akte"]},
+"rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
 "1.8":{"t":"wet","art":"Art. 1.1.2a Vuurwerkbesluit"},
 "1.9":{"t":"wet","art":"Art. 2.1.3 Vuurwerkbesluit"},
 "1.10":{"t":"info","v":"vergelijk"},
-"1.11":{"t":"split","a":"scene-vuurwerk-los","rows":["vraag","oog","waarschuwing"]},
+"1.11":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},
+"rows":["vraag","oog","waarschuwing"]},
 "1.12":{"t":"info","v":"lagen4"},
 "1.13":{"t":"praktijk","a":"boa-notitie","ic":"oog","icons":["oog","document","zoeken","wet"]},
-"1.14":{"t":"casus","a":"scene-tas-inhoud"},
+"1.14":{"t":"casus","a":{"icon":"tas","orbit":["vuurwerk","document"]}},
 "1.15":{"t":"info","v":"checklist"},
-"1.16":{"t":"onthoud","a":"scene-etiket-categorie","icons":["lagen","vuurwerk","mensen"]},
-"1.17":{"t":"onthoud","a":"boa-notitie","icons":["document","vraag","pv"]},
-"1.18":{"t":"vooruit"},
+"1.16":{"t":"info","v":"keten7"},
+"1.17":{"t":"onthoud","a":{"icon":"document","orbit":["vuurwerk","lijst"]},
+"icons":["lagen","vuurwerk","mensen"]},
+"1.18":{"t":"onthoud","a":"boa-notitie","icons":["document","vraag","pv"]},
+"1.19":{"t":"vooruit"},
 "2.0":{"t":"lo","a":"boa-armen"},
 "2.1":{"t":"split","a":"wetboek","rows":["route","wet"]},
 "2.2":{"t":"split","a":{"icon":"kalender","orbit":["wet","vuurwerk","document"]},
 "rev":1,"rows":["kalender","document","vuurwerk"]},
 "2.3":{"t":"wet","art":"Art. 9.2.2.1a Wm"},
-"2.4":{"t":"split","a":"scene-tas-inhoud","rows":["hand","vuurwerk","mensen"]},
+"2.4":{"t":"split","a":{"icon":"tas","orbit":["vuurwerk","document"]},
+"rows":["hand","vuurwerk","mensen"]},
 "2.5":{"t":"split","a":{"icon":"winkel","orbit":["kalender","document","kruis"]},
 "rev":1,"rows":["kruis","kalender","document"]},
 "2.6":{"t":"split","a":{"icon":"akte","orbit":["mensen","kalender","vuurwerk"]},
 "rows":["akte","mensen","klok"]},
-"2.7":{"t":"praktijk","a":"scene-ontheffing-sportveld","ic":"lamp"},
-"2.8":{"t":"letop","a":"boa-uitleg"},
-"2.9":{"t":"wet","art":"Art. 1a en 2 WED"},
-"2.10":{"t":"split","a":"wetboek","rows":["straf","wet"]},
-"2.11":{"t":"info","v":"tijdlijn"},
-"2.12":{"t":"onthoud","a":"wetboek","icons":["wet","akte"]},
-"2.13":{"t":"onthoud","a":{"icon":"lagen","orbit":["wet","document","straf"]},
+"2.7":{"t":"praktijk","a":{"icon":"akte","orbit":["vuurwerk","vraag"]},
+"ic":"lamp"},
+"2.8":{"t":"checklist","a":"wetboek","icons":["akte","mensen","locatie","klok","vuurwerk","lijst","vink"]},
+"2.9":{"t":"letop","a":"boa-uitleg"},
+"2.10":{"t":"wet","art":"Art. 1a en 2 WED"},
+"2.11":{"t":"split","a":"wetboek","rows":["straf","wet"]},
+"2.12":{"t":"info","v":"tijdlijn"},
+"2.13":{"t":"onthoud","a":"wetboek","icons":["wet","akte"]},
+"2.14":{"t":"onthoud","a":{"icon":"lagen","orbit":["wet","document","straf"]},
 "icons":["wet","straf","route"]},
-"2.14":{"t":"vooruit"},
+"2.15":{"t":"vooruit"},
 "3.0":{"t":"lo","a":"boa-armen"},
-"3.1":{"t":"casus","a":"scene-plein-knal"},
+"3.1":{"t":"casus","a":{"icon":"knal","orbit":["mensen","vuurwerk","oog"]}},
 "3.2":{"t":"split","a":"weegschaal","rows":["oog","schild","mensen"]},
 "3.3":{"t":"wet","art":"Art. 142 Sv"},
 "3.4":{"t":"wet","art":"Domein I, onderdeel 9"},
 "3.5":{"t":"letop","a":{"icon":"domein","orbit":["wet","vraag","boa"]}},
 "3.6":{"t":"letop","a":"boa-uitleg"},
-"3.7":{"t":"split","a":"scene-vuurwerk-professioneel","rev":1,"rows":["domein","vraag","mensen"]},
+"3.7":{"t":"split","a":{"icon":"vuurwerk","orbit":["waarschuwing","akte"]},
+"rev":1,"rows":["wet","domein","mensen"]},
 "3.8":{"t":"wet","art":"Art. 17 WED"},
-"3.9":{"t":"info","v":"bevoegd"},
-"3.10":{"t":"casus","a":"scene-vuurwerk-los"},
-"3.11":{"t":"praktijk","a":"boa-notitie","ic":"lamp"},
-"3.12":{"t":"onthoud","a":"weegschaal","icons":["oog","domein"]},
-"3.13":{"t":"onthoud","a":"boa-notitie","icons":["boa","kalender","mensen"]},
-"3.14":{"t":"vooruit"},
+"3.9":{"t":"split","a":{"icon":"domein","orbit":["wet","vraag","boa"]},
+"rows":["waarschuwing","domein","route"]},
+"3.10":{"t":"info","v":"bevoegd"},
+"3.11":{"t":"casus","a":{"icon":"vraag","orbit":["vuurwerk","oog"]}},
+"3.12":{"t":"praktijk","a":"boa-notitie","ic":"lamp"},
+"3.13":{"t":"onthoud","a":"weegschaal","icons":["oog","domein"]},
+"3.14":{"t":"onthoud","a":"boa-notitie","icons":["boa","kalender","mensen"]},
+"3.15":{"t":"vooruit"},
 "4.0":{"t":"lo","a":"boa-armen"},
 "4.1":{"t":"info","v":"stappen"},
 "4.2":{"t":"info","v":"kaart"},
 "4.3":{"t":"letop","a":"wetboek"},
-"4.4":{"t":"split","a":"scene-boa-staandehouden","rows":["ballon","hand","slot"]},
+"4.4":{"t":"split","a":"boa-uitleg","rows":["ballon","hand","slot"]},
 "4.5":{"t":"wet","art":"Art. 52 Sv"},
 "4.6":{"t":"wet","art":"Art. 27 Sv"},
-"4.7":{"t":"casus","a":"scene-boa-staandehouden"},
+"4.7":{"t":"casus","a":"boa-uitleg"},
 "4.8":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.9":{"t":"wet","art":"Art. 53 en 54 Sv"},
-"4.10":{"t":"praktijk","a":"scene-boa-politie-overdracht","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.11":{"t":"wet","art":"Art. 23 WED"},
-"4.12":{"t":"casus","a":"scene-vervoermiddel-onderzoek"},
-"4.13":{"t":"praktijk","a":"scene-vervoermiddel-onderzoek","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.14":{"t":"wet","art":"Art. 24a WED"},
-"4.15":{"t":"praktijk","a":"scene-vervoermiddel-onderzoek","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.16":{"t":"wet","art":"Art. 18 WED"},
-"4.17":{"t":"split","a":"scene-inbeslagname-tafel","rows":["oog","slot","pv"]},
-"4.18":{"t":"praktijk","a":"scene-tas-inhoud","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.19":{"t":"wet","art":"Art. 26 WED"},
-"4.20":{"t":"split","a":"scene-afstand-melden","rows":["slot","wet","waarschuwing"]},
-"4.21":{"t":"split","a":{"vis":"proces"},
+"4.9":{"t":"wet","art":"Art. 53 Sv"},
+"4.10":{"t":"praktijk","a":{"icon":"afspraak","orbit":["boa","mensen"]},
+"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.11":{"t":"wet","art":"Art. 54 en 67 Sv"},
+"4.12":{"t":"letop","a":"boa-uitleg"},
+"4.13":{"t":"wet","art":"Art. 23 WED"},
+"4.14":{"t":"casus","a":{"icon":"bus","orbit":["zoeken","tas"]}},
+"4.15":{"t":"praktijk","a":{"icon":"bus","orbit":["zoeken","tas"]},
+"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.16":{"t":"wet","art":"Art. 24a WED"},
+"4.17":{"t":"praktijk","a":{"icon":"bus","orbit":["zoeken","tas"]},
+"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.18":{"t":"wet","art":"Art. 18 WED"},
+"4.19":{"t":"split","a":{"icon":"slot","orbit":["vuurwerk","pv"]},
+"rows":["oog","slot","pv"]},
+"4.20":{"t":"praktijk","a":{"icon":"tas","orbit":["vuurwerk","document"]},
+"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.21":{"t":"wet","art":"Art. 26 WED"},
+"4.22":{"t":"split","a":{"icon":"afstand","orbit":["schild","tas"]},
+"rows":["lijst","slot"]},
+"4.23":{"t":"split","a":{"vis":"proces"},
 "rows":["pv","lijst","waarschuwing"],"wide":1},
-"4.22":{"t":"checklist","a":"pv-document","icons":["oog","document","zoeken","wet","slot","vuurwerk","conclusie"]},
-"4.23":{"t":"split","a":"scene-boa-politie-overdracht","rev":1,"rows":["afspraak","lijst"]},
-"4.24":{"t":"letop","a":"boa-armen"},
-"4.25":{"t":"onthoud","a":"boa-uitleg","icons":["hand","vuurwerk","slot"]},
-"4.26":{"t":"onthoud","a":"pv-document","icons":["slot","pv","afspraak"]},
-"4.27":{"t":"vooruit"},
+"4.24":{"t":"split","a":{"icon":"afspraak","orbit":["boa","mensen"]},
+"rev":1,"rows":["afspraak","lijst"]},
+"4.25":{"t":"letop","a":"boa-armen"},
+"4.26":{"t":"onthoud","a":"boa-uitleg","icons":["hand","vuurwerk","slot"]},
+"4.27":{"t":"onthoud","a":"pv-document","icons":["slot","pv","afspraak"]},
+"4.28":{"t":"vooruit"},
 "5.0":{"t":"lo","a":"boa-armen"},
-"5.1":{"t":"casus","a":"scene-tas-zonder-etiket"},
-"5.2":{"t":"split","a":"scene-zwaar-illegaal","rows":["ballon","wet","pv"]},
+"5.1":{"t":"casus","a":{"icon":"tas","orbit":["vraag","waarschuwing"]}},
+"5.2":{"t":"split","a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]},
+"rows":["ballon","wet","pv"]},
 "5.3":{"t":"split","a":{"icon":"waarschuwing","orbit":["vuurwerk","hand","wet"]},
 "rev":1,"rows":["waarschuwing","wet","vraag"]},
-"5.4":{"t":"split","a":"scene-vuurwerk-los","rows":["vraag","oog","pv"]},
-"5.5":{"t":"split","a":"scene-afstand-melden","rows":["schild","wet","waarschuwing"]},
+"5.4":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},
+"rows":["vraag","oog","pv"]},
+"5.5":{"t":"split","a":{"icon":"afstand","orbit":["schild","tas"]},
+"rows":["schild","wet","waarschuwing"]},
 "5.6":{"t":"info","v":"drie"},
-"5.7":{"t":"letop","a":"scene-afstand-melden"},
-"5.8":{"t":"casus","a":"scene-tas-zonder-etiket"},
+"5.7":{"t":"letop","a":{"icon":"afstand","orbit":["schild","tas"]},
+"icons":["hand","kruis","mensen","afspraak"]},
+"5.8":{"t":"casus","a":{"icon":"tas","orbit":["vraag","waarschuwing"]}},
 "5.9":{"t":"praktijk","a":"boa-uitleg","ic":"lamp"},
-"5.10":{"t":"onthoud","a":"scene-zwaar-illegaal","icons":["ballon","waarschuwing"]},
+"5.10":{"t":"onthoud","a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]},
+"icons":["ballon","waarschuwing"]},
 "5.11":{"t":"onthoud","a":"boa-observeer","icons":["schild","waarschuwing","afspraak"]},
 "5.12":{"t":"vooruit"},
 "6.0":{"t":"lo","a":"boa-armen"},
@@ -259,39 +285,46 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "6.6":{"t":"split","a":{"icon":"domein","orbit":["afspraak","boa","mensen"]},
 "rows":["domein","afspraak","vraag"]},
 "6.7":{"t":"info","v":"routes"},
-"6.8":{"t":"casus","a":"scene-woonstraat-fontein"},
-"6.9":{"t":"casus","a":"scene-park-tas"},
-"6.10":{"t":"casus","a":"scene-station-groep"},
-"6.11":{"t":"checklist","a":"scene-boa-politie-overdracht","icons":["oog","wet","persoon","slot","pv"]},
+"6.8":{"t":"casus","a":{"icon":"straat","orbit":["vuurwerk","boa"]}},
+"6.9":{"t":"casus","a":{"icon":"tas","orbit":["afstand","locatie"]}},
+"6.10":{"t":"casus","a":{"icon":"mensen","orbit":["afstand","schild"]}},
+"6.11":{"t":"checklist","a":{"icon":"afspraak","orbit":["boa","mensen"]},
+"icons":["oog","wet","persoon","slot","pv"]},
 "6.12":{"t":"onthoud","a":"weegschaal","icons":["wet","afspraak"]},
-"6.13":{"t":"onthoud","a":"scene-boa-politie-overdracht","icons":["boa","mensen","kalender"]},
+"6.13":{"t":"onthoud","a":{"icon":"afspraak","orbit":["boa","mensen"]},
+"icons":["boa","mensen","kalender"]},
 "6.14":{"t":"vooruit"},
 "7.0":{"t":"lo","a":"boa-armen"},
 "7.1":{"t":"overzicht"},
-"7.2":{"t":"casus","a":"scene-parkeerplaats"},
+"7.2":{"t":"casus","a":{"icon":"mensen","orbit":["vuurwerk","tas"]}},
 "7.3":{"t":"bd","s":1,"a":"boa-observeer","rev":1,"rows":["oor","oog","pv"]},
 "7.4":{"t":"bd","s":2,"a":"wetboek","rev":0,"rows":["wet","kalender","vraag"]},
-"7.5":{"t":"bd","s":1,"a":"scene-parkeerplaats-tas","rev":1,"rows":["document","vraag"]},
+"7.5":{"t":"bd","s":1,"a":{"icon":"tas","orbit":["document","vraag"]},
+"rev":1,"rows":["document","vraag"]},
 "7.6":{"t":"bd","s":1,"a":"boa-notitie","rev":0,"rows":["vraag","zoeken"]},
 "7.7":{"t":"bd","s":3,"a":{"icon":"schild","orbit":["domein","wet","lijst"]},
 "rev":1,"rows":["schild","domein","vraag"]},
-"7.8":{"t":"bd","s":4,"a":"scene-boa-staandehouden","rev":0,"rows":["hand","slot","wet"]},
-"7.9":{"t":"bd","s":4,"a":"scene-afstand-melden","rev":1,"rows":["waarschuwing","schild"]},
-"7.10":{"t":"bd","s":4,"a":"scene-boa-politie-overdracht","rev":0,"rows":["afspraak","mensen"]},
-"7.11":{"t":"bd","s":4,"a":"scene-inbeslagname-tafel","rev":1,"rows":["slot","afspraak"]},
-"7.12":{"t":"letop","a":"pv-document"},
-"7.13":{"t":"pvvoorbeeld","a":"boa-notitie"},
-"7.14":{"t":"recap","n":1,"a":"scene-etiket-categorie"},
-"7.15":{"t":"recap","n":2,"a":"wetboek"},
-"7.16":{"t":"recap","n":3,"a":"weegschaal"},
-"7.17":{"t":"recap","n":4,"a":"boa-uitleg"},
-"7.18":{"t":"recap","n":5,"a":"scene-zwaar-illegaal"},
-"7.19":{"t":"recap","n":6,"a":"scene-boa-politie-overdracht"},
-"7.20":{"t":"split","a":"boa-uitleg","rows":["route","lijst"]},
-"7.21":{"t":"info","v":"beslishulp"},
-"7.22":{"t":"hero","a":"boa-armen","rows":["toets","boek"],"eind":1}};
+"7.8":{"t":"bd","s":4,"a":"boa-uitleg","rev":0,"rows":["hand","slot","wet"]},
+"7.9":{"t":"bd","s":4,"a":{"icon":"afstand","orbit":["schild","tas"]},
+"rev":1,"rows":["waarschuwing","schild"]},
+"7.10":{"t":"bd","s":4,"a":{"icon":"afspraak","orbit":["boa","mensen"]},
+"rev":0,"rows":["afspraak","mensen"]},
+"7.11":{"t":"bd","s":4,"a":{"icon":"slot","orbit":["vuurwerk","pv"]},
+"rev":1,"rows":["slot","afspraak"]},
+"7.12":{"t":"checklist","a":"pv-document","icons":["megafoon","klok","oog","persoon","vuurwerk","document","lagen","hand","wet","ballon","slot","conclusie"]},
+"7.13":{"t":"letop","a":"pv-document"},
+"7.14":{"t":"pvvoorbeeld","a":"boa-notitie"},
+"7.15":{"t":"recap","n":1,"a":{"icon":"document","orbit":["vuurwerk","lijst"]}},
+"7.16":{"t":"recap","n":2,"a":"wetboek"},
+"7.17":{"t":"recap","n":3,"a":"weegschaal"},
+"7.18":{"t":"recap","n":4,"a":"boa-uitleg"},
+"7.19":{"t":"recap","n":5,"a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]}},
+"7.20":{"t":"recap","n":6,"a":{"icon":"afspraak","orbit":["boa","mensen"]}},
+"7.21":{"t":"split","a":"boa-uitleg","rows":["route","lijst"]},
+"7.22":{"t":"info","v":"beslishulp"},
+"7.23":{"t":"hero","a":"boa-armen","rows":["toets","boek"],"eind":1}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaal","1.4":"boa-notitie","2.0":"doelwit","2.1":"boa-uitleg","2.2":"weegschaal","2.3":"boa-notitie","3.0":"boa-uitleg","3.1":"weegschaal","3.2":"boa-notitie","3.3":"vraag","3.4":"wetboek","4.0":"weegschaal","4.1":"boa-notitie","4.2":"vraag","4.3":"wetboek","4.4":"doelwit","4.5":"boa-uitleg","5.0":"boa-notitie","5.1":"vraag","5.2":"wetboek","5.3":"doelwit","6.0":"vraag","6.1":"wetboek","6.2":"doelwit","6.3":"boa-uitleg"};
+const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaal","1.4":"boa-notitie","2.0":"doelwit","2.1":"boa-uitleg","2.2":"weegschaal","2.3":"boa-notitie","3.0":"boa-uitleg","3.1":"weegschaal","3.2":"boa-notitie","3.3":"vraag","3.4":"wetboek","3.5":"doelwit","4.0":"weegschaal","4.1":"boa-notitie","4.2":"vraag","4.3":"wetboek","4.4":"doelwit","4.5":"boa-uitleg","4.6":"weegschaal","5.0":"boa-notitie","5.1":"vraag","5.2":"wetboek","5.3":"doelwit","6.0":"vraag","6.1":"wetboek","6.2":"doelwit","6.3":"boa-uitleg"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
@@ -301,7 +334,7 @@ const ART_ALT={
 
 /* ── Infographics en procesplaten (HTML + duotone iconen) ── */
 /* semi-realistische praktijkscènes (vervangen de oude vectorscènes) */
-const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-vuurwerk-f1':'../images/vuurwerk-f1.webp','scene-vuurwerk-f2':'../images/vuurwerk-f2.webp','scene-vuurwerk-f3':'../images/vuurwerk-f3.webp','scene-vuurwerk-professioneel':'../images/vuurwerk-professioneel.webp','scene-etiket-categorie':'../images/etiket-categorie.webp','scene-vuurwerk-los':'../images/vuurwerk-los.webp','scene-zwaar-illegaal':'../images/zwaar-illegaal.webp','scene-tas-inhoud':'../images/tas-inhoud.webp','scene-boa-staandehouden':'../images/boa-staandehouden.webp','scene-boa-politie-overdracht':'../images/boa-politie-overdracht.webp','scene-parkeerplaats':'../images/parkeerplaats.webp','scene-afstand-melden':'../images/afstand-melden.webp','scene-vervoermiddel-onderzoek':'../images/vervoermiddel-onderzoek.webp','scene-ontheffing-sportveld':'../images/ontheffing-sportveld.webp','scene-inbeslagname-tafel':'../images/inbeslagname-tafel.webp','scene-tas-zonder-etiket':'../images/tas-zonder-etiket.webp','scene-woonstraat-fontein':'../images/woonstraat-fontein.webp','scene-park-tas':'../images/park-tas.webp','scene-station-groep':'../images/station-groep.webp','scene-parkeerplaats-tas':'../images/parkeerplaats-tas.webp'};
+const ART_FILE={};
 const IMG=(n,alt,cls)=>'<img class="'+(cls||'')+(ART_FILE[n]?' foto':'')+'" src="assets/illustraties/'+(ART_FILE[n]||n+'.svg')+'?v='+ASSET_V+'" alt="'+(alt==null?(ART_ALT[n]||''):alt)+'" loading="eager" decoding="async">';
 /* ── BOA-illustratieset (stijlreferentie JS Legal Force) ── */
 const BOA_POSE={'boa-armen':{},'boa-uitleg':{chip:'lamp'},'boa-notitie':{prop:'notitieblok',chip:'oog'},'boa-dossier':{prop:'pv-los'},'boa-observeer':{chip:'oog'}};
@@ -375,7 +408,7 @@ const VIS={
       +'<div class="doc doc-s">'+di('pv')+'<b>Tik-pv (verkort)</b><i></i><i></i><i></i></div><div class="doc doc-l">'+di('dossier')+'<b>Uitgebreid pv</b><i></i><i></i><i></i><i></i><i></i><i></i></div></div>';
   },
   compare(){
-    return '<div class="vis vis-cmp"><figure class="cmp">'+IMG('scene-etiket-categorie')+'<figcaption>'+di('document')+'Verpakt · met etiket</figcaption></figure><span class="cmp-ne" aria-hidden="true">≠</span><figure class="cmp cmp-n">'+IMG('scene-vuurwerk-los')+'<figcaption>'+di('vraag')+'Los · zonder etiket</figcaption></figure></div>';
+    return '<div class="vis vis-cmp-t"><div class="fig fig-vaten"><div class="vt-row"><div class="vt-box vt-a">'+di('document')+'<b>Verpakt · met etiket</b><small>er is informatie om te lezen</small></div><div class="vt-link"><span aria-hidden="true">≠</span></div><div class="vt-box vt-b">'+di('vraag')+'<b>Los · zonder etiket</b><small>er is weinig informatie</small></div></div></div></div>';
   },
   proces(){
     const s=[['boa','Boa','Waarnemen en vastleggen'],['pv-document','Proces-verbaal','Feiten en omstandigheden'],['ovj','Officier van justitie','Beoordeelt het dossier'],['rechter','Rechter','Bepaalt de kwalificatie']];
@@ -404,9 +437,13 @@ const FIG={
       +'<div class="chk-out"><div class="chk-ok">'+di('pv')+'<div><b>Waarneming</b><small>feitelijk vastleggen</small></div></div><div class="chk-no">'+di('vraag')+'<span>Wat je nog niet weet, vul je niet zelf in.</span></div></div></div>';
   },
   vergelijk(){
-    return '<div class="fig fig-cmp"><div class="vis-cmp big"><figure class="cmp">'+IMG('scene-etiket-categorie')+'<figcaption><span class="cmp-h">'+di('document')+'Verpakt · met etiket</span><span>categorie zichtbaar</span><strong class="ok">je hebt aanwijzingen</strong></figcaption></figure>'
-      +'<span class="cmp-ne" aria-hidden="true">≠</span><figure class="cmp cmp-n">'+IMG('scene-vuurwerk-los')+'<figcaption><span class="cmp-h">'+di('vraag')+'Los · zonder etiket</span><span>geen verpakking</span><strong class="warn">onbekend vuurwerk</strong></figcaption></figure></div>'
-      +'<p class="fig-note">'+di('oog')+'Zelfde tas; de beschikbare informatie verschilt.</p></div>';
+    const a=[['document','etiket en verpakking te lezen'],['lijst','categorie staat vaak vermeld'],['vink','je hebt aanwijzingen']];
+    const b=[['vraag','geen verpakking of etiket'],['oog','alleen vorm en grootte te zien'],['waarschuwing','onbekend vuurwerk']];
+    return '<div class="fig fig-vaten"><div class="vt-row"><div class="vt-box vt-a">'+di('document')+'<b>Verpakt · met etiket</b><small>er is informatie om te lezen</small><div class="vt-f">'+a.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div>'
+      +'<div class="vt-link"><span aria-hidden="true">≠</span><em>andere informatie</em></div>'
+      +'<div class="vt-box vt-b">'+di('vraag')+'<b>Los · zonder etiket</b><small>er is weinig informatie</small><div class="vt-f">'+b.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div></div>'
+      +'<div class="vt-down" aria-hidden="true">↓</div><div class="vt-tot">'+di('pv')+'<div><b>Leg vast wat je ziet</b><small>vul niet zelf in wat je niet weet</small></div></div>'
+      +'<p class="fig-note">'+di('lamp')+'<span>Wat je ziet is nog geen juridische conclusie.</span></p></div>';
   },
   tijdlijn(){
     const s=[['Art. 9.2.2.1a Wet milieubeheer','verbod bezit, gebruik en verkoop F2 en F3'],['Art. 1a WED','noemt art. 9.2.2.1a Wm'],['Economisch delict','opzettelijk: misdrijf · anders: overtreding (art. 2 WED)'],['Opsporingsbevoegdheid','boa domein I, onderdeel 9 (sinds 8 september 2026)'],['Opsporingsbevoegdheden','algemeen (Sv) en bijzonder (WED)']];
@@ -434,11 +471,18 @@ const FIG={
       +'<p class="fig-note">'+di('lamp')+'<span>Een afspraak geeft je geen bevoegdheid die je niet hebt.</span></p></div>';
   },
   bevoegd(){
-    const s=[['oog','Is er een strafbaar feit?','redelijk vermoeden · art. 27 Sv'],['domein','Valt het feit binnen mijn domein?','domein I, onderdeel 9'],['boa','Past dit binnen mijn functie en taakomschrijving?','akte en werkgever'],['doel','Welke bevoegdheid wil ik gebruiken?','bijv. staande houden, inbeslagneming'],['wet','Wat is de wettelijke grondslag?','bijv. art. 52 Sv, art. 18 WED'],['vink','Zijn aan de voorwaarden voldaan?','o.a. redelijkerwijs nodig']];
+    const s=[['oog','Welk feit?','redelijk vermoeden · art. 27 Sv'],['wet','Welke wettelijke bepaling?','bijv. art. 9.2.2.1a Wm'],['domein','Staat die bepaling op mijn domeinlijst?','domein I, onderdeel 9'],['boa','Past het bij mijn functie en taak?','akte en werkgever'],['doel','Welke bevoegdheid wil ik gebruiken?','bijv. staande houden, art. 18 WED'],['vink','Zijn aan de voorwaarden voldaan?','o.a. redelijkerwijs nodig'],['schild','Kan ik veilig handelen?','anders afstand en politie']];
     return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke vraag ‘ja’ → volgende vraag · één ‘nee’ of twijfel → niet zelf, overleggen</p><div class="bs-wrap"><ol class="bs">'
-      +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<div class="bs-q"><b>'+x[1]+'</b><small>'+x[2]+'</small></div>'+(i<5?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
-      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">nee</span>'+di('afspraak')+'<b>Niet zelf</b><small>overleg of politie</small></div><div class="bs-yes"><span class="bs-tag">ja</span>'+di('vink')+'<b>Handelen</b><small>veilig? taakverdeling?</small></div></div></div>'
+      +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<div class="bs-q"><b>'+x[1]+'</b><small>'+x[2]+'</small></div>'+(i<6?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
+      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">nee</span>'+di('afspraak')+'<b>Niet zelf</b><small>overleg of politie</small></div><div class="bs-yes"><span class="bs-tag">ja</span>'+di('vink')+'<b>Handelen</b><small>volgens de taakverdeling</small></div></div></div>'
       +'<div class="bs-notes"><p>'+di('oog')+'Een feit zien is iets anders dan bevoegd zijn.</p><p>'+di('schild')+'Bevoegd is niet automatisch veilig.</p></div></div>';
+  },
+  keten7(){
+    const s=[['vuurwerk','Welk product?','wat zie je precies?'],['lijst','Welke categorie?','F1 tot en met F4 · of nog niet vast te stellen'],['mensen','Voor wie?','consument of professional'],['hand','Welke handeling?','bezit, gebruik, verkoop, afsteken'],['wet','Welke bepaling?','welk artikel is overtreden?'],['document','Uitzondering of ontheffing?','bijv. ontheffing'],['domein','Ben ik bevoegd?','domeinlijst en akte']];
+    return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke stap helder → volgende stap · twijfel → niet zelf concluderen</p><div class="bs-wrap"><ol class="bs">'
+      +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<div class="bs-q"><b>'+x[1]+'</b><small>'+x[2]+'</small></div>'+(i<6?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
+      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">nee</span>'+di('afspraak')+'<b>Niet zelf</b><small>overleg of politie</small></div><div class="bs-yes"><span class="bs-tag">ja</span>'+di('vink')+'<b>Handelen</b><small>volgens de taakverdeling</small></div></div></div>'
+      +'<div class="bs-notes"><p>'+di('oog')+'Een categorie is nog geen juridische conclusie.</p><p>'+di('schild')+'Ook bij een helder feit: eerst veilig.</p></div></div>';
   },
   lagen4(){
     const s=[['oog','Waarneming','Wat zie ik?'],['document','Informatie','Wat staat op verpakking of etiket?'],['zoeken','Onderzoek','Wat kan rechtmatig nader worden vastgesteld?'],['wet','Juridische conclusie','Wat kan worden bewezen of onderbouwd?']];
