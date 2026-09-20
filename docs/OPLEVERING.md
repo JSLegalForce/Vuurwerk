@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920c`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920d`).
 
 ## JURIDISCHE BRONNEN
 
@@ -91,10 +91,11 @@ Alle WED-bevoegdheden gelden alleen "voor zover dat redelijkerwijs voor de vervu
 
 ## BEELDEN
 
-- 21 foto's vervangen: **nee** (0/21). Er is geen beeldgenerator beschikbaar.
+- 21 foto's vervangen: **nee** (1/21). Beeld N1 (`scene-plein-knal`) is door de opdrachtgever aangeleverd en staat op de pagina “Een harde knal op het plein” (onderwerp 1). De overige 20 foto's kunnen in deze werkomgeving niet worden gemaakt; er is geen beeldgenerator beschikbaar.
 - Tijdelijke oplossing: pictogrambeelden (op één plek de getekende boa uit de master). Er is geen placeholdertekst en er zijn geen kapotte beelden.
 - De pictogrambeelden zijn decoratief (`aria-hidden`), zodat de alt-tekst geen scène beschrijft die niet te zien is.
-- De map `assets/images/` met placeholderbestanden is verwijderd.
+- De map `assets/images/` met placeholderbestanden is verwijderd. In die map staat nu alleen de aangeleverde foto `plein-knal.webp` (1600 × 829 px, WebP, 92 kB), lokaal opgenomen zodat de e-learning offline blijft werken.
+- Dezelfde scene op een andere pagina (onderwerp 4, dezelfde casus) houdt bewust het pictogrambeeld, zodat alleen de gevraagde pagina is gewijzigd.
 - Beeldplan, personages A–K, prompts en alt-teksten: `BEELDPLAN.md`. Een foto activeren: zet het bestand in `assets/images/`, voeg de scene-naam toe aan `FOTO_AANWEZIG` in het bouwscript en bouw opnieuw.
 
 ## DIDACTISCHE CONTROLE
