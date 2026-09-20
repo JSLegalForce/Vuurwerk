@@ -1,4 +1,4 @@
-const ASSET_V='vw260920d';
+const ASSET_V='vw260920e';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -144,7 +144,7 @@ function bdInline(root){
 const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "0.1":{"t":"casus","a":"scene-plein-knal"},
 "0.2":{"t":"praktijk","a":"boa-observeer","ic":"vraag"},
-"0.3":{"t":"split","a":"boa-uitleg","rows":["kalender","domein","boek"]},
+"0.3":{"t":"rijkaart","a":"scene-boa-jongeren-plein","rows":["kalender","domein","boek"],"ic":"schild"},
 "0.4":{"t":"split","a":{"icon":"vuurwerk","orbit":["vink","kruis","vraag"]},
 "rev":1,"rows":["lijst","vink","lamp"]},
 "0.5":{"t":"split","a":{"vis":"bestanddelen"},
@@ -328,13 +328,13 @@ const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaa
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
-'scene-plein-knal':"Twee boa’s in handhavingsuniform spreken op straat een groep jonge mannen aan. Eén van hen houdt een doos vuurwerk vast; een ander heeft ook vuurwerk in zijn hand.",'scene-vuurwerk-f1':"Klein vuurwerk voor binnengebruik, zoals sterretjes, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Verpakt vuurwerk met op het etiket de categorieaanduiding F2, op een neutrale ondergrond.",'scene-vuurwerk-f3':"Verpakt vuurwerk met op het etiket de categorieaanduiding F3, op een neutrale ondergrond.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk in transportverpakking bij een afgezette vuurwerkshowlocatie.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket, categorieaanduiding en CE-markering. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond. De categorie is niet te zien.",'scene-zwaar-illegaal':"In beslag genomen vuurwerk zonder etiket in een bak op een tafel, gefotografeerd voor het dossier.",'scene-tas-inhoud':"Open sporttas op de grond met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan op straat en vraagt naar zijn identiteitsbewijs.",'scene-boa-politie-overdracht':"Een boa praat met twee politiemensen bij een politieauto en draagt de situatie over.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas.",'scene-afstand-melden':"Een boa, van achteren gezien, houdt afstand van een tas op de grond en meldt zich via de portofoon.",'scene-vervoermiddel-onderzoek':"Een boa staat naast een geparkeerde personenauto met open kofferbak en spreekt de bestuurder aan. In de kofferbak ligt een tas.",'scene-ontheffing-sportveld':"Afgezet sportveld op oudejaarsavond. Een supervisor van een vereniging laat een boa een document zien.",'scene-inbeslagname-tafel':"Handen met handschoenen leggen verpakt vuurwerk in een bak op een tafel. Op tafel ligt een formulier. Geen gezichten.",'scene-tas-zonder-etiket':"Tas op een stoep met groot vuurwerk zonder etiket, deels met tape omwikkeld. Op de achtergrond kijken omstanders toe.",'scene-woonstraat-fontein':"Woonstraat in de avond: een man van middelbare leeftijd staat naast een brandende grondfontein. Een boa komt aanlopen.",'scene-park-tas':"Pad in een park: een achtergelaten tas met vuurwerk naast een bankje. Een boa staat op afstand en belt.",'scene-station-groep':"Stationsplein in de avond: een drukke groep met vuurwerk. Twee boa’s houden afstand en melden zich via de portofoon.",'scene-parkeerplaats-tas':"Detail van de tas op de parkeerplaats: verpakkingen met etiket en los vuurwerk zonder etiket.",
+'scene-plein-knal':"Twee boa’s in handhavingsuniform spreken op straat een groep jonge mannen aan. Eén van hen houdt een doos vuurwerk vast; een ander heeft ook vuurwerk in zijn hand.",'scene-vuurwerk-f1':"Klein vuurwerk voor binnengebruik, zoals sterretjes, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Verpakt vuurwerk met op het etiket de categorieaanduiding F2, op een neutrale ondergrond.",'scene-vuurwerk-f3':"Verpakt vuurwerk met op het etiket de categorieaanduiding F3, op een neutrale ondergrond.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk in transportverpakking bij een afgezette vuurwerkshowlocatie.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket, categorieaanduiding en CE-markering. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond. De categorie is niet te zien.",'scene-zwaar-illegaal':"In beslag genomen vuurwerk zonder etiket in een bak op een tafel, gefotografeerd voor het dossier.",'scene-tas-inhoud':"Open sporttas op de grond met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan op straat en vraagt naar zijn identiteitsbewijs.",'scene-boa-politie-overdracht':"Een boa praat met twee politiemensen bij een politieauto en draagt de situatie over.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas.",'scene-afstand-melden':"Een boa, van achteren gezien, houdt afstand van een tas op de grond en meldt zich via de portofoon.",'scene-vervoermiddel-onderzoek':"Een boa staat naast een geparkeerde personenauto met open kofferbak en spreekt de bestuurder aan. In de kofferbak ligt een tas.",'scene-ontheffing-sportveld':"Afgezet sportveld op oudejaarsavond. Een supervisor van een vereniging laat een boa een document zien.",'scene-inbeslagname-tafel':"Handen met handschoenen leggen verpakt vuurwerk in een bak op een tafel. Op tafel ligt een formulier. Geen gezichten.",'scene-tas-zonder-etiket':"Tas op een stoep met groot vuurwerk zonder etiket, deels met tape omwikkeld. Op de achtergrond kijken omstanders toe.",'scene-woonstraat-fontein':"Woonstraat in de avond: een man van middelbare leeftijd staat naast een brandende grondfontein. Een boa komt aanlopen.",'scene-park-tas':"Pad in een park: een achtergelaten tas met vuurwerk naast een bankje. Een boa staat op afstand en belt.",'scene-station-groep':"Stationsplein in de avond: een drukke groep met vuurwerk. Twee boa’s houden afstand en melden zich via de portofoon.",'scene-boa-jongeren-plein':"Twee boa’s in handhavingsuniform staan op een plein in gesprek met vier jonge mannen.",'scene-parkeerplaats-tas':"Detail van de tas op de parkeerplaats: verpakkingen met etiket en los vuurwerk zonder etiket.",
 'wetboek':'Wet- en regelgeving over vuurwerk','pv-document':'Proces-verbaal met handtekening','doelwit':'Doelwit met pijl','vraag':'Vraagteken','weegschaal':'Weegschaal'
 };
 
 /* ── Infographics en procesplaten (HTML + duotone iconen) ── */
 /* semi-realistische praktijkscènes (vervangen de oude vectorscènes) */
-const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp'};
+const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-boa-jongeren-plein':'../images/boa-jongeren-plein.webp'};
 const IMG=(n,alt,cls)=>'<img class="'+(cls||'')+(ART_FILE[n]?' foto':'')+'" src="assets/illustraties/'+(ART_FILE[n]||n+'.svg')+'?v='+ASSET_V+'" alt="'+(alt==null?(ART_ALT[n]||''):alt)+'" loading="eager" decoding="async">';
 /* ── BOA-illustratieset (stijlreferentie JS Legal Force) ── */
 const BOA_POSE={'boa-armen':{},'boa-uitleg':{chip:'lamp'},'boa-notitie':{prop:'notitieblok',chip:'oog'},'boa-dossier':{prop:'pv-los'},'boa-observeer':{chip:'oog'}};
@@ -893,6 +893,16 @@ const T={};
 T.split=(P,spec,st)=>{
   const nodes=mainParas(P);
   return splitBox([soortChip(P),titleEl(P),P.intro,rowsWrap(nodes,spec.rows)],artHTML(spec.a,spec),spec);
+};
+T.rijkaart=(P,spec,st)=>{
+  /* drie informatierijen + Onthoud-kaart + beeld; uitsluitend bestaande componenten */
+  const k=P.rest.find(n=>n.nodeType===1&&n.classList.contains('kaart'));
+  const nodes=mainParas(P).filter(n=>!(n.nodeType===1&&n.classList&&n.classList.contains('kaart')));
+  const copy=[soortChip(P),titleEl(P),P.intro,rowsWrap(nodes,spec.rows)];
+  if(k){const {card}=kcard(k,spec.ic);copy.push(card);}
+  const s=splitBox(copy,artHTML(spec.a,spec),spec);
+  s.classList.add('next-split'); /* bestaande regel: op mobiel komt het beeld na de tekst */
+  return s;
 };
 T.bd=(P,spec,st)=>{
   const wrap=el('div','bd-page');
