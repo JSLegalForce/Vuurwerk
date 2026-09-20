@@ -1,75 +1,204 @@
-# Oplevering e-learning Vuurwerk – versie 0.2
+# Oplevering e-learning Vuurwerk
 
-Online: https://jslegalforce.github.io/Vuurwerk/ · Juridische peildatum: 20 september 2026 · Blauwdruk: Straatintimidatie2 (ongewijzigd; `app.css` byte-gelijk).
+## VERSIE
 
-## 1. Juridisch wijzigingsoverzicht
+**0.9** (geen 1.0). Alle juridische, didactische en technische eisen voor 1.0 zijn uitgevoerd, op één punt na: de 21 realistische foto's uit het beeldplan zijn **niet** gemaakt. In deze werkomgeving is geen beeldgenerator beschikbaar. Volgens de opdracht mag de versie dan niet 1.0 heten.
 
-| Onderdeel | Wat is er veranderd |
+Wat is er wel gedaan: de oude placeholderbeelden met de tekst "Beeld nog aan te leveren" zijn weggehaald. Op die plekken staat nu een pictogrambeeld in de stijl van Straatintimidatie2. Er is nergens meer placeholdertekst te zien. De bestandsnamen, alt-teksten en prompts voor de foto's staan klaar in `BEELDPLAN.md`.
+
+Blauwdruk: Straatintimidatie2. Die is niet gewijzigd. `app.css` is byte-gelijk aan de master.
+
+## PEILDATUM
+
+Juridische peildatum: **20 september 2026**.
+
+## DATUM OPLEVERING
+
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920c`).
+
+## JURIDISCHE BRONNEN
+
+Alleen officiële bronnen. Alle links zijn gecontroleerd (HTTP 200).
+
+- **Wet milieubeheer**, art. 9.2.2.1a (lid 1–7), geldend vanaf 1-8-2026: https://wetten.overheid.nl/BWBR0003245/2026-08-01
+- **Wet veilige jaarwisseling**: Stb. 2026, 7.
+- **Besluit veilige jaarwisseling**: Stb. 2026, 168 (in werking 1-8-2026): https://zoek.officielebekendmakingen.nl/stb-2026-168.html
+- **Vuurwerkbesluit**, geldend vanaf 1-8-2026: https://wetten.overheid.nl/BWBR0013360/2026-08-01
+  - Artikelen: 1.1.1, 1.1.2a, 1A.1.3, 1.2.2, 1.2.3, 2.1.3, 2.3.2, 2.3.2a, 2.3.5.
+- **Wet op de economische delicten**, geldend vanaf 1-8-2026: https://wetten.overheid.nl/BWBR0002063/2026-08-01
+  - Artikelen: 1a, 2, 6, 17, 18, 21, 23, 24, 24a, 26.
+- **Wetboek van Strafvordering**, geldend vanaf 1-7-2026: https://wetten.overheid.nl/BWBR0001903/2026-07-01
+  - Artikelen: 27, 27a, 52, 53, 54, 67, 94, 95, 96, 142.
+- **Regeling domeinlijsten buitengewoon opsporingsambtenaar**, Domein I, onderdeel 9, gewijzigd bij Stcrt. 2026, 31362 (in werking 8-9-2026): https://zoek.officielebekendmakingen.nl/stcrt-2026-31362.html
+- **Beleidsregels buitengewoon opsporingsambtenaar** (onder meer over de titel voor economische delicten, via art. 17 lid 1 onder 2° WED): https://wetten.overheid.nl/BWBR0039766
+- **Handhavingsplan jaarwisseling**, Ministerie van JenV, maart 2026. Dit is **beleid**, geen wet: https://www.rijksoverheid.nl/documenten/2026/03/16/tk-bijlage-geactualiseerd-handhavingsplan-jaarwisseling-feb-2026
+
+De wetteksten zijn letterlijk overgenomen uit de geldende versies.
+
+## JURIDISCHE WIJZIGINGEN
+
+Ten opzichte van versie 0.2:
+
+| Onderdeel | Wijziging |
 |---|---|
-| Art. 9.2.2.1a Wm | Volledige letterlijke tekst (lid 1–7, geldend vanaf 1-8-2026) opgenomen, met B1-uitleg, betekenis voor de boa, voorbeeld en let op. Aparte pagina’s over lid 1 (bezit en gebruik), lid 2/6/7 (verkoop) en lid 4/5 (ontheffing). |
-| Wet/Besluit veilige jaarwisseling | Inwerkingtreding 1 augustus 2026 verwerkt (Stb. 2026, 7 en Stb. 2026, 168). Ontheffingsvoorwaarden uit art. 2.3.2 en 2.3.2a Vuurwerkbesluit (vereniging/stichting, max. 200 kg aangewezen F2, 31 dec 18.00–1 jan 02.00 uur, afschrift ontheffing op het terrein). |
-| Categorieën | F1–F4 per categorie: wettelijke betekenis (art. 1A.1.3 Vuurwerkbesluit, letterlijk), voor wie, voorbeelden, waarneming, wat je níet kunt concluderen. Definities professioneel vuurwerk, fop- en schertsvuurwerk, consumentenvuurwerk (art. 1.1.1). Personen met gespecialiseerde kennis (art. 1.1.2a, letterlijk). Etiket (art. 2.1.3, letterlijk fragment). |
-| Onbekend vuurwerk | Vaste definitie: “geen wettelijke vuurwerkcategorie”. Nieuw schema waarneming → informatie → onderzoek → juridische conclusie. |
-| Praktijktermen | Nieuwe pagina “Praktijkterm is geen wettelijke categorie” (nitraten, Cobra’s, mortieren, lawinepijlen; bron Handhavingsplan). Aangepast/zelfgemaakt vuurwerk (art. 1.2.3 en 1.2.2 lid 8 Vuurwerkbesluit). |
-| WED | Keten art. 9.2.2.1a Wm → art. 1a WED → economisch delict (art. 2 WED: opzet = misdrijf) → opsporingsbevoegdheid → bevoegdheden. Strafmaxima art. 6 lid 1 onder 1° en 4° WED. Art. 17 WED (opsporingsambtenaren). |
-| Domein I | Onderdeel 9 letterlijk: “Artikel 9.2.2.1a Wet Milieubeheer juncto artikel 1a Wet op de economische delicten”, gewijzigd bij regeling van 28-8-2026, nr. 7766474, Stcrt. 2026, 31362, in werking 8-9-2026. Uitleg “voor zover noodzakelijk voor functie en taakomschrijving”. Zes controlevragen. |
-| Staande houden / aanhouden | Art. 52 Sv en art. 27a lid 1 Sv (letterlijk), art. 27 Sv (verdachte), art. 53 en 54 Sv (letterlijk). Onderscheid aanspreken – staande houden – aanhouden. |
-| **Correctie bevoegdhedenoverzicht** | Het aangeleverde overzicht klopte niet met de geldende WED-tekst. **In beslag nemen en uitlevering vorderen = art. 18 WED** (uitlevering is het middel tot inbeslagneming: “Zij kunnen daartoe hun uitlevering vorderen”). **Medewerking vorderen = art. 24a WED** (art. 24 gaat over regels voor stilhouden en versperringen). **Art. 26 WED is geen bevoegdheid** maar maakt het opzettelijk niet voldoen aan een WED-vordering tot economisch delict. Art. 23 WED (vervoermiddelen) klopte. |
-| Inbeslagneming | Eigen pagina: aantreffen ≠ inbeslagnemen, vatbaarheid (art. 94 Sv), art. 18 WED, art. 95 Sv, kennisgeving van inbeslagneming (art. 94 lid 3 Sv). |
-| Veiligheid | Kernzin behouden. Art. 21 WED (verpakkingen openen) gekoppeld aan “een bevoegdheid is geen plicht; veiligheid gaat voor”. Geen verzonnen afstanden of protocollen. |
-| Handhavingsplan | Letterlijke passages over inzet boa’s, gevaarzetting, openbare orde en lokaal gezag. De passage dat domein I-boa’s niet bevoegd zijn voor bezit wordt expliciet als **achterhaald** gemarkeerd (domeinlijst gewijzigd 8-9-2026). |
-| Proces-verbaal | Zeven lagen (waarneming, etiket, onderzoek, bevoegdheden, beslag, vaststelling categorie, conclusie); slecht én goed voorbeeld. |
-| APV | Geen APV-module (conform opdracht). |
-| Vragen | Alle 28 oefenvragen en 15 eindtoetsvragen herschreven en gecontroleerd tegen de wetteksten; elke juridische vraag heeft een bronvoetnoot. |
+| Art. 17 WED | Nieuw kader dat drie dingen uit elkaar houdt: (A) opsporingsbevoegd zijn voor het feit, (B) een concrete WED-bevoegdheid hebben, en (C) wat past bij je functie en taakomschrijving. Grondslag in letterlijke tekst: de Beleidsregels boa. Een boa krijgt de titel voor economische delicten via art. 17 lid 1 onder 2° WED. De oude placeholder is weg. |
+| F4 / Vuurwerkbesluit | De stellige conclusie staat nu in de cursus. Onderdeel 9 noemt alleen art. 9.2.2.1a Wm. Overtredingen van het Vuurwerkbesluit lopen via art. 9.2.2.1 Wm, en dat artikel staat niet in onderdeel 9. Op grond van onderdeel 9 ben je dus niet bevoegd voor F4-feiten. |
+| Art. 54 Sv | Nieuwe pagina "Aanhouden buiten heterdaad". Opzettelijke overtreding is een misdrijf met maximaal zes jaar. Daardoor is voorlopige hechtenis toegelaten (art. 67 lid 1 onder a Sv). Aanhouden buiten heterdaad gebeurt in beginsel op bevel van de OvJ (lid 1). Daarna komt de HOvJ (lid 2). Alleen als het bevel niet kan worden afgewacht, mag de opsporingsambtenaar zelf aanhouden (lid 3). Bij een overtreding kan niet buiten heterdaad worden aangehouden. De cursus zegt nergens dat een boa buiten heterdaad dezelfde bevoegdheid heeft als bij heterdaad. |
+| Kofferbak | Vier handelingen apart uitgelegd: stilhouden (art. 23 lid 4 WED), onderzoeken (art. 23 lid 1–2), medewerking vorderen zoals de kofferbak laten openen (art. 24a) en opzettelijk weigeren (art. 26). |
+| Veiligstellen / art. 96 Sv | "Veiligstellen" is geen aparte bevoegdheid. Inbeslagneming loopt via art. 18 WED en art. 95 en 96 lid 1 Sv. Art. 96 lid 2 geldt alleen binnen de situaties van lid 1. Afstand houden is een veiligheidsmaatregel en geen beslagbevoegdheid. |
+| Categorieën | Er staan geen productvoorbeelden meer als vaste categorie. De vorm zegt niets over de categorie; de fabrikant deelt in (art. 1A.1.3 Vuurwerkbesluit, letterlijk). Nieuwe keten van 7 stappen: product → categorie → voor wie → handeling → bepaling → uitzondering/ontheffing → bevoegd. |
+| Ontheffing | Controlekaart met 7 vragen, met verwijzing naar art. 9.2.2.1a lid 4–5 Wm en art. 2.3.2 en 2.3.2a Vuurwerkbesluit. |
+| Halt / reprimande | Verwijderd. Er is geen afdoende officiële bron over de actuele stand. |
+| Veiligheid | Alleen de algemene boodschap staat erin: een bevoegdheid is geen plicht, veiligheid gaat voor, afstand houden en de politie inschakelen. Er zijn geen verzonnen afstanden, meters of protocollen. |
+| Proces-verbaal | Checklist van 12 onderdelen, met een "Zo niet"- en een "Zo wel"-voorbeeld. Daarin staan ook de vordering, de reactie van betrokkene en de grondslag van elke bevoegdheid. |
+| Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
-## 2. Gebruikte officiële bronnen
+## WED-BEVOEGDHEDEN
 
-- Wet milieubeheer, art. 9.2.2.1a, geldend vanaf 01-08-2026 – wetten.overheid.nl, BWBR0003245
-- Wet van 16 december 2025 (Wet veilige jaarwisseling), Stb. 2026, 7
-- Besluit veilige jaarwisseling, Stb. 2026, 168 (in werking 1-8-2026)
-- Vuurwerkbesluit, geldend vanaf 01-08-2026 – BWBR0013360 (art. 1.1.1, 1.1.2a, 1A.1.3, 1.2.2, 1.2.3, 1.2.4, 2.1.3, 2.3.2, 2.3.2a, 2.3.3, 2.3.5)
-- Wet op de economische delicten, geldend vanaf 01-08-2026 – BWBR0002063 (art. 1a, 2, 6, 17, 18, 21, 23, 24, 24a, 26)
-- Wetboek van Strafvordering, geldend vanaf 01-07-2026 – BWBR0001903 (art. 27, 27a, 52, 53, 54, 94, 95, 96, 142)
-- Regeling domeinlijsten buitengewoon opsporingsambtenaar, geldend vanaf 08-09-2026 – BWBR0041447; wijziging Stcrt. 2026, 31362
-- Handhavingsplan jaarwisseling, Ministerie van Justitie en Veiligheid, maart 2026 (geactualiseerde versie; Eerste Kamer 16-03-2026)
+Opnieuw gecontroleerd tegen de letterlijke tekst (geldend vanaf 1-8-2026):
 
-## 3. Nog menselijke juridische controle nodig
+| Handeling | Grondslag |
+|---|---|
+| In beslag nemen, en daarvoor uitlevering vorderen | art. 18 WED |
+| Verpakkingen openen | art. 21 WED |
+| Vervoermiddel onderzoeken (ook op lading) | art. 23 lid 1–2 WED |
+| Laten stilhouden / overbrengen | art. 23 lid 4 WED |
+| Regels over stilhouden en versperringen | art. 24 WED (geen medewerkingsbevoegdheid) |
+| Medewerking vorderen | art. 24a WED |
+| Opzettelijk niet voldoen aan een vordering | art. 26 WED. Dit is een economisch delict, geen bevoegdheid. |
 
-1. **Art. 17 WED en boa domein I**: heeft een boa met domein I (akte/aanwijzing) de bijzondere WED-bevoegdheden (art. 18–24a WED)? De Regeling domeinlijsten is mede gebaseerd op art. 17 lid 3 WED, maar de cursus laat de cursist dit bij de werkgever bevestigen.
-2. **F4 en ander professioneel vuurwerk**: onderdeel 9 noemt alleen art. 9.2.2.1a Wm; overtredingen van het Vuurwerkbesluit (art. 9.2.2.1 Wm) staan daar niet. Bevoegdheid domein I voor F4-feiten is niet bevestigd.
-3. **Aanhouden buiten heterdaad (art. 54 Sv)** bij opzettelijke overtreding van art. 9.2.2.1a Wm (misdrijf, max. 6 jaar): of voorlopige hechtenis is toegelaten en dus art. 54 kan worden toegepast.
-4. **Art. 24a WED**: voorbeeld “vorderen dat de bestuurder de kofferbak opent” – bevestigen als juiste toepassing.
-5. **Art. 96 lid 2 Sv** als grondslag bij veiligstellen – toepasbaarheid in vuurwerksituaties.
-6. **Voorbeelden per categorie** (sterretjes/knalerwtjes als F1; sier-/knalvuurwerk als F2) – ter illustratie, laten bevestigen.
-7. **Halt-verwijzing/reprimande voor boa’s**: volgens Handhavingsplan “naar verwachting in de loop van 2026 geregeld” – actuele stand onbekend.
-8. **Strafmaxima** (art. 6 WED) – letterlijk overgenomen, B1-samenvatting laten nalezen.
+Alle WED-bevoegdheden gelden alleen "voor zover dat redelijkerwijs voor de vervulling van hun taak nodig is".
 
-## 4. Afbeeldingen
+## DOMEIN I
 
-Zie `BEELDPLAN.md`: 21 nieuwe beelden (N1–N21) met bestandsnaam, personage, alt-tekst en exacte image-generation prompt, plus inventarisatie van alle 137 pagina’s (behouden / vervangen / nieuw).
-**Status:** in deze werkomgeving is geen beeldgenerator beschikbaar. Er staan daarom duidelijk gemarkeerde placeholders (“Beeld nog aan te leveren – Nx”) op de juiste plek, in de juiste verhouding en met de definitieve bestandsnaam. Een aangeleverde foto met dezelfde naam in `assets/images/` vervangt de placeholder zonder codewijziging.
+- Eén hoofdpagina met 7 stappen: feit → bepaling → domeinlijst → functie/taak → bevoegdheid → voorwaarden → veilig.
+- De denkfout "Vuurwerk staat in mijn domein, dus ik ben voor alle vuurwerkfeiten bevoegd" wordt benoemd en weerlegd.
+- Onderdeel 9 staat er letterlijk in: art. 9.2.2.1a Wm juncto art. 1a WED, in werking 8-9-2026.
+- De oude passage uit het Handhavingsplan (domein I niet bevoegd voor bezit) staat gemarkeerd als achterhaald. Het Handhavingsplan wordt steeds als **beleid/taakverdeling** gelabeld, niet als bron van bevoegdheid.
 
-## 5. Personages
+## OPENSTAANDE JURIDISCHE PUNTEN
 
-Zie `BEELDPLAN.md` §2: 11 casusgebonden personages (A–K) met variatie in geslacht, leeftijd, huidskleur, haar en achtergrond; plus een voorstel voor 6 generieke boa-portretten ter vervanging van de getekende boa uit de blauwdruk.
+| Nr | Punt | Conclusie in de cursus | Zekerheid |
+|---|---|---|---|
+| 1 | Art. 17 WED | Heb je een akte voor art. 9.2.2.1a Wm jo. 1a WED? Dan ben je voor dat feit WED-opsporingsambtenaar (art. 17 lid 1 onder 2°, volgens de Beleidsregels boa). Dan gelden art. 18–24a WED. | redelijk hoog; per akte controleren |
+| 2 | F4 | Niet bevoegd op grond van onderdeel 9 | hoog |
+| 3 | Art. 54 Sv | In beginsel op bevel. Zelf alleen als het bevel niet kan worden afgewacht. Niet bij een overtreding. | hoog (wettekst); uitvoering boa: zie controlepunt |
+| 4 | Kofferbak | 23 lid 4 / 23 lid 1–2 / 24a / 26 | hoog (wettekst); toepassing 24a: zie controlepunt |
+| 5 | Art. 96 / veiligstellen | Geen aparte bevoegdheid | hoog |
+| 6 | Categorievoorbeelden | Verwijderd; de fabrikant deelt in | hoog |
+| 7 | Halt / reprimande | Verwijderd | n.v.t. (onderwerp niet in de cursus) |
+| 8 | Veiligheid | Alleen de algemene boodschap, geen normen | hoog |
 
-## 6. Dubbele beelden/personages
+## BEELDEN
 
-Elke casus heeft een eigen personage. Beelden die bij meerdere casussen voorkomen (N13 afstand en melden) tonen bewust geen herkenbaar gezicht. De getekende boa-illustratie uit de blauwdruk komt nog op meerdere pagina’s voor; die staat in het beeldplan als “vervangen”.
+- 21 foto's vervangen: **nee** (0/21). Er is geen beeldgenerator beschikbaar.
+- Tijdelijke oplossing: pictogrambeelden (op één plek de getekende boa uit de master). Er is geen placeholdertekst en er zijn geen kapotte beelden.
+- De pictogrambeelden zijn decoratief (`aria-hidden`), zodat de alt-tekst geen scène beschrijft die niet te zien is.
+- De map `assets/images/` met placeholderbestanden is verwijderd.
+- Beeldplan, personages A–K, prompts en alt-teksten: `BEELDPLAN.md`. Een foto activeren: zet het bestand in `assets/images/`, voeg de scene-naam toe aan `FOTO_AANWEZIG` in het bouwscript en bouw opnieuw.
 
-## 7. Responsive test
+## DIDACTISCHE CONTROLE
 
-Volledige doorloop (171 schermen: intake, alle pagina’s, alle oefenvragen, eindtoets, resultaat, certificaat) op 1440, 1280, 1024, 768, 390 en 360 px: geen scriptfouten, geen kapotte beelden, geen horizontaal scrollen.
+- Alle 8 onderwerpen zijn nagelopen. De rode draad (de vier vragen) staat in elk onderwerp.
+- Theorie wordt gevolgd door een voorbeeld, een praktijkcasus, "Let op" en "Onthoud".
+- Taal is B1: korte zinnen en uitleg na elke wettekst ("Wat betekent dit voor jou als boa?").
+- Wet, bevoegdheid, domein, beleid en veiligheid zijn visueel van elkaar te onderscheiden.
 
-## 8. Vragen
+## TECHNISCHE TEST
 
-Alle oefen- en eindtoetsvragen zijn opnieuw opgesteld en gecontroleerd tegen de letterlijke wetteksten; antwoordopties zijn gelijkwaardig in vorm en lengte.
+Playwright, lokaal en live:
 
-## 9. Resterende placeholders (informatie ontbreekt werkelijk)
+- Volledige doorloop: 178 schermen (intake, 142 pagina's, 30 oefenvragen met feedback, eindtoets, resultaat, certificaat). Geen scriptfouten, geen consolefouten, geen kapotte beelden.
+- Regressie op 390 px:
+  - hervatten na herladen: scherm "Verdergaan", juiste pagina;
+  - eindtoets zakken: geen certificaat, knop "Eindtoets opnieuw maken";
+  - opnieuw maken en slagen;
+  - certificaat met naam, nummer `JSLF-VW-…` en peildatum;
+  - printweergave en PDF (A4 liggend);
+  - "Opnieuw beginnen" wist de opslag.
+- Opslagsleutel: `jslf-vw-v1`.
 
-- Veiligheidsrichtlijn (afstanden, bewaren, afvoeren) – 3 plekken.
-- Juridische controle – 5 plekken: F4-bevoegdheid, art. 17 WED, art. 54 Sv, aangepast/zelfgemaakt vuurwerk, Halt/reprimande.
+## RESPONSIVE TEST
 
-## 10. Online link
+Getest op 1440×900, 1280×800, 1024×768, 768×1024, 390×844 en 360×740: 178/178 schermen, geen horizontaal scrollen, geen elementen buiten beeld.
 
-https://jslegalforce.github.io/Vuurwerk/
+## VRAGENCONTROLE
+
+- 30 oefenvragen: per onderwerp 5 / 4 / 6 / 7 / 4 / 4.
+- Juiste antwoorden verdeeld over A7 / B9 / C8 / D6.
+- Elke vraag is een praktijksituatie met een bronvoetnoot. De afleiders zijn gelijkwaardig in vorm en lengte.
+- Er komen geen verwijderde onderwerpen in voor (Halt, productvoorbeelden, meters).
+
+## EINDTOETSCONTROLE
+
+- 15 vragen, drempel 80%.
+- Spreiding over de thema's:
+  - Vier vragen: 1
+  - Soorten vuurwerk: 3
+  - De wet: 2
+  - Aanhouden: 1
+  - Bevoegdheid: 2
+  - Bevoegdheden: 2
+  - Inbeslagneming: 1
+  - Taakverdeling: 1
+  - Veiligheid: 1
+  - Proces-verbaal: 1
+- Juiste antwoorden: A3 / B4 / C4 / D4. De volgorde wordt gehusseld.
+
+---
+
+## MENSELIJKE JURIDISCHE CONTROLE NODIG
+
+### 1. Art. 17 WED per individuele akte
+- **ONDERWERP:** WED-bevoegdheden van de domein I-boa.
+- **VRAAG:** Heeft elke domein I-boa met onderdeel 9 automatisch de bevoegdheden van art. 18–24a WED?
+- **WAT ZEGT DE BRON?** Volgens de Beleidsregels boa wordt de titel voor economische delicten verleend op grond van art. 17 lid 1 onder 2° WED. Art. 18–24a WED gelden voor "de opsporingsambtenaren".
+- **WAAR ZIT DE TWIJFEL?** Of dit in elke concrete akte of aanwijzing zo is vastgelegd. Ook of de werkgever beperkingen stelt in de taakomschrijving.
+- **BRON:** art. 17 WED; Beleidsregels boa (BWBR0039766); Stcrt. 2026, 31362.
+- **GEVOLG VOOR DE E-LEARNING:** De cursus geeft de hoofdregel en laat de cursist zijn akte en taakomschrijving controleren. Er staat geen stellige claim voor iedere boa in.
+- **ADVIES VOOR CONTROLE:** Laat Justis of de OM-boa-coördinator bevestigen hoe de titel in akten voor onderdeel 9 wordt vermeld.
+
+### 2. Aanhouding buiten heterdaad in de boa-praktijk
+- **ONDERWERP:** Art. 54 lid 3 Sv voor boa's.
+- **VRAAG:** Mag een boa in de praktijk zelf aanhouden buiten heterdaad, en welke instructie en middelen horen daarbij?
+- **WAT ZEGT DE BRON?** Art. 54 lid 1–3 en art. 67 lid 1 onder a Sv: in beginsel op bevel, en zelf alleen als het bevel niet kan worden afgewacht.
+- **WAAR ZIT DE TWIJFEL?** De uitvoering hangt af van de instructie van de werkgever en de geweldsmiddelen van de boa. Daar is geen landelijke officiële bron voor gevonden.
+- **BRON:** art. 54 en 67 Sv.
+- **GEVOLG VOOR DE E-LEARNING:** De cursus leert dat je buiten heterdaad niet zelfstandig aanhoudt, maar overlegt en de politie inschakelt.
+- **ADVIES VOOR CONTROLE:** Toets deze lijn aan de werkinstructies van de opdrachtgevers.
+
+### 3. Art. 24a WED en de kofferbak
+- **ONDERWERP:** Medewerking vorderen bij onderzoek van een vervoermiddel.
+- **VRAAG:** Is "vorderen dat de bestuurder de kofferbak opent" een juiste toepassing van art. 24a WED naast art. 23?
+- **WAT ZEGT DE BRON?** Art. 24a lid 1: "alle medewerking ... die deze redelijkerwijs kunnen vorderen bij de uitoefening van de hen krachtens deze titel toekomende bevoegdheden".
+- **WAAR ZIT DE TWIJFEL?** Er is geen jurisprudentie of officiële toelichting gevonden over precies dit voorbeeld.
+- **BRON:** art. 23, 24a en 26 WED.
+- **GEVOLG VOOR DE E-LEARNING:** Het voorbeeld staat erin, met de wettekst en de voorwaarde "redelijkerwijs nodig".
+- **ADVIES VOOR CONTROLE:** Laat een OM-jurist het voorbeeld bevestigen.
+
+### 4. Halt en reprimande
+- **ONDERWERP:** Afdoening bij jongeren.
+- **VRAAG:** Kunnen boa's bij vuurwerkfeiten naar Halt verwijzen of een reprimande geven?
+- **WAT ZEGT DE BRON?** Het Handhavingsplan (maart 2026) zegt dat dit "naar verwachting in de loop van 2026" wordt geregeld.
+- **WAAR ZIT DE TWIJFEL?** De actuele stand op 20-9-2026 is niet in een officiële bron gevonden.
+- **BRON:** Handhavingsplan jaarwisseling, maart 2026.
+- **GEVOLG VOOR DE E-LEARNING:** Het onderwerp is volledig verwijderd.
+- **ADVIES VOOR CONTROLE:** Controleer de Aanwijzing Halt-afdoening en de Regeling Halt. Voeg het onderwerp alleen toe als het geregeld is.
+
+### 5. Veiligheidsrichtlijn
+- **ONDERWERP:** Afstanden, bewaren en afvoeren van in beslag genomen of onbekend vuurwerk.
+- **VRAAG:** Welke concrete veiligheidsnormen gelden voor boa's?
+- **WAT ZEGT DE BRON?** Er is geen officiële landelijke richtlijn voor boa's gevonden.
+- **WAAR ZIT DE TWIJFEL?** Er zijn waarschijnlijk lokale of werkgeversprotocollen.
+- **BRON:** geen gevonden.
+- **GEVOLG VOOR DE E-LEARNING:** Alleen de algemene boodschap staat erin: veiligheid gaat voor, afstand houden, niet openen of hanteren, politie inschakelen. Er staan geen meters of procedures in.
+- **ADVIES VOOR CONTROLE:** Vraag het werkgeversprotocol op en voeg dat als lokale instructie toe.
+
+### 6. Productvorm en categorie
+- **ONDERWERP:** Indeling van producttypen in categorieën.
+- **VRAAG:** Kan één producttype (fontein, cakebox, pijl) in verschillende categorieën vallen?
+- **WAT ZEGT DE BRON?** Art. 1A.1.3 Vuurwerkbesluit: de fabrikant deelt in "op grond van toepassing, doel en gevaar". Een aangemelde instantie bevestigt dat.
+- **WAAR ZIT DE TWIJFEL?** De algemene stelling dat een type in meerdere categorieën "kan vallen" is niet letterlijk in een Nederlandse bron gevonden.
+- **BRON:** art. 1A.1.3 Vuurwerkbesluit.
+- **GEVOLG VOOR DE E-LEARNING:** De stelling is verwijderd. De cursus zegt nu alleen dat de vorm de categorie niet laat zien en dat de fabrikant indeelt.
+- **ADVIES VOOR CONTROLE:** Optioneel. Laat een deskundige van de ILT bevestigen of de oorspronkelijke stelling terug mag.

@@ -1,6 +1,6 @@
 # Beeldplan e-learning Vuurwerk
 
-Versie 0.2 · peildatum 20 september 2026. Dit document hoort bij de oplevering; zie ook `OPLEVERING.md`.
+Versie 0.9 · peildatum 20 september 2026. Dit document hoort bij de oplevering; zie ook `OPLEVERING.md`.
 
 ## 1. Stijl en regels voor alle nieuwe beelden
 
@@ -8,7 +8,7 @@ Versie 0.2 · peildatum 20 september 2026. Dit document hoort bij de oplevering;
 - Boa’s: donkerblauw Nederlands handhavingsuniform, **nooit “POLITIE” op boa-kleding**, zichtbare tekst minimaal. Boa en politie visueel duidelijk verschillend.
 - Geen onveilig gedrag: niemand houdt onbekend/zwaar vuurwerk vast, niemand opent of demonteert vuurwerk, boa’s staan op afstand.
 - Beeld suggereert juridisch niet meer dan zichtbaar is: alleen een categorie tonen als die leesbaar op een (fictief) etiket staat.
-- Formaat: 16:9, minimaal 3000 × 1688 px, export als WebP (kwaliteit ±80). Bestandsnaam = kolom “Bestand” zonder `scene-`, in `assets/images/`. Overschrijven is genoeg; code hoeft niet te wijzigen.
+- Formaat: 16:9, minimaal 3000 × 1688 px, export als WebP (kwaliteit ±80). Bestandsnaam = kolom “Bestand” zonder `scene-`, in `assets/images/`. Activeren: zet de scene-naam in `FOTO_AANWEZIG` (bouwscript `beelden.py`) en bouw opnieuw; dan vervangt de foto het tijdelijke pictogrambeeld. Pas de alt-tekst aan als de foto afwijkt van de beschrijving.
 - Basisstijl voor elke prompt: Documentary-style professional photograph, the Netherlands, natural light, realistic skin texture, calm and serious mood, 35mm lens, shallow depth of field, no text or logos except where specified, no cartoon, no 3D, no AI-plastic faces, no American police uniforms or badges, 16:9, 3000x1688 px.
 
 ## 2. Personages (variatie en consistentie)
@@ -64,102 +64,106 @@ De getekende boa-illustratie (één vrouwelijke boa) komt uit Straatintimidatie2
 | Pagina | Titel | Huidig beeld | Actie |
 |---|---|---|---|
 | 1.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 1.2 | Een harde knal op het plein | scene-plein-knal | NIEUW (placeholder staat klaar) |
+| 1.2 | Een harde knal op het plein | scene-plein-knal | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 1.3 | Een harde knal op het plein — wat gaat er door je heen? | boa-observeer | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 1.4 | Waarom vuurwerk jouw werk is | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 1.5 | Toegestaan, verboden en onbekend | icoonvisual | BEHOUDEN (functionele vectorvisual) |
+| 1.5 | Categorie is nog geen conclusie | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 1.6 | De vier vragen | infographic bestanddelen | BEHOUDEN (functionele vectorvisual) |
-| 1.7 | Drie aparte vragen: veilig, strafbaar, bevoegd | weegschaal | BEHOUDEN (functionele illustratie) |
+| 1.7 | Vijf soorten vragen, niet door elkaar | weegschaal | BEHOUDEN (functionele illustratie) |
 | 1.8 | Opzet van de opleiding | infographic opzet | BEHOUDEN |
 | 1.9 | Kort samengevat | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 2.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 2.2 | Waarom categorieën? | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 2.3 | Wettekst: indeling in categorieën | — | — |
 | 2.4 | Overzicht van de categorieën | infographic categorieen | BEHOUDEN |
-| 2.5 | Categorie F1 | scene-vuurwerk-f1 | NIEUW (placeholder staat klaar) |
-| 2.6 | Categorie F2 | scene-vuurwerk-f2 | NIEUW (placeholder staat klaar) |
-| 2.7 | Categorie F3 | scene-vuurwerk-f3 | NIEUW (placeholder staat klaar) |
-| 2.8 | Categorie F4 / professioneel vuurwerk | scene-vuurwerk-professioneel | NIEUW (placeholder staat klaar) |
+| 2.5 | Categorie F1 | scene-vuurwerk-f1 | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 2.6 | Categorie F2 | scene-vuurwerk-f2 | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 2.7 | Categorie F3 | scene-vuurwerk-f3 | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 2.8 | Categorie F4 / professioneel vuurwerk | scene-vuurwerk-professioneel | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 2.9 | Personen met gespecialiseerde kennis | — | — |
 | 2.10 | Verpakking en etiket | — | — |
 | 2.11 | Zelfde tas, andere informatie | infographic vergelijk | BEHOUDEN |
-| 2.12 | Onbekend vuurwerk | scene-vuurwerk-los | NIEUW (placeholder staat klaar) |
+| 2.12 | Onbekend vuurwerk | scene-vuurwerk-los | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 2.13 | Van waarneming naar juridische conclusie | infographic lagen4 | BEHOUDEN |
 | 2.14 | Op straat weet je het niet altijd | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 2.15 | Terug naar het plein: de tas | scene-tas-inhoud | NIEUW (placeholder staat klaar) |
+| 2.15 | Terug naar het plein: de tas | scene-tas-inhoud | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 2.16 | Wat kun je wel en nog niet vaststellen? | infographic checklist | BEHOUDEN |
-| 2.17 | Kort samengevat | scene-etiket-categorie | NIEUW (placeholder staat klaar) |
-| 2.18 | Kort samengevat | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 2.19 | Vooruitblik: Wat zegt de wet? | boa-illustratie (sjabloon) | BEHOUDEN |
+| 2.17 | Van product naar juridische conclusie | infographic keten7 | BEHOUDEN |
+| 2.18 | Kort samengevat | scene-etiket-categorie | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 2.19 | Kort samengevat | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 2.20 | Vooruitblik: Wat zegt de wet? | boa-illustratie (sjabloon) | BEHOUDEN |
 | 3.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 3.2 | Van soort naar strafbaarheid | wetboek | BEHOUDEN (functionele illustratie) |
 | 3.3 | De Wet veilige jaarwisseling | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 3.4 | Wettekst: artikel 9.2.2.1a Wet milieubeheer | — | — |
-| 3.5 | Lid 1: bezit en gebruik | scene-tas-inhoud | NIEUW (placeholder staat klaar) |
+| 3.5 | Lid 1: bezit en gebruik | scene-tas-inhoud | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 3.6 | Lid 2, 6 en 7: verkoop | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 3.7 | Ontheffing van de burgemeester | icoonvisual | BEHOUDEN (functionele vectorvisual) |
-| 3.8 | Ontheffing — voorbeeld uit de praktijk | scene-ontheffing-sportveld | NIEUW (placeholder staat klaar) |
-| 3.9 | Artikel 9.2.2.1a Wm — let op | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 3.10 | Wettekst: artikel 1a en artikel 2 WED | — | — |
-| 3.11 | Straffen | wetboek | BEHOUDEN (functionele illustratie) |
-| 3.12 | Van regel naar opsporingsbevoegdheid | infographic tijdlijn | BEHOUDEN |
-| 3.13 | Kort samengevat | wetboek | BEHOUDEN (functionele illustratie) |
-| 3.14 | Kort samengevat | icoonvisual | BEHOUDEN (functionele vectorvisual) |
-| 3.15 | Vooruitblik: Wanneer ben jij als boa bevoegd? | boa-illustratie (sjabloon) | BEHOUDEN |
+| 3.8 | Ontheffing — voorbeeld uit de praktijk | scene-ontheffing-sportveld | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 3.9 | Controlekaart: ontheffing aangetroffen | wetboek | BEHOUDEN (functionele illustratie) |
+| 3.10 | Artikel 9.2.2.1a Wm — let op | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 3.11 | Wettekst: artikel 1a en artikel 2 WED | — | — |
+| 3.12 | Straffen | wetboek | BEHOUDEN (functionele illustratie) |
+| 3.13 | Van regel naar opsporingsbevoegdheid | infographic tijdlijn | BEHOUDEN |
+| 3.14 | Kort samengevat | wetboek | BEHOUDEN (functionele illustratie) |
+| 3.15 | Kort samengevat | icoonvisual | BEHOUDEN (functionele vectorvisual) |
+| 3.16 | Vooruitblik: Wanneer ben jij als boa bevoegd? | boa-illustratie (sjabloon) | BEHOUDEN |
 | 4.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 4.2 | Ben ik bevoegd? | scene-plein-knal | NIEUW (placeholder staat klaar) |
+| 4.2 | Ben ik bevoegd? | scene-plein-knal | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 4.3 | Zien is iets anders dan bevoegd zijn | weegschaal | BEHOUDEN (functionele illustratie) |
 | 4.4 | Wettekst: de buitengewoon opsporingsambtenaar | — | — |
 | 4.5 | Domein I, onderdeel 9 | — | — |
 | 4.6 | Domeinlijst is niet: alles mag | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 4.7 | Let op: oudere teksten zijn achterhaald | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 4.8 | En F4 of ander professioneel vuurwerk? | scene-vuurwerk-professioneel | NIEUW (placeholder staat klaar) |
+| 4.8 | En F4 of ander professioneel vuurwerk? | scene-vuurwerk-professioneel | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 4.9 | WED: wie spoort economische delicten op? | — | — |
-| 4.10 | Zes vragen: ben ik bevoegd en mag ik dit doen? | infographic bevoegd | BEHOUDEN |
-| 4.11 | Je weet de categorie nog niet | scene-vuurwerk-los | NIEUW (placeholder staat klaar) |
-| 4.12 | Je weet de categorie nog niet — betekenis | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 4.13 | Kort samengevat | weegschaal | BEHOUDEN (functionele illustratie) |
-| 4.14 | Kort samengevat | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 4.15 | Vooruitblik: Wat mag je als boa doen? | boa-illustratie (sjabloon) | BEHOUDEN |
+| 4.10 | Wanneer ben jij als boa bevoegd? | icoonvisual | BEHOUDEN (functionele vectorvisual) |
+| 4.11 | Zeven stappen: ben ik bevoegd en mag ik dit doen? | infographic bevoegd | BEHOUDEN |
+| 4.12 | Je weet de categorie nog niet | scene-vuurwerk-los | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 4.13 | Je weet de categorie nog niet — betekenis | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 4.14 | Kort samengevat | weegschaal | BEHOUDEN (functionele illustratie) |
+| 4.15 | Kort samengevat | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 4.16 | Vooruitblik: Wat mag je als boa doen? | boa-illustratie (sjabloon) | BEHOUDEN |
 | 5.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 5.2 | Van mogen naar doen: vijf stappen | infographic stappen | BEHOUDEN |
 | 5.3 | Bevoegdhedenkaart | infographic kaart | BEHOUDEN |
 | 5.4 | Let op: artikelnummers gecontroleerd | wetboek | BEHOUDEN (functionele illustratie) |
-| 5.5 | Aanspreken, staande houden, aanhouden | scene-boa-staandehouden | NIEUW (placeholder staat klaar) |
+| 5.5 | Aanspreken, staande houden, aanhouden | scene-boa-staandehouden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 5.6 | Wettekst: staande houden | — | — |
 | 5.7 | Wie is verdachte? | — | — |
-| 5.8 | Staande houden — situatie | scene-boa-staandehouden | NIEUW (placeholder staat klaar) |
+| 5.8 | Staande houden — situatie | scene-boa-staandehouden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 5.9 | Staande houden — vijf stappen | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 5.10 | Wettekst: aanhouden | — | — |
-| 5.11 | Aanhouden — vijf stappen | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
-| 5.12 | Wettekst: vervoermiddelen onderzoeken | — | — |
-| 5.13 | Vervoermiddelen onderzoeken — situatie | scene-vervoermiddel-onderzoek | NIEUW (placeholder staat klaar) |
-| 5.14 | Vervoermiddelen onderzoeken — vijf stappen | scene-vervoermiddel-onderzoek | NIEUW (placeholder staat klaar) |
-| 5.15 | Wettekst: medewerking vorderen | — | — |
-| 5.16 | Medewerking vorderen — vijf stappen | scene-vervoermiddel-onderzoek | NIEUW (placeholder staat klaar) |
-| 5.17 | Wettekst: inbeslagneming en uitlevering vorderen | — | — |
-| 5.18 | Inbeslagneming | scene-inbeslagname-tafel | NIEUW (placeholder staat klaar) |
-| 5.19 | Inbeslagneming — vijf stappen | scene-tas-inhoud | NIEUW (placeholder staat klaar) |
-| 5.20 | Wettekst: niet voldoen aan een vordering | — | — |
-| 5.21 | Veiligstellen | scene-afstand-melden | NIEUW (placeholder staat klaar) |
-| 5.22 | Proces-verbaal | infographic proces | BEHOUDEN (functionele vectorvisual) |
-| 5.23 | Wat moet in het proces-verbaal? | pv-document | BEHOUDEN (functionele illustratie) |
-| 5.24 | Overdracht aan de politie | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
-| 5.25 | Let op: redelijkerwijs nodig | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 5.26 | Kort samengevat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 5.27 | Kort samengevat | pv-document | BEHOUDEN (functionele illustratie) |
-| 5.28 | Vooruitblik: Onbekend en zwaar illegaal vuurwerk | boa-illustratie (sjabloon) | BEHOUDEN |
+| 5.10 | Wettekst: aanhouden op heterdaad | — | — |
+| 5.11 | Aanhouden op heterdaad — vijf stappen | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.12 | Wettekst: aanhouden buiten heterdaad | — | — |
+| 5.13 | Let op: heterdaad en buiten heterdaad | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 5.14 | Wettekst: vervoermiddelen onderzoeken | — | — |
+| 5.15 | Vervoermiddelen onderzoeken — situatie | scene-vervoermiddel-onderzoek | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.16 | Vervoermiddelen onderzoeken — vijf stappen | scene-vervoermiddel-onderzoek | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.17 | Wettekst: medewerking vorderen | — | — |
+| 5.18 | Medewerking vorderen — vijf stappen | scene-vervoermiddel-onderzoek | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.19 | Wettekst: inbeslagneming en uitlevering vorderen | — | — |
+| 5.20 | Inbeslagneming | scene-inbeslagname-tafel | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.21 | Inbeslagneming — vijf stappen | scene-tas-inhoud | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.22 | Wettekst: niet voldoen aan een vordering | — | — |
+| 5.23 | Veiligstellen is geen aparte bevoegdheid | scene-afstand-melden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.24 | Proces-verbaal | infographic proces | BEHOUDEN (functionele vectorvisual) |
+| 5.25 | Overdracht aan de politie | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 5.26 | Let op: redelijkerwijs nodig | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 5.27 | Kort samengevat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 5.28 | Kort samengevat | pv-document | BEHOUDEN (functionele illustratie) |
+| 5.29 | Vooruitblik: Onbekend en zwaar illegaal vuurwerk | boa-illustratie (sjabloon) | BEHOUDEN |
 | 6.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 6.2 | Een tas zonder etiketten | scene-tas-zonder-etiket | NIEUW (placeholder staat klaar) |
-| 6.3 | Praktijkterm is geen wettelijke categorie | scene-zwaar-illegaal | NIEUW (placeholder staat klaar) |
+| 6.2 | Een tas zonder etiketten | scene-tas-zonder-etiket | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 6.3 | Praktijkterm is geen wettelijke categorie | scene-zwaar-illegaal | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 6.4 | Aangepast of zelfgemaakt vuurwerk | icoonvisual | BEHOUDEN (functionele vectorvisual) |
-| 6.5 | Onbekend vuurwerk: wat weet je wel en niet? | scene-vuurwerk-los | NIEUW (placeholder staat klaar) |
-| 6.6 | Bevoegd is niet hetzelfde als veilig | scene-afstand-melden | NIEUW (placeholder staat klaar) |
+| 6.5 | Onbekend vuurwerk: wat weet je wel en niet? | scene-vuurwerk-los | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 6.6 | Bevoegd is niet hetzelfde als veilig | scene-afstand-melden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 6.7 | Drie aparte vragen | infographic drie | BEHOUDEN |
-| 6.8 | Wanneer stop je met zelf onderzoeken? | scene-afstand-melden | NIEUW (placeholder staat klaar) |
-| 6.9 | Zelf optreden of politie inschakelen? | scene-tas-zonder-etiket | NIEUW (placeholder staat klaar) |
+| 6.8 | Wanneer stop je met zelf onderzoeken? | scene-afstand-melden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 6.9 | Zelf optreden of politie inschakelen? | scene-tas-zonder-etiket | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 6.10 | Zelf optreden of politie inschakelen? — betekenis | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 6.11 | Kort samengevat | scene-zwaar-illegaal | NIEUW (placeholder staat klaar) |
+| 6.11 | Kort samengevat | scene-zwaar-illegaal | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 6.12 | Kort samengevat | boa-observeer | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 6.13 | Vooruitblik: Taakverdeling tussen boa en politie | boa-illustratie (sjabloon) | BEHOUDEN |
 | 7.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
@@ -170,33 +174,34 @@ De getekende boa-illustratie (één vrouwelijke boa) komt uit Straatintimidatie2
 | 7.6 | Tekst uit het Handhavingsplan: gevaar en openbare orde | — | — |
 | 7.7 | Lokale afspraken | icoonvisual | BEHOUDEN (functionele vectorvisual) |
 | 7.8 | Zelf afhandelen, overleggen of politie inschakelen | infographic routes | BEHOUDEN |
-| 7.9 | Situatie 1: zelf afhandelen | scene-woonstraat-fontein | NIEUW (placeholder staat klaar) |
-| 7.10 | Situatie 2: overleggen | scene-park-tas | NIEUW (placeholder staat klaar) |
-| 7.11 | Situatie 3: politie inschakelen | scene-station-groep | NIEUW (placeholder staat klaar) |
-| 7.12 | Zo verloopt een overdracht | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
+| 7.9 | Situatie 1: zelf afhandelen | scene-woonstraat-fontein | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 7.10 | Situatie 2: overleggen | scene-park-tas | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 7.11 | Situatie 3: politie inschakelen | scene-station-groep | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 7.12 | Zo verloopt een overdracht | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 7.13 | Kort samengevat | weegschaal | BEHOUDEN (functionele illustratie) |
-| 7.14 | Kort samengevat | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
+| 7.14 | Kort samengevat | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 7.15 | Vooruitblik: Van melding tot proces-verbaal | boa-illustratie (sjabloon) | BEHOUDEN |
 | 8.1 | Leerdoelen | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 8.2 | Terugblik | boa-illustratie (sjabloon) | BEHOUDEN |
-| 8.3 | De casus: een knal op de parkeerplaats | scene-parkeerplaats | NIEUW (placeholder staat klaar) |
+| 8.3 | De casus: een knal op de parkeerplaats | scene-parkeerplaats | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 8.4 | Stap 1 – Wat neem je waar? | boa-observeer | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 8.5 | Stap 2 – Is er mogelijk sprake van een strafbaar feit? | wetboek | BEHOUDEN (functionele illustratie) |
-| 8.6 | Stap 3 – Welk vuurwerk kan dit zijn? | scene-parkeerplaats-tas | NIEUW (placeholder staat klaar) |
+| 8.6 | Stap 3 – Welk vuurwerk kan dit zijn? | scene-parkeerplaats-tas | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
 | 8.7 | Stap 4 – Welke informatie heb je nog nodig? | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
 | 8.8 | Stap 5 – Ben je hiervoor opsporingsbevoegd? | icoonvisual | BEHOUDEN (functionele vectorvisual) |
-| 8.9 | Stap 6 – Welke bevoegdheden kun je toepassen? | scene-boa-staandehouden | NIEUW (placeholder staat klaar) |
-| 8.10 | Stap 7 – Is het veilig om zelf verder te handelen? | scene-afstand-melden | NIEUW (placeholder staat klaar) |
-| 8.11 | Stap 8 – Moet de politie worden ingeschakeld? | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
-| 8.12 | Stap 9 – Wat neem je in beslag of draag je over? | scene-inbeslagname-tafel | NIEUW (placeholder staat klaar) |
-| 8.13 | Stap 10 – Het proces-verbaal: zo niet | pv-document | BEHOUDEN (functionele illustratie) |
-| 8.14 | Stap 10 – Het proces-verbaal: zo wel | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 8.15 | Kort samengevat | scene-etiket-categorie | NIEUW (placeholder staat klaar) |
-| 8.16 | Kort samengevat | wetboek | BEHOUDEN (functionele illustratie) |
-| 8.17 | Kort samengevat | weegschaal | BEHOUDEN (functionele illustratie) |
-| 8.18 | Kort samengevat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 8.19 | Kort samengevat | scene-zwaar-illegaal | NIEUW (placeholder staat klaar) |
-| 8.20 | Kort samengevat | scene-boa-politie-overdracht | NIEUW (placeholder staat klaar) |
-| 8.21 | Beslishulp: de vier vragen op straat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
-| 8.22 | Beslishulp: de vier vragen op straat | infographic beslishulp | BEHOUDEN |
-| 8.23 | Klaar voor de eindtoets | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 8.9 | Stap 6 – Welke bevoegdheden kun je toepassen? | scene-boa-staandehouden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.10 | Stap 7 – Is het veilig om zelf verder te handelen? | scene-afstand-melden | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.11 | Stap 8 – Moet de politie worden ingeschakeld? | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.12 | Stap 9 – Wat neem je in beslag of draag je over? | scene-inbeslagname-tafel | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.13 | Stap 10 – Wat komt in het proces-verbaal? | pv-document | BEHOUDEN (functionele illustratie) |
+| 8.14 | Stap 10 – Zo niet | pv-document | BEHOUDEN (functionele illustratie) |
+| 8.15 | Stap 10 – Zo wel | boa-notitie | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 8.16 | Kort samengevat | scene-etiket-categorie | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.17 | Kort samengevat | wetboek | BEHOUDEN (functionele illustratie) |
+| 8.18 | Kort samengevat | weegschaal | BEHOUDEN (functionele illustratie) |
+| 8.19 | Kort samengevat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 8.20 | Kort samengevat | scene-zwaar-illegaal | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.21 | Kort samengevat | scene-boa-politie-overdracht | NIEUW — foto nog niet geleverd; nu tijdelijk pictogrambeeld (geen placeholdertekst) |
+| 8.22 | Beslishulp: de vier vragen op straat | boa-uitleg | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
+| 8.23 | Beslishulp: de vier vragen op straat | infographic beslishulp | BEHOUDEN |
+| 8.24 | Klaar voor de eindtoets | boa-armen | VERVANGEN (fotografisch boa-portret, per casus ander personage) |
