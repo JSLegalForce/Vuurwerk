@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920d`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920e`).
 
 ## JURIDISCHE BRONNEN
 
@@ -51,6 +51,7 @@ Ten opzichte van versie 0.2:
 | Halt / reprimande | Verwijderd. Er is geen afdoende officiële bron over de actuele stand. |
 | Veiligheid | Alleen de algemene boodschap staat erin: een bevoegdheid is geen plicht, veiligheid gaat voor, afstand houden en de politie inschakelen. Er zijn geen verzonnen afstanden, meters of protocollen. |
 | Proces-verbaal | Checklist van 12 onderdelen, met een "Zo niet"- en een "Zo wel"-voorbeeld. Daarin staan ook de vordering, de reactie van betrokkene en de grondslag van elke bevoegdheid. |
+| Pagina “Waarom vuurwerk bij jouw werk hoort” | Onderwerp 1, pagina 4 opnieuw opgebouwd: drie informatiekaarten (nieuwe regels, bevoegdheid domein I, eerst onderzoek doen), een Onthoud-kaart, de aangeleverde foto rechts en een bronnenblok met klikbare bronnen onder elkaar. Opgebouwd met bestaande componenten (`rows`, `kcard`, `split`); `app.css` is niet gewijzigd. De zin over F2 en F3 is aangevuld tot “verboden voor personen zonder gespecialiseerde kennis”, conform artikel 9.2.2.1a, eerste lid, Wm. |
 | Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
 ## WED-BEVOEGDHEDEN
@@ -91,10 +92,10 @@ Alle WED-bevoegdheden gelden alleen "voor zover dat redelijkerwijs voor de vervu
 
 ## BEELDEN
 
-- 21 foto's vervangen: **nee** (1/21). Beeld N1 (`scene-plein-knal`) is door de opdrachtgever aangeleverd en staat op de pagina “Een harde knal op het plein” (onderwerp 1). De overige 20 foto's kunnen in deze werkomgeving niet worden gemaakt; er is geen beeldgenerator beschikbaar.
+- 21 foto's vervangen: **nee** (2/21). Beeld N1 (`scene-plein-knal`) staat op de pagina “Een harde knal op het plein” en beeld N22 (`scene-boa-jongeren-plein`) op de pagina “Waarom vuurwerk bij jouw werk hoort” (beide onderwerp 1). Beide foto's zijn door de opdrachtgever aangeleverd. De overige 19 foto's kunnen in deze werkomgeving niet worden gemaakt; er is geen beeldgenerator beschikbaar.
 - Tijdelijke oplossing: pictogrambeelden (op één plek de getekende boa uit de master). Er is geen placeholdertekst en er zijn geen kapotte beelden.
 - De pictogrambeelden zijn decoratief (`aria-hidden`), zodat de alt-tekst geen scène beschrijft die niet te zien is.
-- De map `assets/images/` met placeholderbestanden is verwijderd. In die map staat nu alleen de aangeleverde foto `plein-knal.webp` (1600 × 829 px, WebP, 92 kB), lokaal opgenomen zodat de e-learning offline blijft werken.
+- De map `assets/images/` met placeholderbestanden is verwijderd. In die map staan nu alleen de aangeleverde foto's `plein-knal.webp` (1600 × 829 px, 92 kB) en `boa-jongeren-plein.webp` (729 × 580 px, 67 kB), lokaal opgenomen zodat de e-learning offline blijft werken.
 - Dezelfde scene op een andere pagina (onderwerp 4, dezelfde casus) houdt bewust het pictogrambeeld, zodat alleen de gevraagde pagina is gewijzigd.
 - Beeldplan, personages A–K, prompts en alt-teksten: `BEELDPLAN.md`. Een foto activeren: zet het bestand in `assets/images/`, voeg de scene-naam toe aan `FOTO_AANWEZIG` in het bouwscript en bouw opnieuw.
 
