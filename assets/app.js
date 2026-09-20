@@ -209,17 +209,24 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "4.5":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
 "4.6":{"t":"casus","a":"scene-tas-inhoud"},
 "4.7":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.8":{"t":"casus","a":"scene-tas-inhoud"},
-"4.9":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.10":{"t":"split","a":"scene-afstand-melden","rows":["slot","wet","waarschuwing"]},
-"4.11":{"t":"split","a":{"vis":"proces"},
+"4.8":{"t":"checklist","a":"wetboek","icons":["bus","afspraak","hand","slot","wet"]},
+"4.9":{"t":"casus","a":"scene-vervoermiddel-onderzoek"},
+"4.10":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.11":{"t":"casus","a":"scene-vervoermiddel-onderzoek"},
+"4.12":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.13":{"t":"casus","a":"scene-boa-staandehouden"},
+"4.14":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.15":{"t":"casus","a":"scene-tas-inhoud"},
+"4.16":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
+"4.17":{"t":"split","a":"scene-afstand-melden","rows":["slot","wet","waarschuwing"]},
+"4.18":{"t":"split","a":{"vis":"proces"},
 "rows":["pv","ovj","wet"],"wide":1},
-"4.12":{"t":"checklist","a":"pv-document","icons":["locatie","oog","vuurwerk","document","wet","lijst"]},
-"4.13":{"t":"split","a":"scene-boa-politie-overdracht","rev":1,"rows":["afspraak","lijst"]},
-"4.14":{"t":"letop","a":"boa-armen"},
-"4.15":{"t":"onthoud","a":"boa-uitleg","icons":["route","wet"]},
-"4.16":{"t":"onthoud","a":"pv-document","icons":["slot","pv","afspraak"]},
-"4.17":{"t":"vooruit"},
+"4.19":{"t":"checklist","a":"pv-document","icons":["locatie","oog","vuurwerk","document","wet","lijst"]},
+"4.20":{"t":"split","a":"scene-boa-politie-overdracht","rev":1,"rows":["afspraak","lijst"]},
+"4.21":{"t":"letop","a":"boa-armen"},
+"4.22":{"t":"onthoud","a":"boa-uitleg","icons":["route","wet","lijst"]},
+"4.23":{"t":"onthoud","a":"pv-document","icons":["slot","pv","afspraak"]},
+"4.24":{"t":"vooruit"},
 "5.0":{"t":"lo","a":"boa-armen"},
 "5.1":{"t":"casus","a":"scene-tas-inhoud"},
 "5.2":{"t":"split","a":"scene-vuurwerk-los","rows":["vraag","oog","pv"]},
@@ -261,7 +268,7 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "7.6":{"t":"bd","s":1,"a":"boa-notitie","rev":0,"rows":["vraag","zoeken"]},
 "7.7":{"t":"bd","s":3,"a":{"icon":"schild","orbit":["domein","wet","lijst"]},
 "rev":1,"rows":["schild","domein"]},
-"7.8":{"t":"bd","s":4,"a":"scene-boa-staandehouden","rev":0,"rows":["route","wet"]},
+"7.8":{"t":"bd","s":4,"a":"scene-boa-staandehouden","rev":0,"rows":["route","hand","wet"]},
 "7.9":{"t":"bd","s":4,"a":"scene-afstand-melden","rev":1,"rows":["waarschuwing","schild"]},
 "7.10":{"t":"bd","s":4,"a":"scene-boa-politie-overdracht","rev":0,"rows":["afspraak","mensen"]},
 "7.11":{"t":"bd","s":4,"a":"scene-zwaar-illegaal","rev":1,"rows":["slot","afspraak"]},
@@ -276,17 +283,17 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "7.20":{"t":"info","v":"beslishulp"},
 "7.21":{"t":"hero","a":"boa-armen","rows":["toets","boek"],"eind":1}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaal","1.4":"boa-notitie","2.0":"doelwit","2.1":"boa-uitleg","2.2":"weegschaal","2.3":"boa-notitie","3.0":"boa-uitleg","3.1":"weegschaal","3.2":"boa-notitie","3.3":"vraag","3.4":"wetboek","4.0":"weegschaal","4.1":"boa-notitie","4.2":"vraag","4.3":"wetboek","4.4":"doelwit","5.0":"boa-notitie","5.1":"vraag","5.2":"wetboek","5.3":"doelwit","6.0":"vraag","6.1":"wetboek","6.2":"doelwit","6.3":"boa-uitleg"};
+const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaal","1.4":"boa-notitie","2.0":"doelwit","2.1":"boa-uitleg","2.2":"weegschaal","2.3":"boa-notitie","3.0":"boa-uitleg","3.1":"weegschaal","3.2":"boa-notitie","3.3":"vraag","3.4":"wetboek","4.0":"weegschaal","4.1":"boa-notitie","4.2":"vraag","4.3":"wetboek","4.4":"doelwit","4.5":"boa-uitleg","4.6":"weegschaal","5.0":"boa-notitie","5.1":"vraag","5.2":"wetboek","5.3":"doelwit","6.0":"vraag","6.1":"wetboek","6.2":"doelwit","6.3":"boa-uitleg"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
-'scene-plein-knal':"Plein in de avond: een groep jongeren staat bij elkaar. Eén jongere houdt vuurwerk in zijn hand. Naast de groep staat een tas met vuurwerk. Een boa kijkt vanaf enige afstand toe.",'scene-vuurwerk-f1':"Voorbeelden van vuurwerk uit categorie F1, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Voorbeelden van vuurwerk uit categorie F2, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f3':"Voorbeelden van vuurwerk uit categorie F3, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk, zoals dat bij een vuurwerkshow wordt gebruikt.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket en categorieaanduiding. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond.",'scene-zwaar-illegaal':"In beslag genomen zwaar illegaal vuurwerk in een bak.",'scene-tas-inhoud':"Open tas met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan en houdt hem staande op straat.",'scene-boa-politie-overdracht':"Een boa draagt een situatie over aan twee politiemensen bij een politieauto.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas met vuurwerk.",'scene-afstand-melden':"Een boa houdt afstand van een verdacht voorwerp en meldt zich via de portofoon.",
+'scene-plein-knal':"Plein in de avond: een groep jongeren staat bij elkaar. Eén jongere houdt vuurwerk in zijn hand. Naast de groep staat een tas met vuurwerk. Een boa kijkt vanaf enige afstand toe.",'scene-vuurwerk-f1':"Voorbeelden van vuurwerk uit categorie F1, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Voorbeelden van vuurwerk uit categorie F2, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f3':"Voorbeelden van vuurwerk uit categorie F3, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk, zoals dat bij een vuurwerkshow wordt gebruikt.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket en categorieaanduiding. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond.",'scene-zwaar-illegaal':"In beslag genomen zwaar illegaal vuurwerk in een bak.",'scene-tas-inhoud':"Open tas met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan en houdt hem staande op straat.",'scene-boa-politie-overdracht':"Een boa draagt een situatie over aan twee politiemensen bij een politieauto.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas met vuurwerk.",'scene-afstand-melden':"Een boa houdt afstand van een verdacht voorwerp en meldt zich via de portofoon.",'scene-vervoermiddel-onderzoek':"Een boa kijkt in de open kofferbak van een geparkeerde auto. Daarin ligt een tas met vuurwerk. De bestuurder staat ernaast.",
 'wetboek':'Wet- en regelgeving over vuurwerk','pv-document':'Proces-verbaal met handtekening','doelwit':'Doelwit met pijl','vraag':'Vraagteken','weegschaal':'Weegschaal'
 };
 
 /* ── Infographics en procesplaten (HTML + duotone iconen) ── */
 /* semi-realistische praktijkscènes (vervangen de oude vectorscènes) */
-const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-vuurwerk-f1':'../images/vuurwerk-f1.webp','scene-vuurwerk-f2':'../images/vuurwerk-f2.webp','scene-vuurwerk-f3':'../images/vuurwerk-f3.webp','scene-vuurwerk-professioneel':'../images/vuurwerk-professioneel.webp','scene-etiket-categorie':'../images/etiket-categorie.webp','scene-vuurwerk-los':'../images/vuurwerk-los.webp','scene-zwaar-illegaal':'../images/zwaar-illegaal.webp','scene-tas-inhoud':'../images/tas-inhoud.webp','scene-boa-staandehouden':'../images/boa-staandehouden.webp','scene-boa-politie-overdracht':'../images/boa-politie-overdracht.webp','scene-parkeerplaats':'../images/parkeerplaats.webp','scene-afstand-melden':'../images/afstand-melden.webp'};
+const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-vuurwerk-f1':'../images/vuurwerk-f1.webp','scene-vuurwerk-f2':'../images/vuurwerk-f2.webp','scene-vuurwerk-f3':'../images/vuurwerk-f3.webp','scene-vuurwerk-professioneel':'../images/vuurwerk-professioneel.webp','scene-etiket-categorie':'../images/etiket-categorie.webp','scene-vuurwerk-los':'../images/vuurwerk-los.webp','scene-zwaar-illegaal':'../images/zwaar-illegaal.webp','scene-tas-inhoud':'../images/tas-inhoud.webp','scene-boa-staandehouden':'../images/boa-staandehouden.webp','scene-boa-politie-overdracht':'../images/boa-politie-overdracht.webp','scene-parkeerplaats':'../images/parkeerplaats.webp','scene-afstand-melden':'../images/afstand-melden.webp','scene-vervoermiddel-onderzoek':'../images/vervoermiddel-onderzoek.webp'};
 const IMG=(n,alt,cls)=>'<img class="'+(cls||'')+(ART_FILE[n]?' foto':'')+'" src="assets/illustraties/'+(ART_FILE[n]||n+'.svg')+'?v='+ASSET_V+'" alt="'+(alt==null?(ART_ALT[n]||''):alt)+'" loading="eager" decoding="async">';
 /* ── BOA-illustratieset (stijlreferentie JS Legal Force) ── */
 const BOA_POSE={'boa-armen':{},'boa-uitleg':{chip:'lamp'},'boa-notitie':{prop:'notitieblok',chip:'oog'},'boa-dossier':{prop:'pv-los'},'boa-observeer':{chip:'oog'}};
