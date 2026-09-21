@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260920e`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260921b`).
 
 ## JURIDISCHE BRONNEN
 
@@ -52,6 +52,9 @@ Ten opzichte van versie 0.2:
 | Veiligheid | Alleen de algemene boodschap staat erin: een bevoegdheid is geen plicht, veiligheid gaat voor, afstand houden en de politie inschakelen. Er zijn geen verzonnen afstanden, meters of protocollen. |
 | Proces-verbaal | Checklist van 12 onderdelen, met een "Zo niet"- en een "Zo wel"-voorbeeld. Daarin staan ook de vordering, de reactie van betrokkene en de grondslag van elke bevoegdheid. |
 | Pagina “Waarom vuurwerk bij jouw werk hoort” | Onderwerp 1, pagina 4 opnieuw opgebouwd: drie informatiekaarten (nieuwe regels, bevoegdheid domein I, eerst onderzoek doen), een Onthoud-kaart, de aangeleverde foto rechts en een bronnenblok met klikbare bronnen onder elkaar. Opgebouwd met bestaande componenten (`rows`, `kcard`, `split`); `app.css` is niet gewijzigd. De zin over F2 en F3 is aangevuld tot “verboden voor personen zonder gespecialiseerde kennis”, conform artikel 9.2.2.1a, eerste lid, Wm. |
+| Pagina “Soorten vuurwerk en de categorieën” | Onderwerp 2, nieuwe pagina 5 (na “Overzicht van de categorieën”). Vier categoriekaarten F1–F4/zwaar-illegaal met illustratieve foto’s, etiketkaart, blok “Is de categorie nog niet duidelijk?”, Onthoud-kaart, korte samenvatting en bronnen. Foto’s (200 × 300 px) uitgesneden uit de aangeleverde voorbeelddia (`assets/images/cat-*.webp`); later te vervangen door scherpere losse foto’s onder dezelfde bestandsnaam. Opmaak in `assets/soorten.css`; `app.css` ongewijzigd. Opgeslagen voortgang schuift automatisch één stap mee (opslag v14). |
+| Terminologie art. 9.2.2.1a lid 1 | Onderwerp 3, pagina “De Wet veilige jaarwisseling”: “hebben of afsteken” → “het bezit en het gebruik … is verboden voor anderen dan personen met gespecialiseerde kennis”. Overige vindplaatsen gecontroleerd en bewust behouden (andere bepaling, uitleg, casus of broncitaat). |
+| Controle onderwerp 2 (21-9-2026) | Nieuwe pagina: B1-formulering controles F2/F3, statusblok onbekend vuurwerk, “boa bevoegd” → “boa domein I bevoegd voor art. 9.2.2.1a Wm”, F4 als wettelijke categorie benoemd, voorbehoud classificatie bij F1 en F2-bijschriften, bronnen aangevuld (lid 4; art. 2.3.2/2.3.2a). Bronnen in onderwerp 2 als korte klikbare bronnaam in plaats van zichtbare URL. |
 | Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
 ## WED-BEVOEGDHEDEN
