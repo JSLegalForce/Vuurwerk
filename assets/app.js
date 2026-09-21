@@ -1,4 +1,4 @@
-const ASSET_V='vw260921b';
+const ASSET_V='vw260921c';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -908,23 +908,17 @@ T.rijkaart=(P,spec,st)=>{
   return s;
 };
 T.soorten=(P,spec,st)=>{
-  /* categorieënoverzicht: kop + etiketkaart, vier categoriekaarten, status, Onthoud + samenvatting */
+  /* categorieënoverzicht: kop + infoblok, vier categoriekaarten, fotonoot, Onthoud met korte samenvatting */
   const box=el('div','cat-page');
-  const k=P.rest.filter(n=>n.nodeType===1&&n.classList.contains('kaart'));
   const top=el('div','cat-top');
-  const tw=el('div','copy');[soortChip(P,'wet'),titleEl(P),P.intro].filter(Boolean).forEach(n=>tw.appendChild(n));
+  const tw=el('div','copy');[titleEl(P),P.intro].filter(Boolean).forEach(n=>tw.appendChild(n));
   top.appendChild(tw);
-  if(k[0]){const {card}=kcard(k[0],'document','cat-info');top.appendChild(card);}
+  const rest=P.rest.filter(n=>n.nodeType===1);
+  const info=rest.find(n=>n.classList.contains('cat-info'));if(info)top.appendChild(info);
   box.appendChild(top);
-  P.rest.forEach(n=>{
-    if(n.nodeType!==1||n===k[0])return;
-    if(n.classList.contains('cat-slot')){
-      const o=n.querySelector('.kaart');
-      if(o){const {card}=kcard(o,'schild');o.replaceWith(card);}
-    }
-    if(n.classList.contains('cat-grid'))[...n.querySelectorAll('.cat-bh')].forEach((h,i)=>h.insertAdjacentHTML('afterbegin',di(i%2?(h.closest('.cat-f1')?'vink':'waarschuwing'):'boek')));
-    box.appendChild(n);
-  });
+  rest.forEach(n=>{if(n!==info)box.appendChild(n);});
+  box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='uitroep'?'<b>!</b>':i==='vink'?vink:di(i);});
+  box.querySelectorAll('.cat-f4 .cat-code').forEach(c=>c.innerHTML=di('waarschuwing'));
   return box;
 };
 T.bd=(P,spec,st)=>{
