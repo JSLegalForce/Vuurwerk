@@ -272,3 +272,18 @@
 .cc-etiket .cc-intro-ic{background:#fdebc8;border-color:#f3dfb8}.cc-etiket .cc-intro-ic .di{color:var(--gold-d)}
 @media (max-width:1180px){.cc-etiket{order:4}.cc-conclusie{order:5}}
 .ck-tegels>.ck-tegel:last-child:nth-child(odd){grid-column:1/-1}
+
+/* ── eindcorrectie 22-9-2026 ── */
+/* overzichtspagina "De categorieën op een rij" */
+.ck-overzicht .cat-code{background:var(--navy,#112558);color:#fff}
+.ck-overzicht .ck-top{grid-template-columns:1fr}
+.ck-overzicht .ck-letop{margin-top:0}
+/* telefoon: het decoratieve wetboek boven elke wettekstpagina weglaten, zodat titel en tekst direct in beeld staan */
+@media (max-width:640px){.wet-page .wet-top>.media{display:none}
+  /* decoratieve illustratie boven tekstpagina's kleiner, zodat de inhoud hoger begint */
+  .page .stage .media:has(> figure.art:not(.art-vis):not(.art-scene)),
+  .page .stage .casus-scene:has(> figure.art:not(.art-vis):not(.art-scene)),
+  .qcard .q-side:has(> figure.art:not(.art-vis):not(.art-scene)){zoom:.66}}
+/* certificaat: toelichting status */
+.cert .cert-note{max-width:620px;margin:18px auto 0;font-size:.82rem;line-height:1.45;color:#5a6478;text-align:center}
+@media print{.cert .cert-note{font-size:9pt;margin-top:10px}}
