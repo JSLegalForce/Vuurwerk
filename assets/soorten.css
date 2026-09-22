@@ -82,3 +82,69 @@
   .cat-sv>div{grid-template-columns:1fr;gap:0}
 }
 @media print{.cat,.cat-onthoud{break-inside:avoid;box-shadow:none}}
+
+/* ══ Categoriepagina's F1–F4 (onderwerp 2, pagina 5–8) ══ */
+.ck{--c:var(--navy2);--c-l:var(--blue-ll)}
+.ck.cat-f1{--c:var(--f1);--c-l:var(--f1-l)}.ck.cat-f2{--c:var(--f2);--c-l:var(--f2-l)}.ck.cat-f3{--c:var(--f3);--c-l:var(--f3-l)}.ck.cat-f4{--c:var(--f4);--c-l:var(--f4-l)}
+.ck>*+*{margin-top:18px}
+.ck-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:14px 28px;align-items:center}
+.ck-h{display:flex;align-items:center;gap:18px;background:var(--c-l);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:18px;padding:16px 20px}
+.ck-h .cat-code{width:76px;height:76px;font-size:2rem}
+.ck-h .cat-code .di{width:40px;height:40px}
+.ck-k{font-family:var(--ui);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.ck-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.15;color:var(--c);margin:2px 0}
+.ck-sub{font-family:var(--ui);font-weight:600;font-size:1.05rem;color:var(--ink2)}
+.ck-intro{margin:14px 0 0!important}
+.ck-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:start}
+.ck-links{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh-s);padding:16px}
+.ck-fotos{padding:0;gap:10px}
+.ck-fotos .cat-foto figcaption{font-size:.84rem;min-height:calc(1.2em + 14px);padding:7px 4px}
+.ck-vb{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;margin-top:16px}
+.ck-vb p{font-size:1rem;line-height:1.5}
+.ck-ic{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:var(--c-l);color:var(--c)}
+.ck-ic .di{width:22px;height:22px;color:var(--c)}
+.ck-ic-vb{background:var(--blue-l)}.ck-ic-vb .di{color:var(--blue)}
+.ck-bh{font-family:var(--ui);font-weight:700;font-size:1.08rem;color:var(--navy);line-height:1.3;margin-bottom:2px}
+.ck-links .cat-fotonoot{margin-top:12px!important;padding-top:10px;border-top:1px solid var(--line)}
+.ck-wmh{display:flex;align-items:center;gap:10px;font-size:1.25rem;margin-bottom:12px}
+.ck-wm-ic{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff}
+.ck-wm-ic svg{width:18px;height:18px}.ck-wm-ic b{font-family:var(--ui);font-weight:800;font-size:1.15rem;line-height:1}
+.ck-tegels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ck-tegel{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;box-shadow:var(--sh-s);padding:14px 16px}
+.ck-tegel .ck-ic{width:40px;height:40px}
+.ck-tegel .ck-ic .di{width:24px;height:24px}
+.ck-tk{font-family:var(--ui);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:3px}
+.ck-tegel p{font-size:1rem;line-height:1.5}
+.ck-tegels>.ck-tegel:only-child,.ck-tegels>.ck-tegel:nth-child(3):last-child{grid-column:1/-1}
+.ck-politie{background:var(--f4);border-color:var(--f4);border-top-color:var(--navy)}
+.ck-politie .ck-tk,.ck-politie p{color:#fff}.ck-politie strong{color:#fff;font-weight:800}
+.ck-politie .ck-ic{background:rgba(255,255,255,.16)}.ck-politie .ck-ic .di{color:#fff;--duo:rgba(255,255,255,.3)}
+.ck-samen{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:14px;padding:12px 18px}
+.ck-samen-l{font-family:var(--ui);font-weight:800;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy2)}
+.ck-samen-c{font-family:var(--ui);font-weight:800;color:#fff;background:var(--c);border-radius:999px;padding:3px 12px;font-size:.92rem}
+.ck-samen ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px}
+.ck-samen li{position:relative;padding-left:20px;font-size:.98rem;color:var(--navy)}
+.ck-samen li::before{content:"→";position:absolute;left:0;color:var(--c);font-weight:700}
+.ck-onthoud{margin-top:22px}
+@media (max-width:1000px){
+  .ck-top{grid-template-columns:1fr}
+  .ck-body{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .ck-h{padding:12px 14px;gap:12px}
+  .ck-h .cat-code{width:56px;height:56px;font-size:1.45rem}
+  .ck-h .cat-code .di{width:30px;height:30px}
+  .ck-tegels{grid-template-columns:1fr}
+  .ck-samen{padding:12px 14px}
+  .ck-samen ul{flex-direction:column;gap:2px}
+}
+@media print{.ck-tegel,.ck-links{break-inside:avoid;box-shadow:none}}
+/* rustiger bronregel op de categoriepagina's: korte klikbare bronnamen naast elkaar */
+.tpl-categorie .bronnen{margin-top:16px;background:transparent}
+.tpl-categorie .bronnen .bb-l{display:flex;flex-wrap:wrap;gap:4px 0;list-style:none;counter-reset:none}
+.tpl-categorie .bronnen .bb-l li{display:inline;padding:0;margin:0;font-size:.86rem;font-style:normal;line-height:1.5;color:var(--ink2)}
+.tpl-categorie .bronnen .bb-l li::before{display:none}
+.tpl-categorie .bronnen .bb-l li+li::before{content:"·";display:inline;position:static;background:none;width:auto;height:auto;margin:0 10px;color:var(--mute);font-weight:700}
+.tpl-categorie .bronnen .bb-l a{font-weight:600;color:var(--blue)}
+.tpl-categorie .bronnen .bb-toel{color:var(--mute)}
+.ck-ic>svg{width:22px;height:22px;color:var(--c)}

@@ -1,4 +1,4 @@
-const ASSET_V='vw260921c';
+const ASSET_V='vw260921e';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -157,29 +157,32 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "rows":["lagen","oog"]},
 "1.2":{"t":"wet","art":"Art. 1A.1.3 Vuurwerkbesluit"},
 "1.3":{"t":"info","v":"categorieen"},
-"1.4":{"t":"soorten"},
-"1.5":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","vink"]},
+"1.4":{"t":"categorie"},
+"1.5":{"t":"categorie"},
+"1.6":{"t":"categorie"},
+"1.7":{"t":"categorie"},
+"1.8":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","vink"]},
 "rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.6":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
+"1.9":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
 "rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.7":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
+"1.10":{"t":"split","a":{"icon":"vuurwerk","orbit":["document","lijst"]},
 "rev":0,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.8":{"t":"split","a":{"icon":"vuurwerk","orbit":["waarschuwing","akte"]},
+"1.11":{"t":"split","a":{"icon":"vuurwerk","orbit":["waarschuwing","akte"]},
 "rev":1,"rows":["wet","mensen","vuurwerk","oog","waarschuwing"]},
-"1.9":{"t":"wet","art":"Art. 1.1.2a Vuurwerkbesluit"},
-"1.10":{"t":"wet","art":"Art. 2.1.3 Vuurwerkbesluit"},
-"1.11":{"t":"info","v":"vergelijk"},
-"1.12":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},
+"1.12":{"t":"wet","art":"Art. 1.1.2a Vuurwerkbesluit"},
+"1.13":{"t":"wet","art":"Art. 2.1.3 Vuurwerkbesluit"},
+"1.14":{"t":"info","v":"vergelijk"},
+"1.15":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},
 "rows":["vraag","oog","waarschuwing"]},
-"1.13":{"t":"info","v":"lagen4"},
-"1.14":{"t":"praktijk","a":"boa-notitie","ic":"oog","icons":["oog","document","zoeken","wet"]},
-"1.15":{"t":"casus","a":{"icon":"tas","orbit":["vuurwerk","document"]}},
-"1.16":{"t":"info","v":"checklist"},
-"1.17":{"t":"info","v":"keten7"},
-"1.18":{"t":"onthoud","a":{"icon":"document","orbit":["vuurwerk","lijst"]},
+"1.16":{"t":"info","v":"lagen4"},
+"1.17":{"t":"praktijk","a":"boa-notitie","ic":"oog","icons":["oog","document","zoeken","wet"]},
+"1.18":{"t":"casus","a":{"icon":"tas","orbit":["vuurwerk","document"]}},
+"1.19":{"t":"info","v":"checklist"},
+"1.20":{"t":"info","v":"keten7"},
+"1.21":{"t":"onthoud","a":{"icon":"document","orbit":["vuurwerk","lijst"]},
 "icons":["lagen","vuurwerk","mensen"]},
-"1.19":{"t":"onthoud","a":"boa-notitie","icons":["document","vraag","pv"]},
-"1.20":{"t":"vooruit"},
+"1.22":{"t":"onthoud","a":"boa-notitie","icons":["document","vraag","pv"]},
+"1.23":{"t":"vooruit"},
 "2.0":{"t":"lo","a":"boa-armen"},
 "2.1":{"t":"split","a":"wetboek","rows":["route","wet"]},
 "2.2":{"t":"split","a":{"icon":"kalender","orbit":["wet","vuurwerk","document"]},
@@ -525,7 +528,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:14,profiel,phase,si,answers,ex}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:15,profiel,phase,si,answers,ex}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -598,6 +601,8 @@ function hervat(sv){
   profiel=sv.profiel;answers=sv.answers||{};si=sv.si||0;ex=sv.ex||null;phase=sv.phase;
   /* v14: pagina 'Soorten vuurwerk en de categorieën' toegevoegd als stap 14 (onderwerp 2, pagina 5) */
   if((sv.v||0)<14&&si>=13)si++;
+  /* v15: de overzichtspagina (stap 14) is vervangen door vier categoriepagina's F1–F4 */
+  if((sv.v||0)<15&&si>=14)si+=3;
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -917,6 +922,16 @@ T.soorten=(P,spec,st)=>{
   const info=rest.find(n=>n.classList.contains('cat-info'));if(info)top.appendChild(info);
   box.appendChild(top);
   rest.forEach(n=>{if(n!==info)box.appendChild(n);});
+  box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='uitroep'?'<b>!</b>':i==='vink'?vink:di(i);});
+  box.querySelectorAll('.cat-f4 .cat-code').forEach(c=>c.innerHTML=di('waarschuwing'));
+  return box;
+};
+T.categorie=(P,spec,st)=>{
+  /* categoriepagina F1–F4: kop met badge, voorbeelden met foto's, handelingskader in tegels, korte samenvatting */
+  const box=el('div','cat-page ck-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  const top=box.querySelector('.ck-top');if(P.intro&&top){P.intro.classList.add('ck-intro');top.after(P.intro);}
+  const h=box.querySelector('.ck-t');if(P.title&&h)h.innerHTML=P.title.innerHTML;
   box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='uitroep'?'<b>!</b>':i==='vink'?vink:di(i);});
   box.querySelectorAll('.cat-f4 .cat-code').forEach(c=>c.innerHTML=di('waarschuwing'));
   return box;
