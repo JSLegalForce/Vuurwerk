@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260922c`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260922d`).
 
 ## JURIDISCHE BRONNEN
 
@@ -60,6 +60,7 @@ Ten opzichte van versie 0.2:
 | Pagina “Categorie is nog geen conclusie” (22-9-2026) | Onderwerp 1, pagina 5 opnieuw vormgegeven volgens aangeleverde voorbeelddia: links vijf ronde beelden (F1, F2, F3, F4, Onbekend) rond een verpakking met etiket, met “Kijk altijd naar de verpakking!” en een fotonoot; rechts introtekst, kaarten F1, F2 en F3, F4 en Onbekend, en een afsluitende conclusie. Teksten volgens opdracht; F4-tekst aangepast. Beelden uitgesneden uit de voorbeelddia (`assets/images/concl-*.webp`). Opmaak in `assets/soorten.css`. |
 | Pagina “Wettekst: indeling in categorieën” (22-9-2026) | Onderwerp 2, pagina 3 opnieuw opgebouwd volgens aangeleverde voorbeelddia: vier categorieblokken F1–F4 met kenmerken volgens art. 1A.1.3 lid 3 Vuurwerkbesluit en foto’s (`assets/images/wet-*.webp`), kort wettekstblok (art. 1A.1.3 lid 1, letterlijk), kaarten “Wat betekent dit voor jou als boa?”, “Aangemelde instantie”, bronnen en “In gewone taal”. |
 | Opschoning onderwerp 2 (22-9-2026) | Onderwerp 2 van 24 naar 19 pagina’s: figuur “Overzicht van de categorieën” en oude pagina’s “Categorie F1–F4” verwijderd; unieke inhoud (wettelijke betekenis, waarnemen/niet concluderen, fop- en schertsvuurwerk, professioneel vuurwerk art. 1.1.1 en 1.2.2 lid 3, Handhavingsplan-praktijkterm) verplaatst naar de categoriepagina’s F1–F4. F4 niet meer gelabeld als “professioneel vuurwerk”; apart Let op-blok professioneel vuurwerk. “Beperkt gevaar” → “weinig gevaar”. Ontheffing: “aan een vereniging of stichting”; onderscheid voorwaarden (2.3.2) en voorschriften (2.3.2a). “Oudere verpakkingen” verwijderd. Etiketboodschap: belangrijke informatie, geen eindconclusie. F1: hele jaar kopen/afsteken, 12 jaar (art. 2.3.3, 2.3.5, 2.3.7). Nieuwe oefenvraag ontheffing (31 oefenvragen). Voortgang v16 schuift mee. Gecontroleerd tegen wetten.overheid.nl (Vuurwerkbesluit en Wm geldend 1-8-2026; Regeling domeinlijsten geldend 8-9-2026). |
+| Eindcorrectie (22-9-2026) | Etiket niet meer “geen bewijs”: etiket geeft belangrijke informatie, vastleggen en betrekken bij het onderzoek (onderwerp 2 oefenvraag 1, onderwerp 8 p6 en p16, eindtoetsvraag 2). Art. 9.2.2.1a lid 1 zonder “verkoop” in de samenvattingen van onderwerp 3 en 8 (verkoop apart als lid 2). F4: geen absolute “niet bevoegd”-formulering meer; “uit onderdeel 9 volgt geen algemene opsporingsbevoegdheid voor F4” (onderwerp 3 p10, onderwerp 4 p8 en oefenvraag 6, onderwerp 8 p18, eindtoetsvraag 8). F1 gecontroleerd tegen art. 1.2.4, 2.3.3, 2.3.5 en 2.3.7 Vuurwerkbesluit. |
 | Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
 ## WED-BEVOEGDHEDEN
