@@ -1,4 +1,4 @@
-/* ══ Vuurwerk — pagina "Soorten vuurwerk en de categorieën" (onderwerp 2) ══
+/* ══ Vuurwerk — paginaspecifieke opmaak: onderwerp 1 “Categorie is nog geen conclusie” en onderwerp 2 categoriepagina’s ══
    Aanvulling op app.css (dat byte-gelijk blijft aan de blauwdruk). Kop, lettertypen, kleuren,
    schaduwen, iconen, bronnen en navigatie komen uit app.css; hier staat alleen de opbouw van deze pagina.
    Categoriekleuren zijn accenten: badge, bovenrand, lichte kopband en kleine iconen. */
@@ -148,3 +148,52 @@
 .tpl-categorie .bronnen .bb-l a{font-weight:600;color:var(--blue)}
 .tpl-categorie .bronnen .bb-toel{color:var(--mute)}
 .ck-ic>svg{width:22px;height:22px;color:var(--c)}
+
+/* ══ Onderwerp 1 · "Categorie is nog geen conclusie" ══ */
+.cc{--f1:var(--green);--f2:#d2691c;--f3:var(--red);--f4:#5b3f8f;--onb:#4a5163;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:28px;align-items:center}
+.cc-vis{position:relative;display:grid;grid-template-columns:1fr 1.15fr 1fr;grid-template-areas:"f1 doos f2" "f3 doos f4" "hint onb ." "noot noot noot";gap:6px 4px;align-items:center;justify-items:center;padding:6px 0}
+.cc-ring{position:absolute;left:50%;top:44%;width:82%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#eef3fb 0,#e6eefa 62%,transparent 63%);border:2px dashed #cfdcf1;pointer-events:none}
+.cc-doos{grid-area:doos;margin:0;position:relative;z-index:1;width:100%;max-width:230px}
+.cc-doos img{width:100%;height:auto;aspect-ratio:230/280;object-fit:contain;filter:drop-shadow(0 14px 20px rgba(17,37,88,.28))}
+.cc-item{--c:var(--navy2);position:relative;z-index:2;margin:0;width:100%;max-width:190px;display:flex;flex-direction:column;align-items:center}
+.cc-f1{grid-area:f1;--c:var(--f1)}.cc-f2{grid-area:f2;--c:var(--f2)}.cc-f3{grid-area:f3;--c:var(--f3)}.cc-f4{grid-area:f4;--c:var(--f4)}.cc-onbekend{grid-area:onb;--c:var(--onb)}
+.cc-foto{display:block;width:78%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid #fff;box-shadow:0 10px 24px -10px rgba(17,37,88,.45);background:#1c2233}
+.cc-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.cc-badge{position:absolute;top:0;right:4%;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;border:3px solid #fff;font-family:var(--ui);font-weight:800;font-size:1.05rem;box-shadow:0 4px 10px -4px rgba(17,37,88,.4)}
+.cc-f2 .cc-badge,.cc-f3 .cc-badge{right:auto;left:4%}
+.cc-item figcaption{margin-top:-18px;position:relative;background:var(--c);color:#fff;border-radius:14px;padding:6px 12px 7px;text-align:center;font-family:var(--ui);line-height:1.2;box-shadow:0 6px 14px -8px rgba(17,37,88,.5);max-width:100%}
+.cc-item figcaption b{display:block;font-weight:800;font-size:.98rem}
+.cc-item figcaption span{display:block;font-size:.8rem;font-weight:500}
+.cc-hint{grid-area:hint;align-self:end;justify-self:start;font-family:var(--ui);font-weight:700;font-style:italic;font-size:1.02rem;line-height:1.2;color:var(--navy2);padding:0 0 10px 4px;position:relative;z-index:2}
+.cc-tekst>*+*{margin-top:12px}
+.cc-kop .ptitle{margin-top:6px}
+.cc-intro,.cc-conclusie{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:16px;padding:14px 18px}
+.cc-intro p,.cc-conclusie p{font-size:1.06rem;line-height:1.5;color:var(--navy)}
+.cc-intro-ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#fff;color:var(--blue);border:1px solid #d3e0f5}
+.cc-intro-ic .di,.cc-intro-ic svg{width:24px;height:24px;color:var(--blue)}
+.cc-conclusie{background:#fff;border-left:5px solid var(--navy2);box-shadow:var(--sh-s)}
+.cc-conclusie p{font-weight:600}
+.cc-kaarten{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cc-kaart{--c:var(--navy2);display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--sh-s);padding:14px 16px}
+.cc-k-f1{--c:var(--f1)}.cc-k-f23{--c:var(--f2)}.cc-k-f4{--c:var(--f4)}.cc-k-onb{--c:var(--onb)}
+.cc-kb{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font-family:var(--ui);font-weight:800;font-size:1.2rem}
+.cc-k-f23 .cc-kb{background:linear-gradient(135deg,var(--f2) 0 50%,var(--f3) 50% 100%);font-size:.82rem;line-height:1;grid-template-rows:auto auto;align-content:center;gap:2px}
+.cc-kaart h3{font-family:var(--ui);font-weight:800;font-size:1.05rem;color:var(--c);margin-bottom:3px}
+.cc-kaart p{font-size:.98rem;line-height:1.5;color:var(--ink)}
+@media (max-width:1180px){
+  .cc{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .cc-tekst{display:contents}
+  .cc-kop{order:0}.cc-vis{order:1}.cc-intro{order:2}.cc-kaarten{order:3}.cc-conclusie{order:4}
+  .cc-vis{max-width:640px;margin:0 auto;width:100%}
+}
+@media (max-width:760px){
+  .cc-vis{grid-template-columns:1fr 1fr;grid-template-areas:"doos doos" "f1 f2" "f3 f4" "onb onb" "hint hint" "noot noot";gap:14px 8px}
+  .cc-ring{display:none}
+  .cc-doos{max-width:170px}
+  .cc-item{max-width:170px}
+  .cc-hint{justify-self:center;padding:0}
+  .cc-kaarten{grid-template-columns:1fr}
+  .cc-kaart{grid-template-columns:44px minmax(0,1fr)}
+  .cc-kb{width:44px;height:44px;font-size:1.05rem}
+}
+.cc-noot{grid-area:noot;font-size:.86rem;font-style:italic;color:var(--ink2);text-align:center;margin-top:4px;position:relative;z-index:2}

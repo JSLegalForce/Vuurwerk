@@ -1,4 +1,4 @@
-const ASSET_V='vw260921e';
+const ASSET_V='vw260922a';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -145,8 +145,7 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "0.1":{"t":"casus","a":"scene-plein-knal"},
 "0.2":{"t":"praktijk","a":"boa-observeer","ic":"vraag"},
 "0.3":{"t":"rijkaart","a":"scene-boa-jongeren-plein","rows":["kalender","domein","boek"],"ic":"schild"},
-"0.4":{"t":"split","a":{"icon":"vuurwerk","orbit":["vink","kruis","vraag"]},
-"rev":1,"rows":["lijst","vink","lamp"]},
+"0.4":{"t":"concl"},
 "0.5":{"t":"split","a":{"vis":"bestanddelen"},
 "rows":["route","lijst","vink"]},
 "0.6":{"t":"split","a":"weegschaal","rev":1,"rows":["lijst","lamp"]},
@@ -935,6 +934,14 @@ T.categorie=(P,spec,st)=>{
   box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='uitroep'?'<b>!</b>':i==='vink'?vink:di(i);});
   box.querySelectorAll('.cat-f4 .cat-code').forEach(c=>c.innerHTML=di('waarschuwing'));
   return box;
+};
+T.concl=(P,spec,st)=>{
+  /* "Categorie is nog geen conclusie": beeld met vijf voorbeelden links, uitleg in kaarten rechts */
+  const cc=P.rest.find(n=>n.nodeType===1&&n.classList.contains('cc'));
+  const tekst=cc.querySelector('.cc-tekst');
+  const kop=el('div','cc-kop');[soortChip(P),titleEl(P)].filter(Boolean).forEach(n=>kop.appendChild(n));tekst.prepend(kop);
+  cc.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='vink'?vink:di(i);});
+  return cc;
 };
 T.bd=(P,spec,st)=>{
   const wrap=el('div','bd-page');
