@@ -256,3 +256,19 @@
   .wc-foto{grid-area:foto;height:auto;min-height:0;aspect-ratio:5/2}
   .wc-wet-a{margin-left:0}
 }
+
+/* ══ Opschoning 22-9-2026: Let op-blok professioneel vuurwerk, etiketkaart ══ */
+.ck-letop{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;background:#fff7ea;border:1px solid #f3dfb8;border-left:5px solid var(--gold);border-radius:16px;padding:14px 18px;margin-top:18px}
+.ck-letop .ck-ic{width:44px;height:44px;background:#fdebc8}.ck-letop .ck-ic .di{color:var(--gold-d)}
+.ck-letop-l{font-family:var(--ui);font-weight:800;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d)}
+.ck-letop h3{font-family:var(--ui);font-weight:800;font-size:1.12rem;color:var(--navy);margin:2px 0 4px}
+.ck-letop p,.ck-letop li{font-size:1rem;line-height:1.5}
+.ck-letop ul{list-style:none;margin:6px 0}
+.ck-letop li{position:relative;padding-left:16px;margin:3px 0}
+.ck-letop li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold-d)}
+.ck-top .cat-info p b{display:block;font-family:var(--ui);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.cc-etiket{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;background:#fff7ea;border:1px solid #f3dfb8;border-radius:16px;padding:12px 18px}
+.cc-etiket p{font-size:1rem;line-height:1.5;color:var(--navy)}
+.cc-etiket .cc-intro-ic{background:#fdebc8;border-color:#f3dfb8}.cc-etiket .cc-intro-ic .di{color:var(--gold-d)}
+@media (max-width:1180px){.cc-etiket{order:4}.cc-conclusie{order:5}}
+.ck-tegels>.ck-tegel:last-child:nth-child(odd){grid-column:1/-1}
