@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260922b`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260922c`).
 
 ## JURIDISCHE BRONNEN
 
@@ -59,6 +59,7 @@ Ten opzichte van versie 0.2:
 | Vier categoriepagina’s F1–F4 (22-9-2026) | Overzichtspagina in onderwerp 2 vervangen door vier pagina’s (pagina 5–8): F1, F2, F3 en “F4 en ander zwaar/illegaal vuurwerk”. Per pagina: kop met badge, foto’s, voorbeelden, “Wat moet je weten?” in tegels, korte samenvatting en rustige bronregel; op pagina 8 de Onthoud-kaart voor alle categorieën. Teksten volgens opdracht; F3-foto’s als “Mogelijke voorbeelden”, F4-foto’s als voorbeelden van zwaar/illegaal vuurwerk. Voortgang schuift mee (opslag v15). Onderwerp 2 telt nu 24 pagina’s. |
 | Pagina “Categorie is nog geen conclusie” (22-9-2026) | Onderwerp 1, pagina 5 opnieuw vormgegeven volgens aangeleverde voorbeelddia: links vijf ronde beelden (F1, F2, F3, F4, Onbekend) rond een verpakking met etiket, met “Kijk altijd naar de verpakking!” en een fotonoot; rechts introtekst, kaarten F1, F2 en F3, F4 en Onbekend, en een afsluitende conclusie. Teksten volgens opdracht; F4-tekst aangepast. Beelden uitgesneden uit de voorbeelddia (`assets/images/concl-*.webp`). Opmaak in `assets/soorten.css`. |
 | Pagina “Wettekst: indeling in categorieën” (22-9-2026) | Onderwerp 2, pagina 3 opnieuw opgebouwd volgens aangeleverde voorbeelddia: vier categorieblokken F1–F4 met kenmerken volgens art. 1A.1.3 lid 3 Vuurwerkbesluit en foto’s (`assets/images/wet-*.webp`), kort wettekstblok (art. 1A.1.3 lid 1, letterlijk), kaarten “Wat betekent dit voor jou als boa?”, “Aangemelde instantie”, bronnen en “In gewone taal”. |
+| Opschoning onderwerp 2 (22-9-2026) | Onderwerp 2 van 24 naar 19 pagina’s: figuur “Overzicht van de categorieën” en oude pagina’s “Categorie F1–F4” verwijderd; unieke inhoud (wettelijke betekenis, waarnemen/niet concluderen, fop- en schertsvuurwerk, professioneel vuurwerk art. 1.1.1 en 1.2.2 lid 3, Handhavingsplan-praktijkterm) verplaatst naar de categoriepagina’s F1–F4. F4 niet meer gelabeld als “professioneel vuurwerk”; apart Let op-blok professioneel vuurwerk. “Beperkt gevaar” → “weinig gevaar”. Ontheffing: “aan een vereniging of stichting”; onderscheid voorwaarden (2.3.2) en voorschriften (2.3.2a). “Oudere verpakkingen” verwijderd. Etiketboodschap: belangrijke informatie, geen eindconclusie. F1: hele jaar kopen/afsteken, 12 jaar (art. 2.3.3, 2.3.5, 2.3.7). Nieuwe oefenvraag ontheffing (31 oefenvragen). Voortgang v16 schuift mee. Gecontroleerd tegen wetten.overheid.nl (Vuurwerkbesluit en Wm geldend 1-8-2026; Regeling domeinlijsten geldend 8-9-2026). |
 | Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
 ## WED-BEVOEGDHEDEN
@@ -133,7 +134,7 @@ Getest op 1440×900, 1280×800, 1024×768, 768×1024, 390×844 en 360×740: 178/
 
 ## VRAGENCONTROLE
 
-- 30 oefenvragen: per onderwerp 5 / 4 / 6 / 7 / 4 / 4.
+- 31 oefenvragen: per onderwerp 6 / 4 / 6 / 7 / 4 / 4.
 - Juiste antwoorden verdeeld over A7 / B9 / C8 / D6.
 - Elke vraag is een praktijksituatie met een bronvoetnoot. De afleiders zijn gelijkwaardig in vorm en lengte.
 - Er komen geen verwijderde onderwerpen in voor (Halt, productvoorbeelden, meters).
