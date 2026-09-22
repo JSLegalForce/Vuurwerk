@@ -14,7 +14,7 @@ Juridische peildatum: **20 september 2026**.
 
 ## DATUM OPLEVERING
 
-20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260921e`).
+20 september 2026. Online: https://jslegalforce.github.io/Vuurwerk/ (cacheversie `vw260922a`).
 
 ## JURIDISCHE BRONNEN
 
@@ -57,6 +57,7 @@ Ten opzichte van versie 0.2:
 | Controle onderwerp 2 (21-9-2026) | Nieuwe pagina: B1-formulering controles F2/F3, statusblok onbekend vuurwerk, “boa bevoegd” → “boa domein I bevoegd voor art. 9.2.2.1a Wm”, F4 als wettelijke categorie benoemd, voorbehoud classificatie bij F1 en F2-bijschriften, bronnen aangevuld (lid 4; art. 2.3.2/2.3.2a). Bronnen in onderwerp 2 als korte klikbare bronnaam in plaats van zichtbare URL. |
 | Herontwerp pagina “Soorten vuurwerk en de categorieën” (21-9-2026) | Opbouw volgens aangeleverde voorbeelddia: kop + infoblok, vier kaarten F1–F4/zwaar-illegaal (badge, foto’s, Voorbeelden, Wat moet je weten?), fotonoot, brede Onthoud-kaart met Kort samengevat. Teksten letterlijk volgens opdracht. Statusblok “Is de categorie nog niet duidelijk?” vervallen (niet in voorbeeld; onderwerp 2 behandelt onbekend vuurwerk op eigen pagina’s). |
 | Vier categoriepagina’s F1–F4 (22-9-2026) | Overzichtspagina in onderwerp 2 vervangen door vier pagina’s (pagina 5–8): F1, F2, F3 en “F4 en ander zwaar/illegaal vuurwerk”. Per pagina: kop met badge, foto’s, voorbeelden, “Wat moet je weten?” in tegels, korte samenvatting en rustige bronregel; op pagina 8 de Onthoud-kaart voor alle categorieën. Teksten volgens opdracht; F3-foto’s als “Mogelijke voorbeelden”, F4-foto’s als voorbeelden van zwaar/illegaal vuurwerk. Voortgang schuift mee (opslag v15). Onderwerp 2 telt nu 24 pagina’s. |
+| Pagina “Categorie is nog geen conclusie” (22-9-2026) | Onderwerp 1, pagina 5 opnieuw vormgegeven volgens aangeleverde voorbeelddia: links vijf ronde beelden (F1, F2, F3, F4, Onbekend) rond een verpakking met etiket, met “Kijk altijd naar de verpakking!” en een fotonoot; rechts introtekst, kaarten F1, F2 en F3, F4 en Onbekend, en een afsluitende conclusie. Teksten volgens opdracht; F4-tekst aangepast. Beelden uitgesneden uit de voorbeelddia (`assets/images/concl-*.webp`). Opmaak in `assets/soorten.css`. |
 | Soortlabels | Pagina's hebben een label: Wet / Bevoegdheid / Domein / Beleid / Veiligheid. |
 
 ## WED-BEVOEGDHEDEN
