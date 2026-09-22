@@ -100,11 +100,11 @@ Kerntekst: “Dit certificaat bevestigt dat [naam] de e-learning Vuurwerk en de 
 - Visueel beoordeeld (screenshots bekeken): alle nieuwe en gesplitste pagina’s op 1440 en 390; overzichtsbladen van alle 176 schermen op 390 px; steekproef op 1440 en 768. Niet elk scherm is op elk formaat afzonderlijk bekeken.
 - Volledige doorloop door klikken (390×844): intake → welkom → alle pagina’s en 31 oefenvragen (juist en onjuist beantwoord, feedback zonder letters) → hervatten na herladen (juiste pagina) → eindtoets 9/15 (60 %, niet geslaagd, geen certificaatknop, wel “opnieuw maken”) → nieuwe poging 15/15 (geslaagd) → certificaat → PDF → herladen op certificaat → “Opnieuw beginnen” wist de opslag.
 - Migratie oude voortgang (v16 → v17) getest op 6 posities: komt op dezelfde pagina uit.
-- Live-controle na uploaden: zie §11.
+- Live-controle na uploaden (https://jslegalforce.github.io/Vuurwerk/): bestanden live byte-gelijk aan de repository; alle 176 stappen op 390×844 en 1440×900 zonder fouten, overloop of kapotte beelden; volledige klikdoorloop, eindtoets zakken/slagen, certificaat, PDF, hervatten, opnieuw beginnen en migratie v16 → v17 live herhaald: geslaagd.
 
 ### 11. Publicatie
 
-Zie de eindrapportage in de chat en het commitoverzicht op GitHub (uploads via de webinterface op `main`).
+Geüpload via de GitHub-webinterface op `main` (22-9-2026): `a36bf1b` app.js + soorten.css · `c98b58d` docs · `6ee0eb6` index.html. Backupbranch: `backup-voor-eindcorrectie-vuurwerk-2026-09-22`.
 
 ### 12. Nog handmatig controleren (door Jan / jurist)
 
