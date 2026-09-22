@@ -2,6 +2,123 @@
 
 ## VERSIE
 
+**0.9.1** (geen 1.0). De cursus is juridisch, didactisch en technisch nagelopen en verbeterd. Versie 1.0 is bewust nog niet gegeven, omdat de beelden in de nieuwe cartoon-/illustratiestijl nog niet bestaan: in deze werkomgeving is geen beeldgenerator beschikbaar. Zie `BEELDPLAN.md` (42 nieuwe beelden met complete prompt).
+
+- Juridische peildatum: **20 september 2026**.
+- Datum eindcorrectie: **22 september 2026**. Cacheversie `vw260922e`, opslag `jslf-vw-v1` met voortgangsversie 17.
+- Backupbranch vóór deze ronde: `backup-voor-eindcorrectie-vuurwerk-2026-09-22` (= commit `ffd550e`).
+- Blauwdruk Straatintimidatie2: niet gewijzigd. `app.css` niet gewijzigd; nieuwe opmaak staat in `soorten.css`.
+
+---
+
+## EINDCORRECTIE 22 SEPTEMBER 2026 — WAT IS ER ECHT GEDAAN
+
+### 1. Juridische controle (tegen de officiële tekst op wetten.overheid.nl, 22-9-2026)
+
+Letterlijk vergeleken met de cursus:
+
+| Bron | Gecontroleerd | Uitkomst |
+|---|---|---|
+| Wet milieubeheer, art. 9.2.2.1a lid 1–5 (geldend 1-8-2026) | wettekst | klopt letterlijk (lid 6–7 niet opnieuw vergeleken; ongewijzigd uit vorige ronde) |
+| WED art. 2 lid 1, 6 lid 1 (1° en 4°), 17 lid 1–3, 18 lid 1, 21 lid 1–2, 23 lid 1, 24a lid 1, 26 | wettekst en strafmaxima | klopt |
+| Sv art. 52 (begin), 54 lid 1–3, 94 lid 1–3, 95 lid 1 (geldend 1-7-2026) | wettekst | klopt |
+| Vuurwerkbesluit art. 1.1.1 (definities), 1.2.2 lid 1–5 en 8, 1.2.3, 2.3.2 (a–d), 2.3.2a lid 3 onder a en e, 2.3.3 lid 1–2, 2.3.5, 2.3.7 | tekst | klopt met de cursus |
+| Regeling domeinlijsten boa (BWBR0041447, geldend 8-9-2026), Domein I onderdeel 9 | tekst | klopt: “Artikel 9.2.2.1a Wet Milieubeheer juncto artikel 1a Wet op de economische delicten” |
+| Beleidsregels boa (BWBR0039766) | citaat titel economische delicten | **gecorrigeerd**: citaat zegt letterlijk “de minister **die** het aangaat” (cursus had “wie”); regeling geldt nu vanaf **1-9-2026** (cursus zei 1-5-2026) |
+| Handhavingsplan (rijksoverheid.nl), Stcrt. 2026, 31362, Stb. 2026, 168 | link opent | ja (gecontroleerd in de browser) |
+
+Niet opnieuw letterlijk vergeleken in deze ronde: art. 1A.1.3, 1.1.2a en 2.1.3 Vuurwerkbesluit, art. 27, 27a, 53, 67, 96, 128 en 142 Sv, art. 1a en 24 WED, en de citaten uit het Handhavingsplan. Die zijn ongewijzigd uit de vorige ronde.
+
+Overige juridische verbeteringen:
+- O1 p6 “De vier vragen”: “veiligstellen” uit de antwoordmogelijkheden gehaald (cursus leert elders dat veiligstellen geen aparte bevoegdheid is).
+- O7 p9 “Situatie 1”: toegevoegd dat bevoegdheid via domein I moet passen bij functie en taak.
+- O7 p12 “Zo verloopt een overdracht”: “veilig gesteld” vervangen door “of de plek veilig is”.
+- Eindtoetsvraag 13 (openbare orde): toelichting leunt nu alleen op het letterlijke Handhavingsplan; de niet-gecontroleerde verwijzing naar de Beleidsregels is weg.
+- Bronlink Regeling domeinlijsten wijst nu naar de geconsolideerde tekst op wetten.overheid.nl (BWBR0041447/2026-09-08); de Staatscourant-vindplaats staat in de toelichting.
+
+### 2. “Opleiding” wordt “cursus”
+
+Vervangen op 9 plaatsen in de inhoud (O1 p1, p2, p3, p6, p7, p8 (titel en figuur), O3 p4, O4 p4, O6 p8), het kaderlabel van onderwerp 1 (“Opleiding” → “Cursus”) en 2 plaatsen in `app.js` (welkomstscherm en inleiding eindtoets). Controle achteraf: het woord komt in geen enkele zichtbare tekst meer voor. `D.opleiding` is alleen een interne veldnaam (waarde “Vuurwerk”).
+
+### 3. Paginalengte, B1 en splitsen
+
+- Gecontroleerde inhoudspagina’s: 141 (vóór) → **145** (na).
+- Te lang (> ca. 140 woorden, inclusief wettekst en bronnen): 27 pagina’s. Aangepakt:
+  - **Gesplitst (4 → 8 pagina’s, 4 nieuw):**
+    - O2 “F4 en ander zwaar/illegaal vuurwerk” (474 woorden) → F4-pagina + nieuw “De categorieën op een rij” (Let op professioneel vuurwerk, Onthoud, Kort samengevat).
+    - O3 “Wettekst: artikel 9.2.2.1a Wm” (355) → “lid 1–3” + nieuw “lid 4–7”, elk met eigen uitleg in gewone taal.
+    - O4 “WED: wie spoort economische delicten op?” (351) → “Wettekst: artikel 17 WED” + nieuw “Artikel 17 WED en jouw akte”.
+    - O5 “Wettekst: aanhouden buiten heterdaad” (365) → alleen art. 54 Sv + nieuw “Buiten heterdaad: wat betekent dit?” (art. 67 Sv en toepassing).
+  - **Ingekort / naar B1:** O1 p4 “Waarom vuurwerk bij jouw werk hoort” (korte vragen in plaats van één lange zin), O4 p8 “En F4 of ander professioneel vuurwerk?” (187 → ca. 120 woorden).
+  - **Bewust langer gebleven:** O1 p5 “Categorie is nog geen conclusie” en O2 p3–p6 (wettekst categorieën en de categoriepagina’s F1–F3): opgebouwd volgens de door Jan aangeleverde voorbeelddia’s met vastgestelde teksten; wettekstpagina’s (art. 142 Sv, 1.1.2a Vuurwerkbesluit, 52/27a Sv, 53/128 Sv, 23 WED, 24a WED, Handhavingsplan): letterlijke wettekst mag niet worden ingekort buiten een correct gemarkeerd fragment; O8 “Stap 10 – Zo wel”: voorbeeld-proces-verbaal hoort volledig te zijn.
+- Wettekst blijft letterlijk; bij een deel staat nu “(lid 1 tot en met 3)” of “(fragment)”.
+- Navigatie na splitsen: paginanummers, voortgang, vorige/volgende, hervatten en oefenvragen getest. Opgeslagen voortgang uit versie 16 wordt met een vaste tabel omgezet (`v17` in `hervat()`); getest met 6 oude posities.
+
+### 4. Bronnen
+
+98 bronregels die als “naam – https://…” (niet klikbaar) werden getoond, zijn omgezet naar de vorm die onderwerp 2 al had: een klikbare korte bronnaam plus toelichting (artikel, geldigheidsdatum). De link naar de Wet milieubeheer springt direct naar art. 9.2.2.1a.
+
+### 5. Oefenvragen (31)
+
+- Alle 31 toelichtingen: “Het juiste antwoord is X.” verwijderd (de feedback toont het juiste antwoord al apart; letters zijn niet nodig).
+- O4 vraag 5 herschreven: het juiste antwoord viel op doordat het als enige een andere vorm had (“Voor alles wat buiten je functie…”). Nu een praktijkcasus (parkeertoezicht-boa ziet F2 afsteken) met vier gelijkwaardige opties.
+- O4 vraag 6, O5 vraag 7: opties gelijk in lengte en vorm gemaakt (het juiste antwoord was duidelijk langer).
+- O6 vraag 1: niet-geloofwaardige afleiders (“Is het duur geweest?”) vervangen.
+- Oefenvragen worden niet gehusseld (vaste volgorde, ontwerp master).
+
+### 6. Eindtoets (15 vragen, drempel 80 %)
+
+- Alle 15 toelichtingen herschreven: geen “Juist is A/B/C/D” meer, maar inhoudelijke uitleg waarom.
+- Technisch gecontroleerd: het antwoord wordt opgeslagen als de oorspronkelijke index van de optie (`data-orig`), niet als de zichtbare letter; score en nabespreking vergelijken die index met `juist`. Vragen én antwoorden worden per poging gehusseld.
+- Vervangen (toepassing in plaats van losse kennis):
+  - vraag 4 (“waarom is onbekend vuurwerk geen conclusie?”) → praktijkcasus tas met verpakt F2 en losse voorwerpen: wat weet je nog niet, wat doe je.
+  - vraag 11 (kaal artikelnummer 24a) → casus weigeren kofferbak openen: art. 24a en 26 WED toegepast.
+- Aangescherpt: vraag 10 en 12 (situatie in plaats van definitie), opties gelijkwaardiger bij vraag 2, 7, 8 en 13.
+- Spreiding: vier vragen 1 · soorten/etiket 2 · onbekend vuurwerk 1 · de wet 2 · aanhouden 1 · bevoegdheid (domein) 2 · bevoegdheden 3 · taakverdeling 1 · veiligheid 1 · proces-verbaal 1.
+
+### 7. Certificaat
+
+Kerntekst: “Dit certificaat bevestigt dat [naam] de e-learning Vuurwerk en de bijbehorende eindtoets van JS Legal Force met goed gevolg heeft afgerond.” Kleine toelichting eronder: “Dit certificaat is een bewijs van succesvolle afronding en het behaalde toetsresultaat. Het betreft geen wettelijk erkend diploma of beroepskwalificatie.” Getest op scherm (390 px) en als PDF (A4 liggend, 1 pagina).
+
+### 8. Responsive aanpassingen (alleen `soorten.css`)
+
+- Telefoon (≤ 640 px): het decoratieve wetboek boven elke wettekstpagina wordt niet getoond; decoratieve pictogram-/boa-illustraties boven tekstpagina’s en oefenvragen zijn ca. een derde kleiner. Foto’s en inhoudelijke infographics blijven op volle grootte. Gevolg: de titel begint op de telefoon ca. 65–100 px hoger.
+- Het label “HANDHAVINGSPLAN” in de wettekstkaart liep op 390/360 px buiten beeld (O7 p5–p6): vervangen door “Beleid”.
+- Overzichtspagina “De categorieën op een rij”: eigen kop over de volle breedte.
+- Er is niets globaal verkleind (geen kleinere letters, marges of regelafstand).
+
+### 9. Beelden
+
+- Beoordeeld: alle 145 inhoudspagina’s, 31 oefenvragen, 15 eindtoetsvragen, start, resultaat en certificaat. Besluit per scherm in `BEELDPLAN.md` §3.
+- **Vervangen of nieuw geplaatst: 0.** Er is geen beeldgenerator beschikbaar; volgens de opdracht is geen slechte vervanging gemaakt en blijven de huidige beelden staan.
+- Nieuw beeldplan in de gevraagde cartoon-/illustratiestijl: 42 beelden (26 praktijk-/situatiebeelden, 4 categoriekaarten F1–F4, 12 productillustraties), elk met doel, personages (H1–H6), scène, formaat, verboden elementen, bestandsnaam, alt-tekst en complete prompt.
+- Gevonden visuele problemen (nog niet opgelost, staan in het beeldplan): `wet-f2`/`concl-f2` tonen losse knalstaven als F2-voorbeeld; `concl-f4` toont vuurpijlen bij F4; categoriefoto’s zijn uitsneden van 200 × 300 px met deels onzintekst en een echte productnaam; de twee praktijkfoto’s zijn realistisch (geel hesje) en passen niet bij de nieuwe stijl; de boa-illustraties uit de master hebben “BOA” op de borst.
+
+### 10. Technische test (Playwright/Chromium, lokaal, na alle wijzigingen)
+
+- Alle **176** leerstappen (145 pagina’s + 31 oefenvragen) gerenderd op **1440×900, 1280×800, 1024×768, 768×1024, 390×844 en 360×740**: 0 scriptfouten, 0 consolefouten, 0 HTTP-fouten (geen 404), 0 kapotte afbeeldingen, geen horizontaal scrollen, geen element buiten de schermbreedte.
+- Visueel beoordeeld (screenshots bekeken): alle nieuwe en gesplitste pagina’s op 1440 en 390; overzichtsbladen van alle 176 schermen op 390 px; steekproef op 1440 en 768. Niet elk scherm is op elk formaat afzonderlijk bekeken.
+- Volledige doorloop door klikken (390×844): intake → welkom → alle pagina’s en 31 oefenvragen (juist en onjuist beantwoord, feedback zonder letters) → hervatten na herladen (juiste pagina) → eindtoets 9/15 (60 %, niet geslaagd, geen certificaatknop, wel “opnieuw maken”) → nieuwe poging 15/15 (geslaagd) → certificaat → PDF → herladen op certificaat → “Opnieuw beginnen” wist de opslag.
+- Migratie oude voortgang (v16 → v17) getest op 6 posities: komt op dezelfde pagina uit.
+- Live-controle na uploaden: zie §11.
+
+### 11. Publicatie
+
+Zie de eindrapportage in de chat en het commitoverzicht op GitHub (uploads via de webinterface op `main`).
+
+### 12. Nog handmatig controleren (door Jan / jurist)
+
+1. Of de nieuwe opzet van eindtoetsvragen 4 en 11 inhoudelijk aansluit bij hoe Jan wil toetsen.
+2. Art. 24a WED en de kofferbak (zie punt 3 hieronder) — ongewijzigd open.
+3. De citaten uit het Handhavingsplan zijn niet opnieuw letterlijk vergeleken.
+4. Weergave op echte telefoons (iOS Safari, Android Chrome): getest is alleen met Chromium in telefoonformaat. De verkleining gebruikt CSS `zoom` en `:has()`; in oudere browsers zonder ondersteuning blijven de illustraties gewoon op de oude grootte.
+
+---
+
+## EERDERE RONDES (historie, ongewijzigd behalve de datum van de Beleidsregels)
+
+### Versie vorige ronde
+
 **0.9** (geen 1.0). Alle juridische, didactische en technische eisen voor 1.0 zijn uitgevoerd, op één punt na: de 21 realistische foto's uit het beeldplan zijn **niet** gemaakt. In deze werkomgeving is geen beeldgenerator beschikbaar. Volgens de opdracht mag de versie dan niet 1.0 heten.
 
 Wat is er wel gedaan: de oude placeholderbeelden met de tekst "Beeld nog aan te leveren" zijn weggehaald. Op die plekken staat nu een pictogrambeeld in de stijl van Straatintimidatie2. Er is nergens meer placeholdertekst te zien. De bestandsnamen, alt-teksten en prompts voor de foto's staan klaar in `BEELDPLAN.md`.
@@ -30,7 +147,7 @@ Alleen officiële bronnen. Alle links zijn gecontroleerd (HTTP 200).
 - **Wetboek van Strafvordering**, geldend vanaf 1-7-2026: https://wetten.overheid.nl/BWBR0001903/2026-07-01
   - Artikelen: 27, 27a, 52, 53, 54, 67, 94, 95, 96, 142.
 - **Regeling domeinlijsten buitengewoon opsporingsambtenaar**, Domein I, onderdeel 9, gewijzigd bij Stcrt. 2026, 31362 (in werking 8-9-2026): https://zoek.officielebekendmakingen.nl/stcrt-2026-31362.html
-- **Beleidsregels buitengewoon opsporingsambtenaar** (onder meer over de titel voor economische delicten, via art. 17 lid 1 onder 2° WED): https://wetten.overheid.nl/BWBR0039766
+- **Beleidsregels buitengewoon opsporingsambtenaar**, geldend vanaf 1-9-2026 (onder meer over de titel voor economische delicten, via art. 17 lid 1 onder 2° WED): https://wetten.overheid.nl/BWBR0039766
 - **Handhavingsplan jaarwisseling**, Ministerie van JenV, maart 2026. Dit is **beleid**, geen wet: https://www.rijksoverheid.nl/documenten/2026/03/16/tk-bijlage-geactualiseerd-handhavingsplan-jaarwisseling-feb-2026
 
 De wetteksten zijn letterlijk overgenomen uit de geldende versies.
