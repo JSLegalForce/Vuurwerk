@@ -1,4 +1,4 @@
-const ASSET_V='vw260922a';
+const ASSET_V='vw260922b';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -154,7 +154,7 @@ const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
 "1.0":{"t":"lo","a":"boa-armen"},
 "1.1":{"t":"split","a":{"icon":"lagen","orbit":["vuurwerk","oog","lijst"]},
 "rows":["lagen","oog"]},
-"1.2":{"t":"wet","art":"Art. 1A.1.3 Vuurwerkbesluit"},
+"1.2":{"t":"wetcat"},
 "1.3":{"t":"info","v":"categorieen"},
 "1.4":{"t":"categorie"},
 "1.5":{"t":"categorie"},
@@ -942,6 +942,14 @@ T.concl=(P,spec,st)=>{
   const kop=el('div','cc-kop');[soortChip(P),titleEl(P)].filter(Boolean).forEach(n=>kop.appendChild(n));tekst.prepend(kop);
   cc.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='vink'?vink:di(i);});
   return cc;
+};
+T.wetcat=(P,spec,st)=>{
+  /* "Wettekst: indeling in categorieën": categorieblokken links, korte wettekst en uitleg rechts */
+  const wc=P.rest.find(n=>n.nodeType===1&&n.classList.contains('wc'));
+  const t=wc.querySelector('.wc-titel');if(t)t.replaceWith(titleEl(P,'wc-h1'));
+  const bk=wc.querySelector('.wc-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  wc.querySelectorAll('[data-i]').forEach(x=>{const ic=di(x.dataset.i);if(x.classList.contains('wc-chip'))x.insertAdjacentHTML('afterbegin',ic);else{x.setAttribute('aria-hidden','true');x.innerHTML=ic;}});
+  return wc;
 };
 T.bd=(P,spec,st)=>{
   const wrap=el('div','bd-page');
