@@ -1,4 +1,4 @@
-const ASSET_V='vw260923c';
+const ASSET_V='vw260923d';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -75,6 +75,7 @@ const DI=(()=>{
     vuurwerk:S(`<path ${F} d="M20 8h8v22h-8z"/><path d="M20 8h8v22h-8zM24 2l4 6h-8zM22 30l-3 14M26 30l3 14M24 30v12"/><path d="M34 14l5-3M35 20h6M14 14l-5-3M13 20H7" stroke-dasharray="2 3"/>`),
     knal:S(`<path ${F} d="M24 6l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z"/><path d="M24 6l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z"/>`),
     tas:S(`<path ${F} d="M8 18h32l-3 24H11z"/><path d="M8 18h32l-3 24H11zM17 18v-5a7 7 0 0 1 14 0v5"/>`),
+    hamer:S(`<path ${F} d="M20 6l12 12-6 6L14 12z"/><path d="M20 6l12 12-6 6L14 12zM23 21 8 36a3 3 0 0 0 4 4l15-15M28 42h14M17 9l12 12"/>`),
     straat:S(`<path ${F} d="M16 44 20 4h8l4 40z"/><path d="M16 44 20 4M32 44 28 4M24 8v4M24 18v5M24 29v6M24 40v4"/>`)
   };
 })();
@@ -143,7 +144,7 @@ function bdInline(root){
   });
 }
 const L_SPEC={"0.0": {"t": "casus", "a": "scene-plein-knal"},
-"0.1": {"t": "lo", "a": "boa-armen"},
+"0.1": {"t": "intro2"},
 "0.2": {"t": "rijkaart", "a": {"vis": "bestanddelen"},
 "rows": ["route", "lijst"], "ic": "schild"},
 "1.0": {"t": "wetcat"},
@@ -1080,6 +1081,20 @@ T.proces=(P,spec,st)=>{
   box.appendChild(titleEl(P));
   box.appendChild(el('div','proces-plaat',VIS.proces()));
   box.appendChild(card);
+  return box;
+};
+T.intro2=(P,spec,st)=>{
+  /* Introductie p2 "Dit ga je leren": tekst en zes leerdoelen links, boa-beeld rechts */
+  const box=el('div','i2');
+  const copy=el('div','i2-copy');
+  const k=P.rest.find(n=>n.nodeType===1&&n.classList.contains('i2-k'));if(k){k.className='kicker i2-k';copy.appendChild(k);}
+  copy.appendChild(titleEl(P,'i2-h'));
+  if(P.intro){P.intro.classList.add('i2-intro');copy.appendChild(P.intro);}
+  P.rest.filter(n=>n.nodeType===1&&(n.classList.contains('i2-na')||n.classList.contains('i2-lo'))).forEach(n=>copy.appendChild(n));
+  copy.querySelectorAll('.i2-ic[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=DI[x.dataset.i]||DI.document;});
+  box.appendChild(copy);
+  const fig=P.rest.find(n=>n.nodeType===1&&n.classList.contains('i2-img'));
+  if(fig){const m=el('div','i2-media');m.appendChild(fig);box.appendChild(m);}
   return box;
 };
 function composePage(stage,bronEl,p,spec,st){
