@@ -4,6 +4,8 @@ Versie 0.9.2 (herbouw compacte cursus) · juridische peildatum 23 september 2026
 
 > **Leidend document:** `docs/BEELDSTIJL.md`. Dit beeldplan volgt die stijl en wijzigt haar niet. Bij verschil gaat `BEELDSTIJL.md` voor.
 >
+> **Visuele referentie:** `docs/BEELDREFERENTIES.md` (primaire stijlreferentie `assets/reference/jslf-beeldstijl-hoofdreferentie.jpg`). Volgorde bij tegenstrijdigheid, zoals daar vastgelegd: juridisch gecontroleerde cursusinhoud → `BEELDSTIJL.md` → primaire stijlreferentie → dit beeldplan → secundaire scenereferentie.
+>
 > **Vervangt** het vorige beeldplan (42 beelden, gekoppeld aan de oude cursus van 145 pagina's). Dat plan is vervallen: de oude pagina's bestaan niet meer. Het staat nog in de git-geschiedenis en op branch `backup-voor-herbouw-compact-2026-09-23`.
 >
 > **Rolverdeling (BEELDSTIJL §13–14):** ChatGPT maakt en controleert de beelden. Claude genereert of vervangt géén definitieve beelden en plaatst alleen beelden met status **GOEDGEKEURD**.
@@ -17,7 +19,7 @@ Versie 0.9.2 (herbouw compacte cursus) · juridische peildatum 23 september 2026
 - **Stijl:** zoals `BEELDSTIJL.md` §2–8. Dus: semi-realistische, volwassen digitale illustratie, geen kinderachtige cartoonstijl, Nederlandse omgeving, correct BOA-embleem (§4), geen politie-uniform of politie-embleem, ronde metalen handboeien als die zichtbaar zijn, geen boa die zonder reden vuurwerk vasthoudt.
 - **Veiligheid in beeld:** nooit een handhaver die onbekend of mogelijk zwaar vuurwerk aanraakt, opent of uit elkaar haalt.
 - **Tekst in beeld:** zo min mogelijk. Toegestaan waar functioneel: `F1` `F2` `F3` `F4`, `Geschikt voor particulier gebruik`, `CE`, `NEM`, `HANDHAVING`. Alle andere tekst komt via HTML.
-- **Doorlopende casus:** dezelfde vier jongeren, dezelfde jongen in de **rode jas**, dezelfde **open zwarte sporttas**, hetzelfde plein en dezelfde twee boa's in 00-01, 01-08, 06-01 en 06-02. Andere situaties gebruiken andere personages.
+- **Doorlopende casus:** dezelfde vier jongeren, dezelfde jongen in de **rode jas**, dezelfde **open zwarte sporttas**, hetzelfde plein en dezelfde twee vaste boa-personages (BEELDREFERENTIES) in 00-01, 01-08, 06-01 en 06-02. Andere situaties gebruiken andere personages.
 - **Formaat:** lesbeeld 4:3 (1600 × 1200) of 3:2 (1800 × 1200); productbeeld 2:3 (800 × 1200). Belangrijkste onderwerp in het midden (60%) voor mobiele uitsnede. WebP, kwaliteit ca. 80.
 - **Naamgeving (BEELDSTIJL §12):** `HH-PP-omschrijving.webp`, waarbij `HH` het hoofdstuk is (00 = introductie) en `PP` de pagina. Map: `assets/images/`.
 
