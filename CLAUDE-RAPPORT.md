@@ -11,7 +11,9 @@
 | `c9b23cb` | `assets/app.js` + `assets/soorten.css`: engine-aanpassingen, bevoegdhedenkaart, voortgang v18, cache `vw260923a` |
 | `4aaa867` | `index.html`: nieuwe cursusinhoud 0.9.2 (42 pagina's, 18 oefenvragen, 15 eindtoetsvragen) |
 | `6a2bc50` | `docs/OPLEVERING.md` en `docs/BEELDPLAN.md` bijgewerkt |
-| *deze commit* | `CLAUDE-RAPPORT.md` + verwijzing naar `docs/BEELDREFERENTIES.md` in `docs/BEELDPLAN.md` |
+| `d9025ca` | `CLAUDE-RAPPORT.md` |
+| `52ce197` | verwijzing naar `docs/BEELDREFERENTIES.md` in `docs/BEELDPLAN.md` |
+| `914839c`, `bd91c74`, `d1f0087` | eindcontrole (tweede ronde), zie §8 |
 
 `docs/BEELDSTIJL.md` en `docs/BEELDREFERENTIES.md` zijn **niet** gewijzigd. Er zijn geen afbeeldingen toegevoegd, verwijderd of vervangen.
 
@@ -78,7 +80,7 @@ Zie `docs/BEELDPLAN.md` (19 slots). **Nieuw te maken (CONCEPT):**
 ## 5. Resterende twijfelpunten
 
 1. **Ontheffingsvoorschriften en onderdeel 9.** Het Vuurwerkbesluit berust mede op art. 9.2.2.1a Wm (art. IIb Wet veilige jaarwisseling). Of overtreding van ontheffingsvoorschriften (art. 2.3.2a Vb) valt onder "art. 9.2.2.1a Wm jo. art. 1a WED" in onderdeel 9, volgt niet uit de primaire tekst. Niet onderwezen. Advies: navragen bij OM of JenV.
-2. **WED-status via de domeinlijst.** De cursus leert: geeft je akte je onderdeel 9, dan ben je voor dat feit WED-opsporingsambtenaar. Dit volgt uit art. 17 lid 1 onder 2° en lid 3 WED, uit de aanhef van de Regeling domeinlijsten en uit de Beleidsregels. Een expliciete bepaling die dit per domein I-akte vaststelt, is niet gevonden. De cursus zegt daarom: "Controleer je akte."
+2. **WED-status via de domeinlijst.** Art. 17 lid 1 onder 2° en lid 3 WED en de aanhef van de Regeling domeinlijsten ("gelet op … art. 17, derde lid") maken een WED-aanwijzing via een domein mogelijk. Een bepaling die vaststelt dat élke domein I-akte met onderdeel 9 die aanwijzing omvat, is niet gevonden. Sinds de eindcontrole formuleert de cursus dit daarom voorwaardelijk (H3 p4, H6 p4): de WED-bevoegdheden alleen als je akte je voor dit economische delict aanwijst — "controleer je akte". In de praktijkcasus is dat een uitdrukkelijk benoemde aanname.
 3. **Aangepast of zelfgemaakt F2/F3-vuurwerk.** Of aangepast vuurwerk nog "vuurwerk van categorie F2/F3" is in de zin van art. 9.2.2.1a Wm, is niet in de wettekst beantwoord. De cursus zegt: niet gokken, veiligheid en politie gaan voor.
 4. **Lokale APV's** zijn niet gecontroleerd. De cursus noemt ze niet als bevoegdheidsgrondslag. Er is geen APV-module, zoals afgesproken.
 5. **Art. 67 Sv:** wetten.overheid.nl meldt een toekomstige wijziging per 1 maart 2027. Vóór die datum opnieuw controleren.
@@ -123,3 +125,82 @@ Zie `docs/BEELDPLAN.md` (19 slots). **Nieuw te maken (CONCEPT):**
 - `soorten.css`: opmaak bevoegdhedenkaart (+ responsive) en een driekoloms notitieregel voor de beslishulp.
 - `app.css`: ongewijzigd.
 - Behouden: intake, hervatten, oefenvragen + feedback (70%), eindtoets (gehusseld, 80%), resultaat met nabespreking, certificaat/print en responsive layout. Aan de launcher is niets gewijzigd.
+
+## 8. Eindcontrole 23 september 2026 (tweede ronde)
+
+Opdracht: alleen gerichte controle en noodzakelijke correcties; geen herstructurering, geen beeldgeneratie, geen onnodige techniek. Structuur blijft **42 pagina's · 18 oefenvragen · 15 eindtoetsvragen**.
+
+Gelezen vooraf: `CLAUDE-RAPPORT.md`, `docs/OPLEVERING.md`, `docs/BEELDSTIJL.md`, `docs/BEELDREFERENTIES.md`, `docs/BEELDPLAN.md`, de volledige inhoud van `index.html` (alle pagina's, oefenvragen en eindtoetsvragen), `assets/app.js` en `assets/soorten.css`.
+
+### 8.1 Uitkomst van de controle
+
+**Moest worden gecorrigeerd**
+
+| # | Plaats | Probleem | Correctie | Bron |
+|---|---|---|---|---|
+| 1 | H3 p4 (art. 17 WED) | "Geeft jouw akte je onderdeel 9, dan ben je … WED-opsporingsambtenaar" was stelliger dan de bronnen toelaten. | Voorwaardelijk: WED-bevoegdheden alleen als je voor dit economische delict bent aangewezen als opsporingsambtenaar in de zin van art. 17 WED; "controleer je akte". | WED art. 17; aanhef Regeling domeinlijsten |
+| 2 | H6 p4 (casus, vraag 3) | Zelfde stellige formulering; functie/taak als vaststaand feit gepresenteerd. | Voorwaardelijk + uitdrukkelijke casusaanname ("In deze casus gaan we ervan uit … Controleer dat in je eigen akte"). | idem |
+| 3 | H3 p2, H3 p3 | Bevoegdheid via onderdeel 9 zonder koppeling aan de akte. | "Verwijst je akte naar domein I, dan …". | Sv art. 142 lid 2; Domein I aanhef |
+| 4 | H3 p3 | Onderdeel 9 kon worden gelezen als het enige relevante onderdeel. | Eén alinea: ook andere onderdelen kunnen een rol spelen, bijv. een APV-bepaling waarvoor je bent aangewezen (verschilt per gemeente) of onderdeel 21; kijk naar akte, taak en concreet feit. De "Níet"-opsomming is een alinea geworden, omdat de lijstweergave er vinkjes bij toonde (misleidend bij "niet"). | Domein I, onderdelen 6 en 21 |
+| 5 | H3 p5 ("Welk feit?") | De introzin was een reeks van vijf stappen (risico op concurrerend model) en de F2/F3-kaart kon lezen als "F2/F3 = bevoegd". | Introzin gekoppeld aan vraag 1–3 van de vier vragen. F2/F3-kaart: alleen bij bezit/gebruik/verkoop zonder uitzondering kan art. 9.2.2.1a zijn overtreden; voor dát feit bevoegdheid binnen akte, functie en taak. F1-kaart: "Is het echt F1 …". | Wm 9.2.2.1a; Domein I |
+| 6 | H3 p5 (beeldkaart) | Het vijfde rondje "Onbekend" naast F1–F4 kon een wettelijke categorie suggereren. | Onderschrift "Niet vast te stellen · geen wettelijke categorie"; kaarttitel "Categorie niet vast te stellen" met de zin "«Onbekend vuurwerk» is geen wettelijke categorie." | Vb 1A.1.3 |
+| 7 | H5 p4 (situatie 1) | "Op de verpakking staat F2 … Je bent bevoegd" — categorie → bevoegdheid. | Toegevoegd: geen ontheffing, geen gespecialiseerde kennis; bevoegd "voor dit feit (art. 9.2.2.1a Wm)". | Wm 9.2.2.1a |
+| 8 | H6 p7 (PV zo wel) | Ontbrak: identiteitsgegevens, periode van onafgebroken waarneming (onderbouwing bezit tas), waar de boa de etiketten in de tas las, afwezigheid van aanwijzingen voor gespecialiseerde kennis, registratie na overbrenging. | Aangevuld met die feitelijke elementen. Niet ingekort. | Sv 27a, 52, 94; WED 18; Wm 9.2.2.1a; Vb 1.1.2a |
+| 9 | Eindtoetsvraag 8 (samenloop) | Stam kon lezen als "F3 op etiket → bevoegd"; uitleg te stellig. | Stam: "iemand zonder gespecialiseerde kennis … op het etiket «F3»"; vraag: "voor welk feit *kan* onderdeel 9 je bevoegd maken?"; uitleg: binnen akte, functie en taak; etiket blijft informatie. | Domein I; Wm 9.2.2.1a |
+| 10 | H1 p2 (F1) | CE-markering genoemd zonder bron. | Bron toegevoegd: art. 1A.4.1 Vuurwerkbesluit (gecontroleerd op wetten.overheid.nl). | Vb 1A.4.1 |
+
+**Kon blijven staan (gecontroleerd)**
+
+- Inwerkingtreding: overal 1 augustus 2026, met Stb. 2026, 169 als primaire bron (H2 p1). Geen afwijkende datum gevonden. Geen twijfelpunt meer.
+- F4-formulering (H3 p5, oefenvraag H3-2, eindtoetsvraag 7): genuanceerd; geen "nooit bevoegd" behalve als ontkenning of fout antwoord; onderdeel 21 en domein II elk één zin.
+- Art. 24a WED: overal lid 1 = plicht, lid 3 = bevoegdheid, art. 26 = strafbaarstelling (H4 p1, H4 p5, oefenvraag H4-2, eindtoetsvraag 10). Nergens lid 1 als bevoegdheid, behalve als bewust fout antwoord.
+- Ontheffingsvoorschriften: H2 p4 en eindtoetsvraag 5 vragen alleen "vastleggen en overleggen"; de omstreden bevoegdheidsvraag wordt niet getoetst. Het afsteektijdstip zelf (art. 2.3.2a lid 3 onder a Vb) is geen twijfelpunt.
+- Aangepast/zelfgemaakt vuurwerk: H1 p7, H5 p1, oefenvraag H5-1, eindtoetsvragen 2 en 13 — niet gokken, beschrijven, veiligheid, politie.
+- APV: alleen genoemd als fout antwoord of (nieuw) als per gemeente verschillend voorbeeld; nergens landelijke grondslag.
+- Art. 67 Sv: geldende tekst per 1 juli 2026 gebruikt; geen toekomstige tekst.
+- Vier vragen: enige denkmodel; het "vier lagen"-gebruik in H1 p8 blijft inhoud onder vraag 1.
+- Eindtoets: per vraag A–F nagelopen. Eén wijziging (vraag 8). Toetsbeelden zijn neutrale illustraties die het antwoord niet verraden. 13 van 15 casusvragen.
+
+**Blijft open / niet zeker** — zie §5, punten 1–6 (punt 2 aangescherpt, zie boven).
+
+### 8.2 Beeldplan (alleen tekstcorrecties, geen beelden)
+
+`docs/BEELDPLAN.md`:
+- 04-06 neutraler: dozen liggen stabiel op een ondergrond, administratieve afhandeling, geen onnodige fysieke handeling met vuurwerk, geen gesuggereerde bevoegdheid;
+- 01-05: `cat-f4-vlinder.webp` (VIPER) en `cat-f4-cobra.webp` (COBRA 6) → **CONTROLEREN · kandidaat VERVANGEN**, niet definitief;
+- regel toegevoegd dat een praktijknaam-beeld nooit F4 bewijst;
+- regel toegevoegd dat tekst in (AI-)beelden nooit een juridische bron is;
+- uitgeschreven: de statussen, primaire stijlreferentie tegenover scenereferentie, de harde boa-regels en de continuïteitsregels van de doorlopende casus.
+
+Niet gewijzigd: `docs/BEELDSTIJL.md`, `docs/BEELDREFERENTIES.md` en alle bestanden in `assets/images/` en `assets/reference/`. Er zijn geen beelden gegenereerd, vervangen, hernoemd of verwijderd.
+
+### 8.3 Techniek
+
+Alleen:
+- de icoonreeks van H3 p3 in `L_SPEC` (`"kruis"` → `"domein"`, zodat de nieuwe alinea geen kruisje krijgt);
+- de cachesleutel `vw260923a` → `vw260923b` in `app.js` en `index.html`.
+
+Voortgang v18, migratie, intake, hervatten, oefenvragen, eindtoets-engine, 80%-grens, certificaatnummer, print/PDF, responsive opmaak en launcher zijn **niet** aangeraakt.
+
+### 8.4 Opnieuw uitgevoerde tests
+
+- **Alle schermen:** 42 pagina's + 18 oefenvragen doorlopen op desktop (1366 × 900) en mobiel (390 × 844). Geen scriptfouten, alle composities gerenderd. H3 p3 en H3 p5 visueel gecontroleerd.
+- **Eindtoets en certificaat:** volledige doorloop met juiste antwoorden, eindtoets 100% (GESLAAGD), certificaat.
+- **Herladen:** het certificaat wordt hervat.
+- **Hervatten:** midden in de lesstof hervat de cursist op dezelfde pagina.
+- **Migratie v17 met certificaat:** het oude certificaat blijft zichtbaar (87%, nummer JSLF-VW-2026-ABC123 behouden).
+- **Migratie v17 onvoltooid:** de cursist gaat naar het startscherm, de antwoorden zijn gewist en er is geen certificaatknop.
+- **Zoekcontrole:** herhaald op "WED-opsporingsambtenaar", "WED-bevoegdheden", "ben je bevoegd", "je bent bevoegd", "24a lid 1", "APV", "onbekend", "illegaal" en "nooit bevoegd". Resterende treffers zijn uitsluitend:
+  - voorwaardelijke formuleringen;
+  - vraagstammen ("Je bent bevoegd. Het vuurwerk is …");
+  - bewust foute antwoordopties;
+  - het foute PV-voorbeeld.
+
+### 8.5 Commits van deze ronde
+
+| Commit | Inhoud |
+|---|---|
+| `914839c` | `assets/app.js`: iconen H3 p3, cache `vw260923b` |
+| `bd91c74` | `docs/BEELDPLAN.md`, `docs/OPLEVERING.md` |
+| `d1f0087` | `index.html`: juridische en redactionele correcties |
+| *deze commit* | `CLAUDE-RAPPORT.md` bijgewerkt |
