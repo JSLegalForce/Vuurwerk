@@ -287,3 +287,24 @@
 /* certificaat: toelichting status */
 .cert .cert-note{max-width:620px;margin:18px auto 0;font-size:.82rem;line-height:1.45;color:#5a6478;text-align:center}
 @media print{.cert .cert-note{font-size:9pt;margin-top:10px}}
+
+/* ── Bevoegdhedenkaart (herbouw 23-9-2026): bevoegdheid · verplichting · strafbaarstelling ── */
+.fig-bev{display:block}
+.bev-cols{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start}
+.bev-col{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden}
+.bev-h{display:flex;gap:10px;align-items:center;padding:12px 14px;color:#fff}
+.bev-h b{display:block;font-family:var(--ui);font-size:1.02rem;letter-spacing:.02em}
+.bev-h small{display:block;opacity:.9;font-size:.86rem}
+.bev-h .di{width:34px;height:34px;flex-shrink:0;--duo:rgba(255,255,255,.25)}
+.bk-bev .bev-h{background:var(--navy)}
+.bk-pl .bev-h{background:var(--blue)}
+.bk-str .bev-h{background:var(--red-d)}
+.bev-l{list-style:none;margin:0;padding:8px 12px 12px;display:grid;gap:8px}
+.bev-l li{display:flex;gap:10px;align-items:flex-start;padding:8px 6px;border-bottom:1px dashed var(--line)}
+.bev-l li:last-child{border-bottom:0}
+.bev-l .di{width:30px;height:30px;flex-shrink:0}
+.bev-l b{display:block;color:var(--navy);line-height:1.3}
+.bev-l small{display:block;color:var(--mute);font-size:.88rem;line-height:1.35;margin-top:2px}
+@media (max-width:1000px){.bev-cols{grid-template-columns:1fr}}
+@media (max-width:640px){.fig-bev .bw-rules{grid-template-columns:1fr}}
+@media (min-width:1001px){.fig-beslis .bs-notes{grid-template-columns:repeat(3,1fr)}}

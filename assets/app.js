@@ -1,4 +1,4 @@
-const ASSET_V='vw260922e';
+const ASSET_V='vw260923a';
 /* ── JS Legal Force duotone-iconenset (48×48) ── */
 const DI=(()=>{
   const S=(b)=>'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+b+'</svg>';
@@ -83,13 +83,14 @@ function di(name,cls){return '<span class="di '+(cls||'')+'" aria-hidden="true">
 /* ── Paginacomposities: per pagina bewust gekozen template, beeld en iconen ──
    t = template, a = beeld (personage / scène / object / visual), rows = iconen per alinea,
    icons = iconen per opsommingspunt, lab = kaartlabels (jurisprudentie) */
-const TOPIC_ICON=['megafoon','vuurwerk','wet','schild','route','waarschuwing','afspraak','pv'];
+const TOPIC_ICON=['megafoon','vuurwerk','wet','schild','route','waarschuwing','pv'];
+function tLab(t){return t.nr===0?'Introductie':'Hoofdstuk '+t.nr;}
 const BD_STAPPEN=[['oog','Wat tref ik aan?'],['wet','Is dit strafbaar?'],['schild','Ben ik bevoegd?'],['route','Wat doe ik nu?']];
 /* ── Vaste visuele grammatica: de vier vragen (rode draad Vuurwerk) ──
    donkerblauwe badge = één van de vier vragen. Alleen voor de vier vragen gebruiken.
    bdBadge(n,size)  size: 'lg' (eigen uitlegpagina) · 'row' (overzicht) · 'inline' (lopende tekst)
    bdGrid(rows)     rij = {n:vraagnummer, t:toelichting (Node of html)} → NUMMER | ICOON | BADGE | UITLEG */
-const BD_KERN=['welk soort vuurwerk is dit?','welke wettelijke bepaling is van toepassing?','mag ik als boa voor dit feit optreden?','zelf optreden, onderzoeken, veiligstellen, overleggen of politie?'];
+const BD_KERN=['welk soort vuurwerk is dit?','welke wettelijke bepaling is van toepassing?','mag ik als boa voor dit feit optreden?','zelf optreden, overleggen of politie?'];
 function bdBadge(n,size,txt){
   return '<span class="bd-badge bd-badge--'+(size||'row')+'" data-bd="'+n+'">'+esc(txt||BD_STAPPEN[n-1][1])+'</span>';
 }
@@ -141,163 +142,68 @@ function bdInline(root){
     tn.parentNode.replaceChild(frag,tn);
   });
 }
-const L_SPEC={"0.0":{"t":"lo","a":"boa-armen"},
-"0.1":{"t":"casus","a":"scene-plein-knal"},
-"0.2":{"t":"praktijk","a":"boa-observeer","ic":"vraag"},
-"0.3":{"t":"rijkaart","a":"scene-boa-jongeren-plein","rows":["kalender","domein","boek"],"ic":"schild"},
-"0.4":{"t":"concl"},
-"0.5":{"t":"split","a":{"vis":"bestanddelen"},"rows":["route","lijst","vink"]},
-"0.6":{"t":"split","a":"weegschaal","rev":1,"rows":["lijst","lamp"]},
-"0.7":{"t":"info","v":"opzet"},
-"0.8":{"t":"onthoud","a":"boa-armen","icons":["kalender","vuurwerk","route"]},
-"1.0":{"t":"lo","a":"boa-armen"},
-"1.1":{"t":"split","a":{"icon":"lagen","orbit":["vuurwerk","oog","lijst"]},"rows":["lagen","oog"]},
-"1.2":{"t":"wetcat"},
-"1.3":{"t":"categorie"},
-"1.4":{"t":"categorie"},
-"1.5":{"t":"categorie"},
-"1.6":{"t":"categorie"},
-"1.7":{"t":"categorie"},
-"1.8":{"t":"wet","art":"Art. 1.1.2a Vuurwerkbesluit"},
-"1.9":{"t":"wet","art":"Art. 2.1.3 Vuurwerkbesluit"},
-"1.10":{"t":"info","v":"vergelijk"},
-"1.11":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},"rows":["vraag","oog","waarschuwing"]},
-"1.12":{"t":"info","v":"lagen4"},
-"1.13":{"t":"praktijk","a":"boa-notitie","ic":"oog","icons":["oog","document","zoeken","wet"]},
-"1.14":{"t":"casus","a":{"icon":"tas","orbit":["vuurwerk","document"]}},
-"1.15":{"t":"info","v":"checklist"},
-"1.16":{"t":"info","v":"keten7"},
-"1.17":{"t":"onthoud","a":{"icon":"document","orbit":["vuurwerk","lijst"]},"icons":["lagen","vuurwerk","mensen"]},
-"1.18":{"t":"onthoud","a":"boa-notitie","icons":["document","vraag","pv"]},
-"1.19":{"t":"vooruit"},
-"2.0":{"t":"lo","a":"boa-armen"},
-"2.1":{"t":"split","a":"wetboek","rows":["route","wet"]},
-"2.2":{"t":"split","a":{"icon":"kalender","orbit":["wet","vuurwerk","document"]},"rev":1,"rows":["kalender","document","vuurwerk"]},
-"2.3":{"t":"wet","art":"Art. 9.2.2.1a Wm"},
-"2.4":{"t":"wet","art":"Art. 9.2.2.1a Wm"},
-"2.5":{"t":"split","a":{"icon":"tas","orbit":["vuurwerk","document"]},"rows":["hand","vuurwerk","mensen"]},
-"2.6":{"t":"split","a":{"icon":"winkel","orbit":["kalender","document","kruis"]},"rev":1,"rows":["kruis","kalender","document"]},
-"2.7":{"t":"split","a":{"icon":"akte","orbit":["mensen","kalender","vuurwerk"]},"rows":["akte","mensen","klok"]},
-"2.8":{"t":"praktijk","a":{"icon":"akte","orbit":["vuurwerk","vraag"]},"ic":"lamp"},
-"2.9":{"t":"checklist","a":"wetboek","icons":["akte","mensen","locatie","klok","vuurwerk","lijst","vink"]},
-"2.10":{"t":"letop","a":"boa-uitleg"},
-"2.11":{"t":"wet","art":"Art. 1a en 2 WED"},
-"2.12":{"t":"split","a":"wetboek","rows":["straf","wet"]},
-"2.13":{"t":"info","v":"tijdlijn"},
-"2.14":{"t":"onthoud","a":"wetboek","icons":["wet","akte"]},
-"2.15":{"t":"onthoud","a":{"icon":"lagen","orbit":["wet","document","straf"]},"icons":["wet","straf","route"]},
-"2.16":{"t":"vooruit"},
-"3.0":{"t":"lo","a":"boa-armen"},
-"3.1":{"t":"casus","a":{"icon":"knal","orbit":["mensen","vuurwerk","oog"]}},
-"3.2":{"t":"split","a":"weegschaal","rows":["oog","schild","mensen"]},
-"3.3":{"t":"wet","art":"Art. 142 Sv"},
-"3.4":{"t":"wet","art":"Domein I, onderdeel 9"},
-"3.5":{"t":"letop","a":{"icon":"domein","orbit":["wet","vraag","boa"]}},
-"3.6":{"t":"letop","a":"boa-uitleg"},
-"3.7":{"t":"split","a":{"icon":"vuurwerk","orbit":["waarschuwing","akte"]},"rev":1,"rows":["wet","domein","mensen"]},
-"3.8":{"t":"wet","art":"Art. 17 WED"},
-"3.9":{"t":"wet","art":"Beleidsregels boa"},
-"3.10":{"t":"split","a":{"icon":"domein","orbit":["wet","vraag","boa"]},"rows":["waarschuwing","domein","route"]},
-"3.11":{"t":"info","v":"bevoegd"},
-"3.12":{"t":"casus","a":{"icon":"vraag","orbit":["vuurwerk","oog"]}},
-"3.13":{"t":"praktijk","a":"boa-notitie","ic":"lamp"},
-"3.14":{"t":"onthoud","a":"weegschaal","icons":["oog","domein"]},
-"3.15":{"t":"onthoud","a":"boa-notitie","icons":["boa","kalender","mensen"]},
-"3.16":{"t":"vooruit"},
-"4.0":{"t":"lo","a":"boa-armen"},
-"4.1":{"t":"info","v":"stappen"},
-"4.2":{"t":"info","v":"kaart"},
-"4.3":{"t":"letop","a":"wetboek"},
-"4.4":{"t":"split","a":"boa-uitleg","rows":["ballon","hand","slot"]},
-"4.5":{"t":"wet","art":"Art. 52 Sv"},
-"4.6":{"t":"wet","art":"Art. 27 Sv"},
-"4.7":{"t":"casus","a":"boa-uitleg"},
-"4.8":{"t":"praktijk","a":"boa-uitleg","ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.9":{"t":"wet","art":"Art. 53 Sv"},
-"4.10":{"t":"praktijk","a":{"icon":"afspraak","orbit":["boa","mensen"]},"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.11":{"t":"wet","art":"Art. 54 Sv"},
-"4.12":{"t":"wet","art":"Art. 67 Sv"},
-"4.13":{"t":"letop","a":"boa-uitleg"},
-"4.14":{"t":"wet","art":"Art. 23 WED"},
-"4.15":{"t":"casus","a":{"icon":"bus","orbit":["zoeken","tas"]}},
-"4.16":{"t":"praktijk","a":{"icon":"bus","orbit":["zoeken","tas"]},"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.17":{"t":"wet","art":"Art. 24a WED"},
-"4.18":{"t":"praktijk","a":{"icon":"bus","orbit":["zoeken","tas"]},"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.19":{"t":"wet","art":"Art. 18 WED"},
-"4.20":{"t":"split","a":{"icon":"slot","orbit":["vuurwerk","pv"]},"rows":["oog","slot","pv"]},
-"4.21":{"t":"praktijk","a":{"icon":"tas","orbit":["vuurwerk","document"]},"ic":"route","icons":["oog","doel","vraag","wet","route"],"wide":1},
-"4.22":{"t":"wet","art":"Art. 26 WED"},
-"4.23":{"t":"split","a":{"icon":"afstand","orbit":["schild","tas"]},"rows":["lijst","slot"]},
-"4.24":{"t":"split","a":{"vis":"proces"},"rows":["pv","lijst","waarschuwing"],"wide":1},
-"4.25":{"t":"split","a":{"icon":"afspraak","orbit":["boa","mensen"]},"rev":1,"rows":["afspraak","lijst"]},
-"4.26":{"t":"letop","a":"boa-armen"},
-"4.27":{"t":"onthoud","a":"boa-uitleg","icons":["hand","vuurwerk","slot"]},
-"4.28":{"t":"onthoud","a":"pv-document","icons":["slot","pv","afspraak"]},
-"4.29":{"t":"vooruit"},
-"5.0":{"t":"lo","a":"boa-armen"},
-"5.1":{"t":"casus","a":{"icon":"tas","orbit":["vraag","waarschuwing"]}},
-"5.2":{"t":"split","a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]},"rows":["ballon","wet","pv"]},
-"5.3":{"t":"split","a":{"icon":"waarschuwing","orbit":["vuurwerk","hand","wet"]},"rev":1,"rows":["waarschuwing","wet","vraag"]},
-"5.4":{"t":"split","a":{"icon":"vraag","orbit":["vuurwerk","oog"]},"rows":["vraag","oog","pv"]},
-"5.5":{"t":"split","a":{"icon":"afstand","orbit":["schild","tas"]},"rows":["schild","wet","waarschuwing"]},
-"5.6":{"t":"info","v":"drie"},
-"5.7":{"t":"letop","a":{"icon":"afstand","orbit":["schild","tas"]},"icons":["hand","kruis","mensen","afspraak"]},
-"5.8":{"t":"casus","a":{"icon":"tas","orbit":["vraag","waarschuwing"]}},
-"5.9":{"t":"praktijk","a":"boa-uitleg","ic":"lamp"},
-"5.10":{"t":"onthoud","a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]},"icons":["ballon","waarschuwing"]},
-"5.11":{"t":"onthoud","a":"boa-observeer","icons":["schild","waarschuwing","afspraak"]},
-"5.12":{"t":"vooruit"},
-"6.0":{"t":"lo","a":"boa-armen"},
-"6.1":{"t":"split","a":"weegschaal","rows":["wet","afspraak","lamp"]},
-"6.2":{"t":"info","v":"taak"},
-"6.3":{"t":"split","a":{"icon":"afspraak","orbit":["boa","document","mensen"]},"rev":1,"rows":["document","mensen","waarschuwing"]},
-"6.4":{"t":"wet","art":"Beleid"},
-"6.5":{"t":"wet","art":"Beleid"},
-"6.6":{"t":"split","a":{"icon":"domein","orbit":["afspraak","boa","mensen"]},"rows":["domein","afspraak","vraag"]},
-"6.7":{"t":"info","v":"routes"},
-"6.8":{"t":"casus","a":{"icon":"straat","orbit":["vuurwerk","boa"]}},
-"6.9":{"t":"casus","a":{"icon":"tas","orbit":["afstand","locatie"]}},
-"6.10":{"t":"casus","a":{"icon":"mensen","orbit":["afstand","schild"]}},
-"6.11":{"t":"checklist","a":{"icon":"afspraak","orbit":["boa","mensen"]},"icons":["oog","wet","persoon","slot","pv"]},
-"6.12":{"t":"onthoud","a":"weegschaal","icons":["wet","afspraak"]},
-"6.13":{"t":"onthoud","a":{"icon":"afspraak","orbit":["boa","mensen"]},"icons":["boa","mensen","kalender"]},
-"6.14":{"t":"vooruit"},
-"7.0":{"t":"lo","a":"boa-armen"},
-"7.1":{"t":"overzicht"},
-"7.2":{"t":"casus","a":{"icon":"mensen","orbit":["vuurwerk","tas"]}},
-"7.3":{"t":"bd","s":1,"a":"boa-observeer","rev":1,"rows":["oor","oog","pv"]},
-"7.4":{"t":"bd","s":2,"a":"wetboek","rev":0,"rows":["wet","kalender","vraag"]},
-"7.5":{"t":"bd","s":1,"a":{"icon":"tas","orbit":["document","vraag"]},"rev":1,"rows":["document","vraag"]},
-"7.6":{"t":"bd","s":1,"a":"boa-notitie","rev":0,"rows":["vraag","zoeken"]},
-"7.7":{"t":"bd","s":3,"a":{"icon":"schild","orbit":["domein","wet","lijst"]},"rev":1,"rows":["schild","domein","vraag"]},
-"7.8":{"t":"bd","s":4,"a":"boa-uitleg","rev":0,"rows":["hand","slot","wet"]},
-"7.9":{"t":"bd","s":4,"a":{"icon":"afstand","orbit":["schild","tas"]},"rev":1,"rows":["waarschuwing","schild"]},
-"7.10":{"t":"bd","s":4,"a":{"icon":"afspraak","orbit":["boa","mensen"]},"rev":0,"rows":["afspraak","mensen"]},
-"7.11":{"t":"bd","s":4,"a":{"icon":"slot","orbit":["vuurwerk","pv"]},"rev":1,"rows":["slot","afspraak"]},
-"7.12":{"t":"checklist","a":"pv-document","icons":["megafoon","klok","oog","persoon","vuurwerk","document","lagen","hand","wet","ballon","slot","conclusie"]},
-"7.13":{"t":"letop","a":"pv-document"},
-"7.14":{"t":"pvvoorbeeld","a":"boa-notitie"},
-"7.15":{"t":"recap","n":1,"a":{"icon":"document","orbit":["vuurwerk","lijst"]}},
-"7.16":{"t":"recap","n":2,"a":"wetboek"},
-"7.17":{"t":"recap","n":3,"a":"weegschaal"},
-"7.18":{"t":"recap","n":4,"a":"boa-uitleg"},
-"7.19":{"t":"recap","n":5,"a":{"icon":"waarschuwing","orbit":["vuurwerk","knal"]}},
-"7.20":{"t":"recap","n":6,"a":{"icon":"afspraak","orbit":["boa","mensen"]}},
-"7.21":{"t":"split","a":"boa-uitleg","rows":["route","lijst"]},
-"7.22":{"t":"info","v":"beslishulp"},
-"7.23":{"t":"hero","a":"boa-armen","rows":["toets","boek"],"eind":1}};
+const L_SPEC={"0.0": {"t": "casus", "a": "scene-plein-knal"},
+"0.1": {"t": "lo", "a": "boa-armen"},
+"0.2": {"t": "rijkaart", "a": {"vis": "bestanddelen"},
+"rows": ["route", "lijst"], "ic": "schild"},
+"1.0": {"t": "wetcat"},
+"1.1": {"t": "categorie"},
+"1.2": {"t": "categorie"},
+"1.3": {"t": "categorie"},
+"1.4": {"t": "categorie"},
+"1.5": {"t": "wet", "art": "Art. 2.1.3 Vuurwerkbesluit"},
+"1.6": {"t": "split", "a": "foto-onbekend", "rows": ["vraag", "waarschuwing", "pv"]},
+"1.7": {"t": "rijkaart", "a": "scene-boa-jongeren-plein", "rows": ["oog", "document", "zoeken", "wet"], "ic": "schild"},
+"2.0": {"t": "split", "a": {"icon": "kalender", "orbit": ["wet", "vuurwerk", "document"]},
+"rows": ["kalender", "wet", "vuurwerk"]},
+"2.1": {"t": "wet", "art": "Art. 9.2.2.1a Wm"},
+"2.2": {"t": "wet", "art": "Art. 1.1.2a Vuurwerkbesluit"},
+"2.3": {"t": "checklist", "a": "wetboek", "icons": ["akte", "mensen", "locatie", "klok", "vuurwerk"]},
+"2.4": {"t": "split", "a": "wetboek", "rows": ["wet", "lijst", "wet", "lagen"]},
+"2.5": {"t": "wet", "art": "Art. 1a en 2 WED"},
+"3.0": {"t": "wet", "art": "Art. 142 Sv"},
+"3.1": {"t": "wet", "art": "Domein I, onderdeel 9"},
+"3.2": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
+"rows": ["vink", "kruis", "kruis", "afspraak"]},
+"3.3": {"t": "wet", "art": "Art. 17 WED"},
+"3.4": {"t": "concl"},
+"4.0": {"t": "info", "v": "bevkaart"},
+"4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
+"4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
+"4.3": {"t": "wet", "art": "Art. 54 Sv"},
+"4.4": {"t": "wet", "art": "Art. 23 WED"},
+"4.5": {"t": "wet", "art": "Art. 18 WED"},
+"4.6": {"t": "letop", "a": "boa-uitleg"},
+"5.0": {"t": "letop", "a": {"icon": "afstand", "orbit": ["schild", "tas"]},
+"icons": ["hand", "kruis", "mensen", "afspraak"]},
+"5.1": {"t": "split", "a": {"icon": "afspraak", "orbit": ["boa", "document", "mensen"]},
+"rows": ["document", "citaat", "citaat", "waarschuwing"]},
+"5.2": {"t": "praktijk", "a": {"icon": "mensen", "orbit": ["afstand", "schild"]},
+"ic": "afspraak", "icons": ["waarschuwing", "mensen", "vuurwerk", "domein", "hand"]},
+"5.3": {"t": "casus", "a": {"icon": "afspraak", "orbit": ["boa", "mensen"]}},
+"5.4": {"t": "checklist", "a": {"icon": "afspraak", "orbit": ["boa", "mensen"]},
+"icons": ["oog", "wet", "persoon", "locatie", "pv"]},
+"6.0": {"t": "casus", "a": "scene-boa-jongeren-plein"},
+"6.1": {"t": "bd", "s": 1, "a": "boa-observeer", "rev": 1, "rows": ["oog", "document", "vraag"]},
+"6.2": {"t": "bd", "s": 2, "a": "wetboek", "rev": 0, "rows": ["hand", "wet", "vraag"]},
+"6.3": {"t": "bd", "s": 3, "a": {"icon": "schild", "orbit": ["domein", "wet", "lijst"]},
+"rev": 1, "rows": ["domein", "akte", "vraag"]},
+"6.4": {"t": "bd", "s": 4, "a": "boa-uitleg", "rev": 0, "rows": ["schild", "hand", "afspraak"]},
+"6.5": {"t": "letop", "a": "pv-document"},
+"6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
+"6.7": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0":"wetboek","1.1":"doelwit","1.2":"boa-uitleg","1.3":"weegschaal","1.4":"boa-notitie","2.0":"doelwit","2.1":"boa-uitleg","2.2":"weegschaal","2.3":"boa-notitie","3.0":"boa-uitleg","3.1":"weegschaal","3.2":"boa-notitie","3.3":"vraag","3.4":"wetboek","3.5":"doelwit","4.0":"weegschaal","4.1":"boa-notitie","4.2":"vraag","4.3":"wetboek","4.4":"doelwit","4.5":"boa-uitleg","4.6":"weegschaal","5.0":"boa-notitie","5.1":"vraag","5.2":"wetboek","5.3":"doelwit","6.0":"vraag","6.1":"wetboek","6.2":"doelwit","6.3":"boa-uitleg"};
+const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "2.2": "doelwit", "2.3": "boa-uitleg", "3.0": "weegschaal", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
-'scene-plein-knal':"Twee boa’s in handhavingsuniform spreken op straat een groep jonge mannen aan. Eén van hen houdt een doos vuurwerk vast; een ander heeft ook vuurwerk in zijn hand.",'scene-vuurwerk-f1':"Klein vuurwerk voor binnengebruik, zoals sterretjes, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Verpakt vuurwerk met op het etiket de categorieaanduiding F2, op een neutrale ondergrond.",'scene-vuurwerk-f3':"Verpakt vuurwerk met op het etiket de categorieaanduiding F3, op een neutrale ondergrond.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk in transportverpakking bij een afgezette vuurwerkshowlocatie.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket, categorieaanduiding en CE-markering. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond. De categorie is niet te zien.",'scene-zwaar-illegaal':"In beslag genomen vuurwerk zonder etiket in een bak op een tafel, gefotografeerd voor het dossier.",'scene-tas-inhoud':"Open sporttas op de grond met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan op straat en vraagt naar zijn identiteitsbewijs.",'scene-boa-politie-overdracht':"Een boa praat met twee politiemensen bij een politieauto en draagt de situatie over.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas.",'scene-afstand-melden':"Een boa, van achteren gezien, houdt afstand van een tas op de grond en meldt zich via de portofoon.",'scene-vervoermiddel-onderzoek':"Een boa staat naast een geparkeerde personenauto met open kofferbak en spreekt de bestuurder aan. In de kofferbak ligt een tas.",'scene-ontheffing-sportveld':"Afgezet sportveld op oudejaarsavond. Een supervisor van een vereniging laat een boa een document zien.",'scene-inbeslagname-tafel':"Handen met handschoenen leggen verpakt vuurwerk in een bak op een tafel. Op tafel ligt een formulier. Geen gezichten.",'scene-tas-zonder-etiket':"Tas op een stoep met groot vuurwerk zonder etiket, deels met tape omwikkeld. Op de achtergrond kijken omstanders toe.",'scene-woonstraat-fontein':"Woonstraat in de avond: een man van middelbare leeftijd staat naast een brandende grondfontein. Een boa komt aanlopen.",'scene-park-tas':"Pad in een park: een achtergelaten tas met vuurwerk naast een bankje. Een boa staat op afstand en belt.",'scene-station-groep':"Stationsplein in de avond: een drukke groep met vuurwerk. Twee boa’s houden afstand en melden zich via de portofoon.",'scene-boa-jongeren-plein':"Twee boa’s in handhavingsuniform staan op een plein in gesprek met vier jonge mannen.",'scene-parkeerplaats-tas':"Detail van de tas op de parkeerplaats: verpakkingen met etiket en los vuurwerk zonder etiket.",
-'wetboek':'Wet- en regelgeving over vuurwerk','pv-document':'Proces-verbaal met handtekening','doelwit':'Doelwit met pijl','vraag':'Vraagteken','weegschaal':'Weegschaal'
+'scene-plein-knal':"Twee boa’s in handhavingsuniform spreken op straat een groep jonge mannen aan. Eén van hen houdt een doos vuurwerk vast; een ander heeft ook vuurwerk in zijn hand.",'scene-vuurwerk-f1':"Klein vuurwerk voor binnengebruik, zoals sterretjes, in de originele verpakking met categorieaanduiding.",'scene-vuurwerk-f2':"Verpakt vuurwerk met op het etiket de categorieaanduiding F2, op een neutrale ondergrond.",'scene-vuurwerk-f3':"Verpakt vuurwerk met op het etiket de categorieaanduiding F3, op een neutrale ondergrond.",'scene-vuurwerk-professioneel':"Professioneel vuurwerk in transportverpakking bij een afgezette vuurwerkshowlocatie.",'scene-etiket-categorie':"Close-up van een vuurwerkverpakking met etiket, categorieaanduiding en CE-markering. Fictief merk.",'scene-vuurwerk-los':"Los vuurwerk zonder verpakking of etiket op de grond. De categorie is niet te zien.",'scene-tas-inhoud':"Open sporttas op de grond met verschillende soorten vuurwerk: een deel in de verpakking, een deel los.",'scene-boa-staandehouden':"Een boa spreekt een jongere aan op straat en vraagt naar zijn identiteitsbewijs.",'scene-boa-politie-overdracht':"Een boa praat met twee politiemensen bij een politieauto en draagt de situatie over.",'scene-parkeerplaats':"Parkeerplaats in de avond: vier jongeren. Eén jongere houdt vuurwerk in zijn hand. Op de grond staat een tas.",'scene-afstand-melden':"Een boa, van achteren gezien, houdt afstand van een tas op de grond en meldt zich via de portofoon.",'scene-vervoermiddel-onderzoek':"Een boa staat naast een geparkeerde personenauto met open kofferbak en spreekt de bestuurder aan. In de kofferbak ligt een tas.",'scene-ontheffing-sportveld':"Afgezet sportveld op oudejaarsavond. Een supervisor van een vereniging laat een boa een document zien.",'scene-inbeslagname-tafel':"Handen met handschoenen leggen verpakt vuurwerk in een bak op een tafel. Op tafel ligt een formulier. Geen gezichten.",'scene-tas-zonder-etiket':"Tas op een stoep met groot vuurwerk zonder etiket, deels met tape omwikkeld. Op de achtergrond kijken omstanders toe.",'scene-woonstraat-fontein':"Woonstraat in de avond: een man van middelbare leeftijd staat naast een brandende grondfontein. Een boa komt aanlopen.",'scene-park-tas':"Pad in een park: een achtergelaten tas met vuurwerk naast een bankje. Een boa staat op afstand en belt.",'scene-station-groep':"Stationsplein in de avond: een drukke groep met vuurwerk. Twee boa’s houden afstand en melden zich via de portofoon.",'scene-boa-jongeren-plein':"Twee boa’s in handhavingsuniform staan op een plein in gesprek met vier jonge mannen.",'scene-parkeerplaats-tas':"Detail van de tas op de parkeerplaats: verpakkingen met etiket en los vuurwerk zonder etiket.",
+'foto-onbekend':'Vuurwerkobject zonder etiket of zichtbare categorie','wetboek':'Wet- en regelgeving over vuurwerk','pv-document':'Proces-verbaal met handtekening','doelwit':'Doelwit met pijl','vraag':'Vraagteken','weegschaal':'Weegschaal'
 };
 
 /* ── Infographics en procesplaten (HTML + duotone iconen) ── */
 /* semi-realistische praktijkscènes (vervangen de oude vectorscènes) */
-const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-boa-jongeren-plein':'../images/boa-jongeren-plein.webp'};
+const ART_FILE={'scene-plein-knal':'../images/plein-knal.webp','scene-boa-jongeren-plein':'../images/boa-jongeren-plein.webp','foto-onbekend':'../images/concl-onbekend.webp'};
 const IMG=(n,alt,cls)=>'<img class="'+(cls||'')+(ART_FILE[n]?' foto':'')+'" src="assets/illustraties/'+(ART_FILE[n]||n+'.svg')+'?v='+ASSET_V+'" alt="'+(alt==null?(ART_ALT[n]||''):alt)+'" loading="eager" decoding="async">';
 /* ── BOA-illustratieset (stijlreferentie JS Legal Force) ── */
 const BOA_POSE={'boa-armen':{},'boa-uitleg':{chip:'lamp'},'boa-notitie':{prop:'notitieblok',chip:'oog'},'boa-dossier':{prop:'pv-los'},'boa-observeer':{chip:'oog'}};
@@ -382,94 +288,21 @@ const VIS={
 };
 /* Vervangers van de oorspronkelijke figuren: zelfde labels, rijkere vormgeving */
 const FIG={
-  opzet(){
-    const s=[['megafoon','Introductie'],['lagen','Zes inhoudelijke onderwerpen'],['lijst','Samenvatting'],['toets','Eindtoets · ten minste 80%'],['certificaat','Certificaat']];
-    return '<div class="fig fig-route"><ol class="route">'+s.map((x,i)=>'<li class="rt'+(i===4?' rt-end':'')+'"><span class="rt-n">'+(i+1)+'</span>'+di(x[0])+'<b>'+x[1]+'</b></li>').join('')+'</ol>'
-      +'<p class="fig-note">'+di('route')+'Je voortgang wordt bewaard; je kunt later verdergaan.</p></div>';
-  },
-  categorieen(){
-    const s=[['vuurwerk','F1','zeer weinig gevaar · binnen'],['vuurwerk','F2','weinig gevaar · buiten'],['vuurwerk','F3','middelmatig gevaar · grote open ruimte'],['waarschuwing','F4','veel gevaar · alleen gespecialiseerde kennis']];
-    return '<div class="fig fig-bewijs"><div class="bw-side bw-side-l">'+boaHTML('boa-armen',{side:'l',sz:'vis',bust:1})+'</div><div class="bw-main"><div class="bw-grid">'+s.map((x,i)=>'<div class="bw"><span class="bw-n">'+(i+1)+'</span>'+di(x[0])+'<div><b>Categorie '+x[1]+'</b><small>'+x[2]+'</small></div></div>').join('')+'</div>'
-      +'<div class="bw-arrow" aria-hidden="true">↓</div><div class="bw-sum">'+di('wet')+'<div><b>Verbod art. 9.2.2.1a Wm</b><small>geldt voor F2 en F3 · niet voor F1</small></div></div></div><div class="bw-side bw-side-r">'+IMG('wetboek','')+'</div>'
-      +'<div class="bw-rules"><p>'+di('document')+'De fabrikant bepaalt de categorie (art. 1A.1.3 Vuurwerkbesluit).</p><p>'+di('waarschuwing')+'F4 en ander professioneel vuurwerk: regels in het Vuurwerkbesluit.</p></div></div>';
-  },
-  checklist(){
-    const t=['vorm, grootte en hoeveelheid','verpakking en etiket: aanwezig of niet','de categorie: vaak nog vast te stellen','verboden of niet: nog vast te stellen'];
-    return '<div class="fig fig-check">'+bdGrid(t.map((x,i)=>({n:1,d:i+1,label:i<2?'Kun je zien':'Nog vaststellen',t:'<span>'+x+'</span><span class="bdg-v">'+di(i<2?'vink':'vraag')+'</span>'})),{cls:'bdg--check'}).outerHTML
-      +'<div class="chk-flow"><span class="chk-lab">leg vast wat je ziet</span><span class="chk-arrow" aria-hidden="true">↓</span></div>'
-      +'<div class="chk-out"><div class="chk-ok">'+di('pv')+'<div><b>Waarneming</b><small>feitelijk vastleggen</small></div></div><div class="chk-no">'+di('vraag')+'<span>Wat je nog niet weet, vul je niet zelf in.</span></div></div></div>';
-  },
-  vergelijk(){
-    const a=[['document','etiket en verpakking te lezen'],['lijst','categorie staat vaak vermeld'],['vink','je hebt aanwijzingen']];
-    const b=[['vraag','geen verpakking of etiket'],['oog','alleen vorm en grootte te zien'],['waarschuwing','onbekend vuurwerk']];
-    return '<div class="fig fig-vaten"><div class="vt-row"><div class="vt-box vt-a">'+di('document')+'<b>Verpakt · met etiket</b><small>er is informatie om te lezen</small><div class="vt-f">'+a.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div>'
-      +'<div class="vt-link"><span aria-hidden="true">≠</span><em>andere informatie</em></div>'
-      +'<div class="vt-box vt-b">'+di('vraag')+'<b>Los · zonder etiket</b><small>er is weinig informatie</small><div class="vt-f">'+b.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div></div>'
-      +'<div class="vt-down" aria-hidden="true">↓</div><div class="vt-tot">'+di('pv')+'<div><b>Leg vast wat je ziet</b><small>vul niet zelf in wat je niet weet</small></div></div>'
-      +'<p class="fig-note">'+di('lamp')+'<span>Wat je ziet is nog geen juridische conclusie.</span></p></div>';
-  },
-  tijdlijn(){
-    const s=[['Art. 9.2.2.1a Wet milieubeheer','verbod bezit, gebruik en verkoop F2 en F3'],['Art. 1a WED','noemt art. 9.2.2.1a Wm'],['Economisch delict','opzettelijk: misdrijf · anders: overtreding (art. 2 WED)'],['Opsporingsbevoegdheid','boa domein I, onderdeel 9 (sinds 8 september 2026)'],['Opsporingsbevoegdheden','algemeen (Sv) en bijzonder (WED)']];
-    return '<div class="fig fig-tl"><div class="tl-art">'+IMG('wetboek','')+'</div><div class="tl-main"><ol class="tl">'+s.map((x,i)=>'<li>'+di(['wet','document','straf','domein','schild'][i])+'<div><b>'+x[0]+'</b><small>'+x[1]+'</small></div></li>').join('')+'</ol>'
-      +'<p class="fig-note">'+di('route')+'Van regel naar bevoegdheid: elke stap bouwt voort op de vorige.</p></div></div>';
-  },
-  stappen(){
-    const s=[['oog','Situatie','wat zie en hoor je?'],['doel','Wat wil je doen?','bijv. staande houden'],['vraag','Mag dat?','ben je bevoegd?'],['wet','Wettelijke grondslag','op welk artikel?'],['route','Wat doe je vervolgens?','afhandelen of overdragen']];
-    return '<div class="fig fig-bewijs"><div class="bw-side bw-side-l">'+boaHTML('boa-armen',{side:'l',sz:'vis',bust:1})+'</div><div class="bw-main"><div class="bw-grid">'+s.map((x,i)=>'<div class="bw"><span class="bw-n">'+(i+1)+'</span>'+di(x[0])+'<div><b>'+x[1]+'</b><small>'+x[2]+'</small></div></div>').join('')+'</div>'
-      +'<div class="bw-arrow" aria-hidden="true">↓</div><div class="bw-sum">'+di('pv')+'<div><b>Vastleggen</b><small>in het proces-verbaal</small></div></div>'
-      +'</div><div class="bw-side bw-side-r">'+IMG('wetboek','')+'</div><div class="bw-rules"><p>'+di('wet')+'Geen grondslag? Dan doe je het niet.</p><p>'+di('lijst')+'Schrijf feiten op, geen conclusies.</p></div></div>';
-  },
-  drie(){
-    const s=[['wet','Ben ik juridisch bevoegd?'],['schild','Kan ik veilig handelen?'],['afspraak','Wat is de afgesproken taakverdeling?']];
-    return '<div class="fig fig-route"><ol class="route">'+s.map((x,i)=>'<li class="rt'+(i===2?' rt-end':'')+'"><span class="rt-n">'+(i+1)+'</span>'+di(x[0])+'<b>'+x[1]+'</b></li>').join('')+'</ol>'
-      +'<p class="fig-note">'+di('lamp')+'Drie aparte vragen. Samen bepalen ze wat je doet.</p></div>';
-  },
-  taak(){
-    const f=[['wet','wet'],['domein','domeinlijst'],['boek','bevoegdheden']];
-    const g=[['document','Handhavingsplan'],['afspraak','afspraken'],['mensen','boa en politie']];
-    return '<div class="fig fig-vaten"><div class="vt-row"><div class="vt-box vt-a">'+di('wet')+'<b>Bevoegdheid</b><small>wat je juridisch mág</small><div class="vt-f">'+f.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div>'
-      +'<div class="vt-link"><span aria-hidden="true">≠</span><em>twee aparte vragen</em></div>'
-      +'<div class="vt-box vt-b">'+di('afspraak')+'<b>Taakverdeling</b><small>wat van jou wordt verwacht</small><div class="vt-f">'+g.map(x=>'<span class="chip">'+di(x[0])+x[1]+'</span>').join('')+'</div></div></div>'
-      +'<div class="vt-down" aria-hidden="true">↓</div><div class="vt-tot">'+di('boa')+'<div><b>Jouw handelen op straat</b><small>binnen je bevoegdheid én volgens de afspraken</small></div></div>'
-      +'<p class="fig-note">'+di('lamp')+'<span>Een afspraak geeft je geen bevoegdheid die je niet hebt.</span></p></div>';
-  },
-  bevoegd(){
-    const s=[['oog','Welk feit?','redelijk vermoeden · art. 27 Sv'],['wet','Welke wettelijke bepaling?','bijv. art. 9.2.2.1a Wm'],['domein','Staat die bepaling op mijn domeinlijst?','domein I, onderdeel 9'],['boa','Past het bij mijn functie en taak?','akte en werkgever'],['doel','Welke bevoegdheid wil ik gebruiken?','bijv. staande houden, art. 18 WED'],['vink','Zijn aan de voorwaarden voldaan?','o.a. redelijkerwijs nodig'],['schild','Kan ik veilig handelen?','anders afstand en politie']];
-    return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke vraag ‘ja’ → volgende vraag · één ‘nee’ of twijfel → niet zelf, overleggen</p><div class="bs-wrap"><ol class="bs">'
-      +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<div class="bs-q"><b>'+x[1]+'</b><small>'+x[2]+'</small></div>'+(i<6?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
-      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">nee</span>'+di('afspraak')+'<b>Niet zelf</b><small>overleg of politie</small></div><div class="bs-yes"><span class="bs-tag">ja</span>'+di('vink')+'<b>Handelen</b><small>volgens de taakverdeling</small></div></div></div>'
-      +'<div class="bs-notes"><p>'+di('oog')+'Een feit zien is iets anders dan bevoegd zijn.</p><p>'+di('schild')+'Bevoegd is niet automatisch veilig.</p></div></div>';
-  },
-  keten7(){
-    const s=[['vuurwerk','Welk product?','wat zie je precies?'],['lijst','Welke categorie?','F1 tot en met F4 · of nog niet vast te stellen'],['mensen','Voor wie?','consument of professional'],['hand','Welke handeling?','bezit, gebruik, verkoop, afsteken'],['wet','Welke bepaling?','welk artikel is overtreden?'],['document','Uitzondering of ontheffing?','bijv. ontheffing'],['domein','Ben ik bevoegd?','domeinlijst en akte']];
-    return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke stap helder → volgende stap · twijfel → niet zelf concluderen</p><div class="bs-wrap"><ol class="bs">'
-      +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<div class="bs-q"><b>'+x[1]+'</b><small>'+x[2]+'</small></div>'+(i<6?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
-      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">nee</span>'+di('afspraak')+'<b>Niet zelf</b><small>overleg of politie</small></div><div class="bs-yes"><span class="bs-tag">ja</span>'+di('vink')+'<b>Handelen</b><small>volgens de taakverdeling</small></div></div></div>'
-      +'<div class="bs-notes"><p>'+di('oog')+'Een categorie is nog geen juridische conclusie.</p><p>'+di('schild')+'Ook bij een helder feit: eerst veilig.</p></div></div>';
-  },
-  lagen4(){
-    const s=[['oog','Waarneming','Wat zie ik?'],['document','Informatie','Wat staat op verpakking of etiket?'],['zoeken','Onderzoek','Wat kan rechtmatig nader worden vastgesteld?'],['wet','Juridische conclusie','Wat kan worden bewezen of onderbouwd?']];
-    return '<div class="fig fig-bewijs"><div class="bw-side bw-side-l">'+boaHTML('boa-armen',{side:'l',sz:'vis',bust:1})+'</div><div class="bw-main"><div class="bw-grid">'+s.map((x,i)=>'<div class="bw"><span class="bw-n">'+(i+1)+'</span>'+di(x[0])+'<div><b>'+x[1]+'</b><small>'+x[2]+'</small></div></div>').join('')+'</div>'
-      +'<div class="bw-arrow" aria-hidden="true">↓</div><div class="bw-sum">'+di('pv')+'<div><b>Proces-verbaal</b><small>houd de vier lagen uit elkaar</small></div></div></div><div class="bw-side bw-side-r">'+IMG('wetboek','')+'</div>'
-      +'<div class="bw-rules"><p>'+di('vraag')+'Onbekend vuurwerk is geen wettelijke categorie.</p><p>'+di('lijst')+'Een conclusie moet je kunnen onderbouwen.</p></div></div>';
-  },
-  kaart(){
-    const s=[['hand','Staande houden','art. 52 Sv'],['slot','Aanhouden','art. 53 en 54 Sv'],['bus','Vervoermiddel onderzoeken','art. 23 WED'],['afspraak','Medewerking vorderen','art. 24a WED'],['vuurwerk','Uitlevering vorderen · in beslag nemen','art. 18 WED'],['waarschuwing','Niet voldoen aan vordering','art. 26 WED · economisch delict']];
-    return '<div class="fig fig-bewijs"><div class="bw-side bw-side-l">'+boaHTML('boa-armen',{side:'l',sz:'vis',bust:1})+'</div><div class="bw-main"><div class="bw-grid">'+s.map((x,i)=>'<div class="bw"><span class="bw-n">'+(i+1)+'</span>'+di(x[0])+'<div><b>'+x[1]+'</b><small>'+x[2]+'</small></div></div>').join('')+'</div>'
-      +'<div class="bw-arrow" aria-hidden="true">↓</div><div class="bw-sum">'+di('route')+'<div><b>Per bevoegdheid</b><small>Wanneer mag dit? · Welke voorwaarden? · Wat mag ik precies? · Waar ligt de grens?</small></div></div></div><div class="bw-side bw-side-r">'+IMG('wetboek','')+'</div>'
-      +'<div class="bw-rules"><p>'+di('wet')+'WED-bevoegdheden: alleen voor zover redelijkerwijs nodig.</p><p>'+di('schild')+'Bevoegd is niet automatisch veilig.</p></div></div>';
-  },
-  routes(){
-    const s=[['boa','Zelf afhandelen'],['afspraak','Overleggen'],['mensen','Politie inschakelen']];
-    return '<div class="fig fig-route"><ol class="route">'+s.map((x,i)=>'<li class="rt'+(i===2?' rt-end':'')+'"><span class="rt-n">'+(i+1)+'</span>'+di(x[0])+'<b>'+x[1]+'</b></li>').join('')+'</ol>'
-      +'<p class="fig-note">'+di('document')+'Uitgangspunten: Handhavingsplan jaarwisseling (maart 2026) en lokale afspraken.</p></div>';
+  bevkaart(){
+    const kol=[
+      {c:'bk-bev',ic:'schild',h:'Bevoegdheid',s:'wat jij mag doen',r:[['hand','Staande houden','art. 52 Sv'],['slot','Aanhouden op heterdaad','art. 53 Sv'],['klok','Aanhouden buiten heterdaad','art. 54 Sv · alleen als aan de voorwaarden is voldaan'],['vuurwerk','Inbeslagneming · uitlevering vorderen','art. 18 WED'],['bus','Vervoermiddel stilhouden en onderzoeken','art. 23 WED'],['afspraak','Zelf feitelijk handelen als iemand niet meewerkt','art. 24a lid 3 WED']]},
+      {c:'bk-pl',ic:'mensen',h:'Verplichting',s:'wat de burger moet doen',r:[['afspraak','Meewerken aan een redelijke vordering','art. 24a lid 1 WED · geen bevoegdheid van de boa']]},
+      {c:'bk-str',ic:'waarschuwing',h:'Strafbaarstelling',s:'wat zelf een strafbaar feit is',r:[['kruis','Opzettelijk niet voldoen aan een WED-vordering','art. 26 WED · economisch delict']]}
+    ];
+    return '<div class="fig fig-bev"><div class="bev-cols">'+kol.map(k=>'<section class="bev-col '+k.c+'"><div class="bev-h">'+di(k.ic)+'<div><b>'+k.h+'</b><small>'+k.s+'</small></div></div><ul class="bev-l">'+k.r.map(x=>'<li>'+di(x[0])+'<div><b>'+x[1]+'</b><small>'+x[2]+'</small></div></li>').join('')+'</ul></section>').join('')+'</div>'
+      +'<div class="bw-rules"><p>'+di('wet')+'WED-bevoegdheden: alleen voor zover redelijkerwijs nodig, en alleen voor een feit waarvoor jij bevoegd bent.</p><p>'+di('schild')+'Een bevoegdheid is geen plicht, en niet automatisch veilig.</p></div></div>';
   },
   beslishulp(){
-    const s=[['oog','Wat tref ik aan?','welk soort vuurwerk?'],['wet','Is dit strafbaar?','welke bepaling?'],['schild','Ben ik bevoegd?','staat het op mijn domeinlijst?'],['route','Wat doe ik nu?','veilig? taakverdeling?']];
+    const s=[['oog','Wat tref ik aan?','beschrijf wat je ziet · niet gokken'],['wet','Is dit strafbaar?','welke gedraging · welk strafbaar feit?'],['schild','Ben ik bevoegd?','voor dít feit · binnen functie en taak?'],['route','Wat doe ik nu?','veilig? · taak? · politie?']];
     return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke vraag helder → volgende vraag · twijfel → overleggen</p><div class="bs-wrap"><ol class="bs">'
       +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<span class="bs-bd">'+bdBadge(i+1,'row')+'</span><div class="bs-q"><b>'+x[2]+'</b></div>'+(i<3?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
-      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">twijfel</span>'+di('afspraak')+'<b>Overleg</b><small>of schakel de politie in</small></div><div class="bs-yes"><span class="bs-tag">helder</span>'+di('vink')+'<b>Handel</b><small>volgens de taakverdeling</small></div></div></div>'
-      +'<div class="bs-notes"><p>'+di('schild')+'Veiligheid weegt altijd mee.</p><p>'+di('pv')+'Leg feiten vast, geen conclusies.</p></div></div>';
+      +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">twijfel</span>'+di('afspraak')+'<b>Overleg</b><small>of schakel de politie in</small></div><div class="bs-yes"><span class="bs-tag">helder</span>'+di('vink')+'<b>Handel</b><small>binnen je bevoegdheid en taak</small></div></div></div>'
+      +'<div class="bs-notes"><p>'+di('vuurwerk')+'Een categorie is nog geen conclusie.</p><p>'+di('schild')+'Veiligheid weegt altijd mee.</p><p>'+di('pv')+'Leg feiten vast, geen conclusies.</p></div></div>';
   }
 };
 
@@ -484,10 +317,10 @@ const chev='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 const pijlR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const pijlL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
 let profiel=null, steps=[], si=0, answers={}, phase='intake';
-let ex=null;
+let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:17,profiel,phase,si,answers,ex}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:18,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -511,7 +344,7 @@ function shell(inner,opt){
   const ti=opt.ti;
   let seg='';
   if(ti!=null){
-    seg='<div class="hd-prog" aria-label="Onderwerp '+(ti+1)+' van '+D.topics.length+'"><span class="hd-prog-t">Onderwerp '+(ti+1)+' van '+D.topics.length+'</span><span class="segs">'+D.topics.map((t,i)=>'<i class="'+(i<ti?'done':i===ti?'cur':'')+'"></i>').join('')+'</span></div>';
+    seg='<div class="hd-prog" aria-label="Deel '+(ti+1)+' van '+D.topics.length+'"><span class="hd-prog-t">Deel '+(ti+1)+' van '+D.topics.length+'</span><span class="segs">'+D.topics.map((t,i)=>'<i class="'+(i<ti?'done':i===ti?'cur':'')+'"></i>').join('')+'</span></div>';
   }else if(opt.lab){seg='<div class="hd-prog"><span class="hd-prog-t">'+esc(opt.lab)+'</span></div>';}
   const sub=ti!=null?esc(D.topics[ti].titel):esc(opt.sub||'Praktijkgerichte e-learning voor boa\'s');
   return '<header class="hd"><div class="hd-in"><div class="brand">'+LOGO+'<span class="brand-t"><b>JS LEGAL</b><b>FORCE</b></span></div><span class="hd-div" aria-hidden="true"></span>'
@@ -557,15 +390,15 @@ function intake(){
   document.getElementById('go').onclick=()=>{const vn=vnv('vn'),an=vnv('an'),og=vnv('og');if(!vn||!an){document.getElementById('er').classList.add('on');return;}profiel={voornaam:vn,achternaam:an,org:og};welkom();};
 }
 function hervat(sv){
-  profiel=sv.profiel;answers=sv.answers||{};si=sv.si||0;ex=sv.ex||null;phase=sv.phase;
-  /* v14: pagina 'Soorten vuurwerk en de categorieën' toegevoegd als stap 14 (onderwerp 2, pagina 5) */
-  if((sv.v||0)<14&&si>=13)si++;
-  /* v15: de overzichtspagina (stap 14) is vervangen door vier categoriepagina's F1–F4 */
-  if((sv.v||0)<15&&si>=14)si+=3;
-  /* v16: onderwerp 2 opgeschoond (overzichtsfiguur en oude pagina's F1–F4 samengevoegd in de categoriepagina's; oefenvraag toegevoegd) */
-  if((sv.v||0)<16&&si>=9){const p=si-9;if(p<24){si=9+[0,1,2,3,3,4,5,6,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18][p];}else if(p<29){si-=5;}else{si-=4;}}
-  /* v17: eindcorrectie — vier pagina's gesplitst (O2 F4, O3 art. 9.2.2.1a, O4 art. 17 WED, O5 art. 54 Sv) */
-  if((sv.v||0)<17){const M=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175];if(si<M.length)si=M[si];}
+  profiel=sv.profiel;answers=sv.answers||{};si=sv.si||0;ex=sv.ex||null;phase=sv.phase;oudCert=sv.oudCert||null;
+  /* v18: volledige herbouw (42 pagina's, 18 oefenvragen, nieuwe eindtoets). Oude posities en antwoorden passen niet meer.
+     Een eerder behaald certificaat blijft bewaard en bereikbaar vanaf het startscherm. */
+  if((sv.v||0)<18){
+    if(ex&&ex.submitted&&ex.pct>=D.eindtoetsDrempel&&!oudCert)oudCert={pct:ex.pct,nr:ex.nr||null,versie:'eerdere versie'};
+    answers={};si=0;ex=null;
+    phase=(phase==='intake')?'intake':'welkom';
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -574,16 +407,17 @@ function hervat(sv){
 }
 function welkom(){
   phase='welkom';save();
-  const stats='<div class="stats"><div class="stat">'+di('lagen')+'<div><div class="n">'+D.aantalOnderwerpen+'</div><div class="l">Onderwerpen met oefenvragen</div></div></div>'
+  const stats='<div class="stats"><div class="stat">'+di('lagen')+'<div><div class="n">'+D.aantalOnderwerpen+'</div><div class="l">Hoofdstukken met oefenvragen</div></div></div>'
    +'<div class="stat">'+di('toets')+'<div><div class="n">'+D.eindtoets.length+'</div><div class="l">Vragen in de eindtoets</div></div></div>'
    +'<div class="stat">'+di('certificaat')+'<div><div class="n">'+D.eindtoetsDrempel+'%</div><div class="l">Nodig voor certificaat</div></div></div></div>';
   setScreen(heroScreen({copy:'<span class="pill">'+esc(D.kaderLabel)+'</span><p class="kicker">Welkom bij de e-learning</p><h1 class="h-xl">Welkom, <span class="accent">'+esc(profiel.voornaam)+'</span></h1>'
    +'<p class="h-sub">'+esc(D.opleiding)+'</p>'
-   +'<p class="lead">Elk onderwerp begint met korte theorie. Daarna volgen enkele oefenvragen met directe feedback. Na alle onderwerpen maak je een eindtoets over de hele cursus. Haal je die, dan krijg je een certificaat.</p>'
-   +stats+'<div class="hero-acts"><button class="btn btn-primary btn-lg" id="go"><span>Start de e-learning</span>'+pijlR+'</button></div>',art:'boa-uitleg',
+   +'<p class="lead">Na een korte introductie volgen vijf hoofdstukken met korte theorie en oefenvragen met directe feedback. Daarna los je één praktijkcasus op en maak je een eindtoets over de hele cursus. Haal je die, dan krijg je een certificaat.</p>'
+   +stats+'<div class="hero-acts"><button class="btn btn-primary btn-lg" id="go"><span>Start de e-learning</span>'+pijlR+'</button>'+(oudCert?'<button class="btn btn-ghost" id="oudcert">'+di('certificaat')+'<span>Eerder behaald certificaat</span></button>':'')+'</div>',art:'boa-uitleg',
    badge:'<div class="float-chip fc2 chip-wet">'+di('wet')+'<span><b>De vier vragen</b><small>bij elke situatie met vuurwerk</small></span></div>'}),{lab:'Stap 2 van 2'});
   {const fig=document.querySelector('.hero-art .art-boa'),cw=document.querySelector('.hero-art .chip-wet');if(fig&&cw){fig.appendChild(cw);fig.classList.add('has-wet');}}
   document.getElementById('go').onclick=()=>{answers={};ex=null;buildSteps();si=0;phase='leren';render();};
+  const oc=document.getElementById('oudcert');if(oc)oc.onclick=()=>certificaat(oudCert.pct,oudCert);
 }
 function render(){const st=steps[si];if(!st)return eindtoetsIntro();phase='leren';save();return st.type==='page'?pageScreen(st):qScreen(st);}
 function isLaatsteLerenStap(){return si===steps.length-1;}
@@ -591,9 +425,9 @@ function isLaatsteLerenStap(){return si===steps.length-1;}
 function pageScreen(st){
   const t=D.topics[st.ti],p=t.pages[st.pi],n=st.pi+1,tot=t.pages.length,last=isLaatsteLerenStap();
   const spec=L_SPEC[st.ti+'.'+st.pi]||{t:'split',a:'boa-armen'};
-  const head='<div class="pagehead"><span class="ph-ic">'+di(TOPIC_ICON[st.ti])+'</span><div><span class="ph-k">Onderwerp '+t.nr+' · Pagina '+n+'/'+tot+'</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Pagina '+n+' van '+tot+'</span></div>';
+  const head='<div class="pagehead"><span class="ph-ic">'+di(TOPIC_ICON[st.ti])+'</span><div><span class="ph-k">'+tLab(t)+' · Pagina '+n+'/'+tot+'</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Pagina '+n+' van '+tot+'</span></div>';
   setScreen('<article class="card page tpl-'+spec.t+'" data-page="'+st.ti+'.'+st.pi+'">'+head+'<div class="stage" id="stage"></div><div id="bron"></div>'
-    +navHTML(si>0,last?'Naar de eindtoets':'Volgende',null,'',navPos('Onderwerp '+t.nr,'Pagina <b>'+n+'</b> van '+tot))+'</article>',{ti:st.ti,frac:(si+1)/steps.length});
+    +navHTML(si>0,last?'Naar de eindtoets':'Volgende',null,'',navPos(tLab(t),'Pagina <b>'+n+'</b> van '+tot))+'</article>',{ti:st.ti,frac:(si+1)/steps.length});
   composePage(document.getElementById('stage'),document.getElementById('bron'),p,spec,st);
   const pv=document.getElementById('prev');if(pv)pv.onclick=()=>{if(si>0){si--;render();}};
   document.getElementById('next').onclick=()=>{if(last){eindtoetsIntro();}else{si++;render();}};
@@ -603,13 +437,13 @@ function qScreen(st){
   const t=D.topics[st.ti],q=t.vragen[st.qi];
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
-  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">Onderwerp '+t.nr+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+artHTML(art,{rev:1,sz:'mid'})+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
    +'<div class="opts" id="opts" role="radiogroup" aria-label="Antwoordmogelijkheden">'+q.opties.map((o,i)=>'<button class="opt" role="radio" aria-checked="false" data-i="'+i+'"><span class="lt">'+L(i)+'</span><span class="ot">'+esc(o)+'</span></button>').join('')+'</div>'
    +'</div><div id="fb" class="q-fb" aria-live="polite"></div></div>'
-   +'<nav class="nav">'+(si>0?'<button class="btn btn-ghost" id="prev">'+pijlL+'<span>Vorige</span></button>':'<span></span>')+'<span class="sp">'+navPos('Onderwerp '+t.nr+' · Oefenvragen','Vraag <b>'+qn+'</b> van '+D.totaalVragen)+'</span><button class="btn btn-primary" id="act" disabled><span>Controleer antwoord</span>'+pijlR+'</button></nav></article>';
+   +'<nav class="nav">'+(si>0?'<button class="btn btn-ghost" id="prev">'+pijlL+'<span>Vorige</span></button>':'<span></span>')+'<span class="sp">'+navPos(tLab(t)+' · Oefenvragen','Vraag <b>'+qn+'</b> van '+D.totaalVragen)+'</span><button class="btn btn-primary" id="act" disabled><span>Controleer antwoord</span>'+pijlR+'</button></nav></article>';
   setScreen(html,{ti:st.ti,frac:(si+1)/steps.length});
   const pv=document.getElementById('prev');if(pv)pv.onclick=()=>{if(si>0){si--;render();}};
   if(answers[key(st)]!==undefined){lockAndReveal(st,answers[key(st)],false);return;}
@@ -669,7 +503,7 @@ function eindtoetsIntro(){
   phase='eindtoets';
   nieuweEindtoets();save();
   setScreen(heroScreen({copy:'<span class="pill">Eindtoets</span><p class="kicker">'+esc(D.opleiding)+'</p><h1 class="h-xl">Eindtoets</h1>'
-   +'<p class="lead">Je hebt alle onderwerpen doorlopen. De eindtoets bevat <b>'+D.eindtoets.length+' vragen</b> over de hele cursus, waaronder enkele praktijkcasussen. Je krijgt <b>geen</b> feedback per vraag. De toelichting verschijnt pas nadat je de toets hebt afgerond.</p>'
+   +'<p class="lead">Je hebt alle hoofdstukken en de praktijkcasus doorlopen. De eindtoets bevat <b>'+D.eindtoets.length+' vragen</b> over de hele cursus, waaronder enkele praktijkcasussen. Je krijgt <b>geen</b> feedback per vraag. De toelichting verschijnt pas nadat je de toets hebt afgerond.</p>'
    +'<div class="info-rows"><div class="irow">'+di('route')+'<p>Je kunt binnen de toets terugbladeren en je antwoord wijzigen zolang je nog niet hebt afgerond.</p></div>'
    +'<div class="irow">'+di('certificaat')+'<p>Voor een certificaat is ten minste <b>'+D.eindtoetsDrempel+'%</b> nodig. Haal je de toets niet, dan kun je hem opnieuw maken. De volgorde van vragen en antwoorden wisselt dan.</p></div></div>'
    +'<div class="hero-acts"><button class="btn btn-primary btn-lg" id="go"><span>Start de eindtoets</span>'+pijlR+'</button><button class="btn btn-ghost" id="terug">'+pijlL+'<span>Terug naar start</span></button></div>',art:'boa-notitie',
@@ -714,12 +548,12 @@ function exResult(){
   let acts='';
   if(pass&&klaar)acts+='<button class="btn btn-groen btn-lg" id="cert">'+di('certificaat')+'<span>Certificaat bekijken</span></button>';
   if(!pass)acts+='<button class="btn btn-primary btn-lg" id="her"><span>Eindtoets opnieuw maken</span>'+pijlR+'</button>';
-  if(pass&&!klaar)acts+='<button class="btn btn-primary btn-lg" id="terugleren"><span>Onderwerpen afronden</span>'+pijlR+'</button>';
+  if(pass&&!klaar)acts+='<button class="btn btn-primary btn-lg" id="terugleren"><span>Oefenvragen afronden</span>'+pijlR+'</button>';
   acts+='<button class="btn btn-ghost" id="dash">Terug naar start</button>';
   const deg=Math.round(ex.pct*3.6);
   setScreen('<article class="card res"><div class="res-top"><div class="res-copy"><span class="pill">Eindtoets</span><h1 class="h-xl res-h">Resultaat eindtoets</h1><p class="res-sub">'+esc(profiel.voornaam+' '+profiel.achternaam)+(profiel.org?' — '+esc(profiel.org):'')+'</p>'
    +'<div class="verdict '+(pass?'ok':'no')+'"><span class="vd-ic">'+(pass?vink:kruis)+'</span>'+(pass?'GESLAAGD':'NIET GESLAAGD')+'</div>'
-   +'<p class="advies">'+(pass?(klaar?'Je hebt de eindtoets gehaald. Je certificaat staat klaar.':'Je hebt de eindtoets gehaald. Rond eerst alle onderwerpen af voor het certificaat.'):'Voor een certificaat is ten minste '+D.eindtoetsDrempel+'% nodig. Bekijk de nabespreking hieronder en maak de eindtoets opnieuw. De volgorde wisselt dan.')+'</p>'
+   +'<p class="advies">'+(pass?(klaar?'Je hebt de eindtoets gehaald. Je certificaat staat klaar.':'Je hebt de eindtoets gehaald. Rond eerst alle oefenvragen af voor het certificaat.'):'Voor een certificaat is ten minste '+D.eindtoetsDrempel+'% nodig. Bekijk de nabespreking hieronder en maak de eindtoets opnieuw. De volgorde wisselt dan.')+'</p>'
    +'<div class="acts">'+acts+'</div></div>'
    +'<div class="score"><div class="ring '+(pass?'ok':'no')+'" style="--deg:'+deg+'deg"><div class="ring-in"><div class="p">'+ex.pct+'%</div><div class="pl">Behaald percentage</div></div></div><div class="g">'+ex.goed+' van de '+N+' vragen juist</div></div>'
    +'<div class="res-art">'+boaHTML(pass?'boa-armen':'boa-uitleg',{sz:'mid'})+'</div></div>'
@@ -730,11 +564,11 @@ function exResult(){
   const tl=document.getElementById('terugleren');if(tl)tl.onclick=()=>{buildSteps();si=0;phase='leren';render();};
   document.getElementById('dash').onclick=()=>{welkom();};
 }
-function certificaat(pct){
-  phase='certificaat';save();
+function certificaat(pct,oud){
+  phase=oud?'welkom':'certificaat';save();
   const jaar=new Date().getFullYear();
-  let nr=(ex&&ex.nr)?ex.nr:('JSLF-VW-'+jaar+'-'+Math.random().toString(36).slice(2,8).toUpperCase());
-  if(ex){ex.nr=nr;save();}
+  let nr=oud?(oud.nr||('JSLF-VW-'+jaar+'-'+Math.random().toString(36).slice(2,8).toUpperCase())):((ex&&ex.nr)?ex.nr:('JSLF-VW-'+jaar+'-'+Math.random().toString(36).slice(2,8).toUpperCase()));
+  if(oud){if(!oud.nr){oud.nr=nr;save();}}else if(ex){ex.nr=nr;save();}
   const datum=new Date().toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'});
   setScreen('<article class="card certcard"><div class="cert"><div class="top"></div><div class="sh">'+LOGO+'</div>'
    +'<div class="k">JS Legal Force · Certificaat</div><h2>CERTIFICAAT</h2><p class="lead">Dit certificaat bevestigt dat</p>'
@@ -743,7 +577,7 @@ function certificaat(pct){
    +'<div class="meta"><div><div class="mk">Score eindtoets</div><div class="mv">'+pct+'%</div></div><div><div class="mk">Datum</div><div class="mv">'+datum+'</div></div><div><div class="mk">Juridische peildatum</div><div class="mv">'+esc(D.peildatum)+'</div></div><div><div class="mk">Certificaatnr.</div><div class="mv">'+nr+'</div></div></div><p class="cert-note">Dit certificaat is een bewijs van succesvolle afronding en het behaalde toetsresultaat. Het betreft geen wettelijk erkend diploma of beroepskwalificatie.</p></div>'
    +'<div class="acts"><button class="btn btn-primary btn-lg" id="dl"><span>↓ Download certificaat (PDF)</span></button><button class="btn btn-ghost" id="terug">'+pijlL+'<span>Terug naar resultaat</span></button></div></article>',{lab:'Certificaat',sub:'Certificaat',frac:1});
   document.getElementById('dl').onclick=()=>window.print();
-  document.getElementById('terug').onclick=()=>exResult();
+  document.getElementById('terug').onclick=()=>{if(oud)welkom();else exResult();};
 }
 
 /* ── Paginacomposities ── */
@@ -944,13 +778,13 @@ T.lo=(P,spec,st)=>{
   const box=el('div','lo-page');
   const copy=el('div','copy');
   const top=el('div','lo-top',di('doel','lo-doel'));
-  const tw=el('div');tw.appendChild(el('p','kicker','Onderwerp '+D.topics[st.ti].nr+' · '+esc(D.topics[st.ti].titel)));tw.appendChild(titleEl(P,'h-l'));if(P.intro)tw.appendChild(P.intro);
+  const tw=el('div');tw.appendChild(el('p','kicker',D.topics[st.ti].nr===0?'Introductie · Start':tLab(D.topics[st.ti])+' · '+esc(D.topics[st.ti].titel)));tw.appendChild(titleEl(P,'h-l'));if(P.intro)tw.appendChild(P.intro);
   top.appendChild(tw);copy.appendChild(top);
   const list=el('ol','lo-list');
   [...ul.children].forEach((li,i)=>{const r=el('li','lo-item','<span class="lo-n">'+di('vink')+'</span>');const s=el('span','lo-t');const src=li.querySelector('span:not(.lo-ic)')||li;while(src.firstChild)s.appendChild(src.firstChild);r.appendChild(s);list.appendChild(r);});
   copy.appendChild(list);
   box.appendChild(copy);
-  box.appendChild(el('div','media',artHTML(spec.a,spec)+'<div class="float-chip fc3">'+di(TOPIC_ICON[st.ti])+'<span>'+(st.ti===0?'Start':'Onderwerp '+D.topics[st.ti].nr)+'</span></div>'));
+  box.appendChild(el('div','media',artHTML(spec.a,spec)+'<div class="float-chip fc3">'+di(TOPIC_ICON[st.ti])+'<span>'+(st.ti===0?'Start':tLab(D.topics[st.ti]))+'</span></div>'));
   return box;
 };
 T.wet=(P,spec,st)=>{
@@ -1097,7 +931,7 @@ T.info=(P,spec,st)=>{
 T.vooruit=(P,spec,st)=>{
   const nt=D.topics[st.ti+1];
   const nodes=mainParas(P);
-  const art='<div class="next-card"><span class="nc-k">Volgend onderwerp</span><span class="nc-ic">'+di(TOPIC_ICON[st.ti+1])+'</span><b>'+(nt?esc(nt.titel):'')+'</b><span class="nc-n">Onderwerp '+(nt?nt.nr:'')+' van '+D.topics.length+'</span></div>'+boaHTML('boa-armen',{side:'r',sz:'klein',bust:1,alt:''});
+  const art='<div class="next-card"><span class="nc-k">Volgend hoofdstuk</span><span class="nc-ic">'+di(TOPIC_ICON[st.ti+1])+'</span><b>'+(nt?esc(nt.titel):'')+'</b><span class="nc-n">'+(nt?tLab(nt):'')+'</span></div>'+boaHTML('boa-armen',{side:'r',sz:'klein',bust:1,alt:''});
   const s=splitBox([el('p','kicker',di('route')+'Vooruitblik'),titleEl(P),rowsWrap(nodes,['route','lijst'])],'<div class="art art-next">'+art+'</div>',{});
   s.classList.add('next-split');
   return s;
