@@ -6,7 +6,7 @@
 
 - Juridische peildatum: **23 september 2026**.
 - Doelgroep: **boa's in domein I**, Europees Nederland.
-- Cacheversie `vw260923a` · opslag `jslf-vw-v1`, voortgangsversie **18**.
+- Cacheversie `vw260923b` · opslag `jslf-vw-v1`, voortgangsversie **18**.
 - Backupbranch vóór deze herbouw: `backup-voor-herbouw-compact-2026-09-23` (= commit `619eba5`).
 - Basis: `HERZIENINGSRAPPORT_Vuurwerk.md` (23-9-2026) en de beslissingen van Jan van 23-9-2026.
 - De oude opleveringsnotities (versie 0.9.1, 145 pagina's) staan in de git-geschiedenis en op de backupbranch.
@@ -59,6 +59,10 @@ Was: 145 pagina's, 31 oefenvragen, 15 eindtoetsvragen.
 - Hervatten midden in de lesstof werkt.
 - Migratie getest: v17 met behaald certificaat → startscherm met certificaatknop, oud percentage en nummer behouden; v17 midden in de cursus → startscherm, antwoorden gewist, geen certificaatknop.
 - Zoekcontrole op oude absolute formuleringen: zie `CLAUDE-RAPPORT.md`.
+
+## Eindcontrole 23-9-2026 (tweede ronde)
+
+Gerichte juridische en redactionele correcties, geen herstructurering: zie `CLAUDE-RAPPORT.md` §8. Structuur ongewijzigd (42 · 18 · 15). Cacheversie `vw260923b`.
 
 ## Open
 
