@@ -145,8 +145,7 @@ function bdInline(root){
 }
 const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "0.1": {"t": "intro2"},
-"0.2": {"t": "rijkaart", "a": {"vis": "bestanddelen"},
-"rows": ["route", "lijst"], "ic": "schild"},
+"0.2": {"t": "intro3"},
 "1.0": {"t": "wetcat"},
 "1.1": {"t": "categorie"},
 "1.2": {"t": "categorie"},
@@ -1120,6 +1119,29 @@ T.intro2=(P,spec,st)=>{
   box.appendChild(copy);
   const fig=P.rest.find(n=>n.nodeType===1&&n.classList.contains('i2-img'));
   if(fig){const m=el('div','i2-media');m.appendChild(fig);box.appendChild(m);}
+  return box;
+};
+T.intro3=(P,spec,st)=>{
+  /* Introductie p3 "De vier vragen": kop, vier vragen, zes leerdoelen, beeld, taakstelling boa/politie, Onthoud + bron.
+     Desktop: links kop, vragen en leerdoelen; rechts beeld met daaronder de taakstelling; onderaan Onthoud.
+     Mobiel (CSS): beeld bovenaan, daarna alles onder elkaar. */
+  const box=el('div','i3');
+  const E=c=>P.rest.find(n=>n.nodeType===1&&n.classList.contains(c));
+  const links=el('div','i3-links'),rechts=el('div','i3-rechts');
+  const kop=el('div','i3-kop');
+  kop.appendChild(titleEl(P,'i3-h'));
+  if(P.intro){P.intro.classList.add('i3-intro');kop.appendChild(P.intro);}
+  links.appendChild(kop);
+  ['i3-vragen','i3-lo'].forEach(c=>{const n=E(c);if(n)links.appendChild(n);});
+  const fig=E('i3-img');
+  if(fig){const m=el('div','i3-media');m.appendChild(fig);rechts.appendChild(m);}
+  const taak=el('div','i3-taak');
+  P.rest.filter(n=>n.nodeType===1&&n.classList.contains('i3-t')).forEach(n=>taak.appendChild(n));
+  rechts.appendChild(taak);
+  box.appendChild(links);box.appendChild(rechts);
+  const o=E('i3-onthoud');if(o)box.appendChild(o);
+  const POLITIE='<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="var(--duo)" stroke="none" d="M7 22c0-7 8-12 17-12s17 5 17 12z"/><path d="M7 22c0-7 8-12 17-12s17 5 17 12zM7 22h34M9 22l2 6h26l2-6M12 28c3 6 21 6 24 0"/><path d="M24 13l2 3.5-2 3.5-2-3.5z"/></svg>';
+  box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='politie'?POLITIE:i==='uitroep'?'<b>!</b>':i==='vink'?vink:(DI[i]||DI.document);});
   return box;
 };
 function composePage(stage,bronEl,p,spec,st){
