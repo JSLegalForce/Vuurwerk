@@ -148,7 +148,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "0.2": {"t": "intro3"},
 "1.0": {"t": "wetcat"},
 "1.1": {"t": "f1"},
-"1.2": {"t": "categorie"},
+"1.2": {"t": "f2"},
 "1.3": {"t": "categorie"},
 "1.4": {"t": "categorie"},
 "1.5": {"t": "wet", "art": "Art. 2.1.3 Vuurwerkbesluit"},
@@ -739,6 +739,13 @@ T.f1=(P,spec,st)=>{
   const box=el('div','f1-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='vink'?vink:di(i);});
+  return box;
+};
+T.f2=(P,spec,st)=>{
+  /* H1 p3 "F2 – Vuurwerk met weinig gevaar": banner met sfeerbeeld, links voorbeelden + Voorbeelden-kaart, rechts Tip en drie kaarten (laatste: strafbaarstelling). */
+  const box=el('div','f2-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
 T.concl=(P,spec,st)=>{
