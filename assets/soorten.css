@@ -816,3 +816,7 @@
   .tpl-f3 .f3-onthoud{grid-template-columns:34px minmax(0,1fr);gap:10px;padding:10px 12px}
 }
 @media print{.tpl-f3 .f3-links,.tpl-f3 .f3-k{break-inside:avoid;box-shadow:none}}
+/* F3-banner: aangeleverde sfeerfoto (alleen het fotogedeelte, zonder ingebakken tekst) */
+.tpl-f3 .f3-sfeer img{object-position:50% 58%}
+@media (max-width:760px){.tpl-f3 .f3-sfeer img{object-position:50% 55%}}
+@media (min-width:1181px){.tpl-f3 .f3-banner{grid-template-columns:auto minmax(0,1.75fr) minmax(0,1fr)}.tpl-f3 .f3-t{font-size:clamp(1.5rem,2.2vw,2rem)}}
