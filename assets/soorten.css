@@ -615,3 +615,4 @@
 .tpl-f1 .f1-leeg-ic{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:54px;height:54px;opacity:.28}
 .tpl-f1 .f1-leeg-ic .di{width:54px;height:54px;color:#fff;--duo:rgba(255,255,255,.35)}
 @media (max-width:760px){.tpl-f1 .f1-sfeer img{object-position:66% 30%}}
+.tpl-f1 .f1-foto-tt img{object-position:48% 58%}
