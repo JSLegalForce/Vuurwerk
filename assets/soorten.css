@@ -698,3 +698,13 @@
 .tpl-f2 .f2-k p,.tpl-f2 .f2-k li{font-size:.99rem}
 @media (max-width:760px){.tpl-f2 .f2-vbk{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:12px 14px}.tpl-f2 .f2-vbk .f2-k-ic{width:42px;height:42px}.tpl-f2 .f2-vbk .f2-k-ic .di{width:24px;height:24px}.tpl-f2 .f2-vbk h4{font-size:1.06rem}.tpl-f2 .f2-vbk p{font-size:1rem}}
 @media (min-width:761px) and (max-width:1180px){.tpl-f2 .f2-foto{aspect-ratio:1/1}.tpl-f2 .f2-foto img{object-position:50% 72%}}
+/* F2: rechtershamer en kaart Ontheffing burgemeester (lila accent = uitzondering op de hoofdregel) */
+.tpl-f2 .f2-k-ic>svg{width:28px;height:28px}
+.tpl-f2 .f2-k-straf .f2-k-ic{color:#c8234a}
+.tpl-f2 .f2-k-onth{background:#f7f2fd;border-color:#cdb6ea}
+.tpl-f2 .f2-k-onth .f2-k-ic{background:#e9dcf8;color:#6b3fa0}
+.tpl-f2 .f2-k-onth h4{color:#4b2a7a}
+.tpl-f2 .f2-k .f2-k-ref{margin-top:6px;font-size:.86rem;line-height:1.4;color:var(--mute)}
+@media (max-width:760px){.tpl-f2 .f2-k-ic>svg{width:24px;height:24px}}
+.tpl-f2 .f2-hamer>svg{width:30px;height:30px}
+@media (min-width:1181px){.tpl-f2 .f2-body{align-items:start}.tpl-f2 .f2-vbk{flex:none}}
