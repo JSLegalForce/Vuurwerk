@@ -149,7 +149,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "1.0": {"t": "wetcat"},
 "1.1": {"t": "f1"},
 "1.2": {"t": "f2"},
-"1.3": {"t": "categorie"},
+"1.3": {"t": "f3"},
 "1.4": {"t": "categorie"},
 "1.5": {"t": "wet", "art": "Art. 2.1.3 Vuurwerkbesluit"},
 "1.6": {"t": "split", "a": "foto-onbekend", "rows": ["vraag", "waarschuwing", "pv"]},
@@ -744,6 +744,13 @@ T.f1=(P,spec,st)=>{
 T.f2=(P,spec,st)=>{
   /* H1 p3 "F2 – Vuurwerk met weinig gevaar": banner met sfeerbeeld, links voorbeelden + Voorbeelden-kaart, rechts Tip en drie kaarten (laatste: strafbaarstelling). */
   const box=el('div','f2-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.f3=(P,spec,st)=>{
+  /* H1 p4 "F3 – Vuurwerk met middelmatig gevaar": banner met sfeerbeeld, links voorbeelden + Voorbeelden-kaart, rechts Tip, Hoe herken je F3? (met Onthoud) en Wat is strafbaar?. */
+  const box=el('div','f3-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
