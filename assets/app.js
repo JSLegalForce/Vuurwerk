@@ -150,7 +150,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "1.1": {"t": "f1"},
 "1.2": {"t": "f2"},
 "1.3": {"t": "f3"},
-"1.4": {"t": "categorie"},
+"1.4": {"t": "f4"},
 "1.5": {"t": "wet", "art": "Art. 2.1.3 Vuurwerkbesluit"},
 "1.6": {"t": "split", "a": "foto-onbekend", "rows": ["vraag", "waarschuwing", "pv"]},
 "1.7": {"t": "rijkaart", "a": "scene-boa-jongeren-plein", "rows": ["oog", "document", "zoeken", "wet"], "ic": "schild"},
@@ -751,6 +751,13 @@ T.f2=(P,spec,st)=>{
 T.f3=(P,spec,st)=>{
   /* H1 p4 "F3 – Vuurwerk met middelmatig gevaar": banner met sfeerbeeld, links voorbeelden + Voorbeelden-kaart, rechts Tip, Hoe herken je F3? (met Onthoud) en Wat is strafbaar?. */
   const box=el('div','f3-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.f4=(P,spec,st)=>{
+  /* H1 p5 "F4 – Professioneel vuurwerk": banner met sfeerbeeld, links voorbeelden + Voorbeelden-kaart, rechts Tip, Herkenning in de praktijk, Wat weet je nog niet? en Wat is strafbaar?. */
+  const box=el('div','f4-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
