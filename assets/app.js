@@ -147,7 +147,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "0.1": {"t": "intro2"},
 "0.2": {"t": "intro3"},
 "1.0": {"t": "wetcat"},
-"1.1": {"t": "categorie"},
+"1.1": {"t": "f1"},
 "1.2": {"t": "categorie"},
 "1.3": {"t": "categorie"},
 "1.4": {"t": "categorie"},
@@ -731,6 +731,14 @@ T.categorie=(P,spec,st)=>{
   const h=box.querySelector('.ck-t');if(P.title&&h)h.innerHTML=P.title.innerHTML;
   box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='uitroep'?'<b>!</b>':i==='vink'?vink:di(i);});
   box.querySelectorAll('.cat-f4 .cat-code').forEach(c=>c.innerHTML=di('waarschuwing'));
+  return box;
+};
+T.f1=(P,spec,st)=>{
+  /* H1 p2 "F1 – Zeer licht vuurwerk": brede banner met sfeerbeeld, links vier voorbeeldtegels, rechts vier informatiekaarten.
+     Mobiel (CSS): sfeerbeeld bovenaan in de banner, daarna voorbeelden en kaarten onder elkaar. */
+  const box=el('div','f1-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='vink'?vink:di(i);});
   return box;
 };
 T.concl=(P,spec,st)=>{
