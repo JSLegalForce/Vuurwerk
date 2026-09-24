@@ -540,7 +540,7 @@
 .tpl-f1 .f1-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.6rem,2.7vw,2.45rem);line-height:1.1;color:var(--f1);margin:4px 0 8px}
 .tpl-f1 .f1-sub{font-family:var(--ui);font-weight:500;font-size:1.08rem;line-height:1.4;color:var(--navy)}
 .tpl-f1 .f1-sfeer{align-self:stretch;position:relative;margin-left:-60px;min-height:176px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
-.tpl-f1 .f1-sfeer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 35%;display:block}
+.tpl-f1 .f1-sfeer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 28%;display:block}
 .tpl-f1 .f1-sfeer.leeg{background:radial-gradient(circle at 70% 45%,rgba(230,161,51,.18),transparent 55%)}
 /* hoofddeel: links voorbeelden, rechts vier kaarten, samen even hoog */
 .tpl-f1 .f1-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px;align-items:stretch}
@@ -614,3 +614,4 @@
 .tpl-f1 .f1-foto-kn img{object-position:50% 35%}
 .tpl-f1 .f1-leeg-ic{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:54px;height:54px;opacity:.28}
 .tpl-f1 .f1-leeg-ic .di{width:54px;height:54px;color:#fff;--duo:rgba(255,255,255,.35)}
+@media (max-width:760px){.tpl-f1 .f1-sfeer img{object-position:66% 30%}}
