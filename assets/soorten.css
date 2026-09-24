@@ -332,6 +332,7 @@
 @media (max-width:1000px){
   .tpl-intro2 .i2{grid-template-columns:1fr;gap:16px}
   .tpl-intro2 .i2-img{height:auto;border-radius:16px;overflow:hidden;aspect-ratio:4/3}
+  .tpl-intro2 .i2-media{order:-1} /* mobiel: beeld bovenaan, zoals intro p1 */
 }
 @media (max-width:760px){
   .tpl-intro2 .i2-lo{grid-template-columns:1fr}
