@@ -151,7 +151,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "1.2": {"t": "f2"},
 "1.3": {"t": "f3"},
 "1.4": {"t": "f4"},
-"1.5": {"t": "wet", "art": "Art. 2.1.3 Vuurwerkbesluit"},
+"1.5": {"t": "etiket"},
 "1.6": {"t": "split", "a": "foto-onbekend", "rows": ["vraag", "waarschuwing", "pv"]},
 "1.7": {"t": "rijkaart", "a": "scene-boa-jongeren-plein", "rows": ["oog", "document", "zoeken", "wet"], "ic": "schild"},
 "2.0": {"t": "split", "a": {"icon": "kalender", "orbit": ["wet", "vuurwerk", "document"]},
@@ -760,6 +760,13 @@ T.f4=(P,spec,st)=>{
   const box=el('div','f4-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.etiket=(P,spec,st)=>{
+  /* H1 p6 "Verpakking en etiket": brede banner met sfeerbeeld; links controlepunten + wettekst, rechts categorieën + boa-praktijkkaart.
+     Mobiel (CSS): sfeerbeeld bovenaan in de banner, daarna alle kaarten onder elkaar. */
+  const box=el('div','et-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   return box;
 };
 T.concl=(P,spec,st)=>{
