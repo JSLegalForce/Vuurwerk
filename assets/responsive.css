@@ -99,3 +99,33 @@
   .tpl-etiket .et-boa{padding:14px 16px}
   .tpl-etiket .et-kol{gap:14px}
 }
+
+/* ── I. Banners 1001–1180 px: titel en ondertitel volledig in het tekstvlak.
+   Oorzaak: de sfeerfoto schoof met een negatieve marge (-110/-120 px) over de tekstkolom, terwijl die kolom in dit
+   breedtebereik te smal is voor de titel. Oplossing: tekstkolom breder, minder overlap. Zelfde patroon bij F3 en etiket; F4 heeft het niet. ── */
+@media (min-width:1001px) and (max-width:1180px){
+  .tpl-f2 .f2-banner,.tpl-f3 .f3-banner,.tpl-etiket .et-banner{grid-template-columns:auto minmax(0,1.8fr) minmax(0,1fr)}
+  .tpl-f2 .f2-sfeer,.tpl-f3 .f3-sfeer,.tpl-etiket .et-sfeer{margin-left:-50px}
+}
+
+/* ── J. Zeer smalle telefoons (≤360 px): compacte voortgang in de kop terug (tekst "Deel x van 7" + smalle balkjes).
+   app.css verbergt .hd-prog hier; deze regel toont een kleinere variant. De cursusnaam blijft leesbaar (titel kort af met …). ── */
+@media (max-width:360px){
+  .hd-prog{display:flex;gap:4px}
+  .hd-prog-t{font-size:.7rem;letter-spacing:0}
+  .hd-prog .segs{gap:2px}.hd-prog .segs i{width:6px;height:4px}
+  .hd-in{gap:8px}
+}
+
+/* ── K. 1001–1180 px: rechterkolom (kaarten met tekst) iets breder, zodat beide kolommen beter in balans zijn ── */
+@media (min-width:1001px) and (max-width:1180px){
+  .tpl-f2 .f2-body,.tpl-f3 .f3-body,.tpl-f4 .f4-body{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px}
+  /* F4: iets bredere fotokolom, zodat het bijschrift «Vlinder (professioneel)» binnen de foto past */
+  .tpl-f4 .f4-body{grid-template-columns:minmax(0,1.12fr) minmax(0,1.2fr)}
+}
+
+/* ── L. Brede schermen (≥1700 px): lopende tekst houdt een comfortabele regellengte (kaarten en grids blijven breed) ── */
+@media (min-width:1700px){
+  .card.page p{max-width:86ch}
+  .card.page .pvdoc-b p{max-width:none}
+}
