@@ -1,0 +1,101 @@
+/* ══ Responsive optimalisatie desktop + mobiel (25-9-2026) ══
+   Alleen afmetingen, spacing en responsive positionering. Geen inhoud verbergen, geen vaste hoogtes.
+   Alle regels zijn template-specifiek (.tpl-…) of zitten in een gerichte media query.
+   Terugdraaien: dit bestand en de <link> in index.html verwijderen. */
+
+/* ── A. Desktop/laptop: lagere banners op de categorie- en etiketpagina's ── */
+@media (min-width:1001px){
+  .tpl-f1 .f1-banner,.tpl-f2 .f2-banner,.tpl-f3 .f3-banner,.tpl-f4 .f4-banner,.tpl-etiket .et-banner{min-height:144px}
+  .tpl-f1 .f1-sfeer,.tpl-f2 .f2-sfeer,.tpl-f3 .f3-sfeer,.tpl-f4 .f4-sfeer,.tpl-etiket .et-sfeer{min-height:144px}
+  .tpl-f1 .f1-banner .cat-code,.tpl-f2 .f2-banner .cat-code,.tpl-f3 .f3-banner .cat-code,.tpl-f4 .f4-banner .cat-code{width:88px;height:88px;font-size:2.2rem}
+  .tpl-f4 .f4-banner .cat-code .di{width:44px;height:44px}
+  .tpl-etiket .et-badge{width:88px;height:88px}.tpl-etiket .et-badge svg{width:46px;height:46px}
+  .tpl-f1 .f1-bt,.tpl-f2 .f2-bt,.tpl-f3 .f3-bt,.tpl-f4 .f4-bt,.tpl-etiket .et-bt{padding-top:16px;padding-bottom:16px}
+  .tpl-f1 .f1p>*+*,.tpl-f2 .f2p>*+*,.tpl-f3 .f3p>*+*,.tpl-f4 .f4p>*+*,.tpl-etiket .etp>*+*{margin-top:14px}
+}
+
+/* ── B. Laptop/tablet liggend (1001–1180 px): categorie- en etiketpagina's blijven tweekoloms ── */
+@media (min-width:1001px) and (max-width:1180px){
+  .tpl-f2 .f2-body{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+  .tpl-f2 .f2-foto{aspect-ratio:2/3}.tpl-f2 .f2-foto img{object-position:50% 45%}
+  .tpl-f3 .f3-body{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+  .tpl-f3 .f3-foto{aspect-ratio:2/3}.tpl-f3 .f3-foto img{object-position:50% 45%}
+  .tpl-f4 .f4-body{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+  .tpl-f4 .f4-fotos{max-width:none;margin:0}
+  .tpl-f4 .f4-foto{aspect-ratio:2/3}
+  .tpl-etiket .et-body{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tpl-etiket .et-wet,.tpl-etiket .et-boa{flex:1}
+  .tpl-etiket .et-tegels{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1001px) and (max-width:1180px){.tpl-f2 .f2-links,.tpl-f3 .f3-links,.tpl-f4 .f4-links{align-self:start}}
+
+/* ── C. Brede schermen (≥1700 px): de beschikbare breedte beter benutten ── */
+@media (min-width:1700px){:root{--page:1600px}.card.page,.card.qcard{max-width:1480px}}
+
+/* ── D. Desktop: proces-verbaalvoorbeeld breder, zodat het document minder lang wordt ── */
+@media (min-width:1001px){
+  .tpl-pvvoorbeeld .split{grid-template-columns:minmax(0,2.3fr) minmax(0,.8fr)}
+  .tpl-pvvoorbeeld .copy{max-width:none}
+}
+
+/* ── E. Mobiel (≤760 px): eigen, efficiëntere leesroute. Bodytekst blijft even groot. ── */
+@media (max-width:760px){
+  /* paginakop: klein label iets beter leesbaar */
+  .ph-k{font-size:.8rem}
+  /* banners categorie- en etiketpagina's: sfeerfoto minder hoog, titelblok compacter */
+  .tpl-f1 .f1-sfeer,.tpl-f2 .f2-sfeer,.tpl-f3 .f3-sfeer,.tpl-f4 .f4-sfeer,.tpl-etiket .et-sfeer{aspect-ratio:16/6.5}
+  .tpl-f1 .f1-bt,.tpl-f2 .f2-bt,.tpl-f3 .f3-bt,.tpl-f4 .f4-bt,.tpl-etiket .et-bt{padding:8px 0 14px}
+  .tpl-f1 .f1-banner .cat-code,.tpl-f2 .f2-banner .cat-code,.tpl-f3 .f3-banner .cat-code,.tpl-f4 .f4-banner .cat-code{width:54px;height:54px;font-size:1.4rem;align-self:start;margin-top:10px}
+  .tpl-etiket .et-badge{width:54px;height:54px;margin-top:10px}
+  .tpl-etiket .et-badge svg{width:30px;height:30px}
+  .tpl-f1 .f1p>*+*,.tpl-f2 .f2p>*+*,.tpl-f3 .f3p>*+*,.tpl-f4 .f4p>*+*,.tpl-etiket .etp>*+*{margin-top:12px}
+  /* etiketpagina: controlepunten als rijen (icoon links, tekst rechts) in plaats van smalle tegels */
+  .tpl-etiket .et-tegels{grid-template-columns:1fr;gap:8px}
+  .tpl-etiket .et-tegel{display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-areas:"ic h" "ic p";column-gap:14px;align-items:center;text-align:left;padding:10px 14px}
+  .tpl-etiket .et-tegel .et-ico{grid-area:ic;width:48px;height:48px;margin:0}
+  .tpl-etiket .et-tegel .et-ico-cat{width:46px;height:46px;border-width:3px}
+  .tpl-etiket .et-ico-cat b{font-size:1.3rem;margin-top:-6px}
+  .tpl-etiket .et-ico-cat i{bottom:7px;width:4px;height:4px}
+  .tpl-etiket .et-ico-cat i:nth-of-type(1){left:calc(50% - 11px)}.tpl-etiket .et-ico-cat i:nth-of-type(2){left:calc(50% - 5px)}.tpl-etiket .et-ico-cat i:nth-of-type(3){left:calc(50% + 1px)}.tpl-etiket .et-ico-cat i:nth-of-type(4){left:calc(50% + 7px)}
+  .tpl-etiket .et-tegel h4{grid-area:h;align-self:end;margin:0}
+  .tpl-etiket .et-tegel p{grid-area:p;align-self:start;font-size:1rem}
+  /* resultaat eindtoets: vraagtekst krijgt de volle breedte, status eronder */
+  .qrow-h{display:grid;grid-template-columns:30px minmax(0,1fr) auto;grid-template-areas:"n o c" "n s c";column-gap:10px;row-gap:2px;padding:10px 12px}
+  .qrow-h .qn{grid-area:n}.qrow-h .qo{grid-area:o}.qrow-h .qs{grid-area:s;justify-self:start}.qrow-h .chev{grid-area:c}
+}
+
+/* ── F. Mobiel: decoratieve illustraties boven de tekst minder hoog; navigatie iets dichter bij de inhoud ── */
+@media (max-width:760px){
+  .split>.media .art-obj img,.wet-top>.media .art-obj img{width:clamp(112px,32vw,140px)}
+  .split>.media .art-icon{width:clamp(124px,36vw,150px)}
+  .split>.media .art-char img{height:clamp(132px,38vw,162px)}
+  .q-side .art-obj img{width:120px}.q-side .art-char img{height:132px}
+  .card.page>.nav,.card.qcard>.nav{margin-top:18px}
+  .ft{padding-bottom:16px}
+}
+
+/* ── G. Tablet staand (761–1000 px): proces-verbaalvoorbeeld krijgt de meeste breedte ── */
+@media (min-width:761px) and (max-width:1000px){
+  .tpl-pvvoorbeeld .split{grid-template-columns:minmax(0,1fr) minmax(0,190px);gap:20px}
+  .tpl-pvvoorbeeld .copy{max-width:none}
+}
+
+/* ── H. Laptop (≥1001 px): kaarten op de categorie- en etiketpagina's iets compacter (tekstgrootte gelijk) ── */
+@media (min-width:1001px){
+  .tpl-f1 .f1-kaarten,.tpl-f2 .f2-kaarten,.tpl-f3 .f3-kaarten,.tpl-f4 .f4-kaarten{gap:8px}
+  .tpl-f2 .f2-k,.tpl-f3 .f3-k,.tpl-f4 .f4-k{padding-top:9px;padding-bottom:9px}
+  .tpl-etiket .et-kaart{padding:14px 16px 14px}
+  .tpl-etiket .et-kop{margin-bottom:10px}
+  .tpl-etiket .et-tegel{padding:10px 8px}
+  .tpl-etiket .et-ico{width:58px;height:58px;margin-bottom:6px}
+  .tpl-etiket .et-ico-cat{width:56px;height:56px}
+  .tpl-etiket .et-ico-cat b{font-size:1.65rem}.tpl-etiket .et-ico-cat i{bottom:9px}
+  .tpl-etiket .et-info{margin-top:10px}
+  .tpl-etiket .et-wet{padding:14px 20px}
+  .tpl-etiket .et-wet-kop{margin-bottom:8px}
+  .tpl-etiket .et-wet-l li{padding:1px 0}
+  .tpl-etiket .et-cats{gap:6px}
+  .tpl-etiket .et-c{padding-top:8px;padding-bottom:8px}
+  .tpl-etiket .et-boa{padding:14px 16px}
+  .tpl-etiket .et-kol{gap:14px}
+}
