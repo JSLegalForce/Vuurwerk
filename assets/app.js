@@ -152,8 +152,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "1.3": {"t": "f3"},
 "1.4": {"t": "f4"},
 "1.5": {"t": "etiket"},
-"1.6": {"t": "split", "a": "foto-onbekend", "rows": ["vraag", "waarschuwing", "pv"]},
-"1.7": {"t": "rijkaart", "a": "scene-boa-jongeren-plein", "rows": ["oog", "document", "zoeken", "wet"], "ic": "schild"},
+"1.6": {"t": "onbekend"},
 "2.0": {"t": "split", "a": {"icon": "kalender", "orbit": ["wet", "vuurwerk", "document"]},
 "rows": ["kalender", "wet", "vuurwerk"]},
 "2.1": {"t": "wet", "art": "Art. 9.2.2.1a Wm"},
@@ -320,7 +319,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:18,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:19,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -399,6 +398,14 @@ function hervat(sv){
     phase=(phase==='intake')?'intake':'welkom';
     save();
   }
+  /* v19: hoofdstuk 1 van 8 naar 7 pagina's (oude p7 en p8 samengevoegd tot de nieuwe p7, stap 9).
+     Opgeslagen posities vanaf de oude p8 (stap 10) schuiven één stap terug; oude p8 wordt de nieuwe p7. Eindtoets en overige antwoorden blijven gelijk. */
+  else if(sv.v===18){
+    if(si>=10)si-=1;
+    /* oefenvraag 2 van hoofdstuk 1 is een nieuwe vraag (veiligheid); een oud antwoord daarop past niet meer */
+    delete answers['1-1'];
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -437,8 +444,8 @@ function qScreen(st){
   const t=D.topics[st.ti],q=t.vragen[st.qi];
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
-  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
-   +'<div class="q-layout"><div class="q-side">'+artHTML(art,{rev:1,sz:'mid'})+'</div><div class="q-main">'
+  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+   +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
    +'<div class="opts" id="opts" role="radiogroup" aria-label="Antwoordmogelijkheden">'+q.opties.map((o,i)=>'<button class="opt" role="radio" aria-checked="false" data-i="'+i+'"><span class="lt">'+L(i)+'</span><span class="ot">'+esc(o)+'</span></button>').join('')+'</div>'
@@ -450,6 +457,12 @@ function qScreen(st){
   let sel=null;const opts=[...document.querySelectorAll('.opt')];
   opts.forEach(b=>b.onclick=()=>{if(b.classList.contains('locked'))return;sel=+b.dataset.i;opts.forEach(x=>{x.classList.remove('sel');x.setAttribute('aria-checked','false');});b.classList.add('sel');b.setAttribute('aria-checked','true');document.getElementById('act').disabled=false;});
   document.getElementById('act').onclick=()=>{if(sel===null)return;answers[key(st)]={sel,goed:sel===q.juist};save();lockAndReveal(st,answers[key(st)],true);};
+}
+/* oefenvragen met stijl v2 (hoofdstuk 1): eigen foto en/of situatiekaart links; anders de bestaande illustratie */
+function qSide(q,art){
+  const foto=q.beeld?'<figure class="qv-foto"><img src="'+esc(q.beeld.src)+'?v='+ASSET_V+'" alt="'+esc(q.beeld.alt)+'" width="'+q.beeld.w+'" height="'+q.beeld.h+'" loading="eager" decoding="async"></figure>':artHTML(art,{rev:1,sz:'mid'});
+  const sit=q.situatie?'<div class="qv-sit">'+di('zoeken')+'<div><b>Situatie</b><p>'+esc(q.situatie)+'</p></div></div>':'';
+  return foto+sit;
 }
 function key(st){return st.ti+'-'+st.qi;}
 function globalQNum(st){let n=0;for(let i=0;i<D.topics.length;i++)for(let j=0;j<D.topics[i].vragen.length;j++){n++;if(i===st.ti&&j===st.qi)return n;}return n;}
@@ -481,9 +494,10 @@ function balanceerFeedback(qc){
 function feedbackHTML(q,ans){
   const goed=ans.goed;
   const uit=fnRender(q.uitleg,q.voetnoten);
-  let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?'Juist!':'Helaas, dat is niet het juiste antwoord.')+'</h3>'
-    +'<div class="fbx-sub"><p class="fbx-s">'+(goed?'Juist beantwoord':'Onjuist beantwoord')+'</p>'
-    +'<div class="fbx-pills"><div class="fbp '+(goed?'g':'r')+'"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
+  const v2=q.stijl==='v2';
+  let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?(v2?'Helemaal goed!':'Juist!'):'Helaas, dat is niet het juiste antwoord.')+'</h3>'
+    +'<div class="fbx-sub"><p class="fbx-s">'+(goed?(v2?'Dit is het juiste antwoord.':'Juist beantwoord'):'Onjuist beantwoord')+'</p>'
+    +'<div class="fbx-pills"><div class="fbp '+(goed?'g':'r')+'"><span class="fbp-l">'+(goed&&v2?'Juiste antwoord':'Jouw antwoord')+'</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +(goed?'':'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div>')+'</div></div></div></div>'
     +'<div class="fbx-grid"><div class="fbx-sec fbx-uit">'+di('lamp')+'<div><div class="fb-h">Toelichting</div><p class="fb-p">'+uit.body+'</p></div></div>';
   if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">Kernregel</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
@@ -767,6 +781,14 @@ T.etiket=(P,spec,st)=>{
      Mobiel (CSS): sfeerbeeld bovenaan in de banner, daarna alle kaarten onder elkaar. */
   const box=el('div','et-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  return box;
+};
+T.onbekend=(P,spec,st)=>{
+  /* H1 p7 "Onbekend vuurwerk en veelgebruikte namen": links titel, intro en vier kaarten, rechts de foto; onderaan Onthoud + veiligheid.
+     Mobiel (CSS): titel, foto, kaarten, Onthoud, bronnen. */
+  const box=el('div','ob-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
 T.concl=(P,spec,st)=>{
