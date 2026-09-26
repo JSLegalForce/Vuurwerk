@@ -156,7 +156,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.0": {"t": "split", "a": {"icon": "kalender", "orbit": ["wet", "vuurwerk", "document"]},
 "rows": ["kalender", "wet", "vuurwerk"]},
 "2.1": {"t": "wet", "art": "Art. 9.2.2.1a Wm"},
-"2.2": {"t": "wet", "art": "Art. 1.1.2a Vuurwerkbesluit"},
+"2.2": {"t": "pgk"},
 "2.3": {"t": "checklist", "a": "wetboek", "icons": ["akte", "mensen", "locatie", "klok", "vuurwerk"]},
 "2.4": {"t": "split", "a": "wetboek", "rows": ["wet", "lijst", "wet", "lagen"]},
 "2.5": {"t": "wet", "art": "Art. 1a en 2 WED"},
@@ -791,6 +791,14 @@ T.onbekend=(P,spec,st)=>{
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
+T.pgk=(P,spec,st)=>{
+  /* H2 p3 "Personen met gespecialiseerde kennis": compacte overzichtskaart links, boa-kaart en Onthoud rechts; boekbeeld rechtsboven */
+  const box=el('div','pg-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  const bk=box.querySelector('.pg-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
 T.concl=(P,spec,st)=>{
   /* "Categorie is nog geen conclusie": beeld met vijf voorbeelden links, uitleg in kaarten rechts */
   const cc=P.rest.find(n=>n.nodeType===1&&n.classList.contains('cc'));
@@ -1210,7 +1218,7 @@ function composePage(stage,bronEl,p,spec,st){
   stage.appendChild(node);
   bdInline(node);
   /* jurisprudentie: bronregel binnen de leerplaat, direct onder de uitspraak */
-  const jpc=spec.t==='juris'?node.querySelector('.jp-copy'):spec.t==='wet'?node.querySelector(node.classList.contains('wet-solo')?'.ug-l':'.uitleg-grid:not(.ug-l)'):null;
+  const jpc=spec.t==='juris'?node.querySelector('.jp-copy'):spec.t==='pgk'?node.querySelector('.pg-rechts'):spec.t==='wet'?node.querySelector(node.classList.contains('wet-solo')?'.ug-l':'.uitleg-grid:not(.ug-l)'):null;
   bronBox(P,jpc||bronEl);
 }
 

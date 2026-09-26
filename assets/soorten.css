@@ -1160,3 +1160,66 @@
   [data-page="2.1"] .wet-page{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
   [data-page="2.1"] .law-rows .lr{grid-template-columns:84px minmax(0,1fr);padding:7px 0}
 }
+/* ══ H2 p3 · Personen met gespecialiseerde kennis (26-9-2026, volgens mock-up; alleen .tpl-pgk) ══ */
+.tpl-pgk .pgp>*+*{margin-top:14px}
+.tpl-pgk .pg-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}
+.tpl-pgk .pg-titelrij{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.tpl-pgk .pg-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.5rem,2.3vw,2.1rem);line-height:1.15;color:var(--navy);margin:0}
+.tpl-pgk .pg-chip{margin:0}
+.tpl-pgk .pg-art{font-family:var(--ui);font-weight:700;font-size:1.12rem;color:var(--navy)}
+.tpl-pgk .pg-intro{font-size:1.06rem;line-height:1.5;color:var(--navy);margin-top:8px;max-width:70ch}
+.tpl-pgk .pg-boek .art{margin:0}
+.tpl-pgk .pg-boek .art-obj img{width:118px}
+.tpl-pgk .pg-body{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px;align-items:start}
+.tpl-pgk .pg-links,.tpl-pgk .pg-rechts{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tpl-pgk .pg-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#dbe7fb;flex:none}
+.tpl-pgk .pg-ic .di{width:24px;height:24px;color:var(--blue);--duo:rgba(36,88,198,.18)}
+.tpl-pgk .pg-wie{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh-s);overflow:hidden}
+.tpl-pgk .pg-wie-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:linear-gradient(160deg,#152a63,#0f1f4d);color:#fff;padding:12px 18px}
+.tpl-pgk .pg-wie-ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(245,178,40,.16)}
+.tpl-pgk .pg-wie-ic .di{width:22px;height:22px;color:#f5b228;--duo:rgba(245,178,40,.2)}
+.tpl-pgk .pg-wie-h h3{font-family:var(--ui);font-weight:800;font-size:1.25rem;color:#fff;flex:1 1 auto;margin:0}
+.tpl-pgk .pg-badge{font-family:var(--ui);font-weight:800;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:#f5b228;background:rgba(255,255,255,.08);border:1px solid rgba(245,178,40,.35);border-radius:999px;padding:5px 12px}
+.tpl-pgk .pg-rij{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;padding:12px 18px}
+.tpl-pgk .pg-rij+.pg-rij{border-top:1px solid var(--line)}
+.tpl-pgk .pg-rij h4,.tpl-pgk .pg-onth h3,.tpl-pgk .pg-boa h3,.tpl-pgk .pg-onthoud h3{font-family:var(--ui);font-weight:800;font-size:1.1rem;line-height:1.25;color:var(--navy);margin:0 0 4px}
+.tpl-pgk .pg-rij p,.tpl-pgk .pg-rij li,.tpl-pgk .pg-onth li,.tpl-pgk .pg-boa p,.tpl-pgk .pg-check li,.tpl-pgk .pg-onthoud p{font-size:1rem;line-height:1.45;color:var(--navy)}
+.tpl-pgk .pg-rij ul,.tpl-pgk .pg-onth ul{margin:0;padding-left:18px}
+.tpl-pgk .pg-ref{display:inline-block;font-size:.9rem;font-style:italic;color:var(--ink2)}
+.tpl-pgk .pg-onth{background:#f2f7ff;border:1.5px dashed #9bb6e6;border-radius:18px;padding:14px 18px}
+.tpl-pgk .pg-onth-h{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;margin-bottom:6px}
+.tpl-pgk .pg-apart{display:inline-block;font-family:var(--ui);font-weight:800;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--blue);border-radius:999px;padding:3px 10px;margin-bottom:4px}
+.tpl-pgk .pg-onth ul{margin-left:58px}
+.tpl-pgk .pg-onth .pg-ref{margin:6px 0 0 58px}
+.tpl-pgk .pg-boa{background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:18px;box-shadow:var(--sh-s);padding:14px 18px}
+.tpl-pgk .pg-boa-h{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;margin-bottom:6px}
+.tpl-pgk .pg-nadruk{font-weight:700;margin-top:2px}
+.tpl-pgk .pg-check{background:#fff;border:1px solid #d3e0f5;border-radius:14px;padding:10px 14px;margin-top:10px}
+.tpl-pgk .pg-check-l{display:block;font-family:var(--ui);font-weight:800;color:var(--navy);margin-bottom:4px}
+.tpl-pgk .pg-check ol{list-style:none;counter-reset:pgc;margin:0;padding:0}
+.tpl-pgk .pg-check li{counter-increment:pgc;position:relative;padding:3px 0 3px 36px}
+.tpl-pgk .pg-check li::before{content:counter(pgc);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:50%;background:var(--blue-l);color:var(--blue);font-family:var(--ui);font-weight:800;font-size:.9rem;display:grid;place-items:center}
+.tpl-pgk .pg-onthoud{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;background:#fff4dd;border:1px solid #f3d59b;border-radius:18px;padding:14px 18px}
+.tpl-pgk .pg-onthoud .pg-ic{background:#fde7b5}.tpl-pgk .pg-onthoud .pg-ic .di{color:var(--gold-d);--duo:rgba(184,120,18,.2)}
+.tpl-pgk .pg-onthoud h3{color:var(--gold-d)}
+.tpl-pgk .pg-klein{font-size:.95rem!important;color:var(--ink2)!important;margin-top:4px}
+.tpl-pgk .bronnen{margin-top:14px;background:transparent}
+.tpl-pgk .bronnen .bb-l li{font-size:.9rem}
+@media (max-width:1000px){.tpl-pgk .pg-body{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .tpl-pgk .pg-top{grid-template-columns:1fr}
+  .tpl-pgk .pg-boek{display:none}
+  .tpl-pgk .pg-t{font-size:1.45rem}
+  .tpl-pgk .pg-rij{grid-template-columns:38px minmax(0,1fr);gap:12px;padding:12px 14px}
+  .tpl-pgk .pg-ic{width:38px;height:38px}.tpl-pgk .pg-ic .di{width:21px;height:21px}
+  .tpl-pgk .pg-wie-h{padding:12px 14px}
+  .tpl-pgk .pg-onth,.tpl-pgk .pg-boa,.tpl-pgk .pg-onthoud{padding:12px 14px}
+  .tpl-pgk .pg-onth-h,.tpl-pgk .pg-boa-h,.tpl-pgk .pg-onthoud{grid-template-columns:38px minmax(0,1fr);gap:12px}
+  .tpl-pgk .pg-onth ul{margin-left:18px}.tpl-pgk .pg-onth .pg-ref{margin-left:0}
+}
+.tpl-pgk .pg-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
+.tpl-pgk .pg-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
+.tpl-pgk .pg-rechts .bronnen{margin-top:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px}
+.tpl-pgk .pg-rechts .bronnen .bb-l{display:block}
+.tpl-pgk .pg-rechts .bronnen .bb-l>li{display:block;margin:4px 0}
+.tpl-pgk .pg-rechts .bronnen .bb-l>li+li::before{content:counter(bron);margin:0}
