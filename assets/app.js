@@ -701,7 +701,7 @@ function splitBox(copyNodes,artMarkup,spec){
 function bronBox(P,bronEl){
   if(!P.bron)return;
   const d=el('details','bronnen');
-  const sum=el('summary','',di('boek')+'<span>Bronnen</span><span class="bron-n">'+P.bron.querySelectorAll('li').length+'</span>');
+  const sum=el('summary','',di('boek')+'<span>Bronnen</span><span class="bron-n">'+P.bron.querySelectorAll('.bb-l>li').length+'</span>');
   d.appendChild(sum);
   P.bron.querySelector('.bb-t').classList.add('sr');
   d.appendChild(P.bron);
@@ -865,7 +865,7 @@ T.wet=(P,spec,st)=>{
   box.appendChild(top);
   box.appendChild(wk);
   const ug=el('div','uitleg-grid');
-  if(grid){[...grid.querySelectorAll('.law-mini')].forEach((m,i)=>{const c=el('section','ucard',di(i?'boa':'lamp','ucard-ic'));const hd=el('h3','ucard-h');hd.appendChild(m.querySelector('.law-mini-head span:last-child'));const w=el('div');w.appendChild(hd);w.appendChild(m.querySelector('p'));c.appendChild(w);ug.appendChild(c);});}
+  if(grid){[...grid.querySelectorAll('.law-mini')].forEach((m,i)=>{const c=el('section','ucard',di(i?'boa':'lamp','ucard-ic'));const hd=el('h3','ucard-h');hd.appendChild(m.querySelector('.law-mini-head span:last-child'));const w=el('div');w.appendChild(hd);w.appendChild(m.querySelector('.law-rows')||m.querySelector('p'));c.appendChild(w);ug.appendChild(c);});}
   if(def){const c=el('section','ucard tip',di('lamp','ucard-ic'));const w=el('div');w.appendChild(el('h3','ucard-h sr','Uitleg'));w.appendChild(def.querySelector('p'));c.appendChild(w);ug.appendChild(c);}
   /* eerste uitlegkaart direct onder de wettekst, overige kaarten in de rechterkolom */
   const ugl=el('div','uitleg-grid ug-l');if(ug.firstElementChild)ugl.appendChild(ug.firstElementChild);

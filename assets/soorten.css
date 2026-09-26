@@ -1135,3 +1135,28 @@
   .q-v2 .qv-sit{grid-template-columns:40px minmax(0,1fr);gap:12px;padding:12px 14px}
   .q-v2 .qv-sit>.di{width:40px;height:40px;padding:8px}
 }
+/* ══ H2 p2 · art. 9.2.2.1a Wm: "In gewone taal" als vier regels + specifieke bronnen (26-9-2026; alleen .law-rows / .bb-leden) ══ */
+.law-rows{display:flex;flex-direction:column;margin-top:6px}
+.law-rows .lr{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;align-items:start;padding:9px 0}
+.law-rows .lr+.lr{border-top:1px solid var(--line)}
+.law-rows .lr-lab{display:grid;place-items:center;min-height:34px;border-radius:8px;font-family:var(--ui);font-weight:800;font-size:.98rem;line-height:1.1;text-align:center;padding:4px 6px}
+.law-rows .lr-f2 .lr-lab{background:var(--blue);color:#fff}
+.law-rows .lr-f3 .lr-lab{background:#f0a21a;color:#1f1400}
+.law-rows .lr-vk .lr-lab{background:#7f8aa3;color:#fff}
+.law-rows .lr-f14 .lr-lab{background:#e3e8f2;color:var(--navy)}
+.law-rows .lr-t p{margin:0;line-height:1.45}
+.law-rows .lr-t p+p{margin-top:2px}
+.law-rows .lr-nadruk{font-weight:700;color:var(--navy)}
+.bronnen .bb-leden{list-style:disc;margin:4px 0 2px 18px;padding:0}
+.bronnen .bb-leden li{display:list-item;padding:0;margin:1px 0;font-size:.9rem;line-height:1.4;color:var(--ink2)}
+.bronnen .bb-leden li::before{display:none}
+.bronnen .bb-leden b{font-weight:700;color:var(--navy)}
+@media (max-width:760px){
+  .law-rows .lr{grid-template-columns:1fr;gap:6px;padding:10px 0}
+  .law-rows .lr-lab{justify-self:start;min-height:30px;padding:4px 12px}
+}
+.bronnen .bb-leden li{counter-increment:none}
+@media (min-width:1001px){
+  [data-page="2.1"] .wet-page{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+  [data-page="2.1"] .law-rows .lr{grid-template-columns:84px minmax(0,1fr);padding:7px 0}
+}
