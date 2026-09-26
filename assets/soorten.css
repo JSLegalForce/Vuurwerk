@@ -1328,3 +1328,6 @@
 }
 @media (max-width:420px){.tpl-ed .ed-twee{grid-template-columns:1fr}}
 .tpl-ed .ed-voorw{margin:2px 0 4px;font-size:.96rem!important;color:var(--ink2)!important}
+/* Oefenvraag H2 F1 in de tuin: grote praktijkfoto links (.q-groot, alleen deze vraag) */
+@media (min-width:1001px){.q-groot:not(.answered) .q-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.q-groot .qv-foto{aspect-ratio:770/667}}
+@media (min-width:761px) and (max-width:1000px){.q-groot:not(.answered) .q-layout{grid-template-columns:1fr}.q-groot .q-side{order:-1}.q-groot .qv-foto{max-width:none;aspect-ratio:16/8}}

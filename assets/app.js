@@ -455,7 +455,7 @@ function qScreen(st){
   const t=D.topics[st.ti],q=t.vragen[st.qi];
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
-  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
@@ -471,7 +471,7 @@ function qScreen(st){
 }
 /* oefenvragen met stijl v2 (hoofdstuk 1): eigen foto en/of situatiekaart links; anders de bestaande illustratie */
 function qSide(q,art){
-  const foto=q.beeld?'<figure class="qv-foto"><img src="'+esc(q.beeld.src)+'?v='+ASSET_V+'" alt="'+esc(q.beeld.alt)+'" width="'+q.beeld.w+'" height="'+q.beeld.h+'" loading="eager" decoding="async"></figure>':artHTML(art,{rev:1,sz:'mid'});
+  const foto=q.beeld?'<figure class="qv-foto"><img src="'+esc(q.beeld.src)+'?v='+ASSET_V+'" alt="'+esc(q.beeld.alt)+'" width="'+q.beeld.w+'" height="'+q.beeld.h+'"'+(q.beeld.pos?' style="object-position:'+esc(q.beeld.pos)+'"':'')+' loading="eager" decoding="async"></figure>':artHTML(art,{rev:1,sz:'mid'});
   const sit=q.situatie?'<div class="qv-sit">'+di('zoeken')+'<div><b>Situatie</b><p>'+esc(q.situatie)+'</p></div></div>':'';
   return foto+sit;
 }
@@ -504,9 +504,9 @@ function balanceerFeedback(qc){
 }
 function feedbackHTML(q,ans){
   const goed=ans.goed;
-  const uit=fnRender(q.uitleg,q.voetnoten);
+  const uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,q.voetnoten);
   const v2=q.stijl==='v2';
-  let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?(v2?'Helemaal goed!':'Juist!'):'Helaas, dat is niet het juiste antwoord.')+'</h3>'
+  let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?(q.fbGoed||(v2?'Helemaal goed!':'Juist!')):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>'
     +'<div class="fbx-sub"><p class="fbx-s">'+(goed?(v2?'Dit is het juiste antwoord.':'Juist beantwoord'):'Onjuist beantwoord')+'</p>'
     +'<div class="fbx-pills"><div class="fbp '+(goed?'g':'r')+'"><span class="fbp-l">'+(goed&&v2?'Juiste antwoord':'Jouw antwoord')+'</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +(goed?'':'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div>')+'</div></div></div></div>'
