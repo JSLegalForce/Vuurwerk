@@ -1327,3 +1327,4 @@
   .tpl-ed .ed-ic,.tpl-ed .ed-lo-ic{width:38px;height:38px}.tpl-ed .ed-ic .di{width:21px;height:21px}
 }
 @media (max-width:420px){.tpl-ed .ed-twee{grid-template-columns:1fr}}
+.tpl-ed .ed-voorw{margin:2px 0 4px;font-size:.96rem!important;color:var(--ink2)!important}
