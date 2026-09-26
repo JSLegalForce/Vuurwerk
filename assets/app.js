@@ -191,7 +191,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
 "6.7": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "2.2": "doelwit", "3.0": "weegschaal", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
+const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.0": "weegschaal", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
@@ -318,7 +318,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:21,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:22,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -415,6 +415,11 @@ function hervat(sv){
   if(sv.v>=18&&sv.v<=20){
     if(si>22)si-=1;
     delete answers['2-3'];
+    save();
+  }
+  /* v22: oefenvraag 7 van hoofdstuk 2 is een nieuwe praktijkcasus met andere antwoordvolgorde; een oud antwoord daarop vervalt. Posities blijven gelijk. */
+  if(sv.v>=18&&sv.v<=21){
+    delete answers['2-2'];
     save();
   }
   if(phase==='leren'){buildSteps();render();}
