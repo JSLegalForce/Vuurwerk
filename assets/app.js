@@ -158,7 +158,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.1": {"t": "wet", "art": "Art. 9.2.2.1a Wm"},
 "2.2": {"t": "pgk"},
 "2.3": {"t": "onth"},
-"2.4": {"t": "wet", "art": "Art. 1a en 2 WED"},
+"2.4": {"t": "ed"},
 "3.0": {"t": "wet", "art": "Art. 142 Sv"},
 "3.1": {"t": "wet", "art": "Domein I, onderdeel 9"},
 "3.2": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
@@ -813,6 +813,13 @@ T.pgk=(P,spec,st)=>{
 T.onth=(P,spec,st)=>{
   /* H2 p4 "De ontheffing van de burgemeester": zes controlekaarten links (2 x 3), praktijkfoto, boa-kaart en Onthoud rechts */
   const box=el('div','oh-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.ed=(P,spec,st)=>{
+  /* H2 p5 "Economisch delict en straffen": foto links; wet, misdrijf/overtreding, voorbeelden en Let op rechts */
+  const box=el('div','ed-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
