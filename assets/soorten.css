@@ -1270,3 +1270,21 @@
   .tpl-onth .oh-foto img{aspect-ratio:16/8}
   .tpl-onth .oh-k-b{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}
 }
+/* H2 p4 mobiel (≤600 px): zes controlepunten als compacte checklist met thumbnail links (26-9-2026; alleen .tpl-onth) */
+@media (max-width:600px){
+  .tpl-onth .oh-kaarten{gap:6px}
+  .tpl-onth .oh-k{display:grid;grid-template-columns:80px minmax(0,1fr);column-gap:10px;row-gap:1px;align-items:start;padding:8px 10px;border-radius:14px}
+  .tpl-onth .oh-k-b{display:contents}
+  .tpl-onth .oh-k-b img{grid-column:1;grid-row:1/3;width:80px;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+  .tpl-onth .oh-k-h{grid-column:2;grid-row:1;margin:0;gap:8px}
+  .tpl-onth .oh-k-h .oh-ic{display:none}
+  .tpl-onth .oh-k-t{grid-column:2;grid-row:2}
+  .tpl-onth .oh-k h3{font-size:1.04rem}
+  .tpl-onth .oh-k-t p+p{margin-top:1px}
+  .tpl-onth .oh-k-t p{line-height:1.38}
+  .tpl-onth .oh-k-h .oh-n{width:24px;height:24px;font-size:.86rem}
+  .tpl-onth .oh-boa,.tpl-onth .oh-onthoud{padding:10px 12px}
+  .tpl-onth .oh-check{padding:6px 10px;margin-top:6px}
+  .tpl-onth .oh-rechts{gap:8px}
+  .tpl-onth .oh-body{gap:10px}
+}
