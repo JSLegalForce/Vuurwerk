@@ -1223,3 +1223,50 @@
 .tpl-pgk .pg-rechts .bronnen .bb-l{display:block}
 .tpl-pgk .pg-rechts .bronnen .bb-l>li{display:block;margin:4px 0}
 .tpl-pgk .pg-rechts .bronnen .bb-l>li+li::before{content:counter(bron);margin:0}
+/* ══ H2 p4 · De ontheffing van de burgemeester (26-9-2026, volgens mock-up; alleen .tpl-onth) ══ */
+.tpl-onth .ohp>*+*{margin-top:12px}
+.tpl-onth .oh-titelrij{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.tpl-onth .oh-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.5rem,2.3vw,2.1rem);line-height:1.15;color:var(--navy);margin:0}
+.tpl-onth .oh-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
+.tpl-onth .oh-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
+.tpl-onth .oh-art{font-family:var(--ui);font-weight:700;font-size:1.08rem;color:var(--navy)}
+.tpl-onth .oh-intro{font-size:1.04rem;line-height:1.5;color:var(--navy);margin-top:6px;max-width:80ch}
+.tpl-onth .oh-body{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:16px;align-items:start}
+.tpl-onth .oh-kaarten{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tpl-onth .oh-k{background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:16px;padding:10px 12px;min-width:0}
+.tpl-onth .oh-k-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.tpl-onth .oh-ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#dbe7fb;flex:none}
+.tpl-onth .oh-ic .di{width:21px;height:21px;color:var(--blue);--duo:rgba(36,88,198,.18)}
+.tpl-onth .oh-n{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--blue-l);color:var(--blue);font-family:var(--ui);font-weight:800;font-size:.92rem;flex:none}
+.tpl-onth .oh-k h3,.tpl-onth .oh-boa h3,.tpl-onth .oh-onthoud h3{font-family:var(--ui);font-weight:800;font-size:1.08rem;line-height:1.25;color:var(--navy);margin:0}
+.tpl-onth .oh-k-b{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:12px;align-items:start}
+.tpl-onth .oh-k-b img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;display:block}
+.tpl-onth .oh-k-t p,.tpl-onth .oh-boa p,.tpl-onth .oh-check li,.tpl-onth .oh-onthoud p{font-size:.98rem;line-height:1.42;color:var(--navy);margin:0}
+.tpl-onth .oh-k-t p+p{margin-top:3px}
+.tpl-onth .oh-ref{font-size:.9rem!important;color:var(--ink2)!important}
+.tpl-onth .oh-rechts{display:flex;flex-direction:column;gap:10px;min-width:0}
+.tpl-onth .oh-foto{margin:0;border-radius:16px;overflow:hidden;box-shadow:var(--sh-s)}
+.tpl-onth .oh-foto img{width:100%;aspect-ratio:608/239;object-fit:cover;display:block}
+.tpl-onth .oh-boa{background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:16px;padding:12px 14px}
+.tpl-onth .oh-boa-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.tpl-onth .oh-nadruk{font-weight:700}
+.tpl-onth .oh-check{background:#fff;border:1px solid #d3e0f5;border-radius:12px;padding:8px 12px;margin-top:8px}
+.tpl-onth .oh-check-l{display:block;font-family:var(--ui);font-weight:800;color:var(--navy);margin-bottom:2px}
+.tpl-onth .oh-check ol{list-style:none;counter-reset:ohc;margin:0;padding:0}
+.tpl-onth .oh-check li{counter-increment:ohc;position:relative;padding:2px 0 2px 32px}
+.tpl-onth .oh-check li::before{content:counter(ohc);position:absolute;left:0;top:3px;width:23px;height:23px;border-radius:50%;background:var(--blue-l);color:var(--blue);font-family:var(--ui);font-weight:800;font-size:.84rem;display:grid;place-items:center}
+.tpl-onth .oh-onthoud{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;align-items:start;background:#fff4dd;border:1px solid #f3d59b;border-radius:16px;padding:12px 14px}
+.tpl-onth .oh-onthoud .oh-ic{background:#fde7b5}.tpl-onth .oh-onthoud .oh-ic .di{color:var(--gold-d);--duo:rgba(184,120,18,.2)}
+.tpl-onth .oh-onthoud h3{color:var(--gold-d);margin-bottom:2px}
+.tpl-onth .oh-onthoud p+p{margin-top:4px}
+.tpl-onth .bronnen{margin-top:12px}
+@media (max-width:1180px){.tpl-onth .oh-body{grid-template-columns:1fr}.tpl-onth .oh-rechts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}.tpl-onth .oh-foto{grid-column:1/-1}.tpl-onth .oh-foto img{aspect-ratio:21/8}}
+@media (max-width:760px){
+  .tpl-onth .oh-t{font-size:1.45rem}
+  .tpl-onth .oh-kaarten{grid-template-columns:1fr}
+  .tpl-onth .oh-body{display:flex;flex-direction:column}
+  .tpl-onth .oh-rechts{display:contents}
+  .tpl-onth .oh-foto{order:-1}
+  .tpl-onth .oh-foto img{aspect-ratio:16/8}
+  .tpl-onth .oh-k-b{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}
+}
