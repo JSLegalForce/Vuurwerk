@@ -158,8 +158,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.1": {"t": "wet", "art": "Art. 9.2.2.1a Wm"},
 "2.2": {"t": "pgk"},
 "2.3": {"t": "onth"},
-"2.4": {"t": "split", "a": "wetboek", "rows": ["wet", "lijst", "wet", "lagen"]},
-"2.5": {"t": "wet", "art": "Art. 1a en 2 WED"},
+"2.4": {"t": "wet", "art": "Art. 1a en 2 WED"},
 "3.0": {"t": "wet", "art": "Art. 142 Sv"},
 "3.1": {"t": "wet", "art": "Domein I, onderdeel 9"},
 "3.2": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
@@ -319,7 +318,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:19,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:20,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -404,6 +403,12 @@ function hervat(sv){
     if(si>=10)si-=1;
     /* oefenvraag 2 van hoofdstuk 1 is een nieuwe vraag (veiligheid); een oud antwoord daarop past niet meer */
     delete answers['1-1'];
+    save();
+  }
+  /* v20: hoofdstuk 2 van 6 naar 5 pagina's (p5 "Andere vuurwerkregels en samenloop" vervallen, stap 18).
+     Posities na die stap schuiven één terug; wie op stap 18 stond, komt op de nieuwe p5 (Economisch delict). */
+  if(sv.v===18||sv.v===19){
+    if(si>18)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
