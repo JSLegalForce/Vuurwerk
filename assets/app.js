@@ -471,7 +471,7 @@ function qScreen(st){
   const t=D.topics[st.ti],q=t.vragen[st.qi];
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
-  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+(q.layout==='breed'?' q-breed':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
@@ -529,7 +529,7 @@ function feedbackHTML(q,ans){
     +'<div class="fbx-grid"><div class="fbx-sec fbx-uit">'+di('lamp')+'<div><div class="fb-h">Toelichting</div><p class="fb-p">'+uit.body+'</p></div></div>';
   if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">Kernregel</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
   h+='</div>';
-  if(uit.bron)h+='<div class="fbx-bron">'+uit.bron+'</div>';
+  if(uit.bron)h+='<div class="fbx-bron">'+((q.layout==='breed'&&(q.voetnoten||[]).length===1)?uit.bron.replace('<div class="bb-t">Bronnen</div>','<div class="bb-t">Bron</div>'):uit.bron)+'</div>';
   h+='</section>';return h;
 }
 const kort=s=>{s=s.replace(/\[\[\d+\]\]/g,'').replace(/\s+/g,' ').trim();return s.length>70?s.slice(0,68)+'…':s;};
