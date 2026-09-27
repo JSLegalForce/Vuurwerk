@@ -320,7 +320,7 @@ function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
 function fnRender(text,voetnoten){
   const lijst=[],kaart={};
-  const body=esc(text).replace(/\[\[(\d+)\]\]/g,(_,d)=>{const c=(voetnoten||[])[(+d)-1];if(!c)return '';const ck=typeof c==='string'?c:c.t;let n=kaart[ck];if(!n){n=lijst.length+1;kaart[ck]=n;lijst.push(c);}return '<sup class="fn">'+n+'</sup>';}).replace(/\n\n/g,'</p><p class="fb-p">');
+  const body=esc(text).replace(/\[\[(\d+)\]\]/g,(_,d)=>{const c=(voetnoten||[])[(+d)-1];if(!c)return '';const ck=typeof c==='string'?c:c.t;let n=kaart[ck];if(!n){n=lijst.length+1;kaart[ck]=n;lijst.push(c);}return '<sup class="fn">'+n+'</sup>';}).split('\n\n').map(b=>b.split('\n').every(r=>r.startsWith('• '))?'</p><ul class="fb-ul">'+b.split('\n').map(r=>'<li>'+r.slice(2)+'</li>').join('')+'</ul><p class="fb-p">':b).join('</p><p class="fb-p">').replace(/<p class="fb-p"><\/p><ul/g,'<ul').replace(/<\/ul><p class="fb-p"><\/p><p class="fb-p">/g,'</ul><p class="fb-p">');
   let bron='';
   if(lijst.length) bron='<div class="bronnen-blok"><div class="bb-t">Bronnen</div><ol class="bb-l">'+lijst.map(c=>'<li>'+(typeof c==='string'?esc(c):'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.t)+'</a>'+(c.toel?' <span class="bb-toel">'+esc(c.toel)+'</span>':''))+'</li>').join('')+'</ol></div>';
   return {body,bron};

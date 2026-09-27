@@ -1419,3 +1419,7 @@
   .card.qcard.q-foto.q-breed.answered .q-layout{grid-template-columns:minmax(0,1.17fr) minmax(0,1fr);column-gap:28px;row-gap:14px}
   .q-foto.q-breed.answered .qv-foto{aspect-ratio:23/10}
 }
+/* Toelichting met opsomming (oefenvraag 11) */
+.fbx-uit .fb-ul{margin:8px 0 0;padding-left:22px}
+.fbx-uit .fb-ul li{font-size:1rem;line-height:1.5;margin:2px 0}
+.fbx-uit .fb-ul+.fb-p{margin-top:8px}
