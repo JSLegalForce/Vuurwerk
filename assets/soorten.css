@@ -1385,13 +1385,13 @@
   .tpl-wed17 .w17-stap+.w17-stap::before{left:33px}.tpl-wed17 .w17-stap+.w17-stap::after{left:28px}
   .tpl-wed17 .w17-boa-h,.tpl-wed17 .w17-boa-b{padding:12px 14px}
 }
-/* Oefenvragen met grote praktijkfoto (.q-groot, vraag 5 t/m 8): foto blijft ook na beantwoorden zichtbaar */
+/* Oefenvragen met praktijkfoto (.q-foto: vraag 2, 3 en 5 t/m 8): foto blijft ook na beantwoorden zichtbaar */
 @media (min-width:1001px){
-  .card.qcard.q-groot.answered .q-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"side fb" "main fb";grid-template-rows:auto 1fr;row-gap:16px;align-items:start}
-  .q-groot.answered .q-layout>.q-side{display:flex;grid-area:side;position:static}
-  .q-groot.answered .q-layout>.q-main{grid-area:main}
-  .q-groot.answered .q-layout>.q-fb{grid-area:fb}
-  .q-groot.answered .qv-foto{aspect-ratio:16/8}
+  .card.qcard.q-foto.answered .q-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"side fb" "main fb";grid-template-rows:auto 1fr;row-gap:16px;align-items:start}
+  .q-foto.answered .q-layout>.q-side{display:flex;grid-area:side;position:static}
+  .q-foto.answered .q-layout>.q-main{grid-area:main}
+  .q-foto.answered .q-layout>.q-fb{grid-area:fb}
+  .q-foto.answered .qv-foto{aspect-ratio:16/8}
 }
-@media (min-width:1001px) and (max-height:860px){.q-groot.answered .qv-foto{aspect-ratio:16/7}}
-@media (min-width:761px) and (max-width:1000px){.q-groot.answered .q-layout>.q-side{display:flex}}
+@media (min-width:1001px) and (max-height:860px){.q-foto.answered .qv-foto{aspect-ratio:16/7}}
+@media (min-width:761px) and (max-width:1000px){.q-foto.answered .q-layout>.q-side{display:flex}}
