@@ -160,7 +160,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.3": {"t": "onth"},
 "2.4": {"t": "ed"},
 "3.0": {"t": "dom9"},
-"3.1": {"t": "wet", "art": "Art. 17 WED"},
+"3.1": {"t": "wed17"},
 "4.0": {"t": "info", "v": "bevkaart"},
 "4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
 "4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
@@ -187,7 +187,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
 "6.7": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.0": "weegschaal", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
+const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
@@ -320,9 +320,9 @@ function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
 function fnRender(text,voetnoten){
   const lijst=[],kaart={};
-  const body=esc(text).replace(/\[\[(\d+)\]\]/g,(_,d)=>{const c=(voetnoten||[])[(+d)-1];if(!c)return '';let n=kaart[c];if(!n){n=lijst.length+1;kaart[c]=n;lijst.push(c);}return '<sup class="fn">'+n+'</sup>';});
+  const body=esc(text).replace(/\[\[(\d+)\]\]/g,(_,d)=>{const c=(voetnoten||[])[(+d)-1];if(!c)return '';const ck=typeof c==='string'?c:c.t;let n=kaart[ck];if(!n){n=lijst.length+1;kaart[ck]=n;lijst.push(c);}return '<sup class="fn">'+n+'</sup>';}).replace(/\n\n/g,'</p><p class="fb-p">');
   let bron='';
-  if(lijst.length) bron='<div class="bronnen-blok"><div class="bb-t">Bronnen</div><ol class="bb-l">'+lijst.map(c=>'<li>'+esc(c)+'</li>').join('')+'</ol></div>';
+  if(lijst.length) bron='<div class="bronnen-blok"><div class="bb-t">Bronnen</div><ol class="bb-l">'+lijst.map(c=>'<li>'+(typeof c==='string'?esc(c):'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.t)+'</a>'+(c.toel?' <span class="bb-toel">'+esc(c.toel)+'</span>':''))+'</li>').join('')+'</ol></div>';
   return {body,bron};
 }
 function shuffle(n){const a=[];for(let i=0;i<n;i++)a.push(i);for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;}
@@ -523,7 +523,7 @@ function feedbackHTML(q,ans){
   const uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,q.voetnoten);
   const v2=q.stijl==='v2';
   let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?(q.fbGoed||(v2?'Helemaal goed!':'Juist!')):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>'
-    +'<div class="fbx-sub"><p class="fbx-s">'+(goed?(v2?'Dit is het juiste antwoord.':'Juist beantwoord'):'Onjuist beantwoord')+'</p>'
+    +'<div class="fbx-sub"><p class="fbx-s">'+(goed?(q.fbGoedSub?esc(q.fbGoedSub):(v2?'Dit is het juiste antwoord.':'Juist beantwoord')):'Onjuist beantwoord')+'</p>'
     +'<div class="fbx-pills"><div class="fbp '+(goed?'g':'r')+'"><span class="fbp-l">'+(goed&&v2?'Juiste antwoord':'Jouw antwoord')+'</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +(goed?'':'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div>')+'</div></div></div></div>'
     +'<div class="fbx-grid"><div class="fbx-sec fbx-uit">'+di('lamp')+'<div><div class="fb-h">Toelichting</div><p class="fb-p">'+uit.body+'</p></div></div>';
@@ -845,6 +845,14 @@ T.dom9=(P,spec,st)=>{
   const box=el('div','d9-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   const bk=box.querySelector('.d9-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.wed17=(P,spec,st)=>{
+  /* H3 p2 "Artikel 17 WED": drie stappen links, boa-kaart en onthoudregel rechts; wetboek rechtsboven */
+  const box=el('div','w17-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  const bk=box.querySelector('.w17-boek');if(bk)bk.innerHTML=artHTML('wetboek');
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
