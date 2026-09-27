@@ -159,12 +159,11 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.2": {"t": "pgk"},
 "2.3": {"t": "onth"},
 "2.4": {"t": "ed"},
-"3.0": {"t": "wet", "art": "Art. 142 Sv"},
-"3.1": {"t": "wet", "art": "Domein I, onderdeel 9"},
-"3.2": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
+"3.0": {"t": "wet", "art": "Domein I, onderdeel 9"},
+"3.1": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
 "rows": ["vink", "kruis", "domein", "afspraak"]},
-"3.3": {"t": "wet", "art": "Art. 17 WED"},
-"3.4": {"t": "concl"},
+"3.2": {"t": "wet", "art": "Art. 17 WED"},
+"3.3": {"t": "concl"},
 "4.0": {"t": "info", "v": "bevkaart"},
 "4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
 "4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
@@ -318,7 +317,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:22,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:23,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -420,6 +419,12 @@ function hervat(sv){
   /* v22: oefenvraag 7 van hoofdstuk 2 is een nieuwe praktijkcasus met andere antwoordvolgorde; een oud antwoord daarop vervalt. Posities blijven gelijk. */
   if(sv.v>=18&&sv.v<=21){
     delete answers['2-2'];
+    save();
+  }
+  /* v23: hoofdstuk 3 van 5 naar 4 pagina's (p1 "Zien is niet hetzelfde als bevoegd zijn", stap 22, vervallen).
+     Wie op stap 22 stond, komt op de nieuwe p1 (Domein I, onderdeel 9); latere posities schuiven één terug. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=22){
+    if(si>22)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
