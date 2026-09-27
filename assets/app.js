@@ -159,11 +159,8 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.2": {"t": "pgk"},
 "2.3": {"t": "onth"},
 "2.4": {"t": "ed"},
-"3.0": {"t": "wet", "art": "Domein I, onderdeel 9"},
-"3.1": {"t": "split", "a": {"icon": "domein", "orbit": ["wet", "vraag", "boa"]},
-"rows": ["vink", "kruis", "domein", "afspraak"]},
-"3.2": {"t": "wet", "art": "Art. 17 WED"},
-"3.3": {"t": "concl"},
+"3.0": {"t": "dom9"},
+"3.1": {"t": "wet", "art": "Art. 17 WED"},
 "4.0": {"t": "info", "v": "bevkaart"},
 "4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
 "4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
@@ -317,7 +314,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:23,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:24,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -424,6 +421,15 @@ function hervat(sv){
   /* v23: hoofdstuk 3 van 5 naar 4 pagina's (p1 "Zien is niet hetzelfde als bevoegd zijn", stap 22, vervallen).
      Wie op stap 22 stond, komt op de nieuwe p1 (Domein I, onderdeel 9); latere posities schuiven één terug. Antwoorden blijven gelijk. */
   if(sv.v>=18&&sv.v<=22){
+    if(si>22)si-=1;
+    save();
+  }
+  /* v24: hoofdstuk 3 van 4 naar 2 pagina's.
+     - p1 en p2 ("Wat volgt wél en wat níet uit onderdeel 9?", stap 23) zijn samengevoegd tot de nieuwe p1 (stap 22);
+     - p4 "Welk feit? De categorie is nog geen conclusie" (stap 25) is vervallen: wie daar stond, gaat verder bij oefenvraag 8 (eerste vraag van hoofdstuk 3).
+     Latere posities schuiven twee terug. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=23){
+    if(si>25)si-=1;
     if(si>22)si-=1;
     save();
   }
@@ -834,13 +840,13 @@ T.ed=(P,spec,st)=>{
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
-T.concl=(P,spec,st)=>{
-  /* "Categorie is nog geen conclusie": beeld met vijf voorbeelden links, uitleg in kaarten rechts */
-  const cc=P.rest.find(n=>n.nodeType===1&&n.classList.contains('cc'));
-  const tekst=cc.querySelector('.cc-tekst');
-  const kop=el('div','cc-kop');[soortChip(P),titleEl(P)].filter(Boolean).forEach(n=>kop.appendChild(n));tekst.prepend(kop);
-  cc.querySelectorAll('[data-i]').forEach(x=>{const i=x.dataset.i;x.setAttribute('aria-hidden','true');x.innerHTML=i==='vink'?vink:di(i);});
-  return cc;
+T.dom9=(P,spec,st)=>{
+  /* H3 p1 "Domein I, onderdeel 9": grote praktijkfoto links; kop, boa-kaart, Wél/Niet en onthoudregel rechts */
+  const box=el('div','d9-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  const bk=box.querySelector('.d9-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
 };
 T.wetcat=(P,spec,st)=>{
   /* "Wettekst: indeling in categorieën": categorieblokken links, korte wettekst en uitleg rechts */
