@@ -162,12 +162,16 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "3.0": {"t": "dom9"},
 "3.1": {"t": "wed17"},
 "4.0": {"t": "bev"},
-"4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
-"4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
-"4.3": {"t": "wet", "art": "Art. 54 Sv"},
-"4.4": {"t": "wet", "art": "Art. 23 WED"},
-"4.5": {"t": "wet", "art": "Art. 18 WED"},
-"4.6": {"t": "letop", "a": "boa-uitleg"},
+"4.1": {"t": "vp"},
+"4.2": {"t": "vp"},
+"4.3": {"t": "vp"},
+"4.4": {"t": "vp"},
+"4.5": {"t": "vp"},
+"4.6": {"t": "vp"},
+"4.7": {"t": "vp"},
+"4.8": {"t": "vp"},
+"4.9": {"t": "vp"},
+"4.10": {"t": "letop", "a": "boa-uitleg"},
 "5.0": {"t": "letop", "a": {"icon": "afstand", "orbit": ["schild", "tas"]},
 "icons": ["hand", "kruis", "mensen", "afspraak"]},
 "5.1": {"t": "split", "a": {"icon": "afspraak", "orbit": ["boa", "document", "mensen"]},
@@ -314,7 +318,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:24,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:25,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -431,6 +435,13 @@ function hervat(sv){
   if(sv.v>=18&&sv.v<=23){
     if(si>25)si-=1;
     if(si>22)si-=1;
+    save();
+  }
+  /* v25: hoofdstuk 4 van 7 naar 11 pagina's: na het overzicht negen verdiepingspagina's per bevoegdheid, daarna 'Grenzen en vastleggen'.
+     Oude pagina's (stap 29-34) gaan naar dezelfde bevoegdheid; 'Aanhouden buiten heterdaad' (stap 31) is vervallen en gaat naar de eerstvolgende pagina. Latere stappen schuiven vier op. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=24){
+    const m={29:29,30:31,31:32,32:36,33:32,34:38};
+    if(m[si]!==undefined)si=m[si];else if(si>34)si+=4;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
@@ -859,6 +870,13 @@ T.wed17=(P,spec,st)=>{
 T.bev=(P,spec,st)=>{
   /* H4 p1 "Bevoegdheid, verplichting of strafbaarstelling?": drie kolommen (bevoegdheid, verplichting, strafbaarstelling) en twee onthoudkaarten */
   const box=el('div','bv-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.vp=(P,spec,st)=>{
+  /* H4 verdiepingspagina's per bevoegdheid: foto links; wet, bron, betekenis, praktijkvoorbeeld en onthoud rechts */
+  const box=el('div','vp-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
