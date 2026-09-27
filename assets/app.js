@@ -161,7 +161,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.4": {"t": "ed"},
 "3.0": {"t": "dom9"},
 "3.1": {"t": "wed17"},
-"4.0": {"t": "info", "v": "bevkaart"},
+"4.0": {"t": "bev"},
 "4.1": {"t": "wet", "art": "Art. 27 en 52 Sv"},
 "4.2": {"t": "wet", "art": "Art. 53 en 128 Sv"},
 "4.3": {"t": "wet", "art": "Art. 54 Sv"},
@@ -853,6 +853,13 @@ T.wed17=(P,spec,st)=>{
   const box=el('div','w17-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   const bk=box.querySelector('.w17-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.bev=(P,spec,st)=>{
+  /* H4 p1 "Bevoegdheid, verplichting of strafbaarstelling?": drie kolommen (bevoegdheid, verplichting, strafbaarstelling) en twee onthoudkaarten */
+  const box=el('div','bv-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
