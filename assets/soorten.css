@@ -1395,7 +1395,7 @@
 }
 @media (min-width:1001px) and (max-height:860px){.q-foto.answered .qv-foto{aspect-ratio:16/7}}
 @media (min-width:761px) and (max-width:1000px){.q-foto.answered .q-layout>.q-side{display:flex}}
-/* Oefenvraag 8 (.q-breed): na beantwoorden brede indeling volgens mock-up 27-9-2026 — links foto, casus en antwoorden (± 54%), rechts compacte feedbackkaarten (± 46%) */
+/* Oefenvragen met praktijkfoto (.q-breed: vraag 2, 3 en 5 t/m 8; standaard volgens vraag 8): na beantwoorden brede indeling volgens mock-up 27-9-2026 — links foto, casus en antwoorden (± 54%), rechts compacte feedbackkaarten (± 46%) */
 .q-breed.answered .fbx{background:none;border:0;border-radius:0;padding:0;box-shadow:none}
 .q-breed.answered .fbx-top{border-radius:16px;padding:16px 20px;border:1px solid;align-items:center}
 .q-breed.answered .fbx.ok .fbx-top{background:#ebf8f0;border-color:#b9e3ca}
