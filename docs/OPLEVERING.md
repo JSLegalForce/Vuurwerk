@@ -31,7 +31,7 @@ Was: 145 pagina's, 31 oefenvragen, 15 eindtoetsvragen.
 
 - **Introductie:** Een knal op het plein · Wat je leert en hoe de cursus werkt (doelgroep domein I, Europees Nederland) · De vier vragen (met de labels Herkennen, Wet, Wettelijk bevoegd, Taak/beleid, Veiligheid, Politie).
 - **1 Vuurwerk herkennen:** Wie bepaalt de categorie? · F1 · F2 · F3 · F4 en professioneel vuurwerk · Verpakking en etiket · Onbekend vuurwerk en praktijknamen · Terug naar het plein: wat kun je vaststellen?
-- **2 Wat zegt de wet?:** De Wet veilige jaarwisseling · Art. 9.2.2.1a Wm: bezit, gebruik en verkoop · Personen met gespecialiseerde kennis · De ontheffing van de burgemeester · Andere vuurwerkregels en samenloop · Economisch delict en straffen.
+- **2 Wat zegt de wet?:** De Wet veilige jaarwisseling · Art. 9.2.2.1a Wm: bezit, gebruik en verkoop · Personen met gespecialiseerde kennis · De ontheffing van de burgemeester · Andere vuurwerkregels en samenloop · Economisch delict: overtreding of misdrijf?
 - **3 Wanneer ben jij als boa bevoegd?:** Zien is niet hetzelfde als bevoegd zijn (art. 142 Sv) · Domein I, onderdeel 9 · Wat volgt wél en níet uit onderdeel 9? · WED-opsporingsambtenaar: art. 17 WED · Welk feit? De categorie is nog geen conclusie.
 - **4 Wat kun je als boa doen?:** Bevoegdheid, verplichting of strafbaarstelling? · Aanspreken en staande houden · Aanhouden op heterdaad · Aanhouden buiten heterdaad · Vervoermiddel: stilhouden, onderzoeken, meewerken · Inbeslagneming en uitlevering · Grenzen en vastleggen.
 - **5 Wanneer doe je het niet zelf?:** Veiligheid · Taak en beleid · Politie · Zelf, overleggen of politie? · Een goede overdracht.
