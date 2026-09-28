@@ -1558,3 +1558,5 @@
   .tpl-vp .vp-hd .vp-onthoud{padding:8px 12px}
 }
 @media (min-width:1001px) and (max-height:860px){.tpl-vp .vp-hd .vp-links{top:70px}}
+/* ══ H4 p6 "Inzage van gegevens en bescheiden vorderen" (28-9-2026; alleen .vp-inz): hele praktijkfoto zichtbaar op desktop ══ */
+@media (min-width:1001px){.tpl-vp .vp-inz .vp-foto img{aspect-ratio:750/511}}
