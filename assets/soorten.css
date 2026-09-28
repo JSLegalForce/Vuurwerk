@@ -1479,3 +1479,58 @@
   .tpl-bev .bv-foto{flex:none;min-height:0;aspect-ratio:16/8}
   .tpl-bev .bv-h{padding:12px 14px}
 }
+/* ══ H4 verdiepingspagina's per bevoegdheid (27-9-2026, conceptbouw; alleen .tpl-vp) ══ */
+.tpl-vp .vpp>*+*{margin-top:14px}
+.tpl-vp .vp-kop-t{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.tpl-vp .vp-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
+.tpl-vp .vp-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
+.tpl-vp .vp-t{flex-basis:100%;font-family:var(--ui);font-weight:800;font-size:clamp(1.55rem,2.4vw,2.2rem);line-height:1.15;color:var(--navy);margin:4px 0 0}
+.tpl-vp .vp-art{font-family:var(--ui);font-weight:800;font-size:.92rem;color:var(--blue);background:var(--blue-l);border-radius:8px;padding:4px 12px}
+.tpl-vp .vp-intro{font-size:1.06rem;line-height:1.5;color:var(--navy);margin:8px 0 0;max-width:80ch}
+.tpl-vp .vp-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;align-items:start}
+.tpl-vp .vp-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233;position:sticky;top:90px}
+.tpl-vp .vp-foto img{width:100%;aspect-ratio:4/3.4;object-fit:cover;display:block}
+.tpl-vp .vp-rechts{display:flex;flex-direction:column;gap:10px;min-width:0}
+.tpl-vp .vp-kaart{border-radius:16px;padding:12px 16px;border:1px solid #d6e1f3;background:var(--blue-ll)}
+.tpl-vp .vp-kaart h3{display:flex;align-items:center;gap:10px;font-family:var(--ui);font-weight:800;font-size:1.08rem;line-height:1.25;color:var(--navy);margin:0 0 6px}
+.tpl-vp .vp-ic{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#dbe7fb;flex:none}
+.tpl-vp .vp-ic .di{width:19px;height:19px;color:var(--blue);--duo:rgba(36,88,198,.18)}
+.tpl-vp .vp-kaart p{font-size:1rem;line-height:1.48;color:var(--navy);margin:0}
+.tpl-vp .vp-kaart p+p{margin-top:6px}
+.tpl-vp .vp-wet{order:1;background:#fff;border-left:5px solid var(--navy)}
+.tpl-vp .vp-wt p{font-family:Georgia,'Times New Roman',serif;font-size:1rem;line-height:1.5;color:var(--navy)}
+.tpl-vp .vp-lid{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:8px;border-radius:6px;background:var(--navy);color:#fff;font-family:var(--ui);font-size:.78rem;font-weight:800;vertical-align:2px}
+.tpl-vp .vp-bron{order:2;margin:-4px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:.95rem;color:var(--navy)}
+.tpl-vp .vp-bron-l{font-family:var(--ui);font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.tpl-vp .vp-bet{order:3}
+.tpl-vp .vp-vb{order:4;background:#fff}
+.tpl-vp .vp-onthoud{order:5;display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;align-items:center;background:#fff4dd;border:1px solid #f3d59b;border-radius:14px;padding:10px 14px;margin:0;font-size:1rem;line-height:1.45;color:var(--navy);max-width:none}
+.tpl-vp .vp-o-ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
+.tpl-vp .vp-o-ic .di{width:21px;height:21px;color:var(--navy);--duo:rgba(255,255,255,.35)}
+@media (max-width:1000px){
+  .tpl-vp .vp-body{grid-template-columns:1fr}
+  .tpl-vp .vp-foto{position:static}
+  .tpl-vp .vp-foto img{aspect-ratio:16/8}
+}
+@media (max-width:760px){
+  .tpl-vp .vp-t{font-size:1.45rem}
+  .tpl-vp .vp-bron{order:6;margin-top:0}
+  .tpl-vp .vp-kaart{padding:12px 14px}
+}
+.tpl-vp .vp-kaart p.vp-let{background:#fff;border:1px solid #cfdcf3;border-left:4px solid var(--blue);border-radius:10px;padding:8px 12px;font-weight:600}
+/* H4 verdiepingspagina's: compacter op lage desktopschermen (bijv. 1366×768), zonder tekst weg te laten */
+@media (min-width:1001px) and (max-height:860px){
+  .tpl-vp .vpp>*+*{margin-top:10px}
+  .tpl-vp .vp-t{flex-basis:auto;font-size:1.8rem;margin:0}
+  .tpl-vp .vp-intro{margin-top:4px}
+  .tpl-vp .vp-body{gap:18px}
+  .tpl-vp .vp-rechts{gap:8px}
+  .tpl-vp .vp-kaart{padding:9px 14px}
+  .tpl-vp .vp-kaart h3{font-size:1.02rem;margin-bottom:3px}
+  .tpl-vp .vp-ic{width:28px;height:28px}.tpl-vp .vp-ic .di{width:17px;height:17px}
+  .tpl-vp .vp-kaart p,.tpl-vp .vp-wt p{font-size:.97rem;line-height:1.42}
+  .tpl-vp .vp-kaart p+p{margin-top:4px}
+  .tpl-vp .vp-kaart p.vp-let{padding:6px 10px}
+  .tpl-vp .vp-onthoud{padding:8px 12px;font-size:.97rem;line-height:1.42}
+  .tpl-vp .vp-foto{top:70px}
+}
