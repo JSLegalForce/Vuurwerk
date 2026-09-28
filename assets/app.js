@@ -845,7 +845,7 @@ T.onth=(P,spec,st)=>{
   return box;
 };
 T.ed=(P,spec,st)=>{
-  /* H2 p5 "Economisch delict en straffen": foto links; wet, misdrijf/overtreding, voorbeelden en Let op rechts */
+  /* H2 p5 "Economisch delict: overtreding of misdrijf?": foto links; wet, misdrijf/overtreding, voorbeelden en Let op rechts */
   const box=el('div','ed-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
