@@ -1564,3 +1564,5 @@
 @media (min-width:1001px){.tpl-vp .vp-pb .vp-foto img{aspect-ratio:730/510}}
 /* ══ H4 p8 "Zaken onderzoeken en monsters nemen" (29-9-2026; alleen .vp-zo): hele praktijkfoto zichtbaar op desktop ══ */
 @media (min-width:1001px){.tpl-vp .vp-zo .vp-foto img{aspect-ratio:729/529}}
+/* ══ H4 p9 "Vervoermiddel stilhouden en onderzoeken" (29-9-2026; alleen .vp-vm): hele praktijkfoto zichtbaar op desktop ══ */
+@media (min-width:1001px){.tpl-vp .vp-vm .vp-foto img{aspect-ratio:734/554}}
