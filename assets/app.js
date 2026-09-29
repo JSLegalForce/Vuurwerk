@@ -171,7 +171,6 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "4.7": {"t": "vp"},
 "4.8": {"t": "vp"},
 "4.9": {"t": "vp"},
-"4.10": {"t": "letop", "a": "boa-uitleg"},
 "5.0": {"t": "letop", "a": {"icon": "afstand", "orbit": ["schild", "tas"]},
 "icons": ["hand", "kruis", "mensen", "afspraak"]},
 "5.1": {"t": "split", "a": {"icon": "afspraak", "orbit": ["boa", "document", "mensen"]},
@@ -318,7 +317,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:25,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:26,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -442,6 +441,12 @@ function hervat(sv){
   if(sv.v>=18&&sv.v<=24){
     const m={29:29,30:31,31:32,32:36,33:32,34:38};
     if(m[si]!==undefined)si=m[si];else if(si>34)si+=4;
+    save();
+  }
+  /* v26: hoofdstuk 4 van 11 naar 10 pagina's: de laatste pagina 'Grenzen en vastleggen' (stap 38) is vervallen.
+     Wie daar stond, gaat verder bij de eerste oefenvraag van hoofdstuk 4 (nu stap 38). Latere stappen schuiven één terug. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=25){
+    if(si>38)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
