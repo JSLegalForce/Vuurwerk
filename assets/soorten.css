@@ -1566,3 +1566,5 @@
 @media (min-width:1001px){.tpl-vp .vp-zo .vp-foto img{aspect-ratio:729/529}}
 /* ══ H4 p9 "Vervoermiddel stilhouden en onderzoeken" (29-9-2026; alleen .vp-vm): hele praktijkfoto zichtbaar op desktop ══ */
 @media (min-width:1001px){.tpl-vp .vp-vm .vp-foto img{aspect-ratio:734/554}}
+/* ══ H4 p10 "Medewerking vorderen" (29-9-2026; alleen .vp-mw): hele praktijkfoto zichtbaar op desktop ══ */
+@media (min-width:1001px){.tpl-vp .vp-mw .vp-foto img{aspect-ratio:730/517}}
