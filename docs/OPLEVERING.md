@@ -19,7 +19,7 @@
 | 1 Vuurwerk herkennen | 8 | 4 |
 | 2 Wat zegt de wet? | 6 | 4 |
 | 3 Wanneer ben jij als boa bevoegd? | 5 | 4 |
-| 4 Wat kun je als boa doen? | 7 | 4 |
+| 4 Wat kun je als boa doen? | 10 | 4 |
 | 5 Wanneer doe je het niet zelf? | 5 | 2 |
 | 6 Praktijkcasus: van melding tot proces-verbaal | 8 | – |
 | Eindtoets | – | 15 (13 praktijkcasus, 2 kennisvragen) |
@@ -33,7 +33,7 @@ Was: 145 pagina's, 31 oefenvragen, 15 eindtoetsvragen.
 - **1 Vuurwerk herkennen:** Wie bepaalt de categorie? · F1 · F2 · F3 · F4 en professioneel vuurwerk · Verpakking en etiket · Onbekend vuurwerk en praktijknamen · Terug naar het plein: wat kun je vaststellen?
 - **2 Wat zegt de wet?:** De Wet veilige jaarwisseling · Art. 9.2.2.1a Wm: bezit, gebruik en verkoop · Personen met gespecialiseerde kennis · De ontheffing van de burgemeester · Andere vuurwerkregels en samenloop · Economisch delict: overtreding of misdrijf?
 - **3 Wanneer ben jij als boa bevoegd?:** Zien is niet hetzelfde als bevoegd zijn (art. 142 Sv) · Domein I, onderdeel 9 · Wat volgt wél en níet uit onderdeel 9? · WED-opsporingsambtenaar: art. 17 WED · Welk feit? De categorie is nog geen conclusie.
-- **4 Wat kun je als boa doen?:** Bevoegdheid, verplichting of strafbaarstelling? · Aanspreken en staande houden · Aanhouden op heterdaad · Aanhouden buiten heterdaad · Vervoermiddel: stilhouden, onderzoeken, meewerken · Inbeslagneming en uitlevering · Grenzen en vastleggen.
+- **4 Wat kun je als boa doen?:** Bevoegdheid, verplichting of strafbaarstelling? · Staande houden · Vorderen van inzage in een identiteitsbewijs · Aanhouden op heterdaad · Inbeslagneming en uitlevering vorderen · Inzage van gegevens en bescheiden vorderen · Plaatsen betreden · Zaken onderzoeken en monsters nemen · Vervoermiddel stilhouden en onderzoeken · Medewerking vorderen.
 - **5 Wanneer doe je het niet zelf?:** Veiligheid · Taak en beleid · Politie · Zelf, overleggen of politie? · Een goede overdracht.
 - **6 Praktijkcasus:** De melding · Vraag 1 t/m 4 · Het proces-verbaal — zo niet · Het proces-verbaal — zo wel · De vier vragen op straat (visuele eindpagina).
 
