@@ -1568,3 +1568,38 @@
 @media (min-width:1001px){.tpl-vp .vp-vm .vp-foto img{aspect-ratio:734/554}}
 /* ══ H4 p10 "Medewerking vorderen" (29-9-2026; alleen .vp-mw): hele praktijkfoto zichtbaar op desktop ══ */
 @media (min-width:1001px){.tpl-vp .vp-mw .vp-foto img{aspect-ratio:730/517}}
+/* ══ H4 p3 "Vorderen van inzage in een identiteitsbewijs" (30-9-2026; alleen .vp-id): twee genummerde bevoegdheden naast elkaar, voorbeeld en onthoud eronder ══ */
+.tpl-vp .vp-id .vp-foto img{aspect-ratio:668/570;height:auto}
+.tpl-vp .vp-id .vp-rechts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.tpl-vp .vp-id .vp-vb,.tpl-vp .vp-id .vp-onthoud{grid-column:1/-1}
+.tpl-vp .vp-id .vp-st{background:#fff}
+.tpl-vp .vp-id .vp-idk{background:#fff8ec;border-color:#f3dfb8}
+.tpl-vp .vp-id .vp-st h3,.tpl-vp .vp-id .vp-idk h3{align-items:flex-start;margin-bottom:8px}
+.tpl-vp .vp-id .vp-nr{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:1rem;flex:none}
+.tpl-vp .vp-id .vp-h3t{flex:1;min-width:0;padding-top:3px}
+.tpl-vp .vp-id .vp-st .vp-ic,.tpl-vp .vp-id .vp-idk .vp-ic{width:36px;height:36px}
+.tpl-vp .vp-id .vp-st .vp-ic .di,.tpl-vp .vp-id .vp-idk .vp-ic .di{width:22px;height:22px}
+.tpl-vp .vp-id .vp-nw{white-space:nowrap}
+.tpl-vp .vp-id .vp-kaart p{font-size:.98rem;line-height:1.42}
+.tpl-vp .vp-id .vp-onthoud-l{font-size:.97rem;line-height:1.4}
+.tpl-vp .vp-id .vp-idk .vp-ic{background:#fbe6c2}
+.tpl-vp .vp-id .vp-idk .vp-ic .di{color:var(--navy);--duo:rgba(230,161,51,.25)}
+.tpl-vp .vp-id .vp-lijst{list-style:none;margin:8px 0 0;padding:6px 12px;background:var(--blue-ll);border-radius:10px;color:var(--navy);font-size:.98rem;line-height:1.4}
+.tpl-vp .vp-id .vp-lijst li{position:relative;padding-left:20px}
+.tpl-vp .vp-id .vp-lijst li::before{content:"";position:absolute;left:3px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.tpl-vp .vp-id .vp-vb h3 .vp-ic{background:var(--blue)}
+.tpl-vp .vp-id .vp-vb h3 .vp-ic .di{color:#fff;--duo:rgba(255,255,255,.25)}
+.tpl-vp .vp-id .vp-onthoud-l{align-items:start}
+.tpl-vp .vp-id .vp-onthoud-l p{margin:0}
+.tpl-vp .vp-id .vp-o-t{font-family:var(--ui);font-weight:800;font-size:1rem;color:var(--navy)}
+.tpl-vp .vp-id .vp-o-k{font-weight:700}
+.tpl-vp .vp-id .vp-o-lijst{list-style:none;margin:4px 0 0;padding:0}
+.tpl-vp .vp-id .vp-o-lijst li{position:relative;padding-left:20px}
+.tpl-vp .vp-id .vp-o-lijst li+li{margin-top:2px}
+.tpl-vp .vp-id .vp-o-lijst li::before{content:"";position:absolute;left:3px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@media (max-width:1000px){.tpl-vp .vp-id .vp-foto img{aspect-ratio:668/570}}
+@media (max-width:760px){
+  .tpl-vp .vp-id .vp-rechts{grid-template-columns:minmax(0,1fr)}
+  .tpl-vp .vp-id .vp-st .vp-ic,.tpl-vp .vp-id .vp-idk .vp-ic{width:34px;height:34px}
+}
+@media (min-width:1001px) and (max-height:860px){.tpl-vp .vp-id .vp-rechts{gap:8px}.tpl-vp .vp-id .vp-lijst{padding:6px 12px;line-height:1.38}}
