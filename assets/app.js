@@ -190,7 +190,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
 "6.7": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
-const Q_ART={"1.0": "doelwit", "1.1": "boa-uitleg", "1.2": "weegschaal", "1.3": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
+const Q_ART={"1.0": "boa-uitleg", "1.1": "weegschaal", "1.2": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
 'boa-armen':'Boa in donkerblauw handhavingsuniform','boa-observeer':'Boa die de situatie alert observeert','boa-notitie':'Boa met notitieblok voor het vastleggen van waarnemingen','boa-uitleg':'Boa die iets uitlegt','boa-dossier':'Boa met proces-verbaal',
 'rechter':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-dicht':'Nederlandse rechter in zwarte toga met witte bef en een dossier in de hand, in een Nederlandse rechtszaal','rechter-med':'Nederlandse rechter in zwarte toga met witte bef, met de rechtszaal op de achtergrond','ovj':'Officier van justitie met dossier',
@@ -317,7 +317,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:26,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:27,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -447,6 +447,14 @@ function hervat(sv){
      Wie daar stond, gaat verder bij de eerste oefenvraag van hoofdstuk 4 (nu stap 38). Latere stappen schuiven één terug. Antwoorden blijven gelijk. */
   if(sv.v>=18&&sv.v<=25){
     if(si>38)si-=1;
+    save();
+  }
+  /* v27: hoofdstuk 1 van 4 naar 3 oefenvragen: de eerste vraag ("Op het plein zie je in een tas een doos … Wat schrijf je op?", stap 10) is vervallen.
+     Het antwoord op die vraag vervalt; de antwoorden op de andere vragen van hoofdstuk 1 schuiven één plaats op. Wie op stap 10 stond, gaat verder bij de nieuwe eerste vraag; latere stappen schuiven één terug. */
+  if(sv.v>=18&&sv.v<=26){
+    delete answers['1-0'];
+    for(let q=1;q<=3;q++){const o='1-'+q;if(answers[o]!==undefined){answers['1-'+(q-1)]=answers[o];delete answers[o];}}
+    if(si>10)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
