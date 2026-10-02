@@ -43,6 +43,7 @@ Was: 145 pagina's, 31 oefenvragen, 15 eindtoetsvragen.
 2. De vier vragen zijn het enige denkmodel. De oude vijf/zeven-stappenschema's, de losse "Kort samengevat"-, "Leerdoelen"- en "Vooruitblik"-pagina's zijn vervallen.
 3. Elke pagina heeft één label: Herkennen, Wet, Wettelijk bevoegd, Taak/beleid, Veiligheid, Politie of Praktijk. Beleid wordt nooit als bevoegdheidsgrondslag gebruikt.
 4. Eén doorlopende casus (plein, 21 november): intro → H1 p8 → H6.
+5. Bronvermeldingen (vastgesteld 2-10-2026): bij bronvermeldingen van wet- en regelgeving wordt standaard alleen de wet en het artikel genoemd. Voeg niet automatisch 'geldend vanaf [datum]' toe. Een datum wordt alleen vermeld wanneer de datum zelf juridisch relevant is voor de uitleg, bijvoorbeeld bij de inwerkingtreding van een nieuwe wet of specifieke wetswijziging.
 
 ## Techniek
 
