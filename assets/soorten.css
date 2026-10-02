@@ -1644,3 +1644,15 @@
   .tpl-vp .vp-wvj .wvj-rij{grid-template-columns:48px minmax(0,1fr)}
   .tpl-vp .vp-wvj .wvj-rij p{font-size:.97rem;line-height:1.4}
 }
+/* ══ Praktijkfoto's bij oefenvragen (2-10-2026; alleen .q-foto): de hele foto tonen in de eigen verhouding, zonder inzoomen of afsnijden.
+   Voorheen kreeg het fotovak een vaste verhouding (16/9, 16/8, 23/10, 770/667) met object-fit:cover, waardoor bijna vierkante foto's boven en onder werden afgesneden.
+   Nu bepaalt de foto zelf de verhouding (width/height-attributen); een max-hoogte per scherm houdt de layout compact. ══ */
+.card.qcard.q-foto .qv-foto{aspect-ratio:auto;width:fit-content;max-width:100%;margin:0 auto;background:none;align-self:center}
+.card.qcard.q-foto .qv-foto img{width:auto;height:auto;max-width:100%;max-height:var(--qf-max,600px);object-fit:contain;object-position:50% 50%;display:block}
+@media (min-width:1001px){
+  .card.qcard.q-foto:not(.answered) .qv-foto img{--qf-max:min(640px,74vh)}
+  .card.qcard.q-foto.answered .qv-foto img{--qf-max:340px}
+}
+@media (min-width:1001px) and (max-height:860px){.card.qcard.q-foto.answered .qv-foto img{--qf-max:300px}}
+@media (min-width:761px) and (max-width:1000px){.card.qcard.q-foto .qv-foto img{--qf-max:460px}}
+@media (max-width:760px){.card.qcard.q-foto .qv-foto img{--qf-max:340px}}
