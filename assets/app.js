@@ -316,7 +316,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:27,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:28,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -454,6 +454,12 @@ function hervat(sv){
     delete answers['1-0'];
     for(let q=1;q<=3;q++){const o='1-'+q;if(answers[o]!==undefined){answers['1-'+(q-1)]=answers[o];delete answers[o];}}
     if(si>10)si-=1;
+    save();
+  }
+  /* v28: oefenvraag 12 (hoofdstuk 4, tweede vraag) is vervangen door een nieuwe vraag over art. 23 WED.
+     Een eerder gegeven antwoord hoort bij de oude vraag en vervalt; de cursist beantwoordt de nieuwe vraag opnieuw. Posities blijven gelijk. */
+  if(sv.v>=18&&sv.v<=27){
+    delete answers['4-1'];
     save();
   }
   if(phase==='leren'){buildSteps();render();}
