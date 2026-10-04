@@ -174,9 +174,9 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "5.1": {"t": "vp"},
 "5.2": {"t": "vp"},
 "5.3": {"t": "vp"},
-"6.0": {"t": "casus", "a": "scene-boa-jongeren-plein"},
-"6.1": {"t": "bd", "s": 1, "a": "boa-observeer", "rev": 1, "rows": ["oog", "document", "vraag"]},
-"6.2": {"t": "bd", "s": 2, "a": "wetboek", "rev": 0, "rows": ["hand", "wet", "vraag"]},
+"6.0": {"t": "vp"},
+"6.1": {"t": "vp"},
+"6.2": {"t": "vp"},
 "6.3": {"t": "bd", "s": 3, "a": {"icon": "schild", "orbit": ["domein", "wet", "lijst"]},
 "rev": 1, "rows": ["domein", "akte", "vraag"]},
 "6.4": {"t": "bd", "s": 4, "a": "boa-uitleg", "rev": 0, "rows": ["schild", "hand", "afspraak"]},
@@ -898,6 +898,16 @@ T.vp=(P,spec,st)=>{
   const box=el('div','vp-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  /* H6: vraag binnen een praktijkpagina (.cq): eerst kiezen, dan controleren; pas daarna groen/rood en feedback */
+  box.querySelectorAll('.cq').forEach(q=>{
+    const opts=[...q.querySelectorAll('.cq-opt')],chk=q.querySelector('.cq-check'),fb=q.querySelector('.cq-fb');let sel=null;
+    opts.forEach(o=>{o.setAttribute('role','radio');o.setAttribute('aria-checked','false');o.onclick=()=>{if(q.classList.contains('cq-klaar'))return;sel=o;opts.forEach(x=>{x.classList.toggle('cq-sel',x===o);x.setAttribute('aria-checked',x===o?'true':'false');});chk.disabled=false;};});
+    chk.onclick=()=>{if(!sel)return;const goed=sel.dataset.ok==='1';q.classList.add('cq-klaar',goed?'cq-ok':'cq-nok');
+      opts.forEach(x=>{x.disabled=true;if(x.dataset.ok==='1')x.classList.add('cq-goed');else if(x===sel)x.classList.add('cq-fout');});
+      q.querySelector('.cq-rh').textContent=goed?'Goed!':'Helaas, dat is niet het juiste antwoord.';
+      q.querySelector('.cq-ric').innerHTML=goed?vink:kruis;fb.hidden=false;chk.closest('.cq-acties').hidden=true;
+      if(window.matchMedia('(max-width:1000px)').matches)setTimeout(()=>fb.scrollIntoView({behavior:'smooth',block:'start'}),60);};
+  });
   return box;
 };
 T.wetcat=(P,spec,st)=>{
