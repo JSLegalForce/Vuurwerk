@@ -904,6 +904,8 @@ T.vp=(P,spec,st)=>{
     chk.onclick=()=>{if(!sel)return;const goed=sel.dataset.ok==='1';q.classList.add('cq-klaar',goed?'cq-ok':'cq-nok');
       opts.forEach(x=>{x.disabled=true;if(x.dataset.ok==='1')x.classList.add('cq-goed');else if(x===sel)x.classList.add('cq-fout');});
       q.querySelector('.cq-rh').textContent=goed?'Goed!':'Helaas, dat is niet het juiste antwoord.';
+      if(!goed&&sel.dataset.kop)q.querySelector('.cq-rh').textContent=sel.dataset.kop;
+      const lt=sel.querySelector('.cq-l')?.textContent.trim();q.querySelectorAll('.cq-fbx').forEach(x=>{x.hidden=x.dataset.voor!==lt;});
       q.querySelector('.cq-ric').innerHTML=goed?vink:kruis;fb.hidden=false;chk.closest('.cq-acties').hidden=true;
       if(window.matchMedia('(max-width:1000px)').matches)setTimeout(()=>fb.scrollIntoView({behavior:'smooth',block:'start'}),60);};
   });
