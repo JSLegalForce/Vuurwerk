@@ -1872,3 +1872,15 @@
   .tpl-vp .vp-h6 .cq-l{width:28px;height:28px}
   .tpl-vp .vp-h6 .cq-acties .btn{width:100%;justify-content:center}
 }
+/* ══ H6 p4–p5 (4-10-2026; alleen .vp-h6) ══ */
+.tpl-vp .vp-h6 .cq-nok .cq-alleen-goed{display:none}
+.tpl-vp .vp-h6 .cq-res ul{margin:4px 0 6px;padding-left:18px;font-size:.97rem;line-height:1.42;color:var(--navy)}
+.tpl-vp .vp-h6 .cq-vraag{margin-top:6px;color:var(--blue);font-weight:600}
+.tpl-vp .vp-pv .pv-streep{color:#9fb0cc;margin:0 4px}
+.tpl-vp .vp-pv .cq-blok h3{margin-bottom:2px}
+.tpl-vp .vp-pv .pv-op{background:var(--blue-ll);border-color:#d6e1f3}
+.tpl-vp .vp-pv .pv-niet{background:#fdeeed;border-color:#f3c4c0}
+.tpl-vp .vp-pv .pv-denk{background:#e9f7ee;border-color:#b9e3ca}
+.tpl-vp .vp-pv .pv-denk .cq-bic .di{color:#1b9657}
+.tpl-vp .vp-pv .pv-x{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#d64535;color:#fff}
+.tpl-vp .vp-pv .pv-x svg{width:20px;height:20px}
