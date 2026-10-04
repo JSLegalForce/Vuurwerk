@@ -1889,3 +1889,5 @@
 .tpl-vp .vp-h6 .cq-info p{font-size:.95rem}
 .tpl-vp .vp-h6 .cq-ii{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff}
 .tpl-vp .vp-h6 .cq-ii svg{width:20px;height:20px}
+/* H6 p6 mobiel: header niet meeschuiven over de inhoud (alleen deze pagina, ≤600px) */
+@media (max-width:600px){body:has(.vp-afr) .hd{position:static}}
