@@ -289,10 +289,10 @@ const FIG={
   },
   beslishulp(){
     const s=[['oog','Wat tref ik aan?','beschrijf wat je ziet · niet gokken'],['wet','Is dit strafbaar?','welke gedraging · welk strafbaar feit?'],['schild','Ben ik bevoegd?','voor dít feit · binnen functie en taak?'],['route','Wat doe ik nu?','veilig? · taak? · politie?']];
-    return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke vraag helder → volgende vraag · twijfel → overleggen</p><div class="bs-wrap"><ol class="bs">'
+    return '<div class="fig fig-beslis"><p class="bs-rule">'+di('route')+'Elke vraag helder → volgende vraag · twijfel → overleg</p><div class="bs-wrap"><ol class="bs">'
       +s.map((x,i)=>'<li class="bs-step"><span class="bs-n">'+(i+1)+'</span>'+di(x[0])+'<span class="bs-bd">'+bdBadge(i+1,'row')+'</span><div class="bs-q"><b>'+x[2]+'</b></div>'+(i<3?'<span class="bs-ja">ja</span>':'')+'</li>').join('')+'</ol>'
       +'<div class="bs-out"><div class="bs-no"><span class="bs-tag">twijfel</span>'+di('afspraak')+'<b>Overleg</b><small>of schakel de politie in</small></div><div class="bs-yes"><span class="bs-tag">helder</span>'+di('vink')+'<b>Handel</b><small>binnen je bevoegdheid en taak</small></div></div></div>'
-      +'<div class="bs-notes"><p>'+di('vuurwerk')+'Een categorie is nog geen conclusie.</p><p>'+di('schild')+'Veiligheid weegt altijd mee.</p><p>'+di('pv')+'Leg feiten vast, geen conclusies.</p></div></div>';
+      +'<div class="bs-notes bs-kern"><p>'+di('vink')+'Handel binnen je bevoegdheid en taak.</p><p>'+di('afspraak')+'Twijfel je, overleg of schakel de politie in.</p><p>'+di('schild')+'Veiligheid weegt altijd mee.</p><p>'+di('pv')+'Leg feiten vast, geen aannames.</p></div></div>';
   }
 };
 
