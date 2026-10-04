@@ -1889,5 +1889,15 @@
 .tpl-vp .vp-h6 .cq-info p{font-size:.95rem}
 .tpl-vp .vp-h6 .cq-ii{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff}
 .tpl-vp .vp-h6 .cq-ii svg{width:20px;height:20px}
-/* H6 p6 mobiel: header niet meeschuiven over de inhoud (alleen deze pagina, ≤600px) */
-@media (max-width:600px){body:has(.vp-afr) .hd{position:static}}
+/* H6 vraagpagina's (p2–p5) mobiel: header niet meeschuiven over de feedback (≤600px); probleem gemeten op alle vier */
+@media (max-width:600px){body:has(.vp-cq) .hd{position:static}}
+/* ══ H6 stroomlijning (5-10-2026) ══ */
+.tpl-vp .vp-h6 .cq-nr.ml-rood{background:#d64535}
+.tpl-vp .vp-h6 .cq-info h3{margin-bottom:2px}
+.fig-beslis .bs-kern{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.fig-beslis .bs-kern{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fig-beslis .bs-kern{grid-template-columns:1fr}}
+.pvdoc-b .pvr h4{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--ui);font-weight:800;font-size:.95rem;line-height:34px;color:var(--blue);text-transform:uppercase;letter-spacing:.04em}
+.pvdoc-b .pvr-n{width:24px;height:24px;line-height:1;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:.8rem;letter-spacing:0}
+.pvdoc-b .pvr p{margin:0 0 34px}
+.pvdoc-b .pvr-slot{font-style:italic}
