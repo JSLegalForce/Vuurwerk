@@ -173,9 +173,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "5.0": {"t": "vp"},
 "5.1": {"t": "vp"},
 "5.2": {"t": "vp"},
-"5.3": {"t": "casus", "a": {"icon": "afspraak", "orbit": ["boa", "mensen"]}},
-"5.4": {"t": "checklist", "a": {"icon": "afspraak", "orbit": ["boa", "mensen"]},
-"icons": ["oog", "wet", "persoon", "locatie", "pv"]},
+"5.3": {"t": "vp"},
 "6.0": {"t": "casus", "a": "scene-boa-jongeren-plein"},
 "6.1": {"t": "bd", "s": 1, "a": "boa-observeer", "rev": 1, "rows": ["oog", "document", "vraag"]},
 "6.2": {"t": "bd", "s": 2, "a": "wetboek", "rev": 0, "rows": ["hand", "wet", "vraag"]},
@@ -313,7 +311,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:28,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:29,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -457,6 +455,12 @@ function hervat(sv){
      Een eerder gegeven antwoord hoort bij de oude vraag en vervalt; de cursist beantwoordt de nieuwe vraag opnieuw. Posities blijven gelijk. */
   if(sv.v>=18&&sv.v<=27){
     delete answers['4-1'];
+    save();
+  }
+  /* v29: hoofdstuk 5 van 5 naar 4 pagina's: p4 'Zelf, overleggen of politie?' (stap 44) en p5 'Een goede overdracht' (stap 45) zijn vervangen door één praktijkpagina (stap 44).
+     Wie op stap 45 stond, gaat naar de nieuwe p4; latere stappen schuiven één terug. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=28){
+    if(si>=45)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}

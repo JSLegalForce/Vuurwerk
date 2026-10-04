@@ -1757,3 +1757,41 @@
   .tpl-vp .vp-pl .pl-kaarten,.tpl-vp .vp-pl .pl-blokken{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:560px){.tpl-vp .vp-pl .pl-foto img{max-height:360px}}
+/* ══ H5 p4 "Mogelijk zwaar illegaal vuurwerk" (4-10-2026; alleen .vp-zv): situatie + vier stappen links, praktijkfoto rechts (hele foto, niet afgesneden) ══ */
+.tpl-vp .vp-zv .zv-body{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:start}
+.tpl-vp .vp-zv .zv-links{display:flex;flex-direction:column;gap:8px;min-width:0}
+.tpl-vp .vp-zv .zv-labels{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tpl-vp .vp-zv .zv-chip{background:#1b9657}
+.tpl-vp .vp-zv .zv-sub{font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.tpl-vp .vp-zv .vp-t{flex-basis:auto;margin:2px 0 2px}
+.tpl-vp .vp-zv .zv-sit,.tpl-vp .vp-zv .zv-k{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;border-radius:12px;padding:10px 14px;background:var(--blue-ll);border:1px solid #dbe5f5}
+.tpl-vp .vp-zv .zv-k{grid-template-columns:24px 40px minmax(0,1fr);gap:10px}
+.tpl-vp .vp-zv .zv-ic{display:grid;place-items:center;width:40px;height:40px}
+.tpl-vp .vp-zv .zv-ic .di{width:32px;height:32px;color:var(--navy);--duo:rgba(36,88,198,.12)}
+.tpl-vp .vp-zv .zv-sit .zv-ic .di{color:var(--blue)}
+.tpl-vp .vp-zv .zv-nr{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--ui);font-weight:800;font-size:.85rem;margin-top:3px}
+.tpl-vp .vp-zv h3{font-family:var(--ui);font-weight:800;font-size:1.02rem;line-height:1.25;color:var(--navy);margin:0 0 2px}
+.tpl-vp .vp-zv .zv-kop{font-size:1.15rem;margin:4px 0 0}
+.tpl-vp .vp-zv .zv-sit p,.tpl-vp .vp-zv .zv-k p{font-size:.97rem;line-height:1.42;color:var(--navy);margin:0;max-width:none}
+.tpl-vp .vp-zv .zv-k ul{margin:4px 0 0;padding-left:18px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;column-gap:24px;font-size:.97rem;line-height:1.42;color:var(--navy)}
+.tpl-vp .vp-zv .zv-blauw{background:#eef4fd;border-color:#d3e0f5}.tpl-vp .vp-zv .zv-blauw .zv-nr{background:var(--blue)}
+.tpl-vp .vp-zv .zv-rood{background:#fdeeed;border-color:#f3c4c0}.tpl-vp .vp-zv .zv-rood .zv-nr{background:#d64535}.tpl-vp .vp-zv .zv-rood .zv-ic .di{color:#d64535;--duo:rgba(214,69,53,.15)}
+.tpl-vp .vp-zv .zv-geel{background:#fff6e5;border-color:#f3dcae}.tpl-vp .vp-zv .zv-geel .zv-nr{background:var(--gold)}.tpl-vp .vp-zv .zv-geel .zv-ic .di{color:var(--gold-d);--duo:rgba(230,161,51,.18)}
+.tpl-vp .vp-zv .zv-paars{background:#f3f1fb;border-color:#dcd6f1}.tpl-vp .vp-zv .zv-paars .zv-nr{background:#6b5bc7}.tpl-vp .vp-zv .zv-paars .zv-ic .di{color:#6b5bc7;--duo:rgba(107,91,199,.15)}
+.tpl-vp .vp-zv .zv-onthoud{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;margin:0;background:#e3f5eb;border:1px solid #b9e3ca;border-radius:12px;padding:10px 14px;color:var(--navy);font-size:.98rem;line-height:1.42;max-width:none}
+.tpl-vp .vp-zv .zv-onthoud b{display:block}
+.tpl-vp .vp-zv .zv-ot{font-family:var(--ui);font-size:1.02rem}
+.tpl-vp .vp-zv .zv-oic .di{width:36px;height:36px;color:#1b9657;--duo:rgba(27,150,87,.15)}
+.tpl-vp .vp-zv .zv-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);position:sticky;top:90px;justify-self:center;width:fit-content;max-width:100%}
+.tpl-vp .vp-zv .zv-foto img{display:block;width:auto;height:auto;max-width:100%;max-height:min(650px,80vh);object-fit:contain}
+@media (max-width:1000px){
+  .tpl-vp .vp-zv .zv-body{grid-template-columns:minmax(0,1fr)}
+  .tpl-vp .vp-zv .zv-foto{order:-1;position:static}
+  .tpl-vp .vp-zv .zv-foto img{max-height:460px}
+}
+@media (max-width:560px){
+  .tpl-vp .vp-zv .zv-foto img{max-height:360px}
+  .tpl-vp .vp-zv .zv-k{grid-template-columns:24px minmax(0,1fr)}
+  .tpl-vp .vp-zv .zv-k .zv-ic{display:none}
+  .tpl-vp .vp-zv .zv-k ul{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+}
