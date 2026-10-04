@@ -179,7 +179,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.2": {"t": "vp"},
 "6.3": {"t": "vp"},
 "6.4": {"t": "vp"},
-"6.5": {"t": "letop", "a": "pv-document"},
+"6.5": {"t": "vp"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
 "6.7": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */

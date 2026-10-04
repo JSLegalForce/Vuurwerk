@@ -1884,3 +1884,8 @@
 .tpl-vp .vp-pv .pv-denk .cq-bic .di{color:#1b9657}
 .tpl-vp .vp-pv .pv-x{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#d64535;color:#fff}
 .tpl-vp .vp-pv .pv-x svg{width:20px;height:20px}
+/* ══ H6 p6 (4-10-2026; alleen .vp-h6): informatieblok onder Onthoud ══ */
+.tpl-vp .vp-h6 .cq-info{background:var(--blue-ll);border-color:#d6e1f3}
+.tpl-vp .vp-h6 .cq-info p{font-size:.95rem}
+.tpl-vp .vp-h6 .cq-ii{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff}
+.tpl-vp .vp-h6 .cq-ii svg{width:20px;height:20px}
