@@ -1901,3 +1901,11 @@
 .pvdoc-b .pvr-n{width:24px;height:24px;line-height:1;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:.8rem;letter-spacing:0}
 .pvdoc-b .pvr p{margin:0 0 34px}
 .pvdoc-b .pvr-slot{font-style:italic}
+
+/* Eindtoets: optionele casusfoto in de linkerkolom (5-10-2026; alleen vragen met "foto") */
+.exam .ex-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);width:fit-content;max-width:100%}
+.exam .ex-foto img{display:block;width:auto;height:auto;max-width:100%;max-height:min(560px,70vh);object-fit:contain}
+.exam .q-layout.q-metfoto{grid-template-columns:minmax(0,1fr) minmax(0,1.75fr);align-items:start}
+.exam .q-metfoto .q-side{align-self:start;margin-top:22px}
+@media (max-width:1000px){.exam .q-layout.q-metfoto{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr)}}
+@media (max-width:760px){.exam .q-layout.q-metfoto{grid-template-columns:minmax(0,1fr)}.exam .q-metfoto .q-side{margin-top:0}.exam .ex-foto{margin:0 auto}.exam .ex-foto img{max-height:340px}}
