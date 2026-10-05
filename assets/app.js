@@ -588,7 +588,7 @@ function exVraag(){
   const art=q.casus?(['boa-notitie','boa-uitleg','boa-dossier'][orig%3]):(['vraag','wetboek','doelwit','weegschaal'][orig%4]);
   let html='<article class="card qcard exam"><div class="pagehead"><span class="ph-ic">'+di('toets')+'</span><div><span class="ph-k">Eindtoets · '+esc(q.thema||'')+'</span><span class="ph-t">Vraag '+(p+1)+' van '+N+'</span></div><span class="ph-count">'+beantwoord+' van '+N+' beantwoord</span></div>'
    +'<div class="exdots" aria-hidden="true">'+ex.sel.map((s,i)=>'<i class="'+(i===p?'cur ':'')+(s!==null?'done':'')+'"></i>').join('')+'</div>'
-   +'<div class="q-layout"><div class="q-side">'+artHTML(art,{rev:1,sz:'mid'})+'</div><div class="q-main">'
+   +'<div class="q-layout'+(q.foto?' q-metfoto':'')+'"><div class="q-side">'+(q.foto?'<figure class="ex-foto"><img src="'+esc(q.foto)+'" alt="'+esc(q.fotoAlt||'')+'" decoding="async"></figure>':artHTML(art,{rev:1,sz:'mid'}))+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.casus?'boa':'boek')+(q.casus?'Praktijkcasus':'Kennisvraag')+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord. Je kunt je keuze wijzigen tot je de toets afrondt.</p>'
    +'<div class="opts" id="opts" role="radiogroup" aria-label="Antwoordmogelijkheden">'+perm.map((o,slot)=>{const on=(ex.sel[p]===o);return '<button class="opt'+(on?' sel':'')+'" role="radio" aria-checked="'+on+'" data-orig="'+o+'"><span class="lt">'+L(slot)+'</span><span class="ot">'+esc(q.opties[o])+'</span></button>';}).join('')+'</div>'
