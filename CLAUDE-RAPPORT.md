@@ -204,3 +204,31 @@ Voortgang v18, migratie, intake, hervatten, oefenvragen, eindtoets-engine, 80%-g
 | `bd91c74` | `docs/BEELDPLAN.md`, `docs/OPLEVERING.md` |
 | `d1f0087` | `index.html`: juridische en redactionele correcties |
 | *deze commit* | `CLAUDE-RAPPORT.md` bijgewerkt |
+
+## 9. Eindtoets: vragen met foto (5–6 oktober 2026)
+
+Vier van de vijftien eindtoetsvragen zijn vervangen of aangepast volgens goedgekeurde dia's. De eindtoets houdt **15 vragen**. Vragen en antwoorden worden per poging nog steeds geschud; de beoordeling hangt aan de juiste antwoordinhoud (`juist` wijst naar de optie), niet aan een letter.
+
+### 9.1 Techniek
+
+- `assets/app.js` (`exVraag`): een eindtoetsvraag kan een optioneel veld `foto` (+ `fotoAlt`) hebben. Dan staat die foto op de plek van de tekenfiguur (links op desktop, boven de vraag op mobiel, afgeronde hoeken). Een optioneel veld `klasse` wordt als extra class op de toetskaart gezet, zodat opmaak per vraag kan worden afgebakend.
+- `assets/soorten.css`: algemene foto-opmaak (`.exam .ex-foto`, `.q-metfoto`) en twee vraaggebonden typografieblokken: `.exam.ex-wm` en `.exam.ex-onth`. Vragen zonder `foto`/`klasse` zien er ongewijzigd uit.
+
+### 9.2 Aangepaste vragen
+
+| Vraag (op inhoud) | Wijziging | Juist antwoord | PR |
+|---|---|---|---|
+| Etiket «F3» in open sporttas | foto `eind-f3-sporttas.webp`; vraagzin en antwoorden volgens dia | «Ik leg vast dat ik op de verpakking de aanduiding ‘F3’ heb gelezen …» | #66, #67 |
+| Art. 9.2.2.1a, eerste lid, Wm | foto `eind-wm-artikel.webp`; antwoorden volgens dia; toelichting aangevuld met lid 4 (ontheffing burgemeester voor aangewezen F2, niet F3); class `ex-wm` | «Het bezit en gebruik van F2 en F3 voor anderen dan personen met gespecialiseerde kennis.» | #68, #69 |
+| Stationsplein, oudejaarsavond | foto `eind-station-politie.webp`; nieuwe vraag, antwoorden en toelichting (Beleidsregels boa; ordeherstel is politietaak) | «Ik schakel de politie in, houd veilige afstand en geef mijn waarnemingen door. …» | #70 |
+| Ontheffing, 1 januari 03.00 uur | foto `eind-ontheffing-0300.webp`; nieuwe vraag, antwoorden en toelichting; class `ex-onth` | «Het afsteken is niet toegestaan. Ook met een ontheffing eindigt de toegestane afsteektijd op 1 januari om 02.00 uur.» | deze wijziging |
+
+Bron bij de ontheffingsvraag: art. 2.3.2a, derde lid, onder a, Vuurwerkbesluit, zoals opgenomen in het Besluit veilige jaarwisseling (Stb. 2026, 168).
+
+### 9.3 Controles (per wijziging)
+
+- 1779, 1440, 820 en 390 px: foto en volledige teksten zichtbaar, geen horizontale scroll, geen JavaScript-fouten.
+- Antwoord kiezen, verder en terugbladeren met behoud van de keuze.
+- Correcte beoordeling bij wisselende antwoordletters; 15/15 met alle juiste antwoorden, 14/15 als alleen de aangepaste vraag fout is.
+- Volledige toelichting in de nabespreking.
+- De overige eindtoetsvragen en alle cursuspagina's ongewijzigd; de eerder aangepaste fotovragen pixelgelijk vóór en na.
