@@ -1918,3 +1918,12 @@
 .exam.ex-wm .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
 .exam.ex-wm .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.3rem);line-height:1.4}
 @media (max-width:560px){.exam.ex-wm .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-wm .opt .lt{width:38px;height:38px;font-size:1.1rem}}
+
+/* Eindtoets: typografie alleen voor de vraag over de ontheffing om 03.00 uur (class ex-onth, 6-10-2026) */
+.exam.ex-onth .q-text{font-size:clamp(1.45rem,1.05rem + 1vw,2rem);line-height:1.24}
+.exam.ex-onth .q-hint{font-size:1.02rem;margin-top:4px}
+.exam.ex-onth .opts{gap:12px}
+.exam.ex-onth .opt{padding:16px 20px;gap:18px;min-height:70px;border-radius:16px}
+.exam.ex-onth .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
+.exam.ex-onth .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.25rem);line-height:1.4}
+@media (max-width:560px){.exam.ex-onth .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-onth .opt .lt{width:38px;height:38px;font-size:1.1rem}}
