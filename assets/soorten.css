@@ -1945,3 +1945,5 @@
 .exam.ex-f4 .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
 .exam.ex-f4 .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.25rem);line-height:1.4}
 @media (max-width:560px){.exam.ex-f4 .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-f4 .opt .lt{width:38px;height:38px;font-size:1.1rem}}
+/* Nabespreking eindtoets: alinea-indeling in de toelichting tonen (alleen zichtbaar bij toelichtingen met witregels, nu alleen de F4-vraag) */
+.qrow-d .ln-u{white-space:pre-line}
