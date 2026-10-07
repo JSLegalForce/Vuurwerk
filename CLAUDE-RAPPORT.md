@@ -207,12 +207,12 @@ Voortgang v18, migratie, intake, hervatten, oefenvragen, eindtoets-engine, 80%-g
 
 ## 9. Eindtoets: vragen met foto (5–6 oktober 2026)
 
-Vier van de vijftien eindtoetsvragen zijn vervangen of aangepast volgens goedgekeurde dia's. De eindtoets houdt **15 vragen**. Vragen en antwoorden worden per poging nog steeds geschud; de beoordeling hangt aan de juiste antwoordinhoud (`juist` wijst naar de optie), niet aan een letter.
+Vijf van de vijftien eindtoetsvragen zijn vervangen of aangepast volgens goedgekeurde dia's. De eindtoets houdt **15 vragen**. Vragen en antwoorden worden per poging nog steeds geschud; de beoordeling hangt aan de juiste antwoordinhoud (`juist` wijst naar de optie), niet aan een letter.
 
 ### 9.1 Techniek
 
 - `assets/app.js` (`exVraag`): een eindtoetsvraag kan een optioneel veld `foto` (+ `fotoAlt`) hebben. Dan staat die foto op de plek van de tekenfiguur (links op desktop, boven de vraag op mobiel, afgeronde hoeken). Een optioneel veld `klasse` wordt als extra class op de toetskaart gezet, zodat opmaak per vraag kan worden afgebakend.
-- `assets/soorten.css`: algemene foto-opmaak (`.exam .ex-foto`, `.q-metfoto`) en twee vraaggebonden typografieblokken: `.exam.ex-wm` en `.exam.ex-onth`. Vragen zonder `foto`/`klasse` zien er ongewijzigd uit.
+- `assets/soorten.css`: algemene foto-opmaak (`.exam .ex-foto`, `.q-metfoto`) en drie vraaggebonden typografieblokken: `.exam.ex-wm`, `.exam.ex-onth` en `.exam.ex-domein`. Vragen zonder `foto`/`klasse` zien er ongewijzigd uit.
 
 ### 9.2 Aangepaste vragen
 
@@ -221,7 +221,8 @@ Vier van de vijftien eindtoetsvragen zijn vervangen of aangepast volgens goedgek
 | Etiket «F3» in open sporttas | foto `eind-f3-sporttas.webp`; vraagzin en antwoorden volgens dia | «Ik leg vast dat ik op de verpakking de aanduiding ‘F3’ heb gelezen …» | #66, #67 |
 | Art. 9.2.2.1a, eerste lid, Wm | foto `eind-wm-artikel.webp`; antwoorden volgens dia; toelichting aangevuld met lid 4 (ontheffing burgemeester voor aangewezen F2, niet F3); class `ex-wm` | «Het bezit en gebruik van F2 en F3 voor anderen dan personen met gespecialiseerde kennis.» | #68, #69 |
 | Stationsplein, oudejaarsavond | foto `eind-station-politie.webp`; nieuwe vraag, antwoorden en toelichting (Beleidsregels boa; ordeherstel is politietaak) | «Ik schakel de politie in, houd veilige afstand en geef mijn waarnemingen door. …» | #70 |
-| Ontheffing, 1 januari 03.00 uur | foto `eind-ontheffing-0300.webp`; nieuwe vraag, antwoorden en toelichting; class `ex-onth` | «Het afsteken is niet toegestaan. Ook met een ontheffing eindigt de toegestane afsteektijd op 1 januari om 02.00 uur.» | deze wijziging |
+| Ontheffing, 1 januari 03.00 uur | foto `eind-ontheffing-0300.webp`; nieuwe vraag, antwoorden en toelichting; class `ex-onth` | «Het afsteken is niet toegestaan. Ook met een ontheffing eindigt de toegestane afsteektijd op 1 januari om 02.00 uur.» | #71 |
+| Domeinlijst en taakstelling (collega) | foto `eind-domeinlijst.webp` (gecorrigeerde mouwemblemen); nieuwe vraag, antwoorden en toelichting; class `ex-domein` | «Dat klopt niet. Je moet nagaan of je bevoegd bent, of het optreden binnen je taakstelling past en of aan de voorwaarden voor de gebruikte bevoegdheden is voldaan.» | deze wijziging |
 
 Bron bij de ontheffingsvraag: art. 2.3.2a, derde lid, onder a, Vuurwerkbesluit, zoals opgenomen in het Besluit veilige jaarwisseling (Stb. 2026, 168).
 
