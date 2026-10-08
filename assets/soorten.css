@@ -1956,3 +1956,12 @@
 .exam.ex-f3r .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
 .exam.ex-f3r .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.25rem);line-height:1.4}
 @media (max-width:560px){.exam.ex-f3r .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-f3r .opt .lt{width:38px;height:38px;font-size:1.1rem}}
+
+/* Eindtoets: typografie alleen voor de vraag over groot vuurwerk met tape (class ex-bom, 8-10-2026) */
+.exam.ex-bom .q-text{font-size:clamp(1.45rem,1.05rem + 1vw,2rem);line-height:1.24}
+.exam.ex-bom .q-hint{font-size:1.02rem;margin-top:4px}
+.exam.ex-bom .opts{gap:12px}
+.exam.ex-bom .opt{padding:16px 20px;gap:18px;min-height:70px;border-radius:16px}
+.exam.ex-bom .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
+.exam.ex-bom .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.25rem);line-height:1.4}
+@media (max-width:560px){.exam.ex-bom .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-bom .opt .lt{width:38px;height:38px;font-size:1.1rem}}
