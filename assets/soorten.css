@@ -1984,3 +1984,6 @@
 .exam.ex-pv .opt .lt{width:46px;height:46px;font-size:1.3rem;flex:none}
 .exam.ex-pv .opt .ot{font-size:clamp(1.05rem,.95rem + .35vw,1.2rem);line-height:1.4}
 @media (max-width:560px){.exam.ex-pv .opt{padding:13px 14px;gap:12px;min-height:0}.exam.ex-pv .opt .lt{width:38px;height:38px;font-size:1.1rem}}
+
+/* Eindtoets: vraag over identiteit vaststellen na afsteken F2 (class ex-bev, 8-10-2026): vrijstaande illustratie zoals op de dia, geen fotokader */
+.exam.ex-bev .ex-foto{box-shadow:none;border-radius:0;background:transparent}
