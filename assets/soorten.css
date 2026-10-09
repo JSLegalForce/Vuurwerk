@@ -1987,3 +1987,6 @@
 
 /* Eindtoets: vraag over identiteit vaststellen na afsteken F2 (class ex-bev, 8-10-2026): vrijstaande illustratie zoals op de dia, geen fotokader */
 .exam.ex-bev .ex-foto{box-shadow:none;border-radius:0;background:transparent}
+
+/* Eindtoets: kennisvraag proces-verbaal, welke zin wél (class ex-pvk, 9-10-2026): vrijstaande illustratie zoals op de dia, geen fotokader */
+.exam.ex-pvk .ex-foto{box-shadow:none;border-radius:0;background:transparent}
