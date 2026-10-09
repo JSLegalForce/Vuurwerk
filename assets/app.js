@@ -611,10 +611,27 @@ function exSubmit(){
 function exResult(){
   phase='exresult';save();
   const N=D.eindtoets.length,pass=ex.pct>=D.eindtoetsDrempel,klaar=onderwerpenKlaar();
-  let rows='';
-  for(let p=0;p<N;p++){const q=D.eindtoets[ex.order[p]],sel=ex.sel[p],ok=(sel===q.juist);
-    rows+='<div class="qrow '+(ok?'g100':'gfout')+'"><button class="qrow-h" aria-expanded="false"><span class="qn">'+(p+1)+'</span><span class="qo">'+esc(kort(q.vraag))+'</span><span class="qs">'+(ok?vink+'Juist':kruis+'Onjuist')+'</span><span class="chev">'+chev+'</span></button>'
-      +'<div class="qrow-d"><div class="ln"><b>Jouw antwoord:</b> '+esc(sel!=null?q.opties[sel]:'—')+'</div><div class="ln"><b>Juiste antwoord:</b> '+esc(q.opties[q.juist])+'</div><div class="ln ln-u">'+esc(q.uitleg)+'</div></div></div>';}
+  /* Nabespreking per vraag (herontwerp 9-10-2026): kaart per vraag; uitleg visueel gesplitst in Waarom / Meer uitleg / Bronnen.
+     Alle teksten komen ongewijzigd uit D.eindtoets (vraag, opties, juist, uitleg); er wordt alleen opgedeeld op witregels. */
+  const nbDeel=u=>{const al=String(u||'').split(/\n\s*\n/).map(t=>t.trim()).filter(Boolean);const kern=[],bron=[];
+    al.forEach(a=>{const m=a.match(/^(Bronnen|Bron)\s*:\s*([\s\S]*)$/);if(m)bron.push(m[2]);else kern.push(a);});
+    return {waarom:kern.slice(0,1),meer:kern.slice(1),bron:bron.join('; ').split(/;\s+/).filter(Boolean)};};
+  let goedN=0,rows='';
+  for(let p=0;p<N;p++){const q=D.eindtoets[ex.order[p]],sel=ex.sel[p],ok=(sel===q.juist);if(ok)goedN++;
+    const u=nbDeel(q.uitleg),id='nb'+p;
+    const kaart=(cls,ic,lab,txt)=>'<div class="nb-ant '+cls+'"><span class="nb-ant-ic">'+ic+'</span><div><div class="nb-ant-l">'+lab+'</div><p class="nb-ant-t">'+txt+'</p></div></div>';
+    const ant=ok?'<div class="nb-ants nb-1">'+kaart('goed',vink,'Jouw antwoord is juist',esc(q.opties[sel]))+'</div>'
+      :'<div class="nb-ants nb-2">'+kaart('fout',kruis,'Jouw antwoord',sel!=null?esc(q.opties[sel]):'Geen antwoord gegeven')+kaart('goed',vink,'Juiste antwoord',esc(q.opties[q.juist]))+'</div>';
+    let uitl='';
+    if(u.waarom.length)uitl+='<div class="nb-blok nb-waarom">'+di('lamp')+'<div><div class="nb-blok-l">Waarom?</div>'+u.waarom.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div></div>';
+    if(u.meer.length)uitl+='<div class="nb-blok nb-meer">'+di('boek')+'<div><div class="nb-blok-l">Meer uitleg</div>'+u.meer.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div></div>';
+    if(u.bron.length)uitl+='<div class="nb-bron"><button type="button" class="nb-bron-h" aria-expanded="false" aria-controls="'+id+'b">'+di('document')+'<span>Bronnen</span><span class="nb-chev">'+chev+'</span></button><ul class="nb-bron-d" id="'+id+'b" hidden>'+u.bron.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></div>';
+    rows+='<section class="nb-q '+(ok?'is-goed':'is-fout')+'" id="'+id+'"><h3 class="nb-qh-w"><button type="button" class="nb-qh" aria-expanded="false" aria-controls="'+id+'d"><span class="nb-n">'+(p+1)+'</span><span class="nb-thema">'+esc(q.thema||'')+'</span><span class="nb-vraag">'+esc(q.vraag)+'</span><span class="nb-st">'+(ok?vink+'Juist':kruis+'Onjuist')+'</span><span class="nb-chev">'+chev+'</span></button></h3>'
+      +'<div class="nb-d" id="'+id+'d" hidden>'+ant+uitl+'</div></section>';}
+  rows='<section class="nb" aria-labelledby="nb-titel"><div class="nb-top"><span class="nb-top-ic">'+di('lijst')+'</span><div class="nb-top-t"><h2 id="nb-titel">Nabespreking per vraag</h2><p>Hier zie je per vraag of je het goede antwoord hebt gegeven en waarom.</p></div>'
+    +'<div class="nb-stats"><div class="nb-stat"><span class="nb-stat-ic">'+di('toets')+'</span><b>'+N+'</b><span>vragen</span></div><div class="nb-stat goed"><span class="nb-stat-ic">'+vink+'</span><b>'+goedN+'</b><span>goed</span></div><div class="nb-stat fout"><span class="nb-stat-ic">'+kruis+'</span><b>'+(N-goedN)+'</b><span>fout</span></div></div></div>'
+    +'<div class="nb-lijst">'+rows+'</div>'
+    +'<div class="nb-nav"><button type="button" class="btn btn-ghost" id="nb-vorige">'+pijlL+'<span>Vorige vraag</span></button><div class="nb-teller" aria-live="polite">Nabespreking · <b id="nb-nu">1</b> van '+N+'</div><button type="button" class="btn btn-primary" id="nb-volgende"><span>Volgende vraag</span>'+pijlR+'</button></div></section>';
   let acts='';
   if(pass&&klaar)acts+='<button class="btn btn-groen btn-lg" id="cert">'+di('certificaat')+'<span>Certificaat bekijken</span></button>';
   if(!pass)acts+='<button class="btn btn-primary btn-lg" id="her"><span>Eindtoets opnieuw maken</span>'+pijlR+'</button>';
@@ -627,8 +644,15 @@ function exResult(){
    +'<div class="acts">'+acts+'</div></div>'
    +'<div class="score"><div class="ring '+(pass?'ok':'no')+'" style="--deg:'+deg+'deg"><div class="ring-in"><div class="p">'+ex.pct+'%</div><div class="pl">Behaald percentage</div></div></div><div class="g">'+ex.goed+' van de '+N+' vragen juist</div></div>'
    +'<div class="res-art">'+boaHTML(pass?'boa-armen':'boa-uitleg',{sz:'mid'})+'</div></div>'
-   +'<div class="seclab">'+di('lijst')+'Nabespreking per vraag</div><div class="qrows">'+rows+'</div></article>',{lab:'Resultaat',sub:'Resultaat eindtoets',frac:1});
-  [...document.querySelectorAll('.qrow-h')].forEach(h=>h.onclick=()=>{const o=h.parentElement.classList.toggle('open');h.setAttribute('aria-expanded',o);});
+   +rows+'</article>',{lab:'Resultaat',sub:'Resultaat eindtoets',frac:1});
+  const nbQ=[...document.querySelectorAll('.nb-q')];let nbI=0;
+  const nbZet=(i,open)=>{nbQ.forEach((k,j)=>{const o=(j===i)&&open;k.classList.toggle('open',o);k.querySelector('.nb-qh').setAttribute('aria-expanded',o);k.querySelector('.nb-d').hidden=!o;});
+    if(open){nbI=i;}document.getElementById('nb-nu').textContent=nbI+1;document.getElementById('nb-vorige').disabled=nbI===0;document.getElementById('nb-volgende').disabled=nbI===nbQ.length-1;};
+  nbQ.forEach((k,i)=>k.querySelector('.nb-qh').onclick=()=>nbZet(i,!k.classList.contains('open')));
+  document.querySelectorAll('.nb-bron-h').forEach(b=>b.onclick=()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);document.getElementById(b.getAttribute('aria-controls')).hidden=!o;b.parentElement.classList.toggle('open',o);});
+  const nbGa=d=>{const i=Math.max(0,Math.min(nbQ.length-1,nbI+d));nbZet(i,true);nbQ[i].scrollIntoView({block:'start',behavior:'smooth'});nbQ[i].querySelector('.nb-qh').focus({preventScroll:true});};
+  document.getElementById('nb-vorige').onclick=()=>nbGa(-1);document.getElementById('nb-volgende').onclick=()=>nbGa(1);
+  if(nbQ.length)nbZet(0,true);
   const c=document.getElementById('cert');if(c)c.onclick=()=>certificaat(ex.pct);
   const her=document.getElementById('her');if(her)her.onclick=()=>{eindtoetsIntro();};
   const tl=document.getElementById('terugleren');if(tl)tl.onclick=()=>{buildSteps();si=0;phase='leren';render();};
