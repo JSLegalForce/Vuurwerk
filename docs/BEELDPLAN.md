@@ -1,6 +1,6 @@
 # Beeldplan e-learning Vuurwerk
 
-Versie 0.9.2 (herbouw compacte cursus, na eindcontrole) · juridische peildatum 23 september 2026 · bijgewerkt 23 september 2026.
+Versie 0.9.2 (herbouw compacte cursus, na eindcontrole) · juridische peildatum 12 oktober 2026 · bijgewerkt 23 september 2026.
 
 > **Leidend document:** `docs/BEELDSTIJL.md`. Dit beeldplan volgt die stijl en wijzigt haar niet. Bij verschil gaat `BEELDSTIJL.md` voor.
 >
