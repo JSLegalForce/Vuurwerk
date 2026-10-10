@@ -310,7 +310,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:29,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:30,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -322,7 +322,8 @@ function fnRender(text,voetnoten){
   return {body,bron};
 }
 function shuffle(n){const a=[];for(let i=0;i<n;i++)a.push(i);for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;}
-function buildSteps(){steps=[];D.topics.forEach((t,ti)=>{t.pages.forEach((p,pi)=>steps.push({type:'page',ti,pi}));t.vragen.forEach((q,qi)=>steps.push({type:'q',ti,qi}));});}
+/* v30: vóór het eerste hoofdstuk staat de informatiepagina 'Goed om te weten' (stap 0). */
+function buildSteps(){steps=[{type:'info'}];D.topics.forEach((t,ti)=>{t.pages.forEach((p,pi)=>steps.push({type:'page',ti,pi}));t.vragen.forEach((q,qi)=>steps.push({type:'q',ti,qi}));});}
 const qAnsweredCount=()=>Object.keys(answers).length;
 const onderwerpenKlaar=()=>qAnsweredCount()>=D.totaalVragen;
 const vnv=id=>document.getElementById(id).value.trim();
@@ -462,6 +463,11 @@ function hervat(sv){
     if(si>=45)si-=1;
     save();
   }
+  /* v30: nieuwe informatiepagina 'Goed om te weten' als eerste stap (stap 0). Alle opgeslagen posities schuiven één op. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=29){
+    si+=1;
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -482,8 +488,27 @@ function welkom(){
   document.getElementById('go').onclick=()=>{answers={};ex=null;buildSteps();si=0;phase='leren';render();};
   const oc=document.getElementById('oudcert');if(oc)oc.onclick=()=>certificaat(oudCert.pct,oudCert);
 }
-function render(){const st=steps[si];if(!st)return eindtoetsIntro();phase='leren';save();return st.type==='page'?pageScreen(st):qScreen(st);}
+function render(){const st=steps[si];if(!st)return eindtoetsIntro();phase='leren';save();return st.type==='info'?infoScreen():st.type==='page'?pageScreen(st):qScreen(st);}
 function isLaatsteLerenStap(){return si===steps.length-1;}
+
+/* ── 'Goed om te weten' (informatiepagina vóór hoofdstuk 1, 10-10-2026) ── */
+function infoScreen(){
+  const li=a=>'<ul class="gotw-ul">'+a.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+  const kaart=(cls,ic,kop,inh)=>'<section class="gotw-k '+cls+'"><span class="gotw-ic">'+ic+'</span><div class="gotw-b"><h2>'+kop+'</h2>'+inh+'</div></section>';
+  const info='<span class="gotw-i" aria-hidden="true">i</span>';
+  const html='<article class="card page gotw"><span class="pill">Belangrijk vóór je start</span><h1 class="h-xl gotw-h">Goed om te weten</h1>'
+   +'<div class="gotw-grid">'
+   +kaart('gotw-letop',di('waarschuwing'),'Feitcodes nog niet bekend','<p>De feitcodes voor het bezit en gebruik van F2- en F3-vuurwerk zijn op dit moment nog niet bekend. Deze worden naar verwachting <b>per 1 december 2026</b> bekendgemaakt.</p>')
+   +kaart('gotw-bron',di('document'),'Deze e-learning is gebaseerd op',li(['Wet milieubeheer','Vuurwerkbesluit','Wetboek van Strafvordering','Wetboek van Strafrecht','Wet op de economische delicten','Politiewet 2012','Regeling domeinlijsten buitengewoon opsporingsambtenaar','Landelijk Handhavingsplan Jaarwisseling 2026/2027','Model APV']))
+   +kaart('gotw-lok',di('locatie'),'Lokale afspraken zijn niet opgenomen','<p>Lokale samenwerkingsafspraken, werkafspraken en aanwijzingen van het bevoegd gezag zijn niet opgenomen in deze e-learning.</p><div class="gotw-sub"><b>Denk bijvoorbeeld aan afspraken over:</b>'+li(['wanneer je zelf optreedt','wanneer je de politie inschakelt','de afhandeling van in beslag genomen vuurwerk','lokale prioriteiten en werkwijzen'])+'</div>')
+   +kaart('gotw-nieuw',di('herhaling'),'Nieuwe ontwikkelingen','<p>Nieuwe ontwikkelingen worden aan deze e-learning toegevoegd zodra deze definitief zijn. Denk aan de nieuwe feitcodes voor F2- en F3-vuurwerk, een eventueel nieuw Halt-besluit en andere relevante wijzigingen in wet- en regelgeving of landelijke afspraken.</p>')
+   +kaart('gotw-zelf',di('toets'),'Controleer altijd zelf','<p>Deze e-learning helpt je bij het maken van een juridische beoordeling, maar vervangt niet je eigen controle.</p><div class="gotw-vraag">'+info+'<p>Ben ik bevoegd? Past dit binnen mijn taak? Welke actuele regels gelden? En welke lokale afspraken zijn van toepassing?</p></div>')
+   +'</div>'
+   +'<div class="gotw-peil">'+di('wet')+'<span>Juridische peildatum: <b>12 oktober 2026</b></span></div>'
+   +navHTML(false,'Volgende',null,'',navPos('Vóór je start','Goed om te weten'))+'</article>';
+  setScreen(html,{lab:'Vóór je start',sub:'Belangrijk vóór je start',frac:(si+1)/steps.length});
+  document.getElementById('next').onclick=()=>{si++;render();};
+}
 
 function pageScreen(st){
   const t=D.topics[st.ti],p=t.pages[st.pi],n=st.pi+1,tot=t.pages.length,last=isLaatsteLerenStap();
