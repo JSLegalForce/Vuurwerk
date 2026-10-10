@@ -4,7 +4,7 @@
 
 **0.9.2 — herbouw compacte cursus** (23 september 2026). Nog geen 1.0: de beelden uit `BEELDPLAN.md` zijn nog niet gemaakt en goedgekeurd.
 
-- Juridische peildatum: **23 september 2026**.
+- Juridische peildatum: **12 oktober 2026**.
 - Doelgroep: **boa's in domein I**, Europees Nederland.
 - Cacheversie `vw260923b` · opslag `jslf-vw-v1`, voortgangsversie **18**.
 - Backupbranch vóór deze herbouw: `backup-voor-herbouw-compact-2026-09-23` (= commit `619eba5`).
