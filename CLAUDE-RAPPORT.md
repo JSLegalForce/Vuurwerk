@@ -1,6 +1,6 @@
 # Claude-rapport — herbouw e-learning Vuurwerk (0.9.2)
 
-**Datum:** 23 september 2026 · **Juridische peildatum:** 23 september 2026
+**Datum:** 23 september 2026 · **Juridische peildatum:** 12 oktober 2026
 **Basis:** `HERZIENINGSRAPPORT_Vuurwerk.md` en de beslissingen van Jan van 23 september 2026.
 **Backupbranch vóór de herbouw:** `backup-voor-herbouw-compact-2026-09-23` (= `619eba5`).
 
