@@ -624,8 +624,8 @@ function exResult(){
       :'<div class="nb-ants nb-2">'+kaart('fout',kruis,'Jouw antwoord',sel!=null?esc(q.opties[sel]):'Geen antwoord gegeven')+kaart('goed',vink,'Juiste antwoord',esc(q.opties[q.juist]))+'</div>';
     let uitl='';
     if(u.waarom.length)uitl+='<div class="nb-blok nb-waarom">'+di('lamp')+'<div><div class="nb-blok-l">Waarom?</div>'+u.waarom.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div></div>';
-    if(u.meer.length)uitl+='<div class="nb-blok nb-meer">'+di('boek')+'<div><div class="nb-blok-l">Meer uitleg</div>'+u.meer.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div></div>';
-    if(u.bron.length)uitl+='<div class="nb-bron"><button type="button" class="nb-bron-h" aria-expanded="false" aria-controls="'+id+'b">'+di('document')+'<span>Bronnen</span><span class="nb-chev">'+chev+'</span></button><ul class="nb-bron-d" id="'+id+'b" hidden>'+u.bron.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></div>';
+    if(u.meer.length)uitl+='<div class="nb-meer"><button type="button" class="nb-tog nb-meer-h" aria-expanded="false" aria-controls="'+id+'m">'+di('boek')+'<span>Meer uitleg</span><span class="nb-chev">'+chev+'</span></button><div class="nb-meer-d" id="'+id+'m" hidden>'+u.meer.map(t=>'<p>'+esc(t)+'</p>').join('')+'</div></div>';
+    if(u.bron.length)uitl+='<div class="nb-bron"><button type="button" class="nb-tog nb-bron-h" aria-expanded="false" aria-controls="'+id+'b">'+di('document')+'<span>Bronnen</span><span class="nb-chev">'+chev+'</span></button><ul class="nb-bron-d" id="'+id+'b" hidden>'+u.bron.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul></div>';
     rows+='<section class="nb-q '+(ok?'is-goed':'is-fout')+'" id="'+id+'"><h3 class="nb-qh-w"><button type="button" class="nb-qh" aria-expanded="false" aria-controls="'+id+'d"><span class="nb-n">'+(p+1)+'</span><span class="nb-thema">'+esc(q.thema||'')+'</span><span class="nb-vraag">'+esc(q.vraag)+'</span><span class="nb-st">'+(ok?vink+'Juist':kruis+'Onjuist')+'</span><span class="nb-chev">'+chev+'</span></button></h3>'
       +'<div class="nb-d" id="'+id+'d" hidden>'+ant+uitl+'</div></section>';}
   rows='<section class="nb" aria-labelledby="nb-titel"><div class="nb-top"><span class="nb-top-ic">'+di('lijst')+'</span><div class="nb-top-t"><h2 id="nb-titel">Nabespreking per vraag</h2><p>Hier zie je per vraag of je het goede antwoord hebt gegeven en waarom.</p></div>'
@@ -649,7 +649,7 @@ function exResult(){
   const nbZet=(i,open)=>{nbQ.forEach((k,j)=>{const o=(j===i)&&open;k.classList.toggle('open',o);k.querySelector('.nb-qh').setAttribute('aria-expanded',o);k.querySelector('.nb-d').hidden=!o;});
     if(open){nbI=i;}document.getElementById('nb-nu').textContent=nbI+1;document.getElementById('nb-vorige').disabled=nbI===0;document.getElementById('nb-volgende').disabled=nbI===nbQ.length-1;};
   nbQ.forEach((k,i)=>k.querySelector('.nb-qh').onclick=()=>nbZet(i,!k.classList.contains('open')));
-  document.querySelectorAll('.nb-bron-h').forEach(b=>b.onclick=()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);document.getElementById(b.getAttribute('aria-controls')).hidden=!o;b.parentElement.classList.toggle('open',o);});
+  document.querySelectorAll('.nb-tog').forEach(b=>b.onclick=()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);document.getElementById(b.getAttribute('aria-controls')).hidden=!o;b.parentElement.classList.toggle('open',o);});
   const nbGa=d=>{const i=Math.max(0,Math.min(nbQ.length-1,nbI+d));nbZet(i,true);nbQ[i].scrollIntoView({block:'start',behavior:'smooth'});nbQ[i].querySelector('.nb-qh').focus({preventScroll:true});};
   document.getElementById('nb-vorige').onclick=()=>nbGa(-1);document.getElementById('nb-volgende').onclick=()=>nbGa(1);
   if(nbQ.length)nbZet(0,true);
