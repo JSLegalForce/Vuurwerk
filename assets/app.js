@@ -481,7 +481,7 @@ function welkom(){
    +'<div class="stat">'+di('certificaat')+'<div><div class="n">'+D.eindtoetsDrempel+'%</div><div class="l">Nodig voor certificaat</div></div></div></div>';
   setScreen(heroScreen({copy:'<span class="pill">'+esc(D.kaderLabel)+'</span><p class="kicker">Welkom bij de e-learning</p><h1 class="h-xl">Welkom, <span class="accent">'+esc(profiel.voornaam)+'</span></h1>'
    +'<p class="h-sub">'+esc(D.opleiding)+'</p>'
-   +'<p class="lead">Na een korte introductie volgen vijf hoofdstukken met korte theorie en oefenvragen met directe feedback. Daarna los je één praktijkcasus op en maak je een eindtoets over de hele cursus. Haal je die, dan krijg je een certificaat.</p>'
+   +'<p class="lead">Na deze startpagina lees je eerst ‘Goed om te weten’. Daarna volgen een korte introductie en vijf hoofdstukken met korte theorie en oefenvragen met directe feedback. Daarna los je één praktijkcasus op en maak je een eindtoets over de hele cursus. Haal je die, dan krijg je een certificaat.</p>'
    +stats+'<div class="hero-acts"><button class="btn btn-primary btn-lg" id="go"><span>Start de e-learning</span>'+pijlR+'</button>'+(oudCert?'<button class="btn btn-ghost" id="oudcert">'+di('certificaat')+'<span>Eerder behaald certificaat</span></button>':'')+'</div>',art:'boa-uitleg',
    badge:'<div class="float-chip fc2 chip-wet">'+di('wet')+'<span><b>De vier vragen</b><small>bij elke situatie met vuurwerk</small></span></div>'}),{lab:'Stap 2 van 2'});
   {const fig=document.querySelector('.hero-art .art-boa'),cw=document.querySelector('.hero-art .chip-wet');if(fig&&cw){fig.appendChild(cw);fig.classList.add('has-wet');}}
