@@ -310,7 +310,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:30,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:31,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -466,6 +466,12 @@ function hervat(sv){
   /* v30: nieuwe informatiepagina 'Goed om te weten' als eerste stap (stap 0). Alle opgeslagen posities schuiven één op. Antwoorden blijven gelijk. */
   if(sv.v>=18&&sv.v<=29){
     si+=1;
+    save();
+  }
+  /* v31: nieuwe eindtoetsvraag (opsporingsfouillering) ingevoegd op bronpositie 10; eindtoets van 15 naar 16 vragen.
+     In een opgeslagen eindtoets schuiven bronindexen vanaf 10 één op; de nieuwe vraag komt achteraan (nog onbeantwoord). Een al afgeronde toets houdt zijn behaalde score. */
+  if(sv.v>=18&&sv.v<=30&&ex&&Array.isArray(ex.order)&&ex.order.length===15){
+    ex.order=ex.order.map(o=>o>=10?o+1:o);ex.order.push(10);ex.perm.push(shuffle(4));ex.sel.push(null);
     save();
   }
   if(phase==='leren'){buildSteps();render();}
