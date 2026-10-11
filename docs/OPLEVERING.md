@@ -6,8 +6,8 @@
 
 - Juridische peildatum: **12 oktober 2026**.
 - Doelgroep: **boa's in domein I**, Europees Nederland.
-- Cacheversies in `index.html`: `app.css?v=vw260924a` · `responsive.css?v=vw260925r` · `soorten.css?v=vw261010b` · `app.js?v=vw261011b`.
-- Opslag `jslf-vw-v1`, voortgangsversie **31**.
+- Cacheversies in `index.html`: `app.css?v=vw260924a` · `responsive.css?v=vw260925r` · `soorten.css?v=vw261010b` · `app.js?v=vw261011c`.
+- Opslag `jslf-vw-v1`, voortgangsversie **32**.
 - Stand van de technische gegevens: 11 oktober 2026 (na toevoeging eindtoetsvraag opsporingsfouillering).
 - Backupbranch vóór deze herbouw: `backup-voor-herbouw-compact-2026-09-23` (= commit `619eba5`).
 - Basis: `HERZIENINGSRAPPORT_Vuurwerk.md` (23-9-2026) en de beslissingen van Jan van 23-9-2026.
@@ -58,7 +58,7 @@ Was: 145 pagina's, 31 oefenvragen, 15 eindtoetsvragen.
 - Nieuw in `app.js`: `tLab()` (koppen "Introductie" / "Hoofdstuk n"), `FIG.bevkaart` (bevoegdheid · verplichting · strafbaarstelling), vernieuwde `FIG.beslishulp`. Ongebruikte oude figuren verwijderd.
 - Nieuw in `soorten.css`: opmaak bevoegdhedenkaart. `app.css` ongewijzigd.
 - **Startpagina 'Goed om te weten'** (sinds 10-10-2026): eerste leerstap (`{type:'info'}` in `buildSteps()`, `infoScreen()` in `app.js`, opmaak `.gotw-*` in `soorten.css`), direct na de welkompagina en vóór de Introductie. Daardoor telt de cursus 56 leerstappen.
-- **Voortgang v31 (huidig):** opgeslagen voortgang van v18 t/m v30 wordt bij hervatten omgezet naar de huidige opbouw; bij v29 → v30 schuift de positie één stap op vanwege de nieuwe startpagina. Antwoorden blijven bewaard. Bij v30 → v31 krijgt een opgeslagen eindtoets van 15 vragen de nieuwe vraag (opsporingsfouillering, bronpositie 10) achteraan erbij; een al afgeronde toets houdt zijn behaalde score.
+- **Voortgang v32 (huidig):** opgeslagen voortgang van v18 t/m v31 wordt bij hervatten omgezet naar de huidige opbouw; bij v29 → v30 schuift de positie één stap op vanwege de nieuwe startpagina. Antwoorden blijven bewaard. Eindtoets van 15 naar 16 vragen (v31/v32): een opgeslagen, **nog niet afgeronde** toets van 15 vragen krijgt de nieuwe vraag (opsporingsfouillering, bronpositie 10) achteraan erbij en telt daarna 16 vragen; een **al afgeronde** toets (`ex.submitted`) blijft historisch een toets van 15 vragen (resultaat, percentage, slagingsstatus en nabespreking over 15). Resultaat en score gebruiken het aantal vragen van de poging zelf (`ex.order.length`). Nieuwe pogingen hebben 16 vragen.
 - **Eindtoets (huidig):** 16 vragen (sinds 11-10-2026; daarvoor 15). Per poging worden de volgorde van de vragen en de volgorde van de antwoorden geschud (`nieuweEindtoets()`). De beoordeling vergelijkt de gekozen oorspronkelijke antwoordindex met `juist`, niet de getoonde letter. Tijdens de toets geen feedback; slagingsgrens 80%.
 - **Nabespreking (huidig, `exResult()`):** overzicht met aantal vragen, goed en fout; per vraag Juist/Onjuist. Bij een goed antwoord één kaart "Jouw antwoord is juist", bij een fout antwoord "Jouw antwoord" en "Juiste antwoord". "Waarom?" altijd zichtbaar; "Meer uitleg" en "Bronnen" standaard ingeklapt. Eén vraag tegelijk open, met vorige/volgende. Opmaak `.nb-*` in `soorten.css`.
 - **Voortgang v18:** oude voortgang (v17 of lager) past niet op de nieuwe opbouw. Bij hervatten gaat de cursist naar het startscherm en begint de lesstof opnieuw. **Een eerder behaald certificaat blijft bewaard** (`oudCert`) en is bereikbaar via de knop "Eerder behaald certificaat" op het startscherm, met het oorspronkelijke percentage en certificaatnummer.

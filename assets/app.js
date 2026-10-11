@@ -310,7 +310,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:31,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:32,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -469,9 +469,18 @@ function hervat(sv){
     save();
   }
   /* v31: nieuwe eindtoetsvraag (opsporingsfouillering) ingevoegd op bronpositie 10; eindtoets van 15 naar 16 vragen.
-     In een opgeslagen eindtoets schuiven bronindexen vanaf 10 één op; de nieuwe vraag komt achteraan (nog onbeantwoord). Een al afgeronde toets houdt zijn behaalde score. */
+     In een opgeslagen eindtoets schuiven bronindexen vanaf 10 één op.
+     - Nog niet afgerond: de nieuwe vraag komt achteraan (nog onbeantwoord); de toets telt daarna 16 vragen.
+     - Al afgerond (ex.submitted): blijft een historische toets van 15 vragen; de nieuwe vraag wordt niet toegevoegd. */
   if(sv.v>=18&&sv.v<=30&&ex&&Array.isArray(ex.order)&&ex.order.length===15){
-    ex.order=ex.order.map(o=>o>=10?o+1:o);ex.order.push(10);ex.perm.push(shuffle(4));ex.sel.push(null);
+    ex.order=ex.order.map(o=>o>=10?o+1:o);
+    if(!ex.submitted){ex.order.push(10);ex.perm.push(shuffle(4));ex.sel.push(null);}
+    save();
+  }
+  /* v32: herstel van afgeronde 15-vragentoetsen die onder v31 de nieuwe vraag (bron 10) achteraan onbeantwoord kregen.
+     Een afgeronde toets kan alleen via die migratie een onbeantwoorde laatste vraag hebben; die wordt weer verwijderd. */
+  if(sv.v===31&&ex&&ex.submitted&&Array.isArray(ex.order)&&ex.order.length===16&&ex.order[15]===10&&ex.sel[15]===null){
+    ex.order.pop();ex.perm.pop();ex.sel.pop();
     save();
   }
   if(phase==='leren'){buildSteps();render();}
@@ -635,13 +644,13 @@ function exVraag(){
   };
 }
 function exSubmit(){
-  const N=D.eindtoets.length;let goed=0;
+  const N=ex.order.length;let goed=0;
   for(let p=0;p<N;p++){const q=D.eindtoets[ex.order[p]];if(ex.sel[p]===q.juist)goed++;}
   ex.goed=goed;ex.pct=Math.round(goed/N*100);ex.submitted=true;phase='exresult';save();exResult();
 }
 function exResult(){
   phase='exresult';save();
-  const N=D.eindtoets.length,pass=ex.pct>=D.eindtoetsDrempel,klaar=onderwerpenKlaar();
+  const N=ex.order.length,pass=ex.pct>=D.eindtoetsDrempel,klaar=onderwerpenKlaar();
   /* Nabespreking per vraag (herontwerp 9-10-2026): kaart per vraag; uitleg visueel gesplitst in Waarom / Meer uitleg / Bronnen.
      Alle teksten komen ongewijzigd uit D.eindtoets (vraag, opties, juist, uitleg); er wordt alleen opgedeeld op witregels. */
   const nbDeel=u=>{const al=String(u||'').split(/\n\s*\n/).map(t=>t.trim()).filter(Boolean);const kern=[],bron=[];
