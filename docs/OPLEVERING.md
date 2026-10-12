@@ -6,7 +6,7 @@
 
 - Juridische peildatum: **12 oktober 2026**.
 - Doelgroep: **boa's in domein I**, Europees Nederland.
-- Cacheversies in `index.html`: `app.css?v=vw260924a` · `responsive.css?v=vw260925r` · `soorten.css?v=vw261010b` · `app.js?v=vw261011c`.
+- Cacheversies in `index.html`: `app.css?v=vw260924a` · `responsive.css?v=vw260925r` · `soorten.css?v=vw261012c` · `app.js?v=vw261012d`.
 - Opslag `jslf-vw-v1`, voortgangsversie **32**.
 - Stand van de technische gegevens: 11 oktober 2026 (na toevoeging eindtoetsvraag opsporingsfouillering).
 - Backupbranch vóór deze herbouw: `backup-voor-herbouw-compact-2026-09-23` (= commit `619eba5`).
