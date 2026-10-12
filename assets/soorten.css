@@ -1703,6 +1703,10 @@
 .tpl-vp .vp-tb .tb-ic .di{width:30px;height:30px;color:var(--navy);--duo:rgba(36,88,198,.15)}
 .tpl-vp .vp-tb .tb-k h3{font-family:var(--ui);font-weight:800;font-size:1.06rem;line-height:1.3;color:var(--navy);margin:0 0 3px}
 .tpl-vp .vp-tb .tb-k p{font-size:1rem;line-height:1.45;color:var(--navy);margin:0;max-width:none}
+/* Fase 2 (12-10-2026): H5 p2 – meerdere alinea’s en een korte opsomming in één kaart */
+.tpl-vp .vp-tb .tb-k p+p,.tpl-vp .vp-tb .tb-k ul+p{margin-top:7px}
+.tpl-vp .vp-tb .tb-ul{margin:5px 0 0;padding-left:20px;font-size:1rem;line-height:1.45;color:var(--navy)}
+.tpl-vp .vp-tb .tb-ul li{margin:1px 0}
 .tpl-vp .vp-tb .tb-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);position:sticky;top:90px;justify-self:center;width:fit-content;max-width:100%}
 .tpl-vp .vp-tb .tb-foto img{display:block;width:auto;height:auto;max-width:100%;max-height:min(720px,82vh);object-fit:contain}
 @media (max-width:1000px){
