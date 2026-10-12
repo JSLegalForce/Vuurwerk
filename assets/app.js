@@ -1271,9 +1271,11 @@ T.pvvoorbeeld=(P,spec,st)=>{
   const nodes=mainParas(P).filter(n=>n.nodeType===1);
   const doc=el('div','pvdoc');
   doc.appendChild(el('div','pvdoc-head','<span>PROCES-VERBAAL</span><small>Fictief voorbeeld · alleen de opbouw · geen verplicht landelijk model</small>'));
-  const b=el('div','pvdoc-b');nodes.forEach(n=>b.appendChild(n));doc.appendChild(b);
+  /* Fase 4: het inklapbare KVI-blok (details.kvi) staat onder het PV, niet op het PV-papier */
+  const kvi=nodes.filter(n=>n.classList.contains('kvi'));
+  const b=el('div','pvdoc-b');nodes.filter(n=>!n.classList.contains('kvi')).forEach(n=>b.appendChild(n));doc.appendChild(b);
   doc.appendChild(el('div','pvdoc-foot','<span class="pv-sign"></span><span class="pv-stamp" aria-hidden="true"></span>'));
-  return splitBox([el('p','kicker',di('pv')+'Praktijkvoorbeeld'),titleEl(P),doc],artHTML(spec.a,spec),{});
+  return splitBox([el('p','kicker',di('pv')+'Praktijkvoorbeeld'),titleEl(P),doc,...kvi],artHTML(spec.a,spec),{});
 };
 T.fouten=(P,spec,st)=>{
   const k=P.rest.find(n=>n.nodeType===1&&n.classList.contains('kaart'));
