@@ -2127,3 +2127,47 @@
   .gotw-vraag{padding:12px;gap:10px;align-items:flex-start}
   .gotw-peil{padding:10px 14px;gap:10px}.gotw-peil .di{width:26px;height:26px}.gotw-peil>span:last-child{padding-left:10px}
 }
+
+/* Fase 4 (12-10-2026): H6 p7 – inklapbaar blok KVI, bewijs van ontvangst en afstand */
+.kvi{margin-top:22px;border:1px solid #dbe5f5;border-radius:14px;background:#fff;box-shadow:var(--sh-s);min-width:0}
+.kvi>summary,.kvi-sub>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;font-family:var(--ui);color:var(--navy)}
+.kvi>summary::-webkit-details-marker,.kvi-sub>summary::-webkit-details-marker{display:none}
+.kvi>summary{padding:15px 18px;font-weight:800;font-size:1.04rem;line-height:1.3}
+.kvi>summary::after,.kvi-sub>summary::after{content:"";flex:none;margin-left:auto;width:9px;height:9px;border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:translateY(-3px) rotate(45deg);transition:transform .2s}
+.kvi[open]>summary::after,.kvi-sub[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+.kvi>summary:focus-visible,.kvi-sub>summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:12px}
+.kvi-in{padding:0 18px 18px;display:flex;flex-direction:column;gap:12px}
+.kvi-in p,.kvi-in li{font-size:.97rem;line-height:1.5;color:var(--navy);margin:0;max-width:none}
+.kvi-in h4{margin:0 0 4px;font-family:var(--ui);font-weight:800;font-size:.98rem;line-height:1.3;color:var(--navy)}
+.kvi-let,.kvi-min{background:#fff6e5;border:1px solid #f3dcae;border-radius:12px;padding:12px 14px}
+.kvi-lokaal{background:var(--blue-ll);border:1px solid #d6e1f3;border-radius:12px;padding:12px 14px}
+.kvi-let p+p,.kvi-min p+p,.kvi-lokaal p+p{margin-top:6px}
+.kvi-vier{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;padding:0;margin:0}
+.kvi-vier li{border:1px solid #dbe5f5;border-radius:10px;padding:9px 12px;background:var(--blue-ll);font-size:.93rem}
+.kvi-vier b{display:block;font-family:var(--ui);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:2px}
+.kvi-sub{border:1px solid #e3e9f4;border-radius:12px;background:#fbfcfe}
+.kvi-sub>summary{padding:12px 14px;font-weight:700;font-size:.98rem;line-height:1.3}
+.kvi-sub-in{padding:2px 14px 14px;display:flex;flex-direction:column;gap:9px}
+.kvi-sub-in h4{margin:8px 0 0}
+.kvi-ol,.kvi-ul{margin:0;padding-left:22px}
+.kvi-ol li+li,.kvi-ul li+li{margin-top:3px}
+.kvi-in .kvi-noot{font-size:.9rem;font-style:italic;color:var(--ink2)}
+.kvi-form{border:1px solid #e8dfcc;border-radius:10px;background:#fffdf8;overflow:hidden}
+.kvi-form-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 10px;background:var(--navy2);color:#fff;font-family:var(--ui);font-weight:800;letter-spacing:.08em;font-size:.82rem;padding:9px 14px}
+.kvi-form-h small{font-weight:600;letter-spacing:0;color:#c9d7f5;text-transform:none}
+.kvi-veld{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:4px 14px;padding:8px 14px;border-top:1px solid #eee7d6}
+.kvi-l{font-family:var(--ui);font-size:.8rem;font-weight:700;line-height:1.4;color:#6b5c3b;padding-top:2px}
+.kvi-w{font-family:'Courier New',Courier,monospace;font-size:.93rem;line-height:1.45;color:#1c2540;overflow-wrap:anywhere}
+.kvi-slot .kvi-w{grid-column:1/-1;font-style:italic}
+.kvi-vw{padding:7px 14px;border-top:2px solid #e8dfcc;background:#f6efdf;font-family:var(--ui);font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+@media (max-width:640px){
+  .kvi>summary{padding:13px 14px;font-size:.98rem}
+  .kvi-in{padding:0 12px 14px}
+  .kvi-sub-in{padding:2px 12px 12px}
+  .kvi-vier{grid-template-columns:minmax(0,1fr)}
+  .kvi-veld{grid-template-columns:minmax(0,1fr);gap:1px}
+}
+/* Fase 4: H6 p5 – blok na de inbeslagneming */
+.tpl-vp .vp-h6 .cq-afvoer{background:#fff;border-color:#dbe5f5}
+.tpl-vp .vp-h6 .cq-afvoer p,.tpl-vp .vp-h6 .cq-info p+p{margin-top:6px}
+.tpl-vp .vp-h6 .cq-afvoer h3+p{margin-top:0}
