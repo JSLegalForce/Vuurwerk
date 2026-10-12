@@ -1905,6 +1905,8 @@
 .pvdoc-b .pvr-n{width:24px;height:24px;line-height:1;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:.8rem;letter-spacing:0}
 .pvdoc-b .pvr p{margin:0 0 34px}
 .pvdoc-b .pvr-slot{font-style:italic}
+/* Fase 3 (12-10-2026): aanhef voorbeeld-PV even ruim als de genummerde onderdelen */
+.pvdoc-b .pvr-aanhef{margin:0 0 34px}
 
 /* Eindtoets: optionele casusfoto in de linkerkolom (5-10-2026; alleen vragen met "foto") */
 .exam .ex-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);width:fit-content;max-width:100%}
