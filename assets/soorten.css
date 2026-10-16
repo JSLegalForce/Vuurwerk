@@ -2171,3 +2171,34 @@
 .tpl-vp .vp-h6 .cq-afvoer{background:#fff;border-color:#dbe5f5}
 .tpl-vp .vp-h6 .cq-afvoer p,.tpl-vp .vp-h6 .cq-info p+p{margin-top:6px}
 .tpl-vp .vp-h6 .cq-afvoer h3+p{margin-top:0}
+
+/* ══ Oefenvraag hoofdstuk 1, vraag 3 («Geschikt voor particulier gebruik») – vormgeving naar referentiedia (16-10-2026).
+   Alleen deze vraag: herkend aan de eigen praktijkfoto 01-q4-particulier-gebruik.webp. ══ */
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .q-soort{background:linear-gradient(180deg,#fbb441,#f39a1e);color:#13244f;padding:7px 16px 7px 9px;font-size:.84rem;font-weight:800;letter-spacing:.06em;box-shadow:0 3px 10px rgba(243,154,30,.28)}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .q-soort .di{color:#13244f}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .opt{border:1.5px solid #d3ddee;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(17,37,88,.05)}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .opt .lt{width:38px;height:38px;flex:0 0 38px;font-weight:800}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .nav .btn svg{display:none}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) #prev{border:1.5px solid #cfd9ea;border-radius:14px;min-width:190px;justify-content:center;font-weight:800}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .nav .btn-primary{background:linear-gradient(180deg,#ff9b2f,#f27711);color:#fff;border:0;border-radius:14px;min-width:288px;justify-content:center;box-shadow:0 6px 16px rgba(242,119,17,.32)}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .nav .btn-primary:hover:not(:disabled){background:linear-gradient(180deg,#ffa641,#e96c08)}
+.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .nav .btn-primary:disabled{background:linear-gradient(180deg,#ff9b2f,#f27711);opacity:.72;box-shadow:none}
+@media (min-width:1001px){
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]){padding:0}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .q-layout{grid-template-columns:minmax(0,42.5%) minmax(0,1fr);column-gap:0;align-items:stretch}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .q-side{align-self:stretch;display:flex}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .qv-foto{width:100%;max-width:none;height:100%;margin:0;border-radius:0;box-shadow:none;background:#1c2233}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:40% 30%}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .q-main{padding:34px 34px 28px 30px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .q-text{font-size:1.85rem;line-height:1.25}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .opts{gap:14px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .opt{padding:14px 18px;min-height:64px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .nav{margin:0 34px;padding:16px 0 18px}
+}
+@media (max-width:1000px){
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]){padding-top:0;overflow:hidden}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .q-side{order:-1;grid-row:1;margin:0 -16px;display:flex}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .qv-foto{width:100%;max-width:none;margin:0;border-radius:0;box-shadow:none}
+  .card.qcard.q-foto:not(.answered):has(img[src*="01-q4-particulier-gebruik"]) .qv-foto img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:4/3;object-fit:cover;object-position:40% 30%}
+  .card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) #prev,.card.qcard.q-foto:has(img[src*="01-q4-particulier-gebruik"]) .nav .btn-primary{min-width:0}
+}
