@@ -310,7 +310,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:32,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:33,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -483,6 +483,12 @@ function hervat(sv){
     ex.order.pop();ex.perm.pop();ex.sel.pop();
     save();
   }
+  /* v33: nieuwe oefenvraag 17 (baldadigheid, art. 424 Sr) achteraan hoofdstuk 5 ingevoegd als stap 48; 16 naar 17 oefenvragen.
+     Latere posities (praktijkcasus hoofdstuk 6) schuiven één op. Bestaande antwoorden blijven gelijk (de nieuwe vraag heeft sleutel '5-2'). */
+  if(sv.v>=18&&sv.v<=32){
+    if(si>=48)si+=1;
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -589,14 +595,15 @@ function balanceerFeedback(qc){
 }
 function feedbackHTML(q,ans){
   const goed=ans.goed;
-  const uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,q.voetnoten);
+  /* uitlegOpties (17-10-2026): optionele toelichting per gekozen antwoord; zonder dit veld blijft alles zoals het was */
+  const uit=fnRender((q.uitlegOpties&&q.uitlegOpties[ans.sel])||((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg),q.voetnoten);
   const v2=q.stijl==='v2';
   let h='<section class="fbx '+(goed?'ok':'no')+'"><div class="fbx-top"><span class="fbx-big" aria-hidden="true">'+(goed?vink:kruis)+'</span><div><h3 class="fbx-h">'+(goed?(q.fbGoed||(v2?'Helemaal goed!':'Juist!')):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>'
     +'<div class="fbx-sub"><p class="fbx-s">'+(goed?(q.fbGoedSub?esc(q.fbGoedSub):(v2?'Dit is het juiste antwoord.':'Juist beantwoord')):'Onjuist beantwoord')+'</p>'
     +'<div class="fbx-pills"><div class="fbp '+(goed?'g':'r')+'"><span class="fbp-l">'+(goed&&v2?'Juiste antwoord':'Jouw antwoord')+'</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +(goed?'':'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div>')+'</div></div></div></div>'
     +'<div class="fbx-grid"><div class="fbx-sec fbx-uit">'+di('lamp')+'<div><div class="fb-h">Toelichting</div><p class="fb-p">'+uit.body+'</p></div></div>';
-  if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">Kernregel</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
+  if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">'+esc(q.kernregelKop||'Kernregel')+'</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
   h+='</div>';
   if(uit.bron)h+='<div class="fbx-bron">'+(((q.layout==='breed'||q.beeld)&&(q.voetnoten||[]).length===1)?uit.bron.replace('<div class="bb-t">Bronnen</div>','<div class="bb-t">Bron</div>'):uit.bron)+'</div>';
   h+='</section>';return h;
