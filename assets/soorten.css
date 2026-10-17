@@ -2233,3 +2233,34 @@
   .card.qcard.q-foto:not(.answered):has(img[src*="03-q8-f4-kofferbak"]) .qv-foto img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:516/585;object-fit:cover;object-position:50% 50%}
   .card.qcard.q-foto:has(img[src*="03-q8-f4-kofferbak"]) #prev,.card.qcard.q-foto:has(img[src*="03-q8-f4-kofferbak"]) .nav .btn-primary{min-width:0}
 }
+
+/* ══ Oefenvraag hoofdstuk 5, vraag 15 (groot vuurwerk met tape, geen etiket) – vormgeving naar referentiedia (17-10-2026), zelfde principes als vraag 3 en 8.
+   Alleen deze vraag: herkend aan de eigen praktijkfoto 05-q15-afstand-houden-vuurwerk.webp. ══ */
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-soort{background:linear-gradient(180deg,#fbb441,#f39a1e);color:#13244f;padding:7px 16px 7px 9px;font-size:.84rem;font-weight:800;letter-spacing:.06em;box-shadow:0 3px 10px rgba(243,154,30,.28)}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-soort .di{color:#13244f}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .opt{border:1.5px solid #d3ddee;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(17,37,88,.05)}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .opt .lt{width:38px;height:38px;flex:0 0 38px;font-weight:800}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav .btn svg{display:none}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) #prev{border:1.5px solid #cfd9ea;border-radius:14px;min-width:190px;justify-content:center;font-weight:800}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav .btn-primary{background:linear-gradient(180deg,#ff9b2f,#f27711);color:#fff;border:0;border-radius:14px;min-width:288px;justify-content:center;box-shadow:0 6px 16px rgba(242,119,17,.32)}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav .btn-primary:hover:not(:disabled){background:linear-gradient(180deg,#ffa641,#e96c08)}
+.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav .btn-primary:disabled{background:linear-gradient(180deg,#ff9b2f,#f27711);opacity:.72;box-shadow:none}
+@media (min-width:1001px){
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]){padding:30px 30px 16px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-layout{grid-template-columns:minmax(0,40%) minmax(0,1fr);column-gap:36px;align-items:center}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-side{align-self:center;display:flex}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto{width:100%;max-width:none;height:auto;aspect-ratio:533/620;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(17,37,88,.14);background:#1c2233}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:50% 50%;border-radius:16px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-main{padding:4px 4px 6px 0}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-text{font-size:1.7rem;line-height:1.28}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .opts{gap:14px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .opt{padding:14px 18px;min-height:64px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav{padding:16px 0 4px}
+}
+@media (max-width:1000px){
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]){overflow:hidden}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .q-side{order:-1;grid-row:1;margin:0 -16px;display:flex}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto{width:100%;max-width:none;margin:0;border-radius:0;box-shadow:none}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:533/620;object-fit:cover;object-position:50% 50%}
+  .card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) #prev,.card.qcard.q-foto:has(img[src*="05-q15-afstand-houden-vuurwerk"]) .nav .btn-primary{min-width:0}
+}
