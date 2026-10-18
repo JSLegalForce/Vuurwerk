@@ -312,7 +312,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:35,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:36,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -503,6 +503,12 @@ function hervat(sv){
     if(si>=57)si+=1;
     save();
   }
+  /* v36: nieuwe oefenvraag 18 (hinderlijk gedrag, lokale APV) achteraan hoofdstuk 5 ingevoegd als stap 49; 17 naar 18 oefenvragen.
+     Latere posities (hoofdstuk 6 en verder) schuiven één op. Bestaande antwoorden blijven gelijk (de nieuwe vraag heeft sleutel '5-3'). */
+  if(sv.v>=18&&sv.v<=35){
+    if(si>=49)si+=1;
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -618,6 +624,8 @@ function feedbackHTML(q,ans){
     +(goed?'':'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div>')+'</div></div></div></div>'
     +'<div class="fbx-grid"><div class="fbx-sec fbx-uit">'+di('lamp')+'<div><div class="fb-h">Toelichting</div><p class="fb-p">'+uit.body+'</p></div></div>';
   if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">'+esc(q.kernregelKop||'Kernregel')+'</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
+  /* praktijktip (18-10-2026): optioneel blok onder 'Onthoud'; zonder dit veld verandert er niets */
+  if(q.praktijktip)h+='<div class="fbx-sec fbx-tip">'+di('boa')+'<div><div class="fb-h">Praktijktip</div><p class="fb-p">'+esc(q.praktijktip)+'</p></div></div>';
   h+='</div>';
   if(uit.bron)h+='<div class="fbx-bron">'+(((q.layout==='breed'||q.beeld)&&(q.voetnoten||[]).length===1)?uit.bron.replace('<div class="bb-t">Bronnen</div>','<div class="bb-t">Bron</div>'):uit.bron)+'</div>';
   h+='</section>';return h;

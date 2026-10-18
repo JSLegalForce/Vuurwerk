@@ -2267,51 +2267,52 @@
 
 /* ══ Oefenvraag hoofdstuk 5, vraag 17 (baldadigheid, art. 424 Sr) – nieuwe praktijkvraag met casustekst, naar referentiedia (17-10-2026).
    Zelfde principes als vraag 3, 8 en 15; de casustekst (situatie) staat vóór beantwoorden rechts tussen het label en 'De vraag'.
-   Alleen deze vraag: herkend aan de eigen praktijkfoto 05-q-baldadigheid-vuurwerk-boa.webp. ══ */
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-soort{background:linear-gradient(180deg,#fbb441,#f39a1e);color:#13244f;padding:7px 16px 7px 9px;font-size:.84rem;font-weight:800;letter-spacing:.06em;box-shadow:0 3px 10px rgba(243,154,30,.28)}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-soort .di{color:#13244f}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .opt{border:1.5px solid #d3ddee;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(17,37,88,.05)}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .opt .lt{width:38px;height:38px;flex:0 0 38px;font-weight:800}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn svg{display:none}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) #prev{border:1.5px solid #cfd9ea;border-radius:14px;min-width:190px;justify-content:center;font-weight:800}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn-primary{background:linear-gradient(180deg,#ff9b2f,#f27711);color:#fff;border:0;border-radius:14px;min-width:288px;justify-content:center;box-shadow:0 6px 16px rgba(242,119,17,.32)}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn-primary:hover:not(:disabled){background:linear-gradient(180deg,#ffa641,#e96c08)}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn-primary:disabled{background:linear-gradient(180deg,#ff9b2f,#f27711);opacity:.72;box-shadow:none}
-.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit p{white-space:pre-line}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-side,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-main,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-head{display:contents}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit{display:block;background:none;border:0;border-radius:0;padding:0}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit>.di,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit b{display:none}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit p{font-size:.98rem;line-height:1.45;color:var(--navy)}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-soort{justify-self:start;align-self:start}
-.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-lab{margin-top:14px}
+   Alleen deze vraag: herkend aan de eigen praktijkfoto 05-q-baldadigheid-vuurwerk-boa.webp.
+   Sinds 18-10-2026 ook voor oefenvraag 18 (hinderlijk gedrag, lokale APV): praktijkfoto 05-q18-hinderlijk-gedrag-vuurwerk.webp, zelfde opmaak. ══ */
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-soort{background:linear-gradient(180deg,#fbb441,#f39a1e);color:#13244f;padding:7px 16px 7px 9px;font-size:.84rem;font-weight:800;letter-spacing:.06em;box-shadow:0 3px 10px rgba(243,154,30,.28)}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-soort .di{color:#13244f}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .opt{border:1.5px solid #d3ddee;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(17,37,88,.05)}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .opt .lt{width:38px;height:38px;flex:0 0 38px;font-weight:800}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav .btn svg{display:none}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) #prev{border:1.5px solid #cfd9ea;border-radius:14px;min-width:190px;justify-content:center;font-weight:800}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav .btn-primary{background:linear-gradient(180deg,#ff9b2f,#f27711);color:#fff;border:0;border-radius:14px;min-width:288px;justify-content:center;box-shadow:0 6px 16px rgba(242,119,17,.32)}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav .btn-primary:hover:not(:disabled){background:linear-gradient(180deg,#ffa641,#e96c08)}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav .btn-primary:disabled{background:linear-gradient(180deg,#ff9b2f,#f27711);opacity:.72;box-shadow:none}
+.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit p{white-space:pre-line}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-side,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-main,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-head{display:contents}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit{display:block;background:none;border:0;border-radius:0;padding:0}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit>.di,.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit b{display:none}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit p{font-size:.98rem;line-height:1.45;color:var(--navy)}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-soort{justify-self:start;align-self:start}
+.card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-lab{margin-top:14px}
 @media (min-width:1001px){
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]){padding:30px 30px 16px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-layout{display:grid;grid-template-columns:minmax(0,47%) minmax(0,1fr);column-gap:30px;row-gap:0;align-items:start}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-foto{grid-column:1;grid-row:1 / span 6;align-self:start;width:100%;max-width:none;height:auto;aspect-ratio:684/648;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(17,37,88,.14);background:#1c2233}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:50% 50%;border-radius:16px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-soort{grid-column:2;grid-row:1}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit{grid-column:2;grid-row:2;margin-top:12px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-lab{grid-column:2;grid-row:3}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-text{grid-column:2;grid-row:4;font-size:1.45rem;line-height:1.3}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-hint{grid-column:2;grid-row:5}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .opts{grid-column:2;grid-row:6;gap:12px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-fb{grid-column:1 / -1;grid-row:7}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .opt{padding:12px 18px;min-height:58px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav{padding:16px 0 4px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]){padding:30px 30px 16px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-layout{display:grid;grid-template-columns:minmax(0,47%) minmax(0,1fr);column-gap:30px;row-gap:0;align-items:start}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-foto{grid-column:1;grid-row:1 / span 6;align-self:start;width:100%;max-width:none;height:auto;aspect-ratio:684/648;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(17,37,88,.14);background:#1c2233}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:50% 50%;border-radius:16px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-soort{grid-column:2;grid-row:1}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit{grid-column:2;grid-row:2;margin-top:12px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-lab{grid-column:2;grid-row:3}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-text{grid-column:2;grid-row:4;font-size:1.45rem;line-height:1.3}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-hint{grid-column:2;grid-row:5}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .opts{grid-column:2;grid-row:6;gap:12px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-fb{grid-column:1 / -1;grid-row:7}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .opt{padding:12px 18px;min-height:58px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav{padding:16px 0 4px}
 }
 @media (max-width:1000px){
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]){overflow:hidden}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-layout{display:flex;flex-direction:column;gap:0}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-foto{order:1;margin:0 -16px 16px;width:auto;max-width:none;border-radius:0;box-shadow:none}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-foto img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:684/648;object-fit:cover}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-soort{order:2}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .qv-sit{order:3;margin-top:12px}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-lab{order:4}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-text{order:5}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-hint{order:6}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .opts{order:7}
-  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-fb{order:8}
-  .card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) #prev,.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn-primary{min-width:0}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]){overflow:hidden}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-layout{display:flex;flex-direction:column;gap:0}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-foto{order:1;margin:0 -16px 16px;width:auto;max-width:none;border-radius:0;box-shadow:none}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-foto img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:684/648;object-fit:cover}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-soort{order:2}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .qv-sit{order:3;margin-top:12px}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-lab{order:4}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-text{order:5}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-hint{order:6}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .opts{order:7}
+  .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .q-fb{order:8}
+  .card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) #prev,.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"],img[src*="05-q18-hinderlijk-gedrag-vuurwerk"]) .nav .btn-primary{min-width:0}
 }
 
 /* ── H6 p8 'Wat moet er op een KVI staan?' – aangeleverde infographic (18-10-2026) ──
