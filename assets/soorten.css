@@ -2313,3 +2313,18 @@
   .card.qcard.q-foto:not(.answered):has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .q-fb{order:8}
   .card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) #prev,.card.qcard.q-foto:has(img[src*="05-q-baldadigheid-vuurwerk-boa"]) .nav .btn-primary{min-width:0}
 }
+
+/* ── H6 p8 'Wat moet er op een KVI staan?' – aangeleverde infographic (18-10-2026) ──
+   Desktop: volle inhoudsbreedte van de kaart. Mobiel: volle breedte; tik opent het beeld op ware grootte (inzoomen). */
+.tpl-infographic .ig-page{min-width:0}
+.tpl-infographic .ig-page .ptitle{margin-bottom:6px}
+.tpl-infographic .ig-page .pintro{margin:0 0 4px}
+.kvi-ig{margin:14px 0 0}
+.kvi-ig-link{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(17,37,88,.08);cursor:zoom-in}
+.kvi-ig-link:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.kvi-ig img{display:block;width:100%;height:auto}
+.kvi-ig-hint{margin-top:8px;text-align:center;font-family:var(--ui);font-size:.86rem;color:var(--mute)}
+@media (max-width:760px){
+  .tpl-infographic .kvi-ig{margin:10px -6px 0}
+  .kvi-ig-link{border-radius:8px}
+}

@@ -181,7 +181,8 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.4": {"t": "vp"},
 "6.5": {"t": "vp"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
-"6.7": {"t": "info", "v": "beslishulp"}};
+"6.7": {"t": "infographic"},
+"6.8": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
 const Q_ART={"1.0": "boa-uitleg", "1.1": "weegschaal", "1.2": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
@@ -310,7 +311,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:33,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:34,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -487,6 +488,12 @@ function hervat(sv){
      Latere posities (praktijkcasus hoofdstuk 6) schuiven één op. Bestaande antwoorden blijven gelijk (de nieuwe vraag heeft sleutel '5-2'). */
   if(sv.v>=18&&sv.v<=32){
     if(si>=48)si+=1;
+    save();
+  }
+  /* v34: nieuwe overzichtspagina 'Wat moet er op een KVI staan?' (infographic) in hoofdstuk 6 ingevoegd als p8 (stap 56), direct na 'Voorbeeld proces-verbaal' (stap 55).
+     Wie op 'De vier vragen op straat' (stap 56) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=33){
+    if(si>=56)si+=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
@@ -1167,6 +1174,15 @@ T.info=(P,spec,st)=>{
   box.appendChild(sr);
   const v=el('div','info-body',FIG[spec.v]());v.setAttribute('aria-hidden','true');
   box.appendChild(v);
+  return box;
+};
+/* H6 'Wat moet er op een KVI staan?' (18-10-2026): aangeleverde infographic groot op de pagina, ongewijzigd.
+   Klik/tik opent het beeld op ware grootte in een nieuw tabblad (inzoomen op mobiel); geen extra bibliotheek. */
+T.infographic=(P,spec,st)=>{
+  const box=el('div','ig-page');
+  box.appendChild(titleEl(P));
+  if(P.intro)box.appendChild(P.intro);
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   return box;
 };
 T.vooruit=(P,spec,st)=>{
