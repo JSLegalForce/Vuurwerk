@@ -182,7 +182,8 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "6.5": {"t": "vp"},
 "6.6": {"t": "pvvoorbeeld", "a": "boa-notitie"},
 "6.7": {"t": "infographic"},
-"6.8": {"t": "info", "v": "beslishulp"}};
+"6.8": {"t": "infographic"},
+"6.9": {"t": "info", "v": "beslishulp"}};
 /* oefenvragen: neutrale illustraties die het antwoord niet verklappen */
 const Q_ART={"1.0": "boa-uitleg", "1.1": "weegschaal", "1.2": "boa-notitie", "2.0": "wetboek", "2.1": "vraag", "3.1": "boa-notitie", "3.2": "wetboek", "3.3": "vraag", "4.0": "doelwit", "4.1": "boa-uitleg", "4.2": "weegschaal", "4.3": "boa-notitie", "5.0": "wetboek", "5.1": "vraag"};
 const ART_ALT={
@@ -311,7 +312,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:34,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:35,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -494,6 +495,12 @@ function hervat(sv){
      Wie op 'De vier vragen op straat' (stap 56) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden blijven gelijk. */
   if(sv.v>=18&&sv.v<=33){
     if(si>=56)si+=1;
+    save();
+  }
+  /* v35: nieuwe overzichtspagina 'Afstand doen van vuurwerk' (infographic) in hoofdstuk 6 ingevoegd als p9 (stap 57), direct na 'Wat moet er op een KVI staan?' (stap 56).
+     Wie op 'De vier vragen op straat' (stap 57) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=34){
+    if(si>=57)si+=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
