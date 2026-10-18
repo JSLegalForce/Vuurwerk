@@ -174,6 +174,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "5.1": {"t": "vp"},
 "5.2": {"t": "vp"},
 "5.3": {"t": "vp"},
+"5.4": {"t": "infographic"},
 "6.0": {"t": "vp"},
 "6.1": {"t": "vp"},
 "6.2": {"t": "vp"},
@@ -312,7 +313,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:36,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:37,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -325,7 +326,8 @@ function fnRender(text,voetnoten){
 }
 function shuffle(n){const a=[];for(let i=0;i<n;i++)a.push(i);for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=a[i];a[i]=a[j];a[j]=t;}return a;}
 /* v30: vóór het eerste hoofdstuk staat de informatiepagina 'Goed om te weten' (stap 0). */
-function buildSteps(){steps=[{type:'info'}];D.topics.forEach((t,ti)=>{t.pages.forEach((p,pi)=>steps.push({type:'page',ti,pi}));t.vragen.forEach((q,qi)=>steps.push({type:'q',ti,qi}));});}
+/* naVragen (18-10-2026): een pagina met naVragen:true staat ná de oefenvragen van het hoofdstuk (afsluitende praktijkpagina). */
+function buildSteps(){steps=[{type:'info'}];D.topics.forEach((t,ti)=>{t.pages.forEach((p,pi)=>{if(!p.naVragen)steps.push({type:'page',ti,pi});});t.vragen.forEach((q,qi)=>steps.push({type:'q',ti,qi}));t.pages.forEach((p,pi)=>{if(p.naVragen)steps.push({type:'page',ti,pi});});});}
 const qAnsweredCount=()=>Object.keys(answers).length;
 const onderwerpenKlaar=()=>qAnsweredCount()>=D.totaalVragen;
 const vnv=id=>document.getElementById(id).value.trim();
@@ -509,6 +511,12 @@ function hervat(sv){
     if(si>=49)si+=1;
     save();
   }
+  /* v37: nieuwe afsluitende praktijkpagina 'Achterlaten van vuurwerkresten' in hoofdstuk 5 ingevoegd als stap 50, ná oefenvraag 18 (stap 49) en vóór hoofdstuk 6.
+     Wie op hoofdstuk 6 pagina 1 (stap 50) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden blijven gelijk. */
+  if(sv.v>=18&&sv.v<=36){
+    if(si>=50)si+=1;
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -552,11 +560,11 @@ function infoScreen(){
 }
 
 function pageScreen(st){
-  const t=D.topics[st.ti],p=t.pages[st.pi],n=st.pi+1,tot=t.pages.length,last=isLaatsteLerenStap();
+  const t=D.topics[st.ti],p=t.pages[st.pi],n=st.pi+1,tot=t.pages.filter(x=>!x.naVragen).length,last=isLaatsteLerenStap();
   const spec=L_SPEC[st.ti+'.'+st.pi]||{t:'split',a:'boa-armen'};
-  const head='<div class="pagehead"><span class="ph-ic">'+di(TOPIC_ICON[st.ti])+'</span><div><span class="ph-k">'+tLab(t)+' · Pagina '+n+'/'+tot+'</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Pagina '+n+' van '+tot+'</span></div>';
+  const head='<div class="pagehead"><span class="ph-ic">'+di(TOPIC_ICON[st.ti])+'</span><div><span class="ph-k">'+tLab(t)+' · '+(p.kop?esc(p.kop):'Pagina '+n+'/'+tot)+'</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">'+(p.kop?esc(p.kop):'Pagina '+n+' van '+tot)+'</span></div>';
   setScreen('<article class="card page tpl-'+spec.t+'" data-page="'+st.ti+'.'+st.pi+'">'+head+'<div class="stage" id="stage"></div><div id="bron"></div>'
-    +navHTML(si>0,last?'Naar de eindtoets':'Volgende',null,'',navPos(tLab(t),'Pagina <b>'+n+'</b> van '+tot))+'</article>',{ti:st.ti,frac:(si+1)/steps.length});
+    +navHTML(si>0,last?'Naar de eindtoets':'Volgende',null,'',navPos(tLab(t),p.kop?'<b>'+esc(p.kop)+'</b>':'Pagina <b>'+n+'</b> van '+tot))+'</article>',{ti:st.ti,frac:(si+1)/steps.length});
   composePage(document.getElementById('stage'),document.getElementById('bron'),p,spec,st);
   const pv=document.getElementById('prev');if(pv)pv.onclick=()=>{if(si>0){si--;render();}};
   document.getElementById('next').onclick=()=>{if(last){eindtoetsIntro();}else{si++;render();}};
