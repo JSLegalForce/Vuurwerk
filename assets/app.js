@@ -146,6 +146,7 @@ function bdInline(root){
 const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "0.1": {"t": "intro2"},
 "0.2": {"t": "intro3"},
+"0.3": {"t": "intro3"},
 "1.0": {"t": "wetcat"},
 "1.1": {"t": "f1"},
 "1.2": {"t": "f2"},
@@ -313,7 +314,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:37,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:38,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -515,6 +516,12 @@ function hervat(sv){
      Wie op hoofdstuk 6 pagina 1 (stap 50) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden blijven gelijk. */
   if(sv.v>=18&&sv.v<=36){
     if(si>=50)si+=1;
+    save();
+  }
+  /* v38: introductie van 3 naar 4 pagina's: nieuwe p4 'Bevoegd is niet altijd zelf optreden' ingevoegd als stap 4, na 'De vier vragen' (stap 3) en vóór hoofdstuk 1.
+     Intro p1-p3 (stap 1-3) behouden hun plek; wie op hoofdstuk 1 pagina 1 (stap 4) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden en eindtoets blijven gelijk. */
+  if(sv.v>=18&&sv.v<=37){
+    if(si>=4)si+=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
@@ -1396,8 +1403,8 @@ T.intro2=(P,spec,st)=>{
   const k=P.rest.find(n=>n.nodeType===1&&n.classList.contains('i2-k'));if(k){k.className='kicker i2-k';copy.appendChild(k);}
   copy.appendChild(titleEl(P,'i2-h'));
   if(P.intro){P.intro.classList.add('i2-intro');copy.appendChild(P.intro);}
-  P.rest.filter(n=>n.nodeType===1&&(n.classList.contains('i2-na')||n.classList.contains('i2-lo'))).forEach(n=>copy.appendChild(n));
-  copy.querySelectorAll('.i2-ic[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=DI[x.dataset.i]||DI.document;});
+  P.rest.filter(n=>n.nodeType===1&&(n.classList.contains('i2-na')||n.classList.contains('i2-lo')||n.classList.contains('i3-onthoud'))).forEach(n=>copy.appendChild(n));
+  copy.querySelectorAll('.i2-ic[data-i],.i3-o-ic[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=DI[x.dataset.i]||DI.document;});
   box.appendChild(copy);
   const fig=P.rest.find(n=>n.nodeType===1&&n.classList.contains('i2-img'));
   if(fig){const m=el('div','i2-media');m.appendChild(fig);box.appendChild(m);}
