@@ -668,6 +668,18 @@
 @media (min-width:761px) and (max-width:1000px){.tpl-f2 .f2-banner{grid-template-columns:auto minmax(0,1.2fr) minmax(0,1fr)}.tpl-f2 .f2-sfeer{margin-left:-40px}}
 @media (min-width:1181px){.tpl-f2 .f2-banner{grid-template-columns:auto minmax(0,1.55fr) minmax(0,1fr)}.tpl-f2 .f2-t{font-size:clamp(1.55rem,2.4vw,2.2rem)}}
 @media (min-width:761px) and (max-width:1000px){.tpl-f2 .f2-sfeer img{width:calc(100% / .82)}}
+/* H1-ronde 20-10-2026: F2-subtitel, identiek aan .f3-sub (titel krijgt dezelfde ondermarge als .f3-t) */
+.tpl-f2 .f2-t:has(+.f2-sub){margin-bottom:8px}
+.tpl-f2 .f2-sub{font-family:var(--ui);font-weight:500;font-size:1.08rem;line-height:1.4;color:var(--navy)}
+@media (max-width:760px){.tpl-f2 .f2-sub{font-size:1rem}}
+/* H1-ronde 20-10-2026: hergebruik bestaande regels (kopie) voor nieuwe inhoud */
+.tpl-f1 .f1-k ul{list-style:none;margin:2px 0 0;padding:0}
+.tpl-f1 .f1-k ul li{position:relative;padding-left:18px;font-size:1.02rem;line-height:1.5;color:var(--navy)}
+.tpl-f1 .f1-k ul li::before{content:"";position:absolute;left:4px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+@media (max-width:760px){.tpl-f1 .f1-k ul li{font-size:1rem}}
+.tpl-f1 .bronnen .bb-l li+li::before{content:"·";display:inline;position:static;background:none;width:auto;height:auto;margin:0 10px;color:var(--mute);font-weight:700}
+.tpl-f3 .f3-k-tip .f3-k-ic .di,.tpl-f4 .f4-k-tip .f4-k-ic .di{width:28px;height:28px;color:#fff;--duo:rgba(255,255,255,.2)}
+.tpl-etiket .et-wet-q footer+.et-wet-in{margin-top:18px}
 
 /* ══ H1 p4 · F3 – Vuurwerk met middelmatig gevaar (24-9-2026, volgens referentiedia; alleen .tpl-f3) ══ */
 .tpl-f3 .f3-page{--f3:#d13a3a;--f3-d:#a92828;--or:#d2691c;--c:var(--f3)}
