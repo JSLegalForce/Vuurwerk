@@ -160,7 +160,8 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "2.3": {"t": "onth"},
 "2.4": {"t": "ed"},
 "3.0": {"t": "dom9"},
-"3.1": {"t": "wed17"},
+"3.1": {"t": "halt"},
+"3.2": {"t": "wed17"},
 "4.0": {"t": "bev"},
 "4.1": {"t": "vp"},
 "4.2": {"t": "vp"},
@@ -314,7 +315,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:38,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:39,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -524,6 +525,12 @@ function hervat(sv){
     if(si>=4)si+=1;
     save();
   }
+  /* v39: hoofdstuk 3 van 2 naar 3 pagina's: nieuwe p2 'Halt-verwijzing bij vuurwerkincidenten' ingevoegd als stap 24, na 'Domein I, onderdeel 9' (stap 23) en vóór 'Artikel 17 WED'.
+     Wie op 'Artikel 17 WED' (stap 24) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden, eindtoets en certificaat blijven gelijk. */
+  if(sv.v>=18&&sv.v<=38){
+    if(si>=24)si+=1;
+    save();
+  }
   if(phase==='leren'){buildSteps();render();}
   else if(phase==='eindtoets'&&ex){exVraag();}
   else if(phase==='exresult'&&ex){exResult();}
@@ -560,7 +567,7 @@ function infoScreen(){
    +kaart('gotw-nieuw',di('herhaling'),'Nieuwe ontwikkelingen','<p>Nieuwe ontwikkelingen worden aan deze e-learning toegevoegd zodra deze definitief zijn. Denk aan de nieuwe feitcodes voor F2- en F3-vuurwerk, een eventueel nieuw Halt-besluit en andere relevante wijzigingen in wet- en regelgeving of landelijke afspraken.</p>')
    +kaart('gotw-zelf',di('toets'),'Controleer altijd zelf','<p>Deze e-learning helpt je bij het maken van een juridische beoordeling, maar vervangt niet je eigen controle.</p><div class="gotw-vraag">'+info+'<p>Ben ik bevoegd? Past dit binnen mijn taak? Welke actuele regels gelden? En welke lokale afspraken zijn van toepassing?</p></div>')
    +'</div>'
-   +'<div class="gotw-peil">'+di('wet')+'<span>Juridische peildatum: <b>12 oktober 2026</b></span></div>'
+   +'<div class="gotw-peil">'+di('wet')+'<span>Juridische peildatum: <b>11 november 2026</b></span></div>'
    +navHTML(false,'Volgende',null,'',navPos('Vóór je start','Goed om te weten'))+'</article>';
   setScreen(html,{lab:'Vóór je start',sub:'Belangrijk vóór je start',frac:(si+1)/steps.length});
   document.getElementById('next').onclick=()=>{si++;render();};
@@ -990,6 +997,13 @@ T.wed17=(P,spec,st)=>{
   const box=el('div','w17-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   const bk=box.querySelector('.w17-boek');if(bk)bk.innerHTML=artHTML('wetboek');
+  box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  return box;
+};
+T.halt=(P,spec,st)=>{
+  /* H3 p2 "Halt-verwijzing bij vuurwerkincidenten": praktijkfoto links; kop, Controleer eerst, Voorwaarden/Niet mogelijk rechts; Let op onderaan over de volle breedte */
+  const box=el('div','hv-page');
+  P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
   return box;
 };
