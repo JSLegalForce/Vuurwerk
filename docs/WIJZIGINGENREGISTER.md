@@ -19,4 +19,4 @@ Werkbranch: `kwaliteitsronde-2026-11` (basis: `main` @ `3aa782c`). Leidende bron
 
 | Hoofdstuk | Pagina | Juridisch aangepast | Afbeelding aangepast | Bron gecontroleerd | Status |
 |---|---|---|---|---|---|
-| 1 Vuurwerk herkennen | Pagina 1 van 7 – De vier vuurwerkcategorieën | Ja – omschrijvingen F1 en F2 verduidelijkt; toelichting voor boa's aangepast | F1 en F2 aangepast (zonder categorieaanduiding/opschrift); F3 en F4: aangeleverde productfoto's nog niet ontvangen, huidige afbeeldingen voorlopig behouden | Ja – Vuurwerkbesluit art. 1A.1.3; VNG Handelingskader hfst. 3 p. 6–7 en hfst. 4 p. 9 | Aangepast, wacht op goedkeuring (en op productfoto's F3/F4) |
+| 1 Vuurwerk herkennen | Pagina 1 van 7 – De vier vuurwerkcategorieën | Ja – omschrijvingen F1 en F2 verduidelijkt; toelichting voor boa's aangepast | F1 en F2 aangepast (zonder categorieaanduiding/opschrift); F3 en F4 vervangen door aangeleverde originele productfoto's (Thunder Shots, Cobra-artikelen), alleen bijgesneden; illustratief, voetnoot behouden | Ja – Vuurwerkbesluit art. 1A.1.3; VNG Handelingskader hfst. 3 p. 6–7 en hfst. 4 p. 9 | Aangepast, wacht op goedkeuring |
