@@ -2458,3 +2458,48 @@
   .tpl-halt .hv-letop{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:12px 14px}
   .tpl-halt .hv-l-ic{width:36px;height:36px}
 }
+
+/* ══ H1 p3 · F2 – kwaliteitsronde 16-11-2026: feitcodekaders, onderste rij met jeugd, bronnen in groepen (alleen .tpl-f2) ══ */
+.tpl-f2 .f2-noot{margin:10px 2px 0;font-size:.9rem;font-style:italic;color:var(--ink2)}
+.tpl-f2 .f2-k-or ul li,.tpl-f2 .f2-k ul li{margin:2px 0}
+.tpl-f2 .f2-fcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tpl-f2 .f2-fc{--fc:#c2185b;--fc-l:#fdf0f5;--fc-b:#f0b9cf;display:flex;flex-direction:column;background:var(--fc-l);border:1.5px solid var(--fc-b);border-radius:16px;padding:16px 18px;min-width:0}
+.tpl-f2 .f2-fc-nrac{--fc:#1f4fb4;--fc-l:#f1f5fd;--fc-b:#b9cdf0}
+.tpl-f2 .f2-fc h4{font-family:var(--ui);font-weight:800;font-size:1.22rem;line-height:1.25;color:var(--fc);margin:0}
+.tpl-f2 .f2-fc-sub{margin:4px 0 12px;font-size:1rem;line-height:1.45;color:var(--navy)}
+.tpl-f2 .f2-fc-bar{background:var(--fc);color:#fff;font-family:var(--ui);font-weight:800;font-size:1rem;text-align:center;padding:7px 10px;border-radius:10px 10px 0 0}
+.tpl-f2 .f2-fc-t{background:#fff;border:1px solid var(--fc-b);border-top:0;border-radius:0 0 10px 10px}
+.tpl-f2 .f2-fc-r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:12px;padding:10px 14px}
+.tpl-f2 .f2-fc-r+.f2-fc-r{border-top:1px solid var(--fc-b)}
+.tpl-f2 .f2-fc-l b{display:block;font-family:var(--ui);font-weight:800;color:var(--navy);font-size:1rem}
+.tpl-f2 .f2-fc-l span{font-size:.94rem;color:var(--ink2)}
+.tpl-f2 .f2-fc-r ul{list-style:none;margin:0;padding:0}
+.tpl-f2 .f2-fc-r li{font-size:.98rem;line-height:1.42;color:var(--navy);margin:1px 0}
+.tpl-f2 .f2-fc-r li b{font-family:var(--ui);font-weight:800;color:var(--fc)}
+.tpl-f2 .f2-fc-let{margin:10px 0 0;font-size:.95rem;line-height:1.45;color:var(--navy)}
+.tpl-f2 .f2-fc-gr{margin:8px 0 0;font-size:.86rem;line-height:1.4;color:var(--ink2)}
+.tpl-f2 .f2-fc-datum{margin-top:auto;padding-top:10px}
+.tpl-f2 .f2-fc-datum{color:var(--fc);font-family:var(--ui);font-weight:800;font-size:.98rem}
+.tpl-f2 .f2-fc-datum::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--fc);margin-right:8px;vertical-align:1px}
+.tpl-f2 .f2-onder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch}
+.tpl-f2 .f2-onder .f2-k{flex:none;grid-template-columns:44px minmax(0,1fr);align-items:start;align-content:start;gap:12px;padding:14px}
+.tpl-f2 .f2-onder .f2-k-ic{width:44px;height:44px}.tpl-f2 .f2-onder .f2-k-ic .di,.tpl-f2 .f2-onder .f2-k-ic>svg{width:24px;height:24px}
+.tpl-f2 .f2-k-jeugd{background:#eff9f3;border-color:#9fd5b5}
+.tpl-f2 .f2-k-jeugd .f2-k-ic{background:#d6f0e0}.tpl-f2 .f2-k-jeugd .f2-k-ic .di{color:var(--green-d);--duo:rgba(27,150,87,.2)}
+.tpl-f2 .f2-k-jeugd h4{color:var(--green-d)}
+.tpl-f2 .f2-bronnen{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1.25fr) minmax(0,.8fr);gap:6px 22px;align-items:start}
+.tpl-f2 .f2-bronnen .bb-t{font-family:var(--ui);font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);padding-top:2px}
+.tpl-f2 .f2-bg>b{display:block;font-family:var(--ui);font-weight:800;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:4px}
+.tpl-f2 .f2-bronnen .bb-l{display:block}
+.tpl-f2 .f2-bronnen .bb-l li{white-space:normal;display:list-item;list-style:none;font-size:.9rem;line-height:1.45;margin:0 0 5px;padding:0}
+.tpl-f2 .f2-bronnen .bb-l li+li::before,.tpl-f2 .f2-bronnen .bb-l li::before{display:none;content:none}
+@media (max-width:1180px){
+  .tpl-f2 .f2-onder{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tpl-f2 .f2-bronnen{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .tpl-f2 .f2-fcs,.tpl-f2 .f2-onder{grid-template-columns:1fr}
+  .tpl-f2 .f2-fc{padding:14px}
+  .tpl-f2 .f2-fc-r{grid-template-columns:1fr;gap:4px}
+  .tpl-f2 .f2-onder .f2-k{grid-template-columns:42px minmax(0,1fr);align-items:start}
+}
