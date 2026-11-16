@@ -556,18 +556,35 @@ function isLaatsteLerenStap(){return si===steps.length-1;}
 
 /* ── 'Goed om te weten' (informatiepagina vóór hoofdstuk 1, 10-10-2026) ── */
 function infoScreen(){
+  /* Kwaliteitsronde 16-11-2026: opbouw volgens referentiedia (zes kaarten, twee rijen van drie) */
   const li=a=>'<ul class="gotw-ul">'+a.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
-  const kaart=(cls,ic,kop,inh)=>'<section class="gotw-k '+cls+'"><span class="gotw-ic">'+ic+'</span><div class="gotw-b"><h2>'+kop+'</h2>'+inh+'</div></section>';
+  const kaart=(cls,ic,kop,inh)=>'<section class="gotw-k '+cls+'"><div class="gotw-kop"><span class="gotw-ic">'+ic+'</span><h2>'+kop+'</h2></div><div class="gotw-b">'+inh+'</div></section>';
   const info='<span class="gotw-i" aria-hidden="true">i</span>';
-  const html='<article class="card page gotw"><span class="pill">Belangrijk vóór je start</span><h1 class="h-xl gotw-h">Goed om te weten</h1>'
+  const bron=(t,a)=>'<div class="gotw-bronnen"><b>'+t+'</b>'+(a.length>1?li(a):'<p>'+a[0]+'</p>')+'</div>';
+  const html='<article class="card page gotw">'
+   +'<header class="gotw-top"><div class="gotw-intro"><span class="pill">Belangrijk vóór je start</span><h1 class="h-xl gotw-h">Goed om te weten</h1>'
+   +'<p class="gotw-lead">Deze e-learning is gebaseerd op de actuele wet- en regelgeving over vuurwerk, waaronder de Wet veilige jaarwisseling, de OM-richtlijn jeugdigen vuurwerkdelicten (2026R008) en het Handelingskader vuurwerk van de VNG.</p></div>'
+   +'<figure class="gotw-foto"><img src="assets/images/00-00-gotw-vuurwerkverpakkingen.webp?v=vw261116a" width="586" height="184" alt="Verschillende vuurwerkverpakkingen op een houten tafel, met een onscherpe straat op de achtergrond." decoding="async"></figure></header>'
    +'<div class="gotw-grid">'
-   +kaart('gotw-letop',di('waarschuwing'),'Feitcodes nog niet bekend','<p>De feitcodes voor het bezit en gebruik van F2- en F3-vuurwerk zijn op dit moment nog niet bekend. Deze worden naar verwachting <b>per 1 december 2026</b> bekendgemaakt.</p>')
-   +kaart('gotw-bron',di('document'),'Deze e-learning is gebaseerd op',li(['Wet milieubeheer','Wet veilige jaarwisseling en Besluit veilige jaarwisseling','Vuurwerkbesluit','Wetboek van Strafvordering','Wetboek van Strafrecht','Wet op de economische delicten','Politiewet 2012','Regeling domeinlijsten buitengewoon opsporingsambtenaar','Besluit buitengewoon opsporingsambtenaar','Beleidsregels buitengewoon opsporingsambtenaar – Bijlage L','OM Instructie inbeslagneming (2024I001)','Handhavingsplan jaarwisseling (maart 2026)','Nationale Politie – Uitvoeringstoets Wet veilige jaarwisseling','Model APV']))
-   +kaart('gotw-lok',di('locatie'),'Lokale afspraken zijn niet opgenomen','<p>Lokale samenwerkingsafspraken, werkafspraken en aanwijzingen van het bevoegd gezag zijn niet opgenomen in deze e-learning.</p><div class="gotw-sub"><b>Denk bijvoorbeeld aan afspraken over:</b>'+li(['wanneer je zelf optreedt','wanneer je de politie inschakelt','de afhandeling van in beslag genomen vuurwerk','lokale prioriteiten en werkwijzen'])+'</div>')
-   +kaart('gotw-nieuw',di('herhaling'),'Nieuwe ontwikkelingen','<p>Nieuwe ontwikkelingen worden aan deze e-learning toegevoegd zodra deze definitief zijn. Denk aan de nieuwe feitcodes voor F2- en F3-vuurwerk, een eventueel nieuw Halt-besluit en andere relevante wijzigingen in wet- en regelgeving of landelijke afspraken.</p>')
-   +kaart('gotw-zelf',di('toets'),'Controleer altijd zelf','<p>Deze e-learning helpt je bij het maken van een juridische beoordeling, maar vervangt niet je eigen controle.</p><div class="gotw-vraag">'+info+'<p>Ben ik bevoegd? Past dit binnen mijn taak? Welke actuele regels gelden? En welke lokale afspraken zijn van toepassing?</p></div>')
+   +kaart('gotw-letop',di('waarschuwing'),'Actuele uitgangspunten',li([
+      'Er geldt een algemeen verbod op het bezit en gebruik van F2- en F3-vuurwerk door personen zonder gespecialiseerde kennis (artikel 9.2.2.1a Wet milieubeheer), behoudens wettelijke uitzonderingen.',
+      'Boa’s Domein I zijn bevoegd om strafbare feiten uit artikel 9.2.2.1a Wet milieubeheer op te sporen, voor zover dit binnen hun taak en aanwijzing valt.',
+      'Bij jeugdige vuurwerkdelicten kan, afhankelijk van de voorwaarden en omstandigheden, worden gekozen voor een reprimande, Halt-afdoening of een volledig uitgeschreven proces-verbaal.',
+      'Het landelijke handelingskader maakt voor de afhandeling onderscheid tussen de verschillende soorten en hoeveelheden vuurwerk.'])
+      +bron('Bronnen',['Artikel 9.2.2.1a Wet milieubeheer.','Regeling domeinlijsten buitengewoon opsporingsambtenaar, Domein I.','VNG, Handelingskader vuurwerk Boa Domein I, 12 november 2026.']))
+   +kaart('gotw-bron',di('document'),'Deze e-learning is gebaseerd op',li([
+      'Wet milieubeheer.','Wet veilige jaarwisseling en Besluit veilige jaarwisseling.','Vuurwerkbesluit.','Wet op de economische delicten.','Wetboek van Strafvordering.','Wetboek van Strafrecht.','Regeling domeinlijsten buitengewoon opsporingsambtenaar.',
+      'OM – Richtlijn voor strafvordering jeugdigen vuurwerkdelicten (2026R008), 3 november 2026.','VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026.','Erratum 4 Feitenboekje 2026, uitgave 1 december 2026.']))
+   +kaart('gotw-lok',di('locatie'),'Lokale afspraken','<p>De landelijke wetgeving en handelingsafspraken vormen het uitgangspunt van deze e-learning. Aanvullende lokale werkafspraken en aanwijzingen kunnen per gemeente of arrondissement verschillen.</p>'
+      +'<div class="gotw-sub"><b>Denk bijvoorbeeld aan:</b><ul class="gotw-ul gotw-vink">'+['De Halt-aanwijzing van het Openbaar Ministerie, die per arrondissement wordt vastgesteld.','De samenwerking met de politie.','De afhandeling en afvoer van inbeslaggenomen vuurwerk.','Lokale prioriteiten en werkwijzen.'].map(t=>'<li>'+t+'</li>').join('')+'</ul></div>'
+      +'<p class="gotw-noot">Een Halt-verwijzing is alleen mogelijk als wordt voldaan aan de wettelijke voorwaarden en de geldende OM-aanwijzing.</p>')
+   +kaart('gotw-nieuw',di('herhaling'),'Nieuwe ontwikkelingen','<p>Deze e-learning volgt de actuele landelijke wet- en regelgeving, met als juridische peildatum <b>16 november 2026</b>.</p><p>Nieuwe ontwikkelingen en wijzigingen, waaronder een eventuele aanpassing van het Halt-besluit, worden waar nodig verwerkt.</p><p>Volgens het VNG-handelingskader wordt een aanpassing van het Halt-besluit halverwege 2027 verwacht.</p>')
+   +kaart('gotw-feit',di('wet'),'Feitcodes','<p>Voor volwassenen zijn vuurwerkfeitcodes opgenomen in het Feitenboekje 2026 en het bijbehorende erratum, met een uitgave van 1 december 2026.</p><p>Controleer steeds welke feitcodes op het moment van optreden daadwerkelijk van toepassing zijn.</p>'
+      +'<div class="gotw-vraag">'+info+'<div><p>Voor jeugdige vuurwerkdelicten zijn geen specifieke feitcodes beschikbaar gesteld.</p><p>Bij jeugdigen kan, afhankelijk van de toepasselijke voorwaarden, sprake zijn van:</p>'+li(['Een reprimande.','Een Halt-afdoening.','Een volledig uitgeschreven proces-verbaal (tik-pv).'])+'<p>Wanneer een proces-verbaal wordt opgemaakt, wordt dit volgens de geldende afspraken aangeleverd bij het betreffende arrondissementsparket.</p></div></div>'
+      +bron('Bron',['VNG, Handelingskader vuurwerk Boa Domein I, pagina 5, hoofdstuk 2.5.']))
+   +kaart('gotw-zelf',di('toets'),'Controleer altijd zelf','<p>Deze e-learning ondersteunt je bij de juridische beoordeling en de praktische handelwijze, maar vervangt niet je eigen beoordeling op straat.</p><div class="gotw-vraag">'+info+'<p>Ben ik bevoegd? Past dit binnen mijn taak? Welke actuele regels en lokale afspraken zijn van toepassing?</p></div>')
    +'</div>'
-   +'<div class="gotw-peil">'+di('wet')+'<span>Juridische peildatum: <b>11 november 2026</b></span></div>'
+   +'<div class="gotw-peil"><span class="gotw-peil-d">'+di('kalender')+'<span>Juridische peildatum: <b>16 november 2026</b></span></span><span class="gotw-peil-docs">'+di('boek')+'<span>Belangrijke documenten: OM-richtlijn 2026R008 | VNG Handelingskader (12-11-2026)</span></span></div>'
    +navHTML(false,'Volgende',null,'',navPos('Vóór je start','Goed om te weten'))+'</article>';
   setScreen(html,{lab:'Vóór je start',sub:'Belangrijk vóór je start',frac:(si+1)/steps.length});
   document.getElementById('next').onclick=()=>{si++;render();};
