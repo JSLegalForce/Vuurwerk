@@ -194,6 +194,10 @@
 .wc-kaart p{font-size:.98rem;line-height:1.5;color:var(--ink)}
 .wc-ai{background:#fff7ea;border-color:#f3dfb8}.wc-ai .wc-ic{background:#fdebc8}.wc-ai .wc-ic .di{color:var(--gold-d)}
 .wc-bron{background:#fff}.wc-bron a{font-weight:700;color:var(--blue)}
+/* Kwaliteitsronde H1 p1 (16-11-2026): tweede alinea boa-kaart en bronnen als lijst */
+.wc-kaart p+p{margin-top:8px}
+.wc-bron-ul{list-style:disc;margin:2px 0 0;padding-left:18px;font-size:.98rem;line-height:1.45;color:var(--ink)}
+.wc-bron-ul li+li{margin-top:3px}
 .wc-gewoon h3{font-size:1.12rem}.wc-gewoon p{font-size:1.04rem}
 @media (max-width:1180px){
   .wc-body{grid-template-columns:1fr}
