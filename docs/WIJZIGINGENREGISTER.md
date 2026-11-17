@@ -56,4 +56,4 @@ Afbeelding: door Jan aangeleverd bestand (BOA_afstand_vuurwerk_foto.png, 558×32
 
 Technisch: nieuw optioneel veld `bronbalk` bij oefenvragen (`assets/app.js`, functie `qBronbalk`) met opmaak gelijk aan de bronnenbalk van H1 p7 (`assets/soorten.css`, `.qcard .q-bronbalk`); alleen deze vraag gebruikt het veld, andere vragen ongewijzigd. Cacheversies app.js en soorten.css opgehoogd.
 
-Status: **Aangepast – wacht op definitieve goedkeuring.**
+Status: **Definitief goedgekeurd en gepubliceerd – 17 november 2026.**
