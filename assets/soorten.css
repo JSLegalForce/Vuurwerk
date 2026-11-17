@@ -2590,3 +2590,12 @@
 .tpl-f4 .f4-bronnen .bb-l li{white-space:normal;display:list-item;list-style:none;font-size:.9rem;line-height:1.45;margin:0 0 5px;padding:0}
 .tpl-f4 .f4-bronnen .bb-l li+li::before,.tpl-f4 .f4-bronnen .bb-l li::before{display:none;content:none}
 @media (max-width:1180px){.tpl-f4 .f4-midden,.tpl-f4 .f4-onder{grid-template-columns:1fr}.tpl-f4 .f4-bronnen{grid-template-columns:1fr}}
+
+/* compacte bronnenbalk onder de antwoorden van een oefenvraag (zelfde opmaak als de bronnenbalk van H1 p7) */
+.qcard .q-bronbalk{margin-top:16px;background:transparent}
+.qcard .q-bronbalk .bb-l{display:flex;flex-wrap:wrap;gap:4px 0;list-style:none;counter-reset:none}
+.qcard .q-bronbalk .bb-l li{display:inline;padding:0;margin:0;font-size:.86rem;font-style:normal;line-height:1.5;color:var(--ink2)}
+.qcard .q-bronbalk .bb-l li::before{display:none}
+.qcard .q-bronbalk .bb-l li+li::before{content:"·";display:inline;position:static;background:none;width:auto;height:auto;margin:0 10px;color:var(--mute);font-weight:700}
+.qcard .q-bronbalk .bb-l a{font-weight:600;color:var(--blue)}
+.qcard .q-bronbalk .bb-toel{color:var(--mute)}
