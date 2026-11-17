@@ -37,4 +37,4 @@ Juridisch gecontroleerd tegen: VNG – Handelingskader vuurwerk Boa Domein I (12
 
 Technisch: in `assets/soorten.css` is voor deze pagina (`.tpl-onbekend`) de bestaande scheidingspunt-regel tussen bronnen overgenomen van de categoriepagina's, zodat beide bronnen gescheiden worden weergegeven (cacheversie soorten.css opgehoogd). Overige inhoud, afbeeldingen en vormgeving: ongewijzigd.
 
-Status: **Aangepast – wacht op definitieve goedkeuring.**
+Status: **Definitief goedgekeurd en gepubliceerd – 17 november 2026.**
