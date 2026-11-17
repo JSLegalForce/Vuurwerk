@@ -23,3 +23,18 @@ Werkbranch: `kwaliteitsronde-2026-11` (basis: `main` @ `3aa782c`). Leidende bron
 | 1 Vuurwerk herkennen | Pagina 3 van 7 – F2: Weinig gevaar | Ja – Wat is F2/Hoe herken je F2 (RAC-onderscheid) aangepast; feitcodekaders F2 wel/niet in de RAC (H171a–c, H172, H163c, H164a) met grondslag per feitcode; Wat is strafbaar; ontheffing; boa-kader (bevoegdheid vs. handelingskader); nieuw kader Jeugd; bronnen in drie groepen | Ja – drie aangeleverde originele productfoto's (Fountains, Best Price, Damage Plan), volledig zichtbaar; illustratief, voetnoot behouden | Ja – Erratum 4 (via VNG-handelingskader p. 14), Wm, WED, Vuurwerkbesluit 1.2.2/1.2.4, OM 2026R007/R008, VNG-handelingskader | Definitief goedgekeurd en gepubliceerd – 16 november 2026 |
 | 1 Vuurwerk herkennen | Pagina 4 van 7 – F3: Middelmatig gevaar | Ja – opzet zoals F2; voorwaarde bij feitcode H163d aangevuld ('indien bestemd voor particulier gebruik'); etiketinformatie F3 gecorrigeerd (stap 3); tekst over politie en lokale afspraken verwerkt | Ja – drie originele productfoto's toegevoegd (Chinese rollen, grote vuurpijlen, Romeinse kaarsen); illustratief, voetnoot behouden | Ja – juridische bronvermeldingen gecontroleerd (Erratum 4, Wm, WED, Vuurwerkbesluit 1.2.2 en 3.1.1, Regeling domeinlijsten, OM 2026R007/R008, VNG-handelingskader) | Definitief goedgekeurd en gepubliceerd – 17 november 2026 |
 | 1 Vuurwerk herkennen | Pagina 5 van 7 – F4: Veel gevaar | Ja – juridische uitleg gecontroleerd (art. 1.2.2 lid 1 en 3 Vb jo. art. 9.2.2.1 Wm en art. 1a WED; 9.2.2.1a Wm alleen F2/F3); feitcodes en bevoegdheden verduidelijkt; VNG-handelingskader verwerkt; nieuw kader met baldadigheid (424 Sr), vernieling (350 Sr), APV en afvalstoffenverordening | Nee – bestaande afbeeldingen behouden, onderschriften ingekort | Ja – Vuurwerkbesluit, Wm, WED, Sr, Regeling domeinlijsten, Erratum 4, OM 2026R007/R008, VNG-handelingskader | Definitief goedgekeurd en gepubliceerd – 17 november 2026 |
+
+### Hoofdstuk 1 – Pagina 7 van 7 – Onbekend vuurwerk en veelgebruikte namen
+
+Branch: `kwaliteitsronde-h1p7-onbekend-vuurwerk` (basis: `main` @ `d974f66`).
+
+Wijzigingen:
+
+- Tekst 'Let op de veiligheid' verduidelijkt.
+- VNG-handelingskader toegevoegd aan bronvermelding.
+
+Juridisch gecontroleerd tegen: VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026), hoofdstuk 3 (categorieën en herkennen) en hoofdstuk 4 (afhandeling bij aantreffen), pagina 6–9. De bron is zonder hyperlink vermeld: er is geen officiële openbare link beschikbaar (zelfde notatie als op de pagina's F2, F3 en F4).
+
+Technisch: in `assets/soorten.css` is voor deze pagina (`.tpl-onbekend`) de bestaande scheidingspunt-regel tussen bronnen overgenomen van de categoriepagina's, zodat beide bronnen gescheiden worden weergegeven (cacheversie soorten.css opgehoogd). Overige inhoud, afbeeldingen en vormgeving: ongewijzigd.
+
+Status: **Definitief goedgekeurd en gepubliceerd – 17 november 2026.**

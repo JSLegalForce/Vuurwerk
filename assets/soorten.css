@@ -1072,6 +1072,7 @@
 .tpl-onbekend .bronnen .bb-l{display:flex;flex-wrap:wrap;gap:4px 0;list-style:none;counter-reset:none}
 .tpl-onbekend .bronnen .bb-l li{display:inline;padding:0;margin:0;font-size:.86rem;font-style:normal;line-height:1.5;color:var(--ink2)}
 .tpl-onbekend .bronnen .bb-l li::before{display:none}
+.tpl-onbekend .bronnen .bb-l li+li::before{content:"·";display:inline;position:static;background:none;width:auto;height:auto;margin:0 10px;color:var(--mute);font-weight:700}
 .tpl-onbekend .bronnen .bb-l a{font-weight:600;color:var(--blue)}
 .tpl-onbekend .bronnen .bb-toel{color:var(--mute)}
 @media (max-width:1180px){
