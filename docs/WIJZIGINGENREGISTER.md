@@ -38,3 +38,22 @@ Juridisch gecontroleerd tegen: VNG – Handelingskader vuurwerk Boa Domein I (12
 Technisch: in `assets/soorten.css` is voor deze pagina (`.tpl-onbekend`) de bestaande scheidingspunt-regel tussen bronnen overgenomen van de categoriepagina's, zodat beide bronnen gescheiden worden weergegeven (cacheversie soorten.css opgehoogd). Overige inhoud, afbeeldingen en vormgeving: ongewijzigd.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 17 november 2026.**
+
+### Hoofdstuk 1 – Oefenvraag 1 van 18 – Onbekend vuurwerk in een open tas
+
+Branch: `kwaliteitsronde-h1-oefenvraag1` (basis: `main` @ `71ec1af`).
+
+Wijzigingen:
+
+- Afbeelding aangepast: boa raakt het onbekende vuurwerk niet meer aan.
+- Toelichting bij het juiste antwoord verduidelijkt.
+- Vuurwerkbesluit en VNG-handelingskader als bronnen toegevoegd.
+- Vraag, antwoorden en kernregel ongewijzigd.
+
+Juridisch gecontroleerd tegen: VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026), hoofdstuk 3 (p. 6–7) en hoofdstuk 4 (p. 8–9); Vuurwerkbesluit art. 1A.1.3. VNG-bron zonder hyperlink (geen officiële openbare link beschikbaar).
+
+Afbeelding: door Jan aangeleverd bestand (BOA_afstand_vuurwerk_foto.png, 558×321) als `assets/images/01-q1-tas-boa-afstand.webp`; alleen witte dia-rand (7 px boven, 2 px links) weggeknipt en technisch 3× vergroot tot 1665×939, zodat afmetingen en positie gelijk blijven aan de vorige foto; alt-tekst aangepast aan het nieuwe beeld. Oude bestand `01-q2-tas-boa.webp` niet verwijderd (niet meer gebruikt).
+
+Technisch: nieuw optioneel veld `bronbalk` bij oefenvragen (`assets/app.js`, functie `qBronbalk`) met opmaak gelijk aan de bronnenbalk van H1 p7 (`assets/soorten.css`, `.qcard .q-bronbalk`); alleen deze vraag gebruikt het veld, andere vragen ongewijzigd. Cacheversies app.js en soorten.css opgehoogd.
+
+Status: **Aangepast – wacht op definitieve goedkeuring.**

@@ -611,6 +611,7 @@ function qScreen(st){
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
    +'<div class="opts" id="opts" role="radiogroup" aria-label="Antwoordmogelijkheden">'+q.opties.map((o,i)=>'<button class="opt" role="radio" aria-checked="false" data-i="'+i+'"><span class="lt">'+L(i)+'</span><span class="ot">'+esc(o)+'</span></button>').join('')+'</div>'
    +'</div><div id="fb" class="q-fb" aria-live="polite"></div></div>'
+   +qBronbalk(q)
    +'<nav class="nav">'+(si>0?'<button class="btn btn-ghost" id="prev">'+pijlL+'<span>Vorige</span></button>':'<span></span>')+'<span class="sp">'+navPos(tLab(t)+' · Oefenvragen','Vraag <b>'+qn+'</b> van '+D.totaalVragen)+'</span><button class="btn btn-primary" id="act" disabled><span>Controleer antwoord</span>'+pijlR+'</button></nav></article>';
   setScreen(html,{ti:st.ti,frac:(si+1)/steps.length});
   const pv=document.getElementById('prev');if(pv)pv.onclick=()=>{if(si>0){si--;render();}};
@@ -618,6 +619,12 @@ function qScreen(st){
   let sel=null;const opts=[...document.querySelectorAll('.opt')];
   opts.forEach(b=>b.onclick=()=>{if(b.classList.contains('locked'))return;sel=+b.dataset.i;opts.forEach(x=>{x.classList.remove('sel');x.setAttribute('aria-checked','false');});b.classList.add('sel');b.setAttribute('aria-checked','true');document.getElementById('act').disabled=false;});
   document.getElementById('act').onclick=()=>{if(sel===null)return;answers[key(st)]={sel,goed:sel===q.juist};save();lockAndReveal(st,answers[key(st)],true);};
+}
+/* optionele compacte bronnenbalk onder de antwoorden (17-11-2026, H1 oefenvraag 1); zonder veld 'bronbalk' verandert er niets */
+function qBronbalk(q){
+  if(!q.bronbalk||!q.bronbalk.length)return '';
+  return '<details class="bronnen q-bronbalk" open><summary>'+di('boek')+'<span>Bronnen</span><span class="bron-n">'+q.bronbalk.length+'</span></summary><div class="bronnen-blok"><div class="bb-t sr">Bronnen</div><ol class="bb-l">'
+    +q.bronbalk.map(c=>'<li>'+(c.url?'<a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.t)+'</a>':esc(c.t))+(c.toel?' <span class="bb-toel">'+esc(c.toel)+'</span>':'')+'</li>').join('')+'</ol></div></details>';
 }
 /* oefenvragen met stijl v2 (hoofdstuk 1): eigen foto en/of situatiekaart links; anders de bestaande illustratie */
 function qSide(q,art){
