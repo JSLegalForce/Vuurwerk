@@ -71,4 +71,4 @@ Afbeelding: door Jan aangeleverd origineel bestand (BOA_jongen_vuurwerkdoos_ORIG
 
 Technisch: alleen het beeldveld van deze vraag in `index.html` aangepast (bestand, alt-tekst, afmetingen). Geen wijzigingen in CSS of JavaScript; fotokader, positie, afgeronde hoeken en schaduw ongewijzigd.
 
-Status: **Aangepast – wacht op definitieve goedkeuring.**
+Status: **Definitief goedgekeurd en gepubliceerd – 18 november 2026.**
