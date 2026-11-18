@@ -85,4 +85,4 @@ Branch: `fix-eindtoets-nabespreking-themalabel` (basis: `main` @ `7a08af2`).
 
 **Functionele wijzigingen:** Geen.
 
-**Status:** Aangepast – wacht op definitieve goedkeuring.
+**Status:** Definitief goedgekeurd en gepubliceerd – 18 november 2026.
