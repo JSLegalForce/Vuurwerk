@@ -72,3 +72,17 @@ Afbeelding: door Jan aangeleverd origineel bestand (BOA_jongen_vuurwerkdoos_ORIG
 Technisch: alleen het beeldveld van deze vraag in `index.html` aangepast (bestand, alt-tekst, afmetingen). Geen wijzigingen in CSS of JavaScript; fotokader, positie, afgeronde hoeken en schaduw ongewijzigd.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 18 november 2026.**
+
+### Eindtoets – Nabespreking – Themalabel
+
+Branch: `fix-eindtoets-nabespreking-themalabel` (basis: `main` @ `7a08af2`).
+
+**Onderdeel:** Eindtoets – Nabespreking – Themalabel.
+
+**Probleem:** Lang themalabel ‘Staande houden en aanhouden’ overlapt op desktop de vraagtekst.
+
+**Oplossing:** Kleine, gerichte CSS-correctie waardoor het themalabel binnen het bestaande kader blijft. In `assets/soorten.css` is bij `.nb-thema` `white-space:nowrap` vervangen door `white-space:normal`, zodat een lang label binnen de bestaande kolom van 150 px over twee regels loopt (op mobiel gold dit al). Kortere labels blijven op één regel. Cacheversie van `soorten.css` in `index.html` opgehoogd, zodat deelnemers de gecorrigeerde opmaak direct krijgen.
+
+**Functionele wijzigingen:** Geen.
+
+**Status:** Definitief goedgekeurd en gepubliceerd – 18 november 2026.
