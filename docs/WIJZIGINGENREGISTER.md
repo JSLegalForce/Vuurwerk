@@ -57,3 +57,18 @@ Afbeelding: door Jan aangeleverd bestand (BOA_afstand_vuurwerk_foto.png, 558×32
 Technisch: nieuw optioneel veld `bronbalk` bij oefenvragen (`assets/app.js`, functie `qBronbalk`) met opmaak gelijk aan de bronnenbalk van H1 p7 (`assets/soorten.css`, `.qcard .q-bronbalk`); alleen deze vraag gebruikt het veld, andere vragen ongewijzigd. Cacheversies app.js en soorten.css opgehoogd.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 17 november 2026.**
+
+### Hoofdstuk 1 – Oefenvraag 3 van 18 – «Geschikt voor particulier gebruik»
+
+Branch: `kwaliteitsronde-h1-oefenvraag3-afbeelding` (basis: `main` @ `477ecf3`).
+
+Wijziging:
+
+- Bestaande afbeelding vervangen door een nieuwe realistische afbeelding waarop een jongen een doos vuurwerk met het opschrift Geschikt voor particulier gebruik aan een vrouwelijke boa toont.
+- Alle overige onderdelen zijn ongewijzigd gebleven: vraag, antwoordmogelijkheden (D blijft het enige juiste antwoord), antwoordcontrole, toelichting, kaders 'Helemaal goed!' en 'Toelichting', kernregel, bronvermelding en vormgeving.
+
+Afbeelding: door Jan aangeleverd origineel bestand (BOA_jongen_vuurwerkdoos_ORIGINEEL.png, 1312×1199), ongewijzigd en zonder bijsnijden omgezet naar `assets/images/01-q4-particulier-gebruik-boa-jongen.webp`; alt-tekst aangepast aan het nieuwe beeld. Oude bestand `01-q4-particulier-gebruik.webp` niet verwijderd (niet meer gebruikt). De nieuwe bestandsnaam bevat de bestaande naam, zodat alle vraagspecifieke opmaak in `assets/soorten.css` ongewijzigd blijft gelden.
+
+Technisch: alleen het beeldveld van deze vraag in `index.html` aangepast (bestand, alt-tekst, afmetingen). Geen wijzigingen in CSS of JavaScript; fotokader, positie, afgeronde hoeken en schaduw ongewijzigd.
+
+Status: **Definitief goedgekeurd en gepubliceerd – 18 november 2026.**
