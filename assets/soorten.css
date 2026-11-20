@@ -1321,6 +1321,37 @@
 }
 @media (max-width:420px){.tpl-ed .ed-twee{grid-template-columns:1fr}}
 .tpl-ed .ed-voorw{margin:2px 0 4px;font-size:.96rem!important;color:var(--ink2)!important}
+/* H2 p5 · kleurloos opzet, Wat moet wel?, Voorbeeld, Onthoud en bronnenbalk (20-11-2026; alleen .tpl-ed) */
+.tpl-ed .ed-ko{background:var(--blue-ll);border:1px solid #d3e0f5;border-radius:16px;padding:12px 16px 14px;display:flex;flex-direction:column;gap:12px}
+.tpl-ed .ed-ko-kop{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.tpl-ed .ed-ko h3,.tpl-ed .ed-moet h3{margin:0 0 2px}
+.tpl-ed .ed-ko-kop p{margin:0}.tpl-ed .ed-ko-kop p+p{margin-top:2px}
+.tpl-ed .ed-moet{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;background:#e2ecfb;border-radius:14px;padding:12px 14px}
+.tpl-ed .ed-moet .ed-ic{background:#fff}
+.tpl-ed .ed-moet ul{margin:2px 0 0;padding-left:18px}
+.tpl-ed .ed-vbd{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;background:#e9f0fc;border-radius:14px;padding:14px 14px 12px;margin-top:14px}
+.tpl-ed .ed-vbd-lab{position:absolute;left:0;top:-15px;margin:0;background:var(--blue);color:#fff;font-family:var(--ui);font-weight:800;font-size:.95rem;line-height:1;border-radius:12px 12px 12px 0;padding:7px 14px}
+.tpl-ed .ed-vbd-ic{width:44px;height:44px;display:grid;place-items:center}
+.tpl-ed .ed-vbd-ic .di{width:38px;height:38px;color:var(--blue);--duo:rgba(36,88,198,.35)}
+.tpl-ed .ed-vbd p{margin:0}.tpl-ed .ed-vbd p+p{margin-top:2px}
+.tpl-ed .ed-onthoud{grid-template-columns:52px auto minmax(0,1fr);align-items:center;gap:0 18px;padding:14px 20px}
+.tpl-ed .ed-onthoud .ed-lo-ic{width:52px;height:52px;font-size:1.8rem}
+.tpl-ed .ed-onthoud h3{margin:0;font-size:1.6rem;color:var(--navy);padding-right:22px;border-right:2px solid #d9c38d}
+.tpl-ed .ed-onth-tekst p{margin:0;font-size:1.05rem;line-height:1.45;color:var(--navy)}
+.tpl-ed .bronnen .bb-l li{font-style:normal}
+@media (min-width:761px){.tpl-ed .bronnen .bb-l{display:flex;flex-wrap:wrap;row-gap:4px}.tpl-ed .bronnen .bb-l li{white-space:nowrap}.tpl-ed .bronnen .bb-l li+li{border-left:1px solid var(--line);padding-left:37px;margin-left:0}.tpl-ed .bronnen .bb-l li+li::before{left:12px}}
+@media (min-width:1001px){.tpl-ed .ed-body{align-items:stretch}.tpl-ed .ed-foto img{height:100%;aspect-ratio:auto}}
+@media (max-width:760px){
+  .tpl-ed .ed-ko{padding:12px 14px}
+  .tpl-ed .ed-ko-kop,.tpl-ed .ed-moet,.tpl-ed .ed-vbd{grid-template-columns:38px minmax(0,1fr);gap:12px}
+  .tpl-ed .ed-moet{padding:12px}
+  .tpl-ed .ed-vbd-ic,.tpl-ed .ed-vbd-ic .di{width:34px;height:34px}
+  .tpl-ed .ed-onthoud{grid-template-columns:38px minmax(0,1fr);gap:8px 12px;padding:12px 14px}
+  .tpl-ed .ed-onthoud .ed-lo-ic{width:38px;height:38px;font-size:1.4rem}
+  .tpl-ed .ed-onthoud h3{font-size:1.25rem;border-right:0;padding-right:0}
+  .tpl-ed .ed-onth-tekst{grid-column:1/-1}
+  .tpl-ed .ed-onth-tekst p{font-size:1rem}
+}
 /* Oefenvraag H2 F1 in de tuin: grote praktijkfoto links (.q-groot, alleen deze vraag) */
 @media (min-width:1001px){.q-groot:not(.answered) .q-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}.q-groot .qv-foto{aspect-ratio:770/667}}
 @media (min-width:761px) and (max-width:1000px){.q-groot:not(.answered) .q-layout{grid-template-columns:1fr}.q-groot .q-side{order:-1}.q-groot .qv-foto{max-width:none;aspect-ratio:16/8}}

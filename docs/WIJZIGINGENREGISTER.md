@@ -86,3 +86,23 @@ Branch: `fix-eindtoets-nabespreking-themalabel` (basis: `main` @ `7a08af2`).
 **Functionele wijzigingen:** Geen.
 
 **Status:** Definitief goedgekeurd en gepubliceerd – 18 november 2026.
+
+### Hoofdstuk 2 – Pagina 5 van 5 – Economisch delict: overtreding of misdrijf?
+
+Branch: `h2p5-economisch-delict-kleurloos-opzet` (basis: `main` @ `6b65a07`).
+
+Wijzigingen (teksten letterlijk volgens opdracht van 20 november 2026):
+
+- Kader 'Wat zegt de wet?' tekstueel aangepast (F2- en F3-vuurwerk; 'op grond van' artikel 1a WED).
+- Groene en rode kaders (Misdrijf / Overtreding) ongewijzigd.
+- Kader 'Voorbeelden voor de boa' vervangen door kader 'Wat is kleurloos opzet?' met daarin 'Wat moet wel?' en 'Voorbeeld'.
+- Geel kader 'Let op' (met uitroepteken) wordt 'Onthoud', over de volle breedte onder foto en tekst, zoals op de referentiedia.
+- Bronnenbalk: vier bronnen met korte, aanklikbare namen: Kleurloos opzet bij WED (Conclusie A-G 24 september 2019, ECLI:NL:PHR:2019:842), Artikel 1a WED, Artikel 2 WED, Artikel 9.2.2.1a Wet milieubeheer.
+
+Bron gecontroleerd: ECLI:NL:PHR:2019:842 is de conclusie van de A-G van 24-09-2019 (zaak 18/03918) en behandelt kleurloos opzet in economische strafzaken; de drie wetten.overheid.nl-links openen het juiste artikel.
+
+Technisch: alleen de HTML van deze pagina in `index.html`; nieuwe opmaakregels uitsluitend onder `.tpl-ed` in `assets/soorten.css` (cacheversie opgehoogd). Foto, titel, chip, iconen, navigatie en paginanummering ongewijzigd. Op desktop vult de foto de hoogte van de rechterkolom; op tablet/mobiel staat de foto bovenaan.
+
+Aanvulling 20 november 2026 (B1): in 'Wat moet wel?' is de zin ‘Zijn opzet moet betrekking hebben op de feiten die volgens de wet strafbaar zijn.’ vervangen door ‘Je moet kunnen aantonen dat de verdachte wist dat hij het vuurwerk bij zich had.’ Verder niets gewijzigd.
+
+Status: **Definitief goedgekeurd en gepubliceerd – 20 november 2026 (PR #126).**
