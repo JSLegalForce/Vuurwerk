@@ -2630,3 +2630,6 @@
 .qcard .q-bronbalk .bb-l li+li::before{content:"·";display:inline;position:static;background:none;width:auto;height:auto;margin:0 10px;color:var(--mute);font-weight:700}
 .qcard .q-bronbalk .bb-l a{font-weight:600;color:var(--blue)}
 .qcard .q-bronbalk .bb-toel{color:var(--mute)}
+/* H2 oefenvraag 5 (20-11-2026): geel kader 'Let op' in de feedback (alleen .fbx-letop, zelfde kleuren als het bestaande gele kader) */
+.qcard .fbx-sec.fbx-letop{background:#fff4dd;border-color:#f3d59b}.qcard .fbx-letop>.di{background:#fff;color:var(--gold-d);--duo:var(--gold-l)}
+.fbx-letop .fb-p+.fb-p{margin-top:2px}

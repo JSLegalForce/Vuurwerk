@@ -672,7 +672,11 @@ function feedbackHTML(q,ans){
   if(q.kernregel)h+='<div class="fbx-sec fbx-kern">'+di('wet')+'<div><div class="fb-h">'+esc(q.kernregelKop||'Kernregel')+'</div><p class="fb-p">'+esc(q.kernregel)+'</p></div></div>';
   /* praktijktip (18-10-2026): optioneel blok onder 'Onthoud'; zonder dit veld verandert er niets */
   if(q.praktijktip)h+='<div class="fbx-sec fbx-tip">'+di('boa')+'<div><div class="fb-h">Praktijktip</div><p class="fb-p">'+esc(q.praktijktip)+'</p></div></div>';
+  /* letop (20-11-2026, H2 oefenvraag 5): optioneel geel kader onder de toelichting; zonder dit veld verandert er niets */
+  if(q.letop)h+='<div class="fbx-sec fbx-letop">'+di('waarschuwing')+'<div><div class="fb-h">Let op</div><p class="fb-p">'+fnRender(q.letop,[]).body+'</p></div></div>';
   h+='</div>';
+  /* bronnenLijst (20-11-2026, H2 oefenvraag 5): optionele vaste bronnenlijst zonder voetnootcijfers in de tekst; zonder dit veld verandert er niets */
+  if(q.bronnenLijst&&q.bronnenLijst.length)uit.bron='<div class="bronnen-blok"><div class="bb-t">Bronnen</div><ol class="bb-l">'+q.bronnenLijst.map(c=>'<li><a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.t)+'</a></li>').join('')+'</ol></div>';
   if(uit.bron)h+='<div class="fbx-bron">'+(((q.layout==='breed'||q.beeld)&&(q.voetnoten||[]).length===1)?uit.bron.replace('<div class="bb-t">Bronnen</div>','<div class="bb-t">Bron</div>'):uit.bron)+'</div>';
   h+='</section>';return h;
 }
