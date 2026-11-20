@@ -103,4 +103,6 @@ Bron gecontroleerd: ECLI:NL:PHR:2019:842 is de conclusie van de A-G van 24-09-20
 
 Technisch: alleen de HTML van deze pagina in `index.html`; nieuwe opmaakregels uitsluitend onder `.tpl-ed` in `assets/soorten.css` (cacheversie opgehoogd). Foto, titel, chip, iconen, navigatie en paginanummering ongewijzigd. Op desktop vult de foto de hoogte van de rechterkolom; op tablet/mobiel staat de foto bovenaan.
 
-Status: **Aangepast en gecontroleerd; wacht op akkoord Jan.**
+Aanvulling 20 november 2026 (B1): in 'Wat moet wel?' is de zin ‘Zijn opzet moet betrekking hebben op de feiten die volgens de wet strafbaar zijn.’ vervangen door ‘Je moet kunnen aantonen dat de verdachte wist dat hij het vuurwerk bij zich had.’ Verder niets gewijzigd.
+
+Status: **Definitief goedgekeurd en gepubliceerd – 20 november 2026 (PR #126).**
