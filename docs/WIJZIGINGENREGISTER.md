@@ -106,3 +106,21 @@ Technisch: alleen de HTML van deze pagina in `index.html`; nieuwe opmaakregels u
 Aanvulling 20 november 2026 (B1): in 'Wat moet wel?' is de zin ‘Zijn opzet moet betrekking hebben op de feiten die volgens de wet strafbaar zijn.’ vervangen door ‘Je moet kunnen aantonen dat de verdachte wist dat hij het vuurwerk bij zich had.’ Verder niets gewijzigd.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 20 november 2026 (PR #126).**
+
+### Hoofdstuk 2 – Oefenvraag 5 van 18 – Ontheffing op het sportveld
+
+Branch: `h2-oefenvraag5-ontheffing-sportveld` (basis: `main` @ `3644a81`).
+
+Wijzigingen (volgens opdracht en referentieafbeelding van 20 november 2026):
+
+- Vraag: «F2» wordt F2 (verder ongewijzigd). Antwoorden A–D, juiste antwoord (B), beoordeling en puntentelling ongewijzigd.
+- Toelichting vervangen door de aangeleverde tekst, met controlelijst als opsomming. Bij een fout antwoord verschijnt dezelfde toelichting.
+- Nieuw geel kader 'Let op' met waarschuwingspictogram onder de toelichting.
+- Bronnen: drie aanklikbare verwijzingen die in een nieuw tabblad openen: Wet milieubeheer – art. 9.2.2.1a lid 4; Vuurwerkbesluit – art. 2.3.2; Vuurwerkbesluit – art. 2.3.2a. De oude voetnoot is vervallen.
+- Afbeelding: de oude foto (met vuurpijlen) is vervangen door de fotouitsnede uit Jans referentieafbeelding (Vuurwerkcontrole_op_het_sportveld.png). Daarop staan uitsluitend F2-cake, -fontein en -compound en een klembord met de ontheffing. Uitsnede 760×405, technisch 2× vergroot tot 1520×810, als `assets/images/02-q2-f2-sportveld-ontheffing.webp`. Het oude bestand `02-q2-f2-sportveld.webp` is niet verwijderd (niet meer gebruikt).
+
+Bron gecontroleerd: art. 9.2.2.1a lid 4 Wm (ontheffing burgemeester, aangewezen F2), art. 2.3.2 Vuurwerkbesluit (voorwaarden voor die ontheffing) en art. 2.3.2a Vuurwerkbesluit (voorschriften, waaronder het afschrift op het afsteekterrein).
+
+Technisch: twee nieuwe optionele velden voor oefenvragen in `assets/app.js` (`letop` en `bronnenLijst`); alleen deze vraag gebruikt ze, andere vragen zijn ongewijzigd. Geel kader `.fbx-letop` toegevoegd in `assets/soorten.css`. Cacheversies van app.js en soorten.css zijn opgehoogd. Opgeslagen antwoorden blijven behouden (sleutel ongewijzigd).
+
+Status: **Definitief goedgekeurd en gepubliceerd – 20 november 2026.**
