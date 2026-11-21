@@ -1425,27 +1425,32 @@
 }
 /* Oefenvraag H3 parkeertoezicht: toelichting in meerdere alinea's */
 .fbx-uit .fb-p+.fb-p{margin-top:8px}
-/* ══ H3 p2 · Artikel 17 WED (27-9-2026, zelfde stijl als Domein I, onderdeel 9; alleen .tpl-wed17) ══ */
-.tpl-wed17 .w17p>*+*{margin-top:14px}
+/* ══ H3 p3 · Artikel 17 WED (vernieuwd 21-11-2026 volgens referentiedia; alle regels uitsluitend binnen .tpl-wed17) ══ */
+.tpl-wed17 .w17p>*+*{margin-top:16px}
 .tpl-wed17 .w17-kop{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start}
 .tpl-wed17 .w17-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
 .tpl-wed17 .w17-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
-.tpl-wed17 .w17-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.55rem,2.4vw,2.2rem);line-height:1.15;color:var(--navy);margin:10px 0 6px;max-width:30ch}
+.tpl-wed17 .w17-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.5rem,2.3vw,2.1rem);line-height:1.15;color:var(--navy);margin:10px 0 6px;max-width:44ch}
 .tpl-wed17 .w17-intro{font-size:1.1rem;line-height:1.5;color:var(--navy);margin:0}
 .tpl-wed17 .w17-boek .art{margin:0}
 .tpl-wed17 .w17-boek .art-obj img{width:104px}
 .tpl-wed17 h3{font-family:var(--ui);font-weight:800;color:var(--navy);margin:0}
-.tpl-wed17 .w17-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px 24px;align-items:start}
+/* stappen links, boa-kaart en Onthoud rechts */
+.tpl-wed17 .w17-body{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:18px 24px;align-items:start}
 .tpl-wed17 .w17-stappen{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
-.tpl-wed17 .w17-stap{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr) 42px;gap:14px;align-items:center;background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:16px;padding:12px 16px}
+.tpl-wed17 .w17-stap{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr) 44px;gap:14px;align-items:center;background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:16px;padding:12px 16px}
 .tpl-wed17 .w17-stap+.w17-stap::before{content:"";position:absolute;left:37px;top:-17px;width:2px;height:18px;background:#9fb6e3}
 .tpl-wed17 .w17-stap+.w17-stap::after{content:"";position:absolute;left:32px;top:-6px;border:6px solid transparent;border-top:7px solid #9fb6e3;border-bottom:0}
 .tpl-wed17 .w17-nr{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:1.3rem}
 .tpl-wed17 .w17-stap h3{font-size:1.15rem;line-height:1.2;margin-bottom:3px}
 .tpl-wed17 .w17-stap p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
-.tpl-wed17 .w17-ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#dbe7fb}
-.tpl-wed17 .w17-ic .di{width:24px;height:24px;color:var(--blue);--duo:rgba(36,88,198,.18)}
-.tpl-wed17 .w17-rechts{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tpl-wed17 .w17-stap .w17-vb-lab{margin-top:6px}
+.tpl-wed17 .w17-vb{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tpl-wed17 .w17-vb li{font-size:.94rem;line-height:1.3;font-weight:600;color:var(--navy);background:#fff;border:1px solid #cfdcf3;border-radius:999px;padding:3px 11px}
+.tpl-wed17 .w17-vb-art{font-weight:400;color:var(--mute);font-size:.86rem;margin-left:2px}
+.tpl-wed17 .w17-ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#dbe7fb}
+.tpl-wed17 .w17-ic .di{width:26px;height:26px;color:var(--blue);--duo:rgba(36,88,198,.18)}
+.tpl-wed17 .w17-rechts{display:flex;flex-direction:column;gap:16px;min-width:0}
 .tpl-wed17 .w17-boa{border:1px solid #cfdcf3;border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--sh-s)}
 .tpl-wed17 .w17-boa-h{display:flex;align-items:center;gap:12px;background:var(--navy);padding:12px 16px}
 .tpl-wed17 .w17-boa-h h3{color:#fff;font-size:1.12rem;line-height:1.25}
@@ -1456,13 +1461,50 @@
 .tpl-wed17 .w17-boa-kern{font-weight:700;margin:0}
 .tpl-wed17 .w17-boa-lab{font-family:var(--ui);font-weight:800;font-size:.95rem!important;margin:10px 0 4px}
 .tpl-wed17 .w17-check{list-style:none;margin:0;padding:0}
-.tpl-wed17 .w17-check li{position:relative;padding:5px 0 5px 32px}
+.tpl-wed17 .w17-check li{position:relative;padding:6px 0 6px 34px}
 .tpl-wed17 .w17-check li+li{border-top:1px solid #e3eaf6}
-.tpl-wed17 .w17-check li::before{content:"✓";position:absolute;left:0;top:6px;width:22px;height:22px;border-radius:50%;background:var(--green-d);color:#fff;font-size:.8rem;font-weight:800;display:grid;place-items:center}
-.tpl-wed17 .w17-onthoud{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:center;background:#fff4dd;border:1px solid #f3d59b;border-radius:14px;padding:12px 14px;margin:0;font-size:1.02rem;line-height:1.45;color:var(--navy)}
-.tpl-wed17 .w17-o-ic{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
-.tpl-wed17 .w17-o-ic .di{width:22px;height:22px;color:var(--navy);--duo:rgba(255,255,255,.35)}
+.tpl-wed17 .w17-check li::before{content:"✓";position:absolute;left:0;top:7px;width:24px;height:24px;border-radius:50%;background:var(--green-d);color:#fff;font-size:.85rem;font-weight:800;display:grid;place-items:center}
+.tpl-wed17 .w17-onthoud{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start;background:var(--gold-l);border:1px solid #f3d59b;border-radius:16px;padding:14px 16px}
+.tpl-wed17 .w17-onthoud h3{font-size:1.15rem;line-height:1.2;color:var(--navy);margin:0 0 3px}
+.tpl-wed17 .w17-onthoud p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
+.tpl-wed17 .w17-o-ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
+.tpl-wed17 .w17-o-ic .di{width:26px;height:26px;color:var(--navy);--duo:rgba(255,255,255,.35)}
+/* praktijkvraag: losstaand, telt niet mee voor voortgang of eindtoets */
+.tpl-wed17 .w17-pv{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"kop vraag knoppen" "fb fb fb";align-items:center;gap:12px 22px;background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:16px;padding:14px 20px}
+.tpl-wed17 .w17-pv-kop{grid-area:kop;display:flex;align-items:center;gap:12px;padding-right:22px;border-right:2px solid #c3d3ef;align-self:stretch}
+.tpl-wed17 .w17-pv-kop h3{font-size:1.25rem;line-height:1.2;color:var(--navy);margin:0}
+.tpl-wed17 .w17-pv-ic{width:44px;height:44px;display:grid;place-items:center;flex:none}
+.tpl-wed17 .w17-pv-ic .di{width:40px;height:40px;color:var(--blue);--duo:rgba(36,88,198,.16)}
+.tpl-wed17 .w17-pv-vraag{grid-area:vraag}
+.tpl-wed17 .w17-pv-vraag p{font-size:1.05rem;line-height:1.45;color:var(--navy);margin:0}
+.tpl-wed17 .w17-pv-knoppen{grid-area:knoppen;display:flex;gap:12px}
+.tpl-wed17 .w17-pv-knop{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:132px;min-height:46px;padding:8px 20px;border-radius:12px;font-family:var(--ui);font-weight:800;font-size:1.08rem;cursor:pointer;transition:box-shadow .15s,transform .15s,background-color .15s}
+.tpl-wed17 .w17-pv-knop svg{width:20px;height:20px;flex:none}
+.tpl-wed17 .w17-pv-ja{background:var(--green-l);border:1.5px solid #9fd4b5;color:var(--green-d)}
+.tpl-wed17 .w17-pv-nee{background:var(--red-l);border:1.5px solid #ee9f9f;color:var(--red-d)}
+.tpl-wed17 .w17-pv-knop:hover{transform:translateY(-1px);box-shadow:var(--sh-s)}
+.tpl-wed17 .w17-pv-knop:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.tpl-wed17 .w17-pv-ja[aria-pressed="true"]{background:var(--green-d);border-color:var(--green-d);color:#fff}
+.tpl-wed17 .w17-pv-nee[aria-pressed="true"]{background:var(--red-d);border-color:var(--red-d);color:#fff}
+.tpl-wed17 .w17-pv-fb{grid-area:fb;display:none}
+.tpl-wed17 .w17-pv-fb.is-zichtbaar{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;align-items:start;background:#fff;border-radius:12px;padding:12px 16px;border:1px solid var(--line);border-left-width:5px}
+.tpl-wed17 .w17-pv-fb.is-goed{border-left-color:var(--green-d)}
+.tpl-wed17 .w17-pv-fb.is-fout{border-left-color:var(--red-d)}
+.tpl-wed17 .w17-pv-fb-ic{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:#fff}
+.tpl-wed17 .w17-pv-fb-ic svg{width:18px;height:18px}
+.tpl-wed17 .w17-pv-fb.is-goed .w17-pv-fb-ic{background:var(--green-d)}
+.tpl-wed17 .w17-pv-fb.is-fout .w17-pv-fb-ic{background:var(--red-d)}
+.tpl-wed17 .w17-pv-fb p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
+.tpl-wed17 .w17-pv-fb p+p{margin-top:4px}
+.tpl-wed17 .w17-pv-fb .w17-pv-fb-kop{font-family:var(--ui);font-weight:800;font-size:1.08rem}
+.tpl-wed17 .w17-pv-fb.is-goed .w17-pv-fb-kop{color:var(--green-d)}
+.tpl-wed17 .w17-pv-fb.is-fout .w17-pv-fb-kop{color:var(--red-d)}
+@media (prefers-reduced-motion:reduce){.tpl-wed17 .w17-pv-knop{transition:none}.tpl-wed17 .w17-pv-knop:hover{transform:none}}
 .tpl-wed17 .bronnen{margin-top:12px}
+@media (max-width:1180px){
+  .tpl-wed17 .w17-pv{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"kop vraag" "knoppen knoppen" "fb fb"}
+  .tpl-wed17 .w17-pv-knoppen{justify-content:flex-end}
+}
 @media (max-width:1000px){.tpl-wed17 .w17-body{grid-template-columns:1fr}}
 @media (max-width:760px){
   .tpl-wed17 .w17-kop{grid-template-columns:1fr}
@@ -1473,6 +1515,12 @@
   .tpl-wed17 .w17-ic{display:none}
   .tpl-wed17 .w17-stap+.w17-stap::before{left:33px}.tpl-wed17 .w17-stap+.w17-stap::after{left:28px}
   .tpl-wed17 .w17-boa-h,.tpl-wed17 .w17-boa-b{padding:12px 14px}
+  .tpl-wed17 .w17-onthoud{grid-template-columns:40px minmax(0,1fr);padding:12px 14px}
+  .tpl-wed17 .w17-o-ic{width:40px;height:40px}
+  .tpl-wed17 .w17-pv{grid-template-columns:1fr;grid-template-areas:"kop" "vraag" "knoppen" "fb";padding:14px}
+  .tpl-wed17 .w17-pv-kop{border-right:0;padding-right:0;padding-bottom:10px;border-bottom:2px solid #c3d3ef}
+  .tpl-wed17 .w17-pv-knoppen{justify-content:stretch}
+  .tpl-wed17 .w17-pv-knop{flex:1;min-width:0}
 }
 /* Oefenvragen met praktijkfoto (.q-foto: vraag 2, 3 en 5 t/m 8): foto blijft ook na beantwoorden zichtbaar */
 @media (min-width:1001px){
