@@ -605,10 +605,11 @@ function qScreen(st){
   const t=D.topics[st.ti],q=t.vragen[st.qi];
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
-  let html='<article class="card qcard'+(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':'')+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  const pk=q.opzet==='praktijk'; /* opzet 'praktijk' (21-11-2026, H3 oefenvraag 7): eigen indeling foto | vraag, daaronder feedback | praktijkkader; zonder dit veld verandert er niets */
+  let html='<article class="card qcard'+(pk?' q-v2 q-pk':(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':''))+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
-   +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(q.vraag.length>150?' q-long':'')+'">'+esc(q.vraag)+'</h2><p class="q-hint">Kies één antwoord.</p>'
+   +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(!pk&&q.vraag.length>150?' q-long':'')+'">'+(pk&&q.casus?'<span class="pk-kop">'+esc(q.casus.kop)+'</span> <span class="pk-tekst">'+esc(q.casus.tekst)+'</span> <span class="pk-vraag">'+esc(q.casus.vraag)+'</span>':esc(q.vraag))+'</h2><p class="q-hint">Kies één antwoord.</p>'
    +'<div class="opts" id="opts" role="radiogroup" aria-label="Antwoordmogelijkheden">'+q.opties.map((o,i)=>'<button class="opt" role="radio" aria-checked="false" data-i="'+i+'"><span class="lt">'+L(i)+'</span><span class="ot">'+esc(o)+'</span></button>').join('')+'</div>'
    +'</div><div id="fb" class="q-fb" aria-live="polite"></div></div>'
    +qBronbalk(q)
@@ -660,6 +661,7 @@ function balanceerFeedback(qc){
   qc.style.setProperty('--qa-cols','minmax(0,1fr) minmax(0,'+best.r.toFixed(1)+'fr)');
 }
 function feedbackHTML(q,ans){
+  if(q.opzet==='praktijk')return feedbackPraktijk(q,ans);
   const goed=ans.goed;
   /* uitlegOpties (17-10-2026): optionele toelichting per gekozen antwoord; zonder dit veld blijft alles zoals het was */
   const uit=fnRender((q.uitlegOpties&&q.uitlegOpties[ans.sel])||((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg),q.voetnoten);
@@ -679,6 +681,21 @@ function feedbackHTML(q,ans){
   if(q.bronnenLijst&&q.bronnenLijst.length)uit.bron='<div class="bronnen-blok"><div class="bb-t">Bronnen</div><ol class="bb-l">'+q.bronnenLijst.map(c=>'<li><a href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.t)+'</a></li>').join('')+'</ol></div>';
   if(uit.bron)h+='<div class="fbx-bron">'+(((q.layout==='breed'||q.beeld)&&(q.voetnoten||[]).length===1)?uit.bron.replace('<div class="bb-t">Bronnen</div>','<div class="bb-t">Bron</div>'):uit.bron)+'</div>';
   h+='</section>';return h;
+}
+/* opzet 'praktijk' (21-11-2026, H3 oefenvraag 7): links feedback met toelichting en Onthoud, rechts 'Van e-learning naar de praktijk' met een
+   informatieve tip. De tip is bewust geen link of knop (geen navigatie naar de kennisbank). Score en opslag lopen via de bestaande lockAndReveal. */
+function feedbackPraktijk(q,ans){
+  const goed=ans.goed,uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,[]);
+  let h='<section class="fbx pk-fbx '+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
+    +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
+  if(!goed)h+='<div class="fbx-pills"><div class="fbp r"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
+    +'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div></div>';
+  h+='<div class="pk-uit"><p class="fb-p">'+uit.body+'</p></div>';
+  if(q.onthoud)h+='<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+esc(q.onthoud)+'</p></div>';
+  h+='</div></div>';
+  if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3><p>'+esc(q.praktijk.tekst)+'</p>'
+    +(q.praktijk.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+'<p><b>Tip:</b> '+esc(q.praktijk.tip)+'</p></div>':'')+'</div></aside>';
+  return h+'</section>';
 }
 const kort=s=>{s=s.replace(/\[\[\d+\]\]/g,'').replace(/\s+/g,' ').trim();return s.length>70?s.slice(0,68)+'…':s;};
 
