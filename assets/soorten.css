@@ -1397,6 +1397,19 @@
 .tpl-dom9 .d9-o-ic{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
 .tpl-dom9 .d9-o-ic .di{width:22px;height:22px;color:var(--navy);--duo:rgba(255,255,255,.35)}
 .tpl-dom9 .bronnen{margin-top:12px}
+/* H3 p1 (21-11-2026, volgens referentiedia): Onthoud over de volle breedte, foto vult de hoogte, vier bronnen naast elkaar (alleen .tpl-dom9) */
+.tpl-dom9 .bronnen .bb-l li{font-style:normal}
+.tpl-dom9 .bronnen .bb-naam{color:var(--navy);font-weight:600}
+@media (min-width:1001px){
+  .tpl-dom9 .d9p{grid-template-areas:"foto kop" "foto rest" "ont ont";grid-template-rows:auto auto auto}
+  .tpl-dom9 .d9-foto{align-self:stretch;aspect-ratio:auto;min-height:420px}
+  .tpl-dom9 .d9-onthoud{align-self:start;padding:12px 18px}
+  .tpl-dom9 .bronnen .bb-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+  .tpl-dom9 .bronnen .bb-l li{display:block;margin:0;padding:0 12px 0 34px;line-height:1.4}
+  .tpl-dom9 .bronnen .bb-l li::before{left:8px;top:1px}
+  .tpl-dom9 .bronnen .bb-l li+li{border-left:1px solid var(--line)}
+  .tpl-dom9 .bronnen .bb-toel{display:block}
+}
 @media (max-width:1000px){
   .tpl-dom9 .d9p{grid-template-columns:1fr;grid-template-areas:"kop" "foto" "rest" "ont";grid-template-rows:auto}
   .tpl-dom9 .d9-foto{aspect-ratio:auto}

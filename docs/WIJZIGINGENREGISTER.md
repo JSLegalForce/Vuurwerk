@@ -124,3 +124,21 @@ Bron gecontroleerd: art. 9.2.2.1a lid 4 Wm (ontheffing burgemeester, aangewezen 
 Technisch: twee nieuwe optionele velden voor oefenvragen in `assets/app.js` (`letop` en `bronnenLijst`); alleen deze vraag gebruikt ze, andere vragen zijn ongewijzigd. Geel kader `.fbx-letop` toegevoegd in `assets/soorten.css`. Cacheversies van app.js en soorten.css zijn opgehoogd. Opgeslagen antwoorden blijven behouden (sleutel ongewijzigd).
 
 Status: **Definitief goedgekeurd en gepubliceerd – 20 november 2026.**
+
+### Hoofdstuk 3 – Pagina 1 van 3 – Domein I, onderdeel 9
+
+Branch: `h3p1-domein-i-onderdeel-9` (basis: `main` @ `6f6558d`).
+
+Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
+
+- Blauw kader 'Wat betekent dit voor jou als boa?': ‘overtredingen van artikel’ is vervangen door ‘**strafbare feiten** uit artikel’.
+- Groen kader 'Wél': de slotzin is nu ‘Dit doe je binnen jouw akte, functie en taakomschrijving.’ (tekst uit de opdracht en de referentiedia).
+- Rood kader 'Niet': ongewijzigd.
+- Geel kader 'Onthoud': nieuwe tekst over twee regels, met ‘lokale samenwerkingsafspraken’ vetgedrukt. De zin ‘maar niet iedere zaak kun je zelfstandig afhandelen’ is niet opgenomen. Het kader staat op desktop over de volle breedte onder foto en tekst; de foto vult de hoogte van de rechterkolom.
+- Bronnenbalk: vier bronnen naast elkaar (op mobiel onder elkaar): Regeling domeinlijsten boa (Stcrt. 2026, 31362), Beleidsregels Buitengewoon Opsporingsambtenaar (Stcrt. 2026, 30048), OM-richtlijn 2026R007 en VNG – Handelingskader vuurwerk. De eerste drie openen in een nieuw tabblad. De VNG-bron staat zonder hyperlink, zoals op de andere pagina's, omdat er geen officiële openbare link is.
+
+Bron gecontroleerd: Stcrt. 2026, 31362 (wijziging Regeling domeinlijsten, art. 9.2.2.1a Wm jo. art. 1a WED); Stcrt. 2026, 30048 (wijzigingsbesluit Beleidsregels boa; bevat een wijziging in Bijlage L); OM-richtlijn 2026R007 op om.nl.
+
+Technisch: alleen de HTML van deze pagina in `index.html`; opmaakregels uitsluitend onder `.tpl-dom9` in `assets/soorten.css` (cacheversie opgehoogd). Foto, iconen, navigatie en paginanummering ongewijzigd.
+
+Status: **Definitief goedgekeurd en gepubliceerd – 21 november 2026.**
