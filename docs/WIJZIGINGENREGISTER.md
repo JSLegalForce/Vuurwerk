@@ -200,3 +200,20 @@ Juridisch gecontroleerd tegen: Regeling domeinlijsten buitengewoon opsporingsamb
 Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (nieuw optioneel veld `opzet: 'praktijk'` in de oefenvraagweergave en een eigen feedbackopbouw `feedbackPraktijk`; zonder dit veld verandert er niets); `assets/soorten.css` (regels uitsluitend onder `.q-pk`); nieuwe foto. Score, opslag van het antwoord, voortgang, eindtoets en certificaat lopen via de bestaande functies en zijn ongewijzigd. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
 Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+
+### Hoofdstuk 3 – Oefenvraag 8 van 18 – F4-vuurwerk en bevoegdheid
+
+Branch: `oefenvraag8-f4` (basis: `main` @ `0fc8531`).
+
+Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
+
+- Zelfde opzet als oefenvraag 7 (`opzet: 'praktijk'`): foto links, casus en antwoorden rechts; na ‘Controleer antwoord’ breed lichtblauw kader met links feedback, toelichting en Onthoud, rechts ‘Wat doe je in de praktijk?’ (lamp) met een geel, niet-aanklikbaar tipkader (boek).
+- Nieuwe casus, antwoorden A–D en toelichting exact volgens de opdracht; juiste antwoord B (index 1). In de toelichting staat ‘schrijft voor’ (vetgedrukt).
+- Bestaande foto `03-q8-f4-kofferbak.webp` ongewijzigd behouden en volledig getoond in de eigen verhouding (niet bijgesneden, zie afwijkingen).
+- Bronnenbalk met vier bronnen: VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026, hoofdstuk 4, pagina 9; zonder hyperlink, geen officiële openbare link), Regeling domeinlijsten (Domein I, onderdeel 9), Wet milieubeheer art. 9.2.2.1a en WED art. 1a (geldende versies op wetten.overheid.nl).
+
+Juridisch gecontroleerd tegen: Regeling domeinlijsten, Domein I, onderdeel 9 (‘art. 9.2.2.1a Wet milieubeheer juncto art. 1a WED’); art. 9.2.2.1a Wm (alleen F2 en F3); Vuurwerkbesluit art. 1.2.2 (F4-regels, strafbaar via art. 9.2.2.1 Wm jo. art. 1a WED, niet in onderdeel 9). Het VNG-handelingskader is niet openbaar en kon niet zelfstandig worden geraadpleegd; de formuleringen daaruit zijn overgenomen uit de opdracht. ‘COV’ is niet uitgeschreven (elders in de cursus: Centraal Onderzoeksteam Vuurwerk).
+
+Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet uitgebreid: beeldverhouding per foto, `**vet**`, alinea's in het praktijkkader en een regelafbreking in Onthoud; zonder deze tekens verandert er niets); `assets/soorten.css` (alleen `.q-pk`: foto in eigen verhouding in plaats van vast 660×469; oefenvraag 7 blijft identiek). Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
