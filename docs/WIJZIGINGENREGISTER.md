@@ -182,3 +182,21 @@ Juridisch gecontroleerd tegen: WED art. 1a, 17, 18, 20, 21 en 24a (geldende teks
 Technisch: alleen de HTML van deze pagina in `index.html`; opmaakregels uitsluitend onder `.tpl-wed17` in `assets/soorten.css`; in `assets/app.js` alleen het sjabloon `T.wed17` (pictogrammen en praktijkvraag). Cacheversies opgehoogd (soorten.css vw261121c, app.js vw261121a). Aantal pagina's en stappen gelijk; voortgangsregistratie ongewijzigd.
 
 Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+
+### Hoofdstuk 3 – Oefenvraag 7 van 18 – Opsporingsbevoegdheid bij parkeertoezicht
+
+Branch: `oefenvraag7-parkeertoezicht` (basis: `main` @ `a5acf3b`).
+
+Wijzigingen (volgens opdracht en definitief goedgekeurde referentiedia van 21 november 2026):
+
+- Nieuwe casus in drie delen (vetgedrukte situatie, casustekst, vraag) en nieuwe antwoorden A–D; juiste antwoord blijft C.
+- Nieuwe praktijkfoto: vrouwelijke boa met blond haar in blauwe handhavingsjas en jongeman in zwarte jas met een doos F2-vuurwerk die achterom kijkt; uitsluitend het fotogedeelte uit de referentiedia, ongewijzigd uitgesneden (660×469), als `assets/images/03-q1-boa-f2-straat.webp`. De oude foto `03-q1-parkeertoezicht.webp` is niet verwijderd (niet meer gebruikt).
+- Indeling: foto links, casus en antwoorden rechts (lichtblauwe omlijning); op tablet en mobiel staat de foto boven de vraag.
+- Na ‘Controleer antwoord’: lichtblauw kader met links de feedback (groen vinkje ‘Juist!’ of de bestaande foutmelding met jouw/juiste antwoord), de juridische toelichting en een apart kader ‘Onthoud’; rechts ‘Van e-learning naar de praktijk’ (lamp) met daaronder een geel tipkader (boek) over de kennisbank Vuurwerk. De tip is uitsluitend informatief: geen link, geen knop, geen pijl, geen hover en geen klikcursor. Vóór het controleren is niets hiervan zichtbaar.
+- Bronnenbalk (bestaand onderdeel van de oefenvragen): WED art. 17 en Regeling domeinlijsten, Domein I, onderdeel 9.
+
+Juridisch gecontroleerd tegen: Regeling domeinlijsten buitengewoon opsporingsambtenaar, Domein I, aanhef (‘voor zover noodzakelijk voor een goede uitoefening van de functie en de daaraan gekoppelde taakomschrijving’) en onderdeel 9 (‘art. 9.2.2.1a Wet milieubeheer juncto art. 1a WED’); art. 9.2.2.1a Wm; art. 1a WED. De toelichting stelt niet dat de persoon met de doos F2 een strafbaar feit pleegt; de vraag gaat alleen over de bevoegdheid van de boa.
+
+Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (nieuw optioneel veld `opzet: 'praktijk'` in de oefenvraagweergave en een eigen feedbackopbouw `feedbackPraktijk`; zonder dit veld verandert er niets); `assets/soorten.css` (regels uitsluitend onder `.q-pk`); nieuwe foto. Score, opslag van het antwoord, voortgang, eindtoets en certificaat lopen via de bestaande functies en zijn ongewijzigd. Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
