@@ -249,4 +249,6 @@ Juridisch: gecontroleerd tegen domeinlijst Domein I onderdeel 9, art. 9.2.2.1a W
 
 Technisch: `index.html` (alleen gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v4, alleen actief met `praktijk.schema`; vraag 7 en 8 ongewijzigd); `assets/soorten.css` (alleen `.pk-v4`). Gecontroleerd op 1440, 1280, 820 en 390 px.
 
-Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+Laatste tekstcorrecties (21 november 2026, op verzoek van Jan): stelling van de collega nu ‘Boa’s in domein I zijn niet bevoegd om het bezit en gebruik (waaronder afsteken) van vuurwerk op te sporen.’; F3-rij nu ‘Controleer bij F3-vuurwerk het VNG-handelingskader en raadpleeg de lokale samenwerkingsafspraken met de politie en het OM over de verdere afhandeling.’ Verder niets gewijzigd.
+
+Status: **Goedgekeurd door Jan; gemerged via pull request #135 en gepubliceerd op 21 november 2026.**
