@@ -2727,7 +2727,7 @@
 .card.qcard.q-pk .q-layout>.q-main{grid-area:main;order:0}
 .card.qcard.q-pk .q-layout>.q-fb{grid-area:fb;order:0}
 .card.qcard.q-pk:not(.answered) .q-layout>.q-fb{display:none}
-.card.qcard.q-pk .qv-foto{width:100%;max-width:none;margin:0;aspect-ratio:660/469;border-radius:16px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233}
+.card.qcard.q-pk .qv-foto{width:min(100%,calc(560px * var(--pk-r,1.4)));max-width:none;margin:0 auto;aspect-ratio:var(--pk-ar,660/469);border-radius:16px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233}
 .card.qcard.q-pk .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:50% 50%;display:block}
 .card.qcard.q-pk .q-head{margin-bottom:12px}
 .card.qcard.q-pk .q-text{display:flex;flex-direction:column;gap:10px;margin:0 0 18px;font-size:inherit;line-height:inherit}
@@ -2757,6 +2757,7 @@
 .card.qcard.q-pk .pk-info-ic svg{width:100%;height:100%}
 .card.qcard.q-pk .pk-info h3{font-family:var(--ui);font-weight:800;font-size:1.3rem;line-height:1.2;color:var(--navy);margin:0 0 6px}
 .card.qcard.q-pk .pk-info p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
+.card.qcard.q-pk .pk-info-b>p+p{margin-top:8px}
 /* informatieve tip: bewust geen link, knop, pijl, hover of klikcursor */
 .card.qcard.q-pk .pk-tip{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:center;margin-top:14px;background:var(--gold-l);border:1px solid #f3d59b;border-radius:14px;padding:12px 18px;cursor:default}
 .card.qcard.q-pk .pk-tip-ic{width:38px;height:38px;color:var(--navy);--duo:#fff}
@@ -2766,14 +2767,14 @@
 /* tablet: foto boven, daarna vraag; feedback en praktijkkader onder elkaar */
 @media (max-width:1000px){
   .card.qcard.q-pk .q-layout,.card.qcard.q-pk.answered .q-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"side" "main" "fb";row-gap:18px}
-  .card.qcard.q-pk .qv-foto{max-width:720px;margin:0 auto}
+  .card.qcard.q-pk .qv-foto{width:min(100%,720px,calc(520px * var(--pk-r,1.4)));margin:0 auto}
   .card.qcard.q-pk .fbx.pk-fbx{grid-template-columns:minmax(0,1fr);row-gap:18px;padding:18px 20px}
   .card.qcard.q-pk .pk-fb{padding-right:0}
   .card.qcard.q-pk .pk-info{padding-left:0;border-left:0;padding-top:18px;border-top:2px solid #c3d3ef}
 }
 @media (max-width:760px){
   .card.qcard.q-pk .q-layout>.q-main{display:block} /* mobiel: foto, casus en antwoorden, daarna feedback */
-  .card.qcard.q-pk .qv-foto{aspect-ratio:660/469;border-radius:14px}
+  .card.qcard.q-pk .qv-foto{width:min(100%,calc(420px * var(--pk-r,1.4)));border-radius:14px}
   .card.qcard.q-pk .fbx.pk-fbx{padding:16px}
   .card.qcard.q-pk .pk-fb{grid-template-columns:40px minmax(0,1fr);gap:12px}
   .card.qcard.q-pk .pk-fb-ic{width:40px;height:40px;border-width:3px}
