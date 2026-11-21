@@ -160,4 +160,4 @@ Juridisch gecontroleerd tegen: VNG – Handreiking afdoening van jeugdigen door 
 
 Technisch: alleen de HTML en titel van deze pagina in `index.html` (zelfde paginapositie, sjabloon `halt`); de oude opmaakregels `.hv-*` zijn vervangen door nieuwe regels `.aj-*`, uitsluitend onder `.tpl-halt` in `assets/soorten.css` (cacheversie opgehoogd naar vw261121b). `assets/app.js` ongewijzigd; aantal pagina's en stappen gelijk, dus voortgangsregistratie (sleutel en versie) blijft behouden. Gecontroleerd op 1440, 1280, 820 en 390 px breed: geen horizontale overloop, geen consolefouten, Vorige/Volgende naar H3 p1 en p3 werken.
 
-Status: **Klaar voor publicatie – pull request #129, 21 november 2026** (merge met uitdrukkelijke toestemming van Jan in de opdracht).
+Status: **Definitief goedgekeurd en gepubliceerd – 21 november 2026.** (pull request #129, merge-commit `54c547a`; live gecontroleerd)
