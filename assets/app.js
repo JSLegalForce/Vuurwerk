@@ -1021,11 +1021,24 @@ T.dom9=(P,spec,st)=>{
   return box;
 };
 T.wed17=(P,spec,st)=>{
-  /* H3 p2 "Artikel 17 WED": drie stappen links, boa-kaart en onthoudregel rechts; wetboek rechtsboven */
+  /* H3 p3 "Artikel 17 WED" (vernieuwd 21-11-2026): drie stappen links, boa-kaart en Onthoud rechts; wetboek rechtsboven;
+     onderaan een losse praktijkvraag (Ja/Nee). De praktijkvraag telt niet mee: geen opslag, geen score, geen invloed op voortgang of eindtoets. */
   const box=el('div','w17-page');
   P.rest.filter(n=>n.nodeType===1).forEach(n=>box.appendChild(n));
   const bk=box.querySelector('.w17-boek');if(bk)bk.innerHTML=artHTML('wetboek');
   box.querySelectorAll('[data-i]').forEach(x=>{x.setAttribute('aria-hidden','true');x.innerHTML=di(x.dataset.i);});
+  const fb=box.querySelector('#w17-pv-fb'),knoppen=[...box.querySelectorAll('.w17-pv-knop')];
+  knoppen.forEach(k=>{const ic=k.querySelector('[data-i]');if(ic)ic.innerHTML=k.dataset.a==='ja'?vink:kruis;});
+  const FB={
+    ja:{ok:false,kop:'Niet juist.',tekst:['Dat je bevoegd bent om het economische delict op te sporen, betekent niet dat je automatisch iedere WED-bevoegdheid mag gebruiken.','Je moet ook voldoen aan de wettelijke voorwaarden van de specifieke bevoegdheid.']},
+    nee:{ok:true,kop:'Juist!',tekst:['Je bent bevoegd om het economische delict op te sporen, maar moet per WED-bevoegdheid beoordelen of je deze mag toepassen.']}
+  };
+  knoppen.forEach(k=>k.addEventListener('click',()=>{
+    const f=FB[k.dataset.a];if(!f||!fb)return;
+    knoppen.forEach(x=>x.setAttribute('aria-pressed',x===k?'true':'false'));
+    fb.className='w17-pv-fb is-zichtbaar '+(f.ok?'is-goed':'is-fout');
+    fb.innerHTML='<span class="w17-pv-fb-ic" aria-hidden="true">'+(f.ok?vink:kruis)+'</span><div><p class="w17-pv-fb-kop">'+f.kop+'</p>'+f.tekst.map(t=>'<p>'+t+'</p>').join('')+'</div>';
+  }));
   return box;
 };
 T.halt=(P,spec,st)=>{
