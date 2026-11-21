@@ -2786,3 +2786,26 @@
   .card.qcard.q-pk .pk-tip{grid-template-columns:32px minmax(0,1fr);padding:12px 14px;gap:12px}
   .card.qcard.q-pk .pk-tip-ic{width:30px;height:30px}
 }
+/* praktijkopzet v3 (21-11-2026, H3 oefenvraag 9): illustratie i.p.v. foto, tussenkopjes, lijsten en tipkader met kop; alleen binnen .q-pk */
+.card.qcard.q-pk .q-layout>.q-side>.art-obj{margin:0 auto;align-self:center}
+.card.qcard.q-pk .q-layout>.q-side>.art-obj img{width:min(100%,360px)}
+.card.qcard.q-pk .pk-info .pk-sub{font-family:var(--ui);font-weight:800;font-size:1.02rem;color:var(--navy);margin:10px 0 4px}
+.card.qcard.q-pk .pk-info-b>h3+.pk-sub{margin-top:2px}
+.card.qcard.q-pk .pk-ul,.card.qcard.q-pk .pk-check{list-style:none;margin:6px 0 0;padding:0}
+.card.qcard.q-pk .pk-ul li,.card.qcard.q-pk .pk-check li{position:relative;padding-left:24px;font-size:1.02rem;line-height:1.45;color:var(--navy)}
+.card.qcard.q-pk .pk-ul li+li,.card.qcard.q-pk .pk-check li+li{margin-top:3px}
+.card.qcard.q-pk .pk-ul li::before{content:"";position:absolute;left:8px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+.card.qcard.q-pk .pk-check li::before{content:"✓";position:absolute;left:0;top:0;font-weight:800;color:var(--green)}
+.card.qcard.q-pk .pk-info-b>p+.pk-check,.card.qcard.q-pk .pk-info-b>.pk-check+p,.card.qcard.q-pk .pk-info-b>.pk-sub+p{margin-top:6px}
+.card.qcard.q-pk .pk-info-b>.pk-check+p{margin-top:10px}
+.card.qcard.q-pk .pk-tip{align-items:start}
+.card.qcard.q-pk .pk-tip-b h4{font-family:var(--ui);font-weight:800;font-size:1.05rem;color:var(--navy);margin:0 0 4px}
+.card.qcard.q-pk .pk-tip-b p{margin:0}
+.card.qcard.q-pk .pk-tip-b p+p,.card.qcard.q-pk .pk-tip-b .pk-ul+p,.card.qcard.q-pk .pk-tip-b p+.pk-ul{margin-top:6px}
+.card.qcard.q-pk .pk-uit .fb-ul{margin:6px 0 8px;padding-left:22px}
+.card.qcard.q-pk .pk-uit .fb-ul li{font-size:1.05rem;line-height:1.5;color:var(--navy)}
+@media (min-width:1001px){
+  .card.qcard.q-pk:has(.q-side>.art-obj) .q-layout{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr)}
+  .card.qcard.q-pk .q-layout>.q-side:has(>.art-obj){align-self:center}
+}
+@media (max-width:1000px){.card.qcard.q-pk .q-layout>.q-side>.art-obj img{width:min(100%,240px)}}

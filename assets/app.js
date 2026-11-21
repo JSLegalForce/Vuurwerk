@@ -688,6 +688,13 @@ function feedbackHTML(q,ans){
 function feedbackPraktijk(q,ans){
   /* v2 (21-11-2026, H3 oefenvraag 8): **tekst** wordt vet; lege regel = nieuwe alinea; regelafbreking in Onthoud */
   const vet=t=>t.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+  /* v3 (21-11-2026, H3 oefenvraag 9): blokken gescheiden door een lege regel; regels die met '• ' of '✓ ' beginnen worden een lijst,
+     een blok dat met '## ' begint een tussenkopje; overige regelafbrekingen blijven staan. Gewone alinea's geven dezelfde HTML als v2. */
+  const blok=t=>t.split('\n\n').map(b=>{const r=b.split('\n');
+    if(r.every(x=>x.startsWith('• ')))return '<ul class="pk-ul">'+r.map(x=>'<li>'+vet(esc(x.slice(2)))+'</li>').join('')+'</ul>';
+    if(r.every(x=>x.startsWith('✓ ')))return '<ul class="pk-check">'+r.map(x=>'<li>'+vet(esc(x.slice(2)))+'</li>').join('')+'</ul>';
+    if(b.startsWith('## '))return '<h4 class="pk-sub">'+vet(esc(b.slice(3)))+'</h4>';
+    return '<p>'+r.map(x=>vet(esc(x))).join('<br>')+'</p>';}).join('');
   const goed=ans.goed,uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,[]);
   let h='<section class="fbx pk-fbx '+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
     +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
@@ -696,8 +703,8 @@ function feedbackPraktijk(q,ans){
   h+='<div class="pk-uit"><p class="fb-p">'+vet(uit.body)+'</p></div>';
   if(q.onthoud)h+='<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+vet(esc(q.onthoud)).replace(/\n/g,'<br>')+'</p></div>';
   h+='</div></div>';
-  if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3>'+q.praktijk.tekst.split('\n\n').map(p=>'<p>'+vet(esc(p))+'</p>').join('')
-    +(q.praktijk.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+'<p><b>Tip:</b> '+esc(q.praktijk.tip)+'</p></div>':'')+'</div></aside>';
+  if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3>'+blok(q.praktijk.tekst)
+    +(q.praktijk.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+(q.praktijk.tipKop?'<div class="pk-tip-b"><h4>'+esc(q.praktijk.tipKop)+'</h4>'+blok(q.praktijk.tip)+'</div>':'<p><b>Tip:</b> '+esc(q.praktijk.tip)+'</p>')+'</div>':'')+'</div></aside>';
   return h+'</section>';
 }
 const kort=s=>{s=s.replace(/\[\[\d+\]\]/g,'').replace(/\s+/g,' ').trim();return s.length>70?s.slice(0,68)+'…':s;};
