@@ -217,3 +217,19 @@ Juridisch gecontroleerd tegen: Regeling domeinlijsten, Domein I, onderdeel 9 (�
 Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet uitgebreid: beeldverhouding per foto, `**vet**`, alinea's in het praktijkkader en een regelafbreking in Onthoud; zonder deze tekens verandert er niets); `assets/soorten.css` (alleen `.q-pk`: foto in eigen verhouding in plaats van vast 660×469; oefenvraag 7 blijft identiek). Gecontroleerd op 1440, 1280, 820 en 390 px.
 
 Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+
+### Hoofdstuk 3 – Oefenvraag 9 van 18 – Bevoegdheid boa bij vuurwerk (Handhavingsplan)
+
+Branch: `oefenvraag9-bevoegdheid` (basis: `main` @ `860886d`).
+
+Wijzigingen (volgens opdracht en referentiedia versie 3 van 21 november 2026):
+
+- Zelfde opzet als oefenvraag 7 en 8 (`opzet: 'praktijk'`). Links de bestaande illustratie `assets/illustraties/wetboek.svg` (wetboek ‘Thema Vuurwerk’ op lichtblauwe cirkel), ongewijzigd; geen nieuwe afbeelding.
+- Nieuwe casus (Handhavingsplan maart 2026), antwoorden A–D, toelichting, Onthoud, praktijkkader ‘Wat betekent dit in de praktijk?’ (F1–F4, drie controlepunten, Let op) en geel tipkader ‘Tip – Kennisbank Vuurwerk’ exact volgens de opdracht; juiste antwoord C (index 2). De tip is niet aanklikbaar.
+- Bronnenbalk: VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026, hoofdstuk 4, pagina 8–9; zonder hyperlink), Regeling domeinlijsten (Domein I, onderdeel 9, zoals gewijzigd op 8 september 2026), Wet milieubeheer art. 9.2.2.1a, WED art. 1a.
+
+Juridisch gecontroleerd tegen: Regeling domeinlijsten, Domein I (aanhef en onderdeel 9, geldend vanaf 8 september 2026); art. 9.2.2.1a Wm; art. 1a WED. VNG-handelingskader niet openbaar; formuleringen overgenomen uit de opdracht. Gemelde aandachtspunten (tekst niet aangepast): ‘bezit en afsteken’ in plaats van de wettelijke term ‘bezit en gebruik’; categorienamen F1–F4 wijken af van de eerder vastgestelde titels (‘F1 – Zeer weinig gevaar’ t/m ‘F4 – Veel gevaar’; ‘F4 – Professioneel vuurwerk’ niet meer gebruiken); F3 ‘politie inschakelen en overdragen’ tegenover ‘controleer samenwerkingsafspraken’ in Introductie p4.
+
+Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v3: tussenkopjes, lijsten en tipkader met kop; bestaande teksten van vraag 7 en 8 geven dezelfde HTML); `assets/soorten.css` (alleen `.q-pk`: illustratie i.p.v. foto, kopjes, lijsten). Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
