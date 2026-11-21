@@ -161,3 +161,24 @@ Juridisch gecontroleerd tegen: VNG – Handreiking afdoening van jeugdigen door 
 Technisch: alleen de HTML en titel van deze pagina in `index.html` (zelfde paginapositie, sjabloon `halt`); de oude opmaakregels `.hv-*` zijn vervangen door nieuwe regels `.aj-*`, uitsluitend onder `.tpl-halt` in `assets/soorten.css` (cacheversie opgehoogd naar vw261121b). `assets/app.js` ongewijzigd; aantal pagina's en stappen gelijk, dus voortgangsregistratie (sleutel en versie) blijft behouden. Gecontroleerd op 1440, 1280, 820 en 390 px breed: geen horizontale overloop, geen consolefouten, Vorige/Volgende naar H3 p1 en p3 werken.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 21 november 2026.** (pull request #129, merge-commit `54c547a`; live gecontroleerd)
+
+### Hoofdstuk 3 – Pagina 3 van 3 – Artikel 17 WED: wanneer mag je de WED-bevoegdheden gebruiken?
+
+Branch: `h3p3-art17-wed-praktijkvraag` (basis: `main` @ `b0d1a64`).
+
+Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
+
+- Dia opnieuw opgebouwd in HTML/CSS volgens de referentiedia (geen dia als afbeelding). Chip ‘Wettelijk bevoegd’, titel en wetboek rechtsboven ongewijzigd; ondertitel ‘Artikel 17 WED bepaalt wie economische delicten mag opsporen.’ (formulering uit de opdracht, niet die van de referentiedia).
+- Drie genummerde stappen in lichtblauwe kaders met de bestaande pictogrammen (vuurwerk, legitimatiebewijs, weegschaal). Stap 1 ‘Het handelen in strijd met …’; stap 3 met de nieuwe tekst en de voorbeelden inbeslagneming (art. 18 WED), plaatsen betreden (art. 20 WED) en zaken onderzoeken (art. 21 WED).
+- Donkerblauw kader ‘Wat betekent dit voor jou als boa?’ (schildpictogram) met ‘Controleer altijd:’ en drie controlevragen met groene vinkjes.
+- Geel kader ‘Onthoud’ met lamp, nieuwe tekst.
+- Nieuwe interactieve praktijkvraag (doelwitpictogram, knoppen Ja/Nee, juist antwoord Nee). Feedback verschijnt direct; opnieuw kiezen kan; bediening met toetsenbord (Enter/spatie); feedback in een `role="status"`/`aria-live="polite"`-gebied; gekozen knop met `aria-pressed`. De vraag is geen oefenvraag en geen eindtoetsvraag: er wordt niets opgeslagen en score, voortgang en certificaat blijven onaangeroerd.
+- Bronnenbalk: WED art. 17 (nu link naar de geldende versie op wetten.overheid.nl in plaats van de versie van 1 augustus 2026) en Regeling domeinlijsten, Domein I, onderdeel 9 (geldende versie vanaf 8 september 2026).
+
+Juridische aanpassingen t.o.v. de opdracht, door Jan goedgekeurd op 21 november 2026: voorbeelden als inbeslagneming (art. 18 WED), plaatsen betreden (art. 20 WED) en zaken onderzoeken (art. 21 WED) in plaats van ‘Betreden’ en ‘Onderzoek aan goederen’, conform de wettekst en de bestaande H4-pagina's; ondertitel volgens de opdracht (niet de referentiedia).
+
+Juridisch gecontroleerd tegen: WED art. 1a, 17, 18, 20, 21 en 24a (geldende tekst, wetten.overheid.nl); Regeling domeinlijsten buitengewoon opsporingsambtenaar, Domein I, aanhef en onderdeel 9 (‘art. 9.2.2.1a Wet milieubeheer juncto art. 1a WED’; ‘voor zover noodzakelijk voor een goede uitoefening van de functie en de daaraan gekoppelde taakomschrijving’).
+
+Technisch: alleen de HTML van deze pagina in `index.html`; opmaakregels uitsluitend onder `.tpl-wed17` in `assets/soorten.css`; in `assets/app.js` alleen het sjabloon `T.wed17` (pictogrammen en praktijkvraag). Cacheversies opgehoogd (soorten.css vw261121c, app.js vw261121a). Aantal pagina's en stappen gelijk; voortgangsregistratie ongewijzigd.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
