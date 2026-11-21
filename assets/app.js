@@ -606,7 +606,8 @@ function qScreen(st){
   const done=qAnsweredCount(),qn=globalQNum(st);
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
   const pk=q.opzet==='praktijk'; /* opzet 'praktijk' (21-11-2026, H3 oefenvraag 7): eigen indeling foto | vraag, daaronder feedback | praktijkkader; zonder dit veld verandert er niets */
-  let html='<article class="card qcard'+(pk?' q-v2 q-pk':(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':''))+'"><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  const pkAr=(pk&&q.beeld&&q.beeld.w&&q.beeld.h)?' style="--pk-ar:'+q.beeld.w+'/'+q.beeld.h+';--pk-r:'+(q.beeld.w/q.beeld.h).toFixed(4)+'"':'';
+  let html='<article class="card qcard'+(pk?' q-v2 q-pk':(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':''))+'"'+pkAr+'><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(!pk&&q.vraag.length>150?' q-long':'')+'">'+(pk&&q.casus?'<span class="pk-kop">'+esc(q.casus.kop)+'</span> <span class="pk-tekst">'+esc(q.casus.tekst)+'</span> <span class="pk-vraag">'+esc(q.casus.vraag)+'</span>':esc(q.vraag))+'</h2><p class="q-hint">Kies één antwoord.</p>'
@@ -685,15 +686,17 @@ function feedbackHTML(q,ans){
 /* opzet 'praktijk' (21-11-2026, H3 oefenvraag 7): links feedback met toelichting en Onthoud, rechts 'Van e-learning naar de praktijk' met een
    informatieve tip. De tip is bewust geen link of knop (geen navigatie naar de kennisbank). Score en opslag lopen via de bestaande lockAndReveal. */
 function feedbackPraktijk(q,ans){
+  /* v2 (21-11-2026, H3 oefenvraag 8): **tekst** wordt vet; lege regel = nieuwe alinea; regelafbreking in Onthoud */
+  const vet=t=>t.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
   const goed=ans.goed,uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,[]);
   let h='<section class="fbx pk-fbx '+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
     +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
   if(!goed)h+='<div class="fbx-pills"><div class="fbp r"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div></div>';
-  h+='<div class="pk-uit"><p class="fb-p">'+uit.body+'</p></div>';
-  if(q.onthoud)h+='<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+esc(q.onthoud)+'</p></div>';
+  h+='<div class="pk-uit"><p class="fb-p">'+vet(uit.body)+'</p></div>';
+  if(q.onthoud)h+='<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+vet(esc(q.onthoud)).replace(/\n/g,'<br>')+'</p></div>';
   h+='</div></div>';
-  if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3><p>'+esc(q.praktijk.tekst)+'</p>'
+  if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3>'+q.praktijk.tekst.split('\n\n').map(p=>'<p>'+vet(esc(p))+'</p>').join('')
     +(q.praktijk.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+'<p><b>Tip:</b> '+esc(q.praktijk.tip)+'</p></div>':'')+'</div></aside>';
   return h+'</section>';
 }
