@@ -135,9 +135,9 @@ Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
 - Groen kader 'Wél': de slotzin is nu ‘Dit doe je binnen jouw akte, functie en taakomschrijving.’ (tekst uit de opdracht en de referentiedia).
 - Rood kader 'Niet': ongewijzigd.
 - Geel kader 'Onthoud': nieuwe tekst over twee regels, met ‘lokale samenwerkingsafspraken’ vetgedrukt. De zin ‘maar niet iedere zaak kun je zelfstandig afhandelen’ is niet opgenomen. Het kader staat op desktop over de volle breedte onder foto en tekst; de foto vult de hoogte van de rechterkolom.
-- Bronnenbalk: vier bronnen naast elkaar (op mobiel onder elkaar): Regeling domeinlijsten boa (Stcrt. 2026, 31362), Beleidsregels Buitengewoon Opsporingsambtenaar (Stcrt. 2026, 30048), OM-richtlijn 2026R007 en VNG – Handelingskader vuurwerk. De eerste drie openen in een nieuw tabblad. De VNG-bron staat zonder hyperlink, zoals op de andere pagina's, omdat er geen officiële openbare link is.
+- Bronnenbalk: vier bronnen naast elkaar (op mobiel onder elkaar): Regeling domeinlijsten boa (Stcrt. 2026, 31362), Beleidsregels Buitengewoon Opsporingsambtenaar, bijlage L (geldende versie op wetten.overheid.nl, BWBR0039766), OM-richtlijn 2026R007 en VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026, hoofdstuk 4, pagina 8–9). De eerste drie openen in een nieuw tabblad. De VNG-bron staat zonder hyperlink, zoals op de andere pagina's, omdat er geen officiële openbare link is.
 
-Bron gecontroleerd: Stcrt. 2026, 31362 (wijziging Regeling domeinlijsten, art. 9.2.2.1a Wm jo. art. 1a WED); Stcrt. 2026, 30048 (wijzigingsbesluit Beleidsregels boa; bevat een wijziging in Bijlage L); OM-richtlijn 2026R007 op om.nl.
+Bron gecontroleerd: Stcrt. 2026, 31362 (wijziging Regeling domeinlijsten, art. 9.2.2.1a Wm jo. art. 1a WED); Beleidsregels Buitengewoon Opsporingsambtenaar, geldende tekst, Bijlage L ‘Handelingsperspectief gevaarzetting’ (op verzoek van Jan in plaats van het wijzigingsbesluit Stcrt. 2026, 30048); OM-richtlijn 2026R007 op om.nl.
 
 Technisch: alleen de HTML van deze pagina in `index.html`; opmaakregels uitsluitend onder `.tpl-dom9` in `assets/soorten.css` (cacheversie opgehoogd). Foto, iconen, navigatie en paginanummering ongewijzigd.
 
