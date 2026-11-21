@@ -2720,3 +2720,68 @@
 /* H2 oefenvraag 5 (20-11-2026): geel kader 'Let op' in de feedback (alleen .fbx-letop, zelfde kleuren als het bestaande gele kader) */
 .qcard .fbx-sec.fbx-letop{background:#fff4dd;border-color:#f3d59b}.qcard .fbx-letop>.di{background:#fff;color:var(--gold-d);--duo:var(--gold-l)}
 .fbx-letop .fb-p+.fb-p{margin-top:2px}
+/* ══ Oefenvraag met opzet 'praktijk' (21-11-2026, H3 oefenvraag 7; alle regels uitsluitend binnen .q-pk) ══
+   foto links | casus en antwoorden rechts; na controleren daaronder feedback | 'Van e-learning naar de praktijk' */
+.card.qcard.q-pk .q-layout,.card.qcard.q-pk.answered .q-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"side main" "fb fb";column-gap:40px;row-gap:24px;align-items:start}
+.card.qcard.q-pk .q-layout>.q-side{grid-area:side;display:flex;flex-direction:column;position:static;order:0}
+.card.qcard.q-pk .q-layout>.q-main{grid-area:main;order:0}
+.card.qcard.q-pk .q-layout>.q-fb{grid-area:fb;order:0}
+.card.qcard.q-pk:not(.answered) .q-layout>.q-fb{display:none}
+.card.qcard.q-pk .qv-foto{width:100%;max-width:none;margin:0;aspect-ratio:660/469;border-radius:16px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233}
+.card.qcard.q-pk .qv-foto img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:50% 50%;display:block}
+.card.qcard.q-pk .q-head{margin-bottom:12px}
+.card.qcard.q-pk .q-text{display:flex;flex-direction:column;gap:10px;margin:0 0 18px;font-size:inherit;line-height:inherit}
+.card.qcard.q-pk .pk-kop{font-family:var(--ui);font-weight:800;font-size:clamp(1.35rem,1.9vw,1.7rem);line-height:1.2;color:var(--navy)}
+.card.qcard.q-pk .pk-tekst{font-family:var(--txt);font-weight:400;font-size:clamp(1.1rem,1.45vw,1.3rem);line-height:1.4;color:var(--navy)}
+.card.qcard.q-pk .pk-vraag{font-family:var(--ui);font-weight:800;font-size:clamp(1.12rem,1.5vw,1.32rem);line-height:1.3;color:var(--navy)}
+.card.qcard.q-pk .q-hint{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.card.qcard.q-pk .opts{gap:10px}
+.card.qcard.q-pk .opt{border-color:#cfdcf3;padding:11px 16px}
+.card.qcard.q-pk .opt:not(.locked):hover{border-color:#9fb6e3}
+/* feedback na controleren: één lichtblauw kader, links feedback, rechts praktijkkader */
+.card.qcard.q-pk .fbx.pk-fbx{margin-top:0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:0;background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:18px;padding:22px 26px}
+.card.qcard.q-pk .pk-fb{display:grid;grid-template-columns:60px minmax(0,1fr);gap:18px;align-items:start;padding-right:26px}
+.card.qcard.q-pk .pk-fb-ic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:4px solid currentColor;background:#fff}
+.card.qcard.q-pk .pk-fb-ic svg{width:30px;height:30px}
+.card.qcard.q-pk .fbx.ok .pk-fb-ic,.card.qcard.q-pk .fbx.ok .pk-fb-h{color:var(--green)}
+.card.qcard.q-pk .fbx.no .pk-fb-ic,.card.qcard.q-pk .fbx.no .pk-fb-h{color:var(--red-d)}
+.card.qcard.q-pk .pk-fb-h{font-family:var(--ui);font-weight:800;font-size:1.6rem;line-height:1.15;margin:0 0 6px}
+.card.qcard.q-pk .pk-fb .fbx-pills{margin:8px 0 12px}
+.card.qcard.q-pk .pk-uit .fb-p{font-size:1.05rem;line-height:1.5;color:var(--navy);margin:0}
+.card.qcard.q-pk .pk-uit .fb-p+.fb-p{margin-top:6px}
+.card.qcard.q-pk .pk-onthoud{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;align-items:start;margin-top:16px;background:#fff;border:1px solid #cfdcf3;border-radius:14px;padding:12px 16px;box-shadow:var(--sh-s)}
+.card.qcard.q-pk .pk-o-ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#4fa6e8;color:#fff;font-family:var(--ui);font-weight:800;font-size:.95rem;font-style:normal}
+.card.qcard.q-pk .pk-onthoud p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
+.card.qcard.q-pk .pk-info{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:start;padding-left:26px;border-left:2px solid #c3d3ef}
+.card.qcard.q-pk .pk-info-ic{width:50px;height:50px;color:var(--gold);--duo:var(--gold-l)}
+.card.qcard.q-pk .pk-info-ic svg{width:100%;height:100%}
+.card.qcard.q-pk .pk-info h3{font-family:var(--ui);font-weight:800;font-size:1.3rem;line-height:1.2;color:var(--navy);margin:0 0 6px}
+.card.qcard.q-pk .pk-info p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
+/* informatieve tip: bewust geen link, knop, pijl, hover of klikcursor */
+.card.qcard.q-pk .pk-tip{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:center;margin-top:14px;background:var(--gold-l);border:1px solid #f3d59b;border-radius:14px;padding:12px 18px;cursor:default}
+.card.qcard.q-pk .pk-tip-ic{width:38px;height:38px;color:var(--navy);--duo:#fff}
+.card.qcard.q-pk .pk-tip-ic svg{width:100%;height:100%}
+.card.qcard.q-pk .pk-tip p{font-size:1.02rem;line-height:1.4}
+.card.qcard.q-pk .q-bronbalk{margin-top:18px}
+/* tablet: foto boven, daarna vraag; feedback en praktijkkader onder elkaar */
+@media (max-width:1000px){
+  .card.qcard.q-pk .q-layout,.card.qcard.q-pk.answered .q-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"side" "main" "fb";row-gap:18px}
+  .card.qcard.q-pk .qv-foto{max-width:720px;margin:0 auto}
+  .card.qcard.q-pk .fbx.pk-fbx{grid-template-columns:minmax(0,1fr);row-gap:18px;padding:18px 20px}
+  .card.qcard.q-pk .pk-fb{padding-right:0}
+  .card.qcard.q-pk .pk-info{padding-left:0;border-left:0;padding-top:18px;border-top:2px solid #c3d3ef}
+}
+@media (max-width:760px){
+  .card.qcard.q-pk .q-layout>.q-main{display:block} /* mobiel: foto, casus en antwoorden, daarna feedback */
+  .card.qcard.q-pk .qv-foto{aspect-ratio:660/469;border-radius:14px}
+  .card.qcard.q-pk .fbx.pk-fbx{padding:16px}
+  .card.qcard.q-pk .pk-fb{grid-template-columns:40px minmax(0,1fr);gap:12px}
+  .card.qcard.q-pk .pk-fb-ic{width:40px;height:40px;border-width:3px}
+  .card.qcard.q-pk .pk-fb-ic svg{width:22px;height:22px}
+  .card.qcard.q-pk .pk-fb-h{font-size:1.35rem}
+  .card.qcard.q-pk .pk-onthoud,.card.qcard.q-pk .pk-tip{margin-left:-52px} /* kaders op mobiel over de volle breedte */
+  .card.qcard.q-pk .pk-info{grid-template-columns:40px minmax(0,1fr);gap:12px}
+  .card.qcard.q-pk .pk-info-ic{width:40px;height:40px}
+  .card.qcard.q-pk .pk-tip{grid-template-columns:32px minmax(0,1fr);padding:12px 14px;gap:12px}
+  .card.qcard.q-pk .pk-tip-ic{width:30px;height:30px}
+}
