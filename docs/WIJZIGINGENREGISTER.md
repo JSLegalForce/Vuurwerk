@@ -142,3 +142,22 @@ Bron gecontroleerd: Stcrt. 2026, 31362 (wijziging Regeling domeinlijsten, art. 9
 Technisch: alleen de HTML van deze pagina in `index.html`; opmaakregels uitsluitend onder `.tpl-dom9` in `assets/soorten.css` (cacheversie opgehoogd). Foto, iconen, navigatie en paginanummering ongewijzigd.
 
 Status: **Definitief goedgekeurd en gepubliceerd – 21 november 2026.**
+
+### Hoofdstuk 3 – Pagina 2 van 3 – Afdoening minderjarige vuurwerkverdachten
+
+Branch: `h3p2-afdoening-jeugd` (basis: `main` @ `ff70a8d`).
+
+Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
+
+- De dia ‘Halt-verwijzing’ is vervangen door de overzichtsdia ‘Afdoening minderjarige vuurwerkverdachten’, nagebouwd in HTML/CSS (geen dia als afbeelding).
+- Chip ‘Afdoening jeugd’, titel en ondertitel ‘Welke stappen volg je als boa bij een jongere van 12 tot 18 jaar?’.
+- Vier genummerde stappen met pictogram: 1 Recidivecheck (blauw, vergrootglas), 2 Reprimande (groen, vinkje), 3 Halt-verwijzing (oranje, personen, met rechts het kader ‘Toestemming voor Halt’ voor 12–16 en 16–18 jaar), 4 Proces-verbaal (paars, document). Teksten exact volgens de opdracht.
+- Geel kader ‘Onthoud’ met lamp over de volle breedte (geen specifieke feitcodes; reprimande niet verplicht vóór Halt).
+- Blauwe bronnenbalk met vijf bronnen. Aanklikbaar (nieuw tabblad): VNG-handreiking afdoening jeugdigen (vng.nl), art. 77e Sr (wetten.overheid.nl), OM-richtlijn 2026R008 (om.nl) en Besluit aanwijzing Halt-feiten 2024 (Stb. 2024, 173). VNG-handelingskader zonder hyperlink (geen officiële openbare link).
+- Afbeelding: nieuwe praktijkfoto (vrouwelijke boa met blond haar, jongen met lichtbruin haar in donkergroene jas, doos F2) als uitsnede uit Jans referentiedia (Handhavingsmedewerker_spreekt_tiener_bij_vuurwerkbox.png), witte rand weggeknipt, technisch 2× vergroot tot 946×1236, als `assets/images/03-02-afdoening-jeugd.webp`. Het oude bestand `03-02-halt-verwijzing.webp` (jongen in zwarte jas) is niet verwijderd (niet meer gebruikt).
+
+Juridisch gecontroleerd tegen: VNG – Handreiking afdoening van jeugdigen door boa’s Domein I (hfst. 3 en 4, p. 5–8: recidivecheck en vastleggen, reprimande bij first offender en licht feit, Halt-voorwaarden, instemming 12–16 jaar jongere én wettelijk vertegenwoordiger(s), afdoeningsladder geen automatisme, proces-verbaal als lichtere interventie niet passend is); Halt-factsheet ‘Voor boa’s verwijzen naar Halt’ (instemming ouders onder 16 jaar); OM-richtlijn 2026R008 (in werking 3 november 2026); Besluit aanwijzing Halt-feiten 2024 (Stb. 2024, 173). Niet zelf geverifieerd: VNG-handelingskader (niet openbaar) en de vermelding ‘Staatscourant 2026, 38075’ (staat niet op de OM-pagina; overgenomen uit de opdracht).
+
+Technisch: alleen de HTML en titel van deze pagina in `index.html` (zelfde paginapositie, sjabloon `halt`); de oude opmaakregels `.hv-*` zijn vervangen door nieuwe regels `.aj-*`, uitsluitend onder `.tpl-halt` in `assets/soorten.css` (cacheversie opgehoogd naar vw261121b). `assets/app.js` ongewijzigd; aantal pagina's en stappen gelijk, dus voortgangsregistratie (sleutel en versie) blijft behouden. Gecontroleerd op 1440, 1280, 820 en 390 px breed: geen horizontale overloop, geen consolefouten, Vorige/Volgende naar H3 p1 en p3 werken.
+
+Status: **Gepubliceerd – 21 november 2026** (met uitdrukkelijke toestemming van Jan in de opdracht).
