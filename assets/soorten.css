@@ -2451,57 +2451,83 @@
 .ig-letop-h{font-family:var(--ui);font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;color:var(--gold-d)}
 .ig-letop-bron{font-size:.86rem;color:var(--ink2)}
 
-/* ── H3 p2 "Halt-verwijzing bij vuurwerkincidenten" (11-11-2026) ──
-   Desktop: foto links; kop, Controleer eerst, Voorwaarden/Niet mogelijk rechts; Let op onderaan over de volle breedte.
-   Tablet: alles onder elkaar, Voorwaarden/Niet mogelijk naast elkaar. Mobiel: foto bovenaan, alles onder elkaar. */
-.tpl-halt .hvp{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.32fr);grid-template-areas:"foto kop" "foto ctrl" "foto twee" "let let";grid-template-rows:auto auto 1fr auto;gap:14px 24px;align-items:start}
-.tpl-halt .hv-kop{grid-area:kop;min-width:0}
-.tpl-halt .hv-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
-.tpl-halt .hv-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
-.tpl-halt .hv-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.3rem);line-height:1.12;color:var(--navy);margin:10px 0 6px}
-.tpl-halt .hv-intro{font-size:1.08rem;line-height:1.5;color:var(--navy);margin:0}
-.tpl-halt .hv-foto{grid-area:foto;align-self:stretch;position:relative;margin:0;min-height:440px;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233}
-.tpl-halt .hv-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 40%;display:block}
-.tpl-halt .hv-ctrl{grid-area:ctrl;min-width:0;border:1px solid #cfdcf3;border-radius:16px;overflow:hidden;background:var(--blue-ll)}
-.tpl-halt .hv-ctrl-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--navy);color:#fff;padding:10px 16px}
-.tpl-halt .hv-ctrl-h h3{color:#fff;font-size:1.12rem;flex:1 1 auto;margin:0}
-.tpl-halt .hv-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.14);flex:none}
-.tpl-halt .hv-ic .di{width:22px;height:22px;color:var(--gold);--duo:rgba(255,255,255,.15)}
-.tpl-halt .hv-badge{font-family:var(--ui);font-weight:800;font-size:.8rem;letter-spacing:.05em;text-transform:none;background:rgba(255,255,255,.14);border-radius:999px;padding:5px 12px;white-space:nowrap}
-.tpl-halt .hv-ctrl-b{padding:12px 16px}
-.tpl-halt .hv-ctrl-b p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
-.tpl-halt .hv-twee{grid-area:twee;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:12px;align-items:stretch;min-width:0}
-.tpl-halt .hv-k{border-radius:16px;padding:14px 16px;border:1px solid}
-.tpl-halt .hv-k-h{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;align-items:center;margin-bottom:8px}
-.tpl-halt .hv-k-ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.35rem;font-weight:800}
-.tpl-halt .hv-k h3{font-size:1.4rem;line-height:1.1;margin:0}
-.tpl-halt .hv-k ul{margin:0;padding-left:20px}
-.tpl-halt .hv-k li{font-size:1rem;line-height:1.42;color:var(--navy)}
-.tpl-halt .hv-k li+li{margin-top:4px}
-.tpl-halt .hv-wel{background:#e9f7ee;border-color:#b3dfc3}.tpl-halt .hv-wel .hv-k-ic{background:var(--green-d)}.tpl-halt .hv-wel h3{color:var(--green-d)}
-.tpl-halt .hv-wel ul{list-style-type:"✓  "}
-.tpl-halt .hv-wel li::marker{color:var(--green-d);font-weight:800}
-.tpl-halt .hv-niet{background:#fdeeee;border-color:#f2bcbc}.tpl-halt .hv-niet .hv-k-ic{background:var(--red-d)}.tpl-halt .hv-niet h3{color:var(--red-d)}
-.tpl-halt .hv-niet li::marker{color:var(--red-d)}
-.tpl-halt .hv-letop{grid-area:let;display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:center;background:#fff4dd;border:1px solid #f3d59b;border-left:5px solid var(--gold);border-radius:14px;padding:12px 16px}
-.tpl-halt .hv-l-ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
-.tpl-halt .hv-l-ic .di{width:24px;height:24px;color:var(--navy);--duo:rgba(255,255,255,.35)}
-.tpl-halt .hv-letop p{font-size:1.02rem;line-height:1.45;color:var(--navy);margin:0}
-.tpl-halt .hv-letop p+p{margin-top:4px}
-.tpl-halt .hv-letop .hv-l-lab{font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);margin:0 0 2px}
+/* ── H3 p2 "Afdoening minderjarige vuurwerkverdachten" (21-11-2026, volgens referentiedia; vervangt 'Halt-verwijzing') ──
+   Desktop: foto links; kop en vier genummerde stappen rechts; Onthoud en bronnenbalk over de volle breedte.
+   Tablet: kop, foto, stappen onder elkaar. Mobiel: foto bovenaan, alles onder elkaar. Alleen .tpl-halt. */
+.tpl-halt .ajp{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);grid-template-areas:"foto kop" "foto stap" "ont ont";grid-template-rows:auto 1fr auto;gap:14px 24px;align-items:start}
+.tpl-halt .aj-kop{grid-area:kop;min-width:0}
+.tpl-halt .aj-chip{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-family:var(--ui);font-weight:800;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px 6px 10px}
+.tpl-halt .aj-chip .di{width:20px;height:20px;color:#fff;--duo:rgba(255,255,255,.2)}
+.tpl-halt .aj-t{font-family:var(--ui);font-weight:800;font-size:clamp(1.55rem,2.4vw,2.2rem);line-height:1.12;color:var(--navy);margin:10px 0 6px}
+.tpl-halt .aj-intro{font-size:1.1rem;line-height:1.45;color:var(--navy);margin:0}
+.tpl-halt .aj-foto{grid-area:foto;align-self:stretch;position:relative;margin:0;min-height:460px;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);background:#1c2233}
+.tpl-halt .aj-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;display:block}
+.tpl-halt .aj-stappen{grid-area:stap;list-style:none;margin:0;padding:0;display:grid;gap:10px;position:relative;min-width:0}
+.tpl-halt .aj-stappen::before{content:"";position:absolute;left:21px;top:30px;bottom:30px;width:2px;background:#c7d3ea;z-index:0}
+.tpl-halt .aj-stap{position:relative;display:grid;grid-template-columns:44px 52px minmax(0,1fr);gap:0 14px;align-items:center;padding:0;min-width:0}
+.tpl-halt .aj-stap>*{position:relative;z-index:1}
+.tpl-halt .aj-stap::after{content:"";position:absolute;left:30px;right:0;top:0;bottom:0;border-radius:16px;background:var(--aj-bg);border:1px solid var(--aj-bd);z-index:0}
+.tpl-halt .aj-nr{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--aj-c);color:#fff;font-family:var(--ui);font-weight:800;font-size:1.2rem;box-shadow:0 0 0 4px #fff}
+.tpl-halt .aj-ic{width:52px;height:52px;display:grid;place-items:center;margin-left:8px}
+.tpl-halt .aj-ic .di{width:46px;height:46px;color:var(--aj-c);--duo:var(--aj-duo)}
+.tpl-halt .aj-tx{padding:12px 16px 12px 6px;min-width:0}
+.tpl-halt .aj-tx h3{font-family:var(--ui);font-weight:800;font-size:1.28rem;line-height:1.15;color:var(--navy);margin:0 0 4px}
+.tpl-halt .aj-tx p{font-size:1.02rem;line-height:1.42;color:var(--navy);margin:0}
+.tpl-halt .aj-s1{--aj-c:#2458c6;--aj-bg:#e8f1fc;--aj-bd:#cfe0f6;--aj-duo:#cfe0f6}
+.tpl-halt .aj-s2{--aj-c:#1b9657;--aj-bg:#e6f5ec;--aj-bd:#c3e6d0;--aj-duo:#c3e6d0}
+.tpl-halt .aj-s3{--aj-c:#e57a1f;--aj-bg:#fdf0e3;--aj-bd:#f6d6b6;--aj-duo:#f9dcc0}
+.tpl-halt .aj-s4{--aj-c:#5b3aa8;--aj-bg:#f1ecfa;--aj-bd:#ddd2f1;--aj-duo:#e3d9f5}
+.tpl-halt .aj-s3{grid-template-columns:44px 52px minmax(0,1fr) minmax(0,.95fr)}
+.tpl-halt .aj-toest{margin:10px 10px 10px 0;background:#fff8f0;border:1.5px solid #f0a35c;border-radius:14px;padding:10px 14px;min-width:0}
+.tpl-halt .aj-toest h4{display:flex;align-items:center;gap:8px;font-family:var(--ui);font-weight:800;font-size:1.02rem;color:var(--navy);margin:0 0 6px}
+.tpl-halt .aj-t-ic .di{width:24px;height:24px;color:#e57a1f;--duo:#f9dcc0}
+.tpl-halt .aj-toest ul{margin:0;padding-left:18px}
+.tpl-halt .aj-toest li{font-size:.95rem;line-height:1.38;color:var(--navy)}
+.tpl-halt .aj-toest li+li{margin-top:4px}
+.tpl-halt .aj-toest li::marker{color:#e57a1f}
+.tpl-halt .aj-onthoud{grid-area:ont;display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center;background:#fff4dd;border:1px solid #f3d59b;border-radius:14px;padding:12px 20px}
+.tpl-halt .aj-o-lab{display:flex;align-items:center;gap:12px;padding-right:20px;border-right:1px solid #e7c37f;font-family:var(--ui);font-weight:800;font-size:1.45rem;color:var(--navy)}
+.tpl-halt .aj-o-ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--gold)}
+.tpl-halt .aj-o-ic .di{width:26px;height:26px;color:var(--navy);--duo:rgba(255,255,255,.35)}
+.tpl-halt .aj-o-l{margin:0;padding-left:20px}
+.tpl-halt .aj-o-l li{font-size:1.04rem;line-height:1.45;color:var(--navy)}
+.tpl-halt .aj-o-l li+li{margin-top:3px}
+.tpl-halt .aj-o-l li::marker{color:var(--gold-d)}
+/* blauwe bronnenbalk */
+.tpl-halt .bronnen{margin-top:12px;background:#e8f1fc;border-color:#cfe0f6}
+.tpl-halt .bronnen summary{color:var(--navy)}
+.tpl-halt .bronnen summary .di{color:var(--blue)}
+.tpl-halt .bronnen .bb-l li{font-style:normal;color:var(--navy)}
+.tpl-halt .bronnen .bb-naam{color:var(--navy);font-weight:600}
+.tpl-halt .bronnen .bb-l a{font-weight:600;color:var(--blue)}
+.tpl-halt .bronnen .bb-toel{color:var(--ink2)}
+@media (min-width:761px){
+  .tpl-halt .bronnen{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;padding:10px 18px}
+  .tpl-halt .bronnen summary{float:none;font-size:1rem;letter-spacing:.02em;text-transform:none;padding:4px 20px 4px 2px;margin-right:16px;border-right:1px solid #b9cdea;cursor:default;pointer-events:none}
+  .tpl-halt .bronnen summary .di{width:30px;height:30px}
+  .tpl-halt .bronnen .bb-l li{display:block;margin:0 0 2px;padding-left:24px;font-size:.86rem;line-height:1.4}
+  .tpl-halt .bronnen .bb-l li::before{top:1px}
+}
 @media (max-width:1000px){
-  .tpl-halt .hvp{grid-template-columns:1fr;grid-template-areas:"kop" "foto" "ctrl" "twee" "let";grid-template-rows:auto}
-  .tpl-halt .hv-foto{min-height:0;aspect-ratio:4/3}
-  .tpl-halt .hv-foto img{object-position:50% 35%}
+  .tpl-halt .ajp{grid-template-columns:1fr;grid-template-areas:"kop" "foto" "stap" "ont";grid-template-rows:auto}
+  .tpl-halt .aj-foto{min-height:0;aspect-ratio:1/1}
+  .tpl-halt .aj-foto img{object-position:50% 85%}
 }
 @media (max-width:760px){
-  .tpl-halt .hvp{grid-template-areas:"foto" "kop" "ctrl" "twee" "let"}
-  .tpl-halt .hv-foto{aspect-ratio:540/600}
-  .tpl-halt .hv-t{font-size:1.5rem}
-  .tpl-halt .hv-twee{grid-template-columns:1fr}
-  .tpl-halt .hv-ctrl-h{padding:10px 14px}.tpl-halt .hv-ctrl-b{padding:12px 14px}
-  .tpl-halt .hv-letop{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:12px 14px}
-  .tpl-halt .hv-l-ic{width:36px;height:36px}
+  .tpl-halt .ajp{grid-template-areas:"foto" "kop" "stap" "ont"}
+  .tpl-halt .aj-foto{aspect-ratio:946/1000}
+  .tpl-halt .aj-t{font-size:1.45rem}
+  .tpl-halt .aj-stappen::before{left:17px}
+  .tpl-halt .aj-stap,.tpl-halt .aj-s3{grid-template-columns:36px minmax(0,1fr);align-items:start}
+  .tpl-halt .aj-stap::after{left:18px}
+  .tpl-halt .aj-nr{width:36px;height:36px;font-size:1.05rem;margin-top:12px}
+  .tpl-halt .aj-ic{display:none}
+  .tpl-halt .aj-tx{padding:12px 14px 10px 4px}
+  .tpl-halt .aj-tx h3{font-size:1.15rem}
+  .tpl-halt .aj-toest{grid-column:2;margin:0 12px 12px 4px}
+  .tpl-halt .aj-onthoud{grid-template-columns:1fr;gap:8px;padding:12px 14px}
+  .tpl-halt .aj-o-lab{border-right:0;padding-right:0;font-size:1.2rem}
+  .tpl-halt .aj-o-ic{width:36px;height:36px}
 }
 
 /* ══ H1 p3 · F2 – kwaliteitsronde 16-11-2026: feitcodekaders, onderste rij met jeugd, bronnen in groepen (alleen .tpl-f2) ══ */
