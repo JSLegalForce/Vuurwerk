@@ -696,15 +696,28 @@ function feedbackPraktijk(q,ans){
     if(b.startsWith('## '))return '<h4 class="pk-sub">'+vet(esc(b.slice(3)))+'</h4>';
     return '<p>'+r.map(x=>vet(esc(x))).join('<br>')+'</p>';}).join('');
   const goed=ans.goed,uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,[]);
-  let h='<section class="fbx pk-fbx '+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
+  let h='<section class="fbx pk-fbx '+(q.praktijk&&q.praktijk.schema?'pk-v4 ':'')+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
     +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
   if(!goed)h+='<div class="fbx-pills"><div class="fbp r"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
     +'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div></div>';
   h+='<div class="pk-uit"><p class="fb-p">'+vet(uit.body)+'</p></div>';
-  if(q.onthoud)h+='<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+vet(esc(q.onthoud)).replace(/\n/g,'<br>')+'</p></div>';
+  const sch=q.praktijk&&q.praktijk.schema;
+  /* v4 (21-11-2026, H3 oefenvraag 9): met praktijk.schema een compacte indeling: feedback | F1–F4-schema | zijkader, daaronder een controlebalk en de tip */
+  if(q.onthoud)h+=sch?'<div class="pk-onthoud pk-onthoud-v4"><span class="pk-o-ic" aria-hidden="true">i</span><div><h4>Onthoud</h4>'+blok(q.onthoud)+'</div></div>'
+    :'<div class="pk-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><p><b>Onthoud:</b> '+vet(esc(q.onthoud)).replace(/\n/g,'<br>')+'</p></div>';
   h+='</div></div>';
+  const tipHTML=p=>p.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+(p.tipKop?'<div class="pk-tip-b"><h4>'+esc(p.tipKop)+'</h4>'+blok(p.tip)+'</div>':'<p><b>Tip:</b> '+esc(p.tip)+'</p>')+'</div>':'';
+  if(sch){const p=q.praktijk,z=p.zijkader,c=p.controle;
+    h+='<div class="pk-schema" role="group" aria-labelledby="pk-info-h"><div class="pk-kop">'+di('lamp','pk-info-ic')+'<h3 id="pk-info-h">'+esc(p.kop)+'</h3></div><ul class="pk-rijen">'
+      +sch.map(r=>'<li class="pk-rij pk-'+esc(r.code.toLowerCase())+'"><div class="pk-cat"><b>'+esc(r.code)+'</b><span>'+esc(r.titel)+'</span></div><div class="pk-rij-t">'+blok(r.tekst)+'</div></li>').join('')+'</ul></div>';
+    if(z)h+='<aside class="pk-zij" aria-labelledby="pk-zij-h"><div class="pk-kop">'+di(z.ic||'schild','pk-zij-ic')+'<h3 id="pk-zij-h">'+esc(z.kop)+'</h3></div>'
+      +z.delen.map(d=>'<div class="pk-deel">'+di(d.ic,'pk-deel-ic')+'<div><h4>'+esc(d.kop)+'</h4>'+blok(d.tekst)+'</div></div>').join('')+'</aside>';
+    if(c)h+='<div class="pk-ctrl"><h4>'+esc(c.kop)+'</h4><ul class="pk-check">'+c.punten.map(x=>'<li>'+vet(esc(x))+'</li>').join('')+'</ul>'
+      +(c.letop?'<div class="pk-letop">'+di('waarschuwing','pk-letop-ic')+'<p>'+vet(esc(c.letop))+'</p></div>':'')+'</div>';
+    return h+tipHTML(p)+'</section>';
+  }
   if(q.praktijk)h+='<aside class="pk-info" aria-labelledby="pk-info-h">'+di('lamp','pk-info-ic')+'<div class="pk-info-b"><h3 id="pk-info-h">'+esc(q.praktijk.kop)+'</h3>'+blok(q.praktijk.tekst)
-    +(q.praktijk.tip?'<div class="pk-tip">'+di('boek','pk-tip-ic')+(q.praktijk.tipKop?'<div class="pk-tip-b"><h4>'+esc(q.praktijk.tipKop)+'</h4>'+blok(q.praktijk.tip)+'</div>':'<p><b>Tip:</b> '+esc(q.praktijk.tip)+'</p>')+'</div>':'')+'</div></aside>';
+    +tipHTML(q.praktijk)+'</div></aside>';
   return h+'</section>';
 }
 const kort=s=>{s=s.replace(/\[\[\d+\]\]/g,'').replace(/\s+/g,' ').trim();return s.length>70?s.slice(0,68)+'…':s;};
