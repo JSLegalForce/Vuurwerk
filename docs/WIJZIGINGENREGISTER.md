@@ -233,3 +233,20 @@ Juridisch gecontroleerd tegen: Regeling domeinlijsten, Domein I (aanhef en onder
 Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v3: tussenkopjes, lijsten en tipkader met kop; bestaande teksten van vraag 7 en 8 geven dezelfde HTML); `assets/soorten.css` (alleen `.q-pk`: illustratie i.p.v. foto, kopjes, lijsten). Gecontroleerd op 1440, 1280, 820 en 390 px.
 
 Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+
+### Hoofdstuk 3 – Oefenvraag 9 van 18 – compacte versie
+
+Branch: `oefenvraag9-compact` (basis: `main` @ `35a8528`, na PR #134).
+
+Wijzigingen (volgens opdracht en referentiedia van 21 november 2026):
+
+- Casus, vier antwoorden en juiste antwoord C ongewijzigd.
+- Feedback compacter: ‘Juist!’ met korte toelichting, ‘Wettelijke grondslag’ (domeinlijst, art. 9.2.2.1a Wm, art. 1a WED) en ‘Let op’; daaronder wit kader ‘Onthoud’.
+- Nieuw F1–F4-schema met gekleurde rijen (F1 groen, F2 geel, F3 oranje, F4 rood) met de titels uit hoofdstuk 1; rechts kader ‘Opsporingsbevoegdheid en afhandeling’; daaronder balk ‘Controleer daarnaast’ met geel ‘Let op’; onderaan de gele, niet-aanklikbare kennisbanktip.
+- **F3:** de stellige zin over verplichte overdracht aan de politie is verwijderd. Nu: ‘Raadpleeg de lokale samenwerkingsafspraken met de politie en het OM over de verdere afhandeling.’ Zie ook het kader ‘Praktische afhandeling’ (verwijzing naar VNG-handelingskader en lokale afspraken).
+
+Juridisch: gecontroleerd tegen domeinlijst Domein I onderdeel 9, art. 9.2.2.1a Wm en art. 1a WED. Gesignaleerd verschil: volgens Jans eerdere weergave van het VNG-handelingskader is voor F3 contact met de politie en overdracht opgenomen; de tekst verwijst nu bewust naar het handelingskader en de lokale afspraken zonder verplichting te noemen (keuze Jan, 21 november 2026). Het handelingskader zelf is niet openbaar en niet zelf geraadpleegd.
+
+Technisch: `index.html` (alleen gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v4, alleen actief met `praktijk.schema`; vraag 7 en 8 ongewijzigd); `assets/soorten.css` (alleen `.pk-v4`). Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
