@@ -2880,7 +2880,7 @@
 .card.qcard.q-pk .pk-v5 .pk-fb-ic svg{width:24px;height:24px}
 .card.qcard.q-pk .pk-v5 .pk-fb-h{font-size:1.45rem}
 .pk-v5 .pk-uit p,.pk-v5 .pk5-k p{font-size:1rem;line-height:1.48;color:var(--navy);margin:0}
-.pk-v5 .pk-uit p+p,.pk-v5 .pk-uit p+.pk-check,.pk-v5 .pk-uit .pk-check+p{margin-top:8px}
+.pk-v5 .pk-uit p+p,.pk-v5 .pk-uit p+.pk-check,.pk-v5 .pk-uit .pk-check+p,.pk-v5 .pk5-k .pk-check+p{margin-top:8px}
 .card.qcard.q-pk .pk-v5 .pk-check li{font-size:1rem;line-height:1.48}
 .card.qcard.q-pk .pk-v5 .pk-check li+li{margin-top:6px}
 .card.qcard.q-pk .pk5-onthoud{margin-top:0;padding:14px 18px;border-radius:16px}
