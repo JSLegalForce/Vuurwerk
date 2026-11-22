@@ -279,4 +279,4 @@ Navigatie: ‘Vorige’ gaat naar oefenvraag 9. Oefenvraag 10 is de laatste vraa
 
 Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v5, alleen actief met `kolommen`; nieuw pictogram ‘tandwiel’); `assets/soorten.css` (alleen `.q-pk5`/`.pk-v5`). Oefenvraag 7, 8 en 9 pixel-identiek gecontroleerd; overige 17 oefenvragen en eindtoets in de gegevens ongewijzigd. Score en opslag (A, B, C onjuist; D juist) getest. Gecontroleerd op 1440, 1100 en 390 px.
 
-Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+Status: **Goedgekeurd door Jan; gemerged via pull request #136 (merge-commit `338c6b775f5e551a71bc1a8828e70993b48dde3f`) en gepubliceerd op 22 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (cacheversies `app.js` en `soorten.css` `vw261122a`; desktop, tablet en mobiel) en via de Vuurwerk-launcher (ongewijzigd).
