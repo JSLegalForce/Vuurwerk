@@ -300,4 +300,4 @@ Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `s
 
 Correctie 22 november 2026 (akkoord Jan op aandachtspunt 1): toelichting bij art. 23 WED nu ‘Vorder dat de bestuurder het vervoermiddel stilhoudt. Onderzoek vervolgens, als aan de wettelijke voorwaarden is voldaan, het vervoermiddel en de lading.’ Titel en badge ongewijzigd. Gecontroleerd tegen art. 23 lid 1, 2 en 4 WED (geldend vanaf 10-11-2026). Aandachtspunten 2 en 3 (art. 24a lid 2 en art. 18 lid 2 WED) bewust niet op deze pagina; bewaard voor uitgebreidere lesstof.
 
-Status: **Goedgekeurd door Jan; merge en publicatie volgen.**
+Status: **Goedgekeurd door Jan; gemerged via pull request #138 (merge-commit `0df8e0fed0c9407688ee6edd1e5c723111ce19e6`) en gepubliceerd op 22 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (cacheversie `soorten.css` `vw261122b`; 1440, 1280, 820 en 390 px) en via de Vuurwerk-launcher (ongewijzigd).
