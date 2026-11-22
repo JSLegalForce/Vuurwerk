@@ -280,3 +280,22 @@ Navigatie: ‘Vorige’ gaat naar oefenvraag 9. Oefenvraag 10 is de laatste vraa
 Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v5, alleen actief met `kolommen`; nieuw pictogram ‘tandwiel’); `assets/soorten.css` (alleen `.q-pk5`/`.pk-v5`). Oefenvraag 7, 8 en 9 pixel-identiek gecontroleerd; overige 17 oefenvragen en eindtoets in de gegevens ongewijzigd. Score en opslag (A, B, C onjuist; D juist) getest. Gecontroleerd op 1440, 1100 en 390 px.
 
 Status: **Goedgekeurd door Jan; gemerged via pull request #136 (merge-commit `338c6b775f5e551a71bc1a8828e70993b48dde3f`) en gepubliceerd op 22 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (cacheversies `app.js` en `soorten.css` `vw261122a`; desktop, tablet en mobiel) en via de Vuurwerk-launcher (ongewijzigd).
+
+### Hoofdstuk 4 – Pagina 1 van 10 – Bevoegdheid, verplichting of strafbaarstelling?
+
+Branch: `h4p1-bevoegdheid-verplichting-strafbaarstelling` (basis: `main` @ `7e4a729`).
+
+Wijzigingen (volgens opdracht en referentieafbeelding van 22 november 2026):
+
+- Nieuwe introductietekst; kolomondertitels ‘Wat mag je als boa?’, ‘Wat moet iemand doen bij een vordering?’ en ‘Wanneer is niet meewerken strafbaar?’.
+- Bevoegdheid: twee groepen met tussenkop – ‘Bevoegdheden uit het Wetboek van Strafvordering (Sv)’ (art. 52 en 53 Sv) en ‘Specifieke WED-bevoegdheden’ (art. 18, 19, 20, 21 en 23 WED), elk met pictogram, titel, korte toelichting en artikelbadge. De rij ‘Medewerking vorderen (art. 24a lid 1 WED)’ is uit deze kolom verwijderd: art. 24a lid 1 is een verplichting, geen bevoegdheid.
+- Verplichting: kop ‘Medewerkingsverplichting – artikel 24a lid 1 WED’ met nieuwe tekst; drie voorbeelden (gegevens en bescheiden, toegang, onderzoek). Het oude voorbeeld ‘Identificeren’ is vervallen; in plaats daarvan een korte noot dat art. 24a WED geen zelfstandige, algemene bevoegdheid geeft om van iedereen een identiteitsbewijs te vorderen.
+- Strafbaarstelling: tekst over art. 26 WED (rechtmatige vordering).
+- Onderaan: lichtblauw kader ‘Wanneer mag je WED-bevoegdheden gebruiken?’ (domein I, F2/F3) en geel kader ‘Belangrijk!’ (vervangen de twee onthoudregels).
+- Bestaande afbeeldingen ongewijzigd (`03-q4-jongen-knal.webp`, `04-01-rechtershamer.webp`); alle tekst is HTML.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl: WED art. 18, 19, 20, 21, 23, 24a en 26 (geldend vanaf 10-11-2026); Sv art. 52 en 53 (geldend vanaf 01-07-2026); Wm art. 9.2.2.1a (geldend vanaf 10-11-2026); Regeling domeinlijsten, Domein I, onderdeel 9 (geldend vanaf 08-09-2026). Aandachtspunten (tekst niet zelfstandig gewijzigd): (1) art. 23 lid 4 WED geeft de bevoegdheid te vorderen dat de bestuurder het vervoermiddel stilhoudt; ‘Een vervoermiddel stilhouden’ is een verkorte weergave. (2) Art. 24a lid 1 WED spreekt van medewerking ‘die deze redelijkerwijs kunnen vorderen bij de uitoefening van de hen krachtens deze titel toekomende bevoegdheden’; de cursustekst geeft dit inhoudelijk juist weer. Lid 2 (verschoningsrecht bij geheimhoudingsplicht) is niet genoemd. (3) Art. 18 lid 2 WED (machtiging officier van justitie bij inbeslagneming ter verbeurdverklaring uit hoofde van art. 7, onder e) is niet genoemd. (4) De tekst ‘bezit of gebruik’ in het WED-kader wijkt af van de wettelijke term ‘bezit en gebruik’; inhoudelijk juist omdat het gaat om het verboden bezit of het verboden gebruik.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `soorten.css`); `assets/soorten.css` (alleen `.bvp-v2`). Gecontroleerd op 1440, 1280, 820 en 390 px; geen horizontaal scrollen.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
