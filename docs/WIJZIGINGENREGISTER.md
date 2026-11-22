@@ -252,3 +252,31 @@ Technisch: `index.html` (alleen gegevens van deze vraag en cacheversies); `asset
 Laatste tekstcorrecties (21 november 2026, op verzoek van Jan): stelling van de collega nu ‘Boa’s in domein I zijn niet bevoegd om het bezit en gebruik (waaronder afsteken) van vuurwerk op te sporen.’; F3-rij nu ‘Controleer bij F3-vuurwerk het VNG-handelingskader en raadpleeg de lokale samenwerkingsafspraken met de politie en het OM over de verdere afhandeling.’ Verder niets gewijzigd.
 
 Status: **Goedgekeurd door Jan; gemerged via pull request #135 en gepubliceerd op 21 november 2026.**
+
+### Hoofdstuk 3 – Oefenvraag 10 van 18 – Redelijk vermoeden van schuld bij vermoedelijk verboden vuurwerk
+
+Branch: `oefenvraag10-redelijk-vermoeden` (basis: `main` @ `125da13`, na PR #135).
+
+Wijzigingen (volgens opdracht en gecorrigeerde referentiedia van 22 november 2026):
+
+- Zelfde praktijkopzet als oefenvraag 7, 8 en 9 (`opzet: 'praktijk'`). Bestaande foto `assets/images/03-q4-jongen-knal.webp` ongewijzigd (twee boa's, jongen in zwarte jas, plein in de avond); geen nieuwe of gegenereerde afbeelding, alle tekst is HTML.
+- Nieuwe casus en antwoorden A–D exact volgens de opdracht; juiste antwoord D (index 3). ‘Kies één antwoord.’ is bij deze vraag zichtbaar.
+- Na controleren drie kolommen: links groen ‘Juist!’ (bij onjuist: rood, met jouw antwoord en het juiste antwoord) en wit ‘Onthoud’; midden ‘Wat betekent dit in de praktijk?’ en ‘Denk ook aan andere mogelijkheden’ (vier regels); rechts ‘Wanneer is er een verdenking?’ en geel ‘Let op!’. Daaronder de bronnenbalk (pas na controleren zichtbaar): Wetboek van Strafvordering, artikel 27 (bestaande link behouden); WED; APV; Afvalstoffenverordening (zonder hyperlinks).
+- Vóór controleren alleen foto, vraag en antwoorden; geen feedback, toelichting of bronnen en D niet herkenbaar.
+
+Taalcontrole: iedere zichtbare zin automatisch letterlijk vergeleken met de opdracht (31 tekstelementen, alle gelijk); ‘verpabking’ komt niet voor.
+
+Juridische controle – gemelde aandachtspunten (tekst niet zelfstandig gewijzigd, wacht op besluit Jan):
+
+1. **Fouilleren** (‘Denk aan staande houden, fouilleren en in beslag nemen.’): een redelijk vermoeden van schuld is niet genoeg voor fouilleren. Een opsporingsfouillering (art. 56 Sv) vereist aanhouding en ernstige bezwaren; de eindtoets van deze cursus (vraag over opsporingsfouillering) zegt dat ook. De WED geeft geen algemene bevoegdheid om iemand aan de kleding te onderzoeken. Voorstel: ‘Denk aan staande houden (artikel 52 Sv) en in beslag nemen (artikel 18 WED). Fouilleren mag alleen als aan de aparte wettelijke voorwaarden is voldaan.’
+2. **WED-bevoegdheden**: de boa in domein I kan die alleen gebruiken bij een vermoeden van een feit uit onderdeel 9 (bezit en gebruik van F2/F3, art. 9.2.2.1a Wm). De zinsdelen ‘voor zover je daartoe bevoegd bent’ dekken dit; de tekst suggereert dus niet dat iedere WED-bevoegdheid automatisch is toegestaan. Geen wijziging nodig.
+3. **Zwerfafval**: in de casus worden geen vuurwerkresten gevonden. Als algemene mogelijkheid kan de regel blijven staan; het kader ‘Let op!’ dekt de bestanddelentoets.
+4. **Baldadigheid (art. 424 Sr)** vereist baldadigheid tegen personen of goederen waardoor gevaar of schade kan ontstaan; alleen een knal is meestal niet genoeg. Gedekt door ‘Let op!’.
+
+Correctie 22 november 2026 (akkoord Jan op aandachtspunt 1): uitsluitend de tekst van het kader ‘Wat betekent dit in de praktijk?’ vervangen door: ‘Je hebt een redelijk vermoeden van schuld en kunt de jongen als verdachte staande houden (artikel 52 Sv).’; ‘Je kunt je opsporingsbevoegdheden gebruiken, voor zover je daartoe bevoegd bent en aan de wettelijke voorwaarden is voldaan. Denk bijvoorbeeld aan inbeslagneming op grond van artikel 18 WED.’; ‘Verzamel aanvullend bewijs om het strafbare feit te kunnen bewijzen.’ en daaronder ‘**Let op:** fouilleren mag alleen als aan de daarvoor geldende wettelijke voorwaarden is voldaan.’ Aandachtspunt 1 is daarmee **opgelost**. Juridisch gecontroleerd: art. 52 Sv (staande houden van een verdachte ter vaststelling van de identiteit), art. 18 WED (inbeslagneming door opsporingsambtenaren), art. 56 Sv (voorwaarden opsporingsfouillering). Casus, antwoorden, overige kaders, bronnen en vormgeving ongewijzigd; in `assets/soorten.css` alleen een witregel boven de Let op-zin binnen `.pk-v5`.
+
+Navigatie: ‘Vorige’ gaat naar oefenvraag 9. Oefenvraag 10 is de laatste vraag van hoofdstuk 3; ‘Volgende vraag’ gaat (ongewijzigd) naar hoofdstuk 4, pagina 1. Oefenvraag 11 volgt na de pagina's van hoofdstuk 4.
+
+Technisch: `index.html` (alleen de gegevens van deze vraag en cacheversies); `assets/app.js` (praktijkopzet v5, alleen actief met `kolommen`; nieuw pictogram ‘tandwiel’); `assets/soorten.css` (alleen `.q-pk5`/`.pk-v5`). Oefenvraag 7, 8 en 9 pixel-identiek gecontroleerd; overige 17 oefenvragen en eindtoets in de gegevens ongewijzigd. Score en opslag (A, B, C onjuist; D juist) getest. Gecontroleerd op 1440, 1100 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**

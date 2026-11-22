@@ -2867,3 +2867,44 @@
   .card.qcard.q-pk .pk-onthoud-v4{margin-left:-52px}
   .card.qcard.q-pk .pk-v4>.pk-fb{grid-template-columns:40px minmax(0,1fr)!important}
 }
+/* praktijkopzet v5 (22-11-2026, H3 oefenvraag 10): drie kolommen – links feedback en Onthoud, midden en rechts losse kaarten;
+   bronnenbalk pas na controleren; alleen .q-pk5 / .pk-v5, vraag 7, 8 en 9 ongewijzigd */
+.card.qcard.q-pk5 .q-text{display:block;font-family:var(--ui);font-weight:800;font-size:clamp(1.3rem,1.75vw,1.6rem);line-height:1.25;color:var(--navy);margin:0 0 6px}
+.card.qcard.q-pk5 .q-hint{position:static;width:auto;height:auto;margin:0 0 14px;overflow:visible;clip:auto;white-space:normal;font-size:1rem;color:var(--muted,#5b6b86)}
+.card.qcard.q-pk5:not(.answered) .q-bronbalk{display:none}
+.card.qcard.q-pk .fbx.pk-fbx.pk-v5{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;background:none;border:0;padding:0;align-items:start}
+.pk-v5 .pk5-kol{display:flex;flex-direction:column;gap:16px;min-width:0}
+.pk-v5 .pk-fb{padding:18px 18px 16px;border-radius:16px;border:1px solid #b9e3ca;background:linear-gradient(180deg,#eefaf3,#f6fcf8);grid-template-columns:44px minmax(0,1fr)!important;gap:12px!important;align-content:start}
+.pk-v5.no .pk-fb{border-color:#f3c4c0;background:linear-gradient(180deg,#fff1f0,#fff8f7)}
+.card.qcard.q-pk .pk-v5 .pk-fb-ic{width:42px;height:42px;border-width:3px}
+.card.qcard.q-pk .pk-v5 .pk-fb-ic svg{width:24px;height:24px}
+.card.qcard.q-pk .pk-v5 .pk-fb-h{font-size:1.45rem}
+.pk-v5 .pk-uit p,.pk-v5 .pk5-k p{font-size:1rem;line-height:1.48;color:var(--navy);margin:0}
+.pk-v5 .pk-uit p+p,.pk-v5 .pk-uit p+.pk-check,.pk-v5 .pk-uit .pk-check+p,.pk-v5 .pk5-k .pk-check+p{margin-top:8px}
+.card.qcard.q-pk .pk-v5 .pk-check li{font-size:1rem;line-height:1.48}
+.card.qcard.q-pk .pk-v5 .pk-check li+li{margin-top:6px}
+.card.qcard.q-pk .pk5-onthoud{margin-top:0;padding:14px 18px;border-radius:16px}
+.pk-v5 .pk5-onthoud h3{font-family:var(--ui);font-weight:800;font-size:1.2rem;line-height:1.2;color:var(--navy);margin:0 0 4px}
+.pk-v5 .pk5-k{background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:16px;padding:16px 18px}
+.pk-v5 .pk-kop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.pk-v5 .pk-kop h3{font-family:var(--ui);font-weight:800;font-size:1.2rem;line-height:1.2;color:var(--navy);margin:0}
+.pk-v5 .pk5-ic{width:32px;height:32px;flex:none;color:var(--blue);--duo:#dbe7fb}
+.pk-v5 .pk5-ic svg{width:100%;height:100%}
+.pk-v5 .pk5-m .pk5-k:first-child .pk5-ic{color:var(--gold);--duo:var(--gold-l)}
+.pk-v5 .pk5-r .pk5-k:first-child .pk5-ic{color:var(--navy);--duo:#dbe7fb}
+.pk-v5 .pk5-rijen{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.pk-v5 .pk5-rijen li{background:#e2ebfa;border-radius:10px;padding:7px 12px;font-size:1rem;line-height:1.4;color:var(--navy)}
+.pk-v5 .pk5-rijen b{font-family:var(--ui);font-weight:800}
+.pk-v5 .pk5-letop{background:var(--gold-l);border-color:#f3d59b}
+.pk-v5 .pk5-letop .pk5-ic{color:var(--gold-d);--duo:#fff}
+.card.qcard.q-pk5 .q-bronbalk .bb-l{counter-reset:bb}
+.card.qcard.q-pk5 .q-bronbalk .bb-l li{counter-increment:bb}
+.card.qcard.q-pk5 .q-bronbalk .bb-l{gap:6px 28px}
+.card.qcard.q-pk5 .q-bronbalk .bb-l li::before,.card.qcard.q-pk5 .q-bronbalk .bb-l li+li::before{content:counter(bb);display:inline-grid;place-items:center;position:static;width:22px;height:22px;margin:0 8px 0 0;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--ui);font-weight:800;font-size:.8rem;line-height:1;vertical-align:middle}
+@media (max-width:1000px){
+  .card.qcard.q-pk .fbx.pk-fbx.pk-v5{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .card.qcard.q-pk .pk-v5 .pk-fb{grid-template-columns:40px minmax(0,1fr)!important}
+  .card.qcard.q-pk .pk-v5 .pk-onthoud{margin-left:0}
+}
