@@ -298,4 +298,6 @@ Juridisch gecontroleerd tegen wetten.overheid.nl: WED art. 18, 19, 20, 21, 23, 2
 
 Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `soorten.css`); `assets/soorten.css` (alleen `.bvp-v2`). Gecontroleerd op 1440, 1280, 820 en 390 px; geen horizontaal scrollen.
 
-Status: **Pull request aangemaakt; wacht op controle en akkoord Jan (niet gemerged).**
+Correctie 22 november 2026 (akkoord Jan op aandachtspunt 1): toelichting bij art. 23 WED nu ‘Vorder dat de bestuurder het vervoermiddel stilhoudt. Onderzoek vervolgens, als aan de wettelijke voorwaarden is voldaan, het vervoermiddel en de lading.’ Titel en badge ongewijzigd. Gecontroleerd tegen art. 23 lid 1, 2 en 4 WED (geldend vanaf 10-11-2026). Aandachtspunten 2 en 3 (art. 24a lid 2 en art. 18 lid 2 WED) bewust niet op deze pagina; bewaard voor uitgebreidere lesstof.
+
+Status: **Goedgekeurd door Jan; merge en publicatie volgen.**
