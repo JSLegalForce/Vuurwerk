@@ -76,7 +76,8 @@ const DI=(()=>{
     knal:S(`<path ${F} d="M24 6l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z"/><path d="M24 6l4 10 10-4-4 10 10 4-10 4 4 10-10-4-4 10-4-10-10 4 4-10-10-4 10-4-4-10 10 4z"/>`),
     tas:S(`<path ${F} d="M8 18h32l-3 24H11z"/><path d="M8 18h32l-3 24H11zM17 18v-5a7 7 0 0 1 14 0v5"/>`),
     hamer:S(`<path ${F} d="M20 6l12 12-6 6L14 12z"/><path d="M20 6l12 12-6 6L14 12zM23 21 8 36a3 3 0 0 0 4 4l15-15M28 42h14M17 9l12 12"/>`),
-    straat:S(`<path ${F} d="M16 44 20 4h8l4 40z"/><path d="M16 44 20 4M32 44 28 4M24 8v4M24 18v5M24 29v6M24 40v4"/>`)
+    straat:S(`<path ${F} d="M16 44 20 4h8l4 40z"/><path d="M16 44 20 4M32 44 28 4M24 8v4M24 18v5M24 29v6M24 40v4"/>`),
+    tandwiel:S(`<circle ${F} cx="24" cy="24" r="13"/><path d="M21 5h6l1 5 4 2 4-3 4 4-3 4 2 4 5 1v6l-5 1-2 4 3 4-4 4-4-3-4 2-1 5h-6l-1-5-4-2-4 3-4-4 3-4-2-4-5-1v-6l5-1 2-4-3-4 4-4 4 3 4-2z"/><circle cx="24" cy="24" r="6"/>`)
   };
 })();
 function di(name,cls){return '<span class="di '+(cls||'')+'" aria-hidden="true">'+(DI[name]||DI.document)+'</span>';}
@@ -607,7 +608,7 @@ function qScreen(st){
   const art=Q_ART[st.ti+'.'+st.qi]||'vraag';
   const pk=q.opzet==='praktijk'; /* opzet 'praktijk' (21-11-2026, H3 oefenvraag 7): eigen indeling foto | vraag, daaronder feedback | praktijkkader; zonder dit veld verandert er niets */
   const pkAr=(pk&&q.beeld&&q.beeld.w&&q.beeld.h)?' style="--pk-ar:'+q.beeld.w+'/'+q.beeld.h+';--pk-r:'+(q.beeld.w/q.beeld.h).toFixed(4)+'"':'';
-  let html='<article class="card qcard'+(pk?' q-v2 q-pk':(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':''))+'"'+pkAr+'><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
+  let html='<article class="card qcard'+(pk?' q-v2 q-pk'+(q.kolommen?' q-pk5':''):(q.vraag.length>150?' has-long':'')+(q.stijl==='v2'?' q-v2':'')+(q.groot?' q-groot':'')+(q.beeld?' q-foto':'')+((q.layout==='breed'||q.beeld)?' q-breed':''))+'"'+pkAr+'><div class="pagehead"><span class="ph-ic">'+di('vraag')+'</span><div><span class="ph-k">'+tLab(t)+' · Oefenvragen</span><span class="ph-t">'+esc(t.titel)+'</span></div><span class="ph-count">Vraag '+qn+' van '+D.totaalVragen+'</span></div>'
    +'<div class="q-layout"><div class="q-side">'+qSide(q,art)+'</div><div class="q-main">'
    +'<div class="q-head"><span class="q-soort">'+di(q.soort==='Praktijkcasus'?'boa':'boek')+esc(q.soort)+'</span>'
    +'<div class="q-lab">De vraag</div></div><h2 class="q-text'+(!pk&&q.vraag.length>150?' q-long':'')+'">'+(pk&&q.casus?'<span class="pk-kop">'+esc(q.casus.kop)+'</span> <span class="pk-tekst">'+esc(q.casus.tekst)+'</span> <span class="pk-vraag">'+esc(q.casus.vraag)+'</span>':esc(q.vraag))+'</h2><p class="q-hint">Kies één antwoord.</p>'
@@ -696,6 +697,20 @@ function feedbackPraktijk(q,ans){
     if(b.startsWith('## '))return '<h4 class="pk-sub">'+vet(esc(b.slice(3)))+'</h4>';
     return '<p>'+r.map(x=>vet(esc(x))).join('<br>')+'</p>';}).join('');
   const goed=ans.goed,uit=fnRender((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg,[]);
+  /* v5 (22-11-2026, H3 oefenvraag 10): met q.kolommen drie kolommen: links feedback en Onthoud, midden en rechts losse kaarten
+     ({ic,kop,tekst,rijen?,soort?}); alleen actief met dit veld, vraag 7, 8 en 9 ongewijzigd. Score en opslag via lockAndReveal. */
+  if(q.kolommen){
+    const kaart=k=>'<section class="pk5-k'+(k.soort?' pk5-'+esc(k.soort):'')+'"><div class="pk-kop">'+di(k.ic||'lamp','pk5-ic')+'<h3>'+esc(k.kop)+'</h3></div>'+blok(k.tekst)
+      +(k.rijen?'<ul class="pk5-rijen">'+k.rijen.map(r=>'<li><b>'+esc(r.b)+'</b> <span>– '+esc(r.t)+'</span></li>').join('')+'</ul>':'')+'</section>';
+    let v='<section class="fbx pk-fbx pk-v5 '+(goed?'ok':'no')+'"><div class="pk5-kol pk5-l"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
+      +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
+    if(!goed)v+='<div class="fbx-pills"><div class="fbp r"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
+      +'<div class="fbp g"><span class="fbp-l">Juiste antwoord</span><span class="fbp-v"><b>'+L(q.juist)+'</b><span class="fbp-t">'+esc(q.opties[q.juist])+'</span></span></div></div>';
+    v+='<div class="pk-uit">'+blok((!goed&&q.uitlegFout)?q.uitlegFout:q.uitleg)+'</div></div></div>';
+    if(q.onthoud)v+='<div class="pk-onthoud pk5-onthoud"><span class="pk-o-ic" aria-hidden="true">i</span><div><h3>Onthoud</h3>'+blok(q.onthoud)+'</div></div>';
+    v+='</div><div class="pk5-kol pk5-m">'+(q.kolommen.midden||[]).map(kaart).join('')+'</div><div class="pk5-kol pk5-r">'+(q.kolommen.rechts||[]).map(kaart).join('')+'</div>';
+    return v+'</section>';
+  }
   let h='<section class="fbx pk-fbx '+(q.praktijk&&q.praktijk.schema?'pk-v4 ':'')+(goed?'ok':'no')+'"><div class="pk-fb"><span class="pk-fb-ic" aria-hidden="true">'+(goed?vink:kruis)+'</span><div class="pk-fb-b">'
     +'<h3 class="pk-fb-h">'+(goed?(q.fbGoed||'Juist!'):(q.fbFout||'Helaas, dat is niet het juiste antwoord.'))+'</h3>';
   if(!goed)h+='<div class="fbx-pills"><div class="fbp r"><span class="fbp-l">Jouw antwoord</span><span class="fbp-v"><b>'+L(ans.sel)+'</b><span class="fbp-t">'+esc(q.opties[ans.sel])+'</span></span></div>'
