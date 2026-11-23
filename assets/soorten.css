@@ -3087,3 +3087,21 @@
 }
 /* zeer brede schermen: fotokolom iets smaller, zodat foto en de kaders ernaast in balans blijven (foto niet bijgesneden) */
 @media (min-width:1800px){.tpl-vp .vp-ib.vpp{grid-template-columns:minmax(0,.7fr) minmax(0,.35fr) minmax(0,1.15fr)}}
+
+/* H4 p6 – art. 19 WED: compacte desktopindeling, uitsluitend deze pagina. */
+@media (min-width:1100px){
+  .tpl-vp .vp-inz.vpp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"kop kop" "foto wet" "foto bron" "bet vb" "onth onth";gap:12px 20px;align-items:start}
+  .tpl-vp .vp-inz.vpp>*+*{margin-top:0}
+  .tpl-vp .vp-inz .vp-body,.tpl-vp .vp-inz .vp-rechts{display:contents}
+  .tpl-vp .vp-inz .vp-kop{grid-area:kop}
+  .tpl-vp .vp-inz .vp-foto{grid-area:foto;position:static;align-self:start}
+  .tpl-vp .vp-inz .vp-foto img{aspect-ratio:750/511;object-fit:contain;height:auto}
+  .tpl-vp .vp-inz .vp-wet{grid-area:wet}
+  .tpl-vp .vp-inz .vp-bron{grid-area:bron;margin-top:0}
+  .tpl-vp .vp-inz .vp-bet{grid-area:bet;align-self:stretch}
+  .tpl-vp .vp-inz .vp-vb{grid-area:vb;align-self:stretch}
+  .tpl-vp .vp-inz .vp-onthoud{grid-area:onth}
+}
+/* Wettekst artikel 19: duidelijk onderscheid tussen lid 1 en lid 2, zonder aanhalingstekens. */
+.tpl-vp .vp-inz .vp-wt p{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;align-items:start}
+.tpl-vp .vp-inz .vp-wt p .vp-lid{display:inline-grid;place-items:center}
