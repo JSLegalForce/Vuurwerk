@@ -3087,21 +3087,55 @@
 }
 /* zeer brede schermen: fotokolom iets smaller, zodat foto en de kaders ernaast in balans blijven (foto niet bijgesneden) */
 @media (min-width:1800px){.tpl-vp .vp-ib.vpp{grid-template-columns:minmax(0,.7fr) minmax(0,.35fr) minmax(0,1.15fr)}}
-
-/* H4 p6 – art. 19 WED: compacte desktopindeling, uitsluitend deze pagina. */
+/* ══ H4 p6 "Inzage van gegevens en bescheiden vorderen" – vernieuwd 23-11-2026 volgens referentiedia (alleen .vp-inz2):
+   titel over de volle breedte; foto links naast wet (lid 1 en 2) + bron; daaronder betekenis en praktijkvoorbeeld naast
+   elkaar; geel 'Onthoud' over de volle breedte. Tablet/mobiel: alles onder elkaar, foto na de titel. ══ */
+.tpl-vp .vp-inz2.vpp>*+*{margin-top:14px}
+.tpl-vp .vp-inz2 .vp-kop-t .vp-art{order:3;margin-top:2px}
+.tpl-vp .vp-inz2 .vp-intro{margin-top:8px}
+.tpl-vp .vp-inz2 .vp-foto{position:static;border-radius:18px}
+.tpl-vp .vp-inz2 .vp-foto img{aspect-ratio:750/511;object-fit:cover;height:auto}
+.tpl-vp .vp-inz2 .vp-rechts{gap:12px}
+.tpl-vp .vp-inz2 .vp-kaart{padding:14px 18px}
+.tpl-vp .vp-inz2 .vp-kaart h3{font-size:1.14rem;margin-bottom:10px}
+.tpl-vp .vp-inz2 .vp-kaart p+p{margin-top:6px}
+/* wit wetskader met twee duidelijk gescheiden leden */
+.tpl-vp .vp-inz2 .vp-wet{order:0;background:#fff;border:1.5px solid #b9cdef;border-left:5px solid var(--navy)}
+.tpl-vp .vp-inz2 .vp-wt{display:flex;flex-direction:column;gap:8px}
+.tpl-vp .vp-inz2 .iz-lid{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;background:var(--blue-ll);border:1px solid #dbe5f5;border-radius:12px;padding:10px 14px}
+.tpl-vp .vp-inz2 .iz-n{width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:var(--ui);font-weight:800;font-size:.9rem;margin-top:1px}
+.tpl-vp .vp-inz2 .vp-wt p{font-family:var(--txt);font-size:1rem;line-height:1.48;color:var(--navy);margin:0}
+.tpl-vp .vp-inz2 .vp-wt p.iz-art{font-family:var(--ui);font-weight:800;font-size:1rem;line-height:1.3;margin-bottom:2px}
+.tpl-vp .vp-inz2 .vp-bron{order:1;margin:0}
+/* lichtblauwe kaders */
+.tpl-vp .vp-inz2 .vp-bet,.tpl-vp .vp-inz2 .vp-vb{background:var(--blue-ll);border:1px solid #c9d9f2}
+.tpl-vp .vp-inz2 .vp-bet{order:2}
+.tpl-vp .vp-inz2 .vp-vb{order:3}
+.tpl-vp .vp-inz2 .iz-vink{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.tpl-vp .vp-inz2 .iz-vink li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:1rem;line-height:1.48;color:var(--navy)}
+.tpl-vp .vp-inz2 .iz-v{width:22px;height:22px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:1px}
+.tpl-vp .vp-inz2 .iz-v .di,.tpl-vp .vp-inz2 .iz-v svg{width:14px;height:14px;color:#fff;--duo:transparent}
+/* geel 'Onthoud' */
+.tpl-vp .vp-inz2 .vp-onthoud{order:4;grid-template-columns:40px minmax(0,1fr);padding:12px 18px;border-radius:16px}
+.tpl-vp .vp-inz2 .vp-onthoud .vp-o-ic{width:40px;height:40px}
+/* desktop vanaf 1100 px: compacte rasterindeling volgens de referentiedia */
 @media (min-width:1100px){
-  .tpl-vp .vp-inz.vpp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);grid-template-areas:"kop kop" "foto wet" "foto bron" "bet vb" "onth onth";gap:12px 20px;align-items:start}
-  .tpl-vp .vp-inz.vpp>*+*{margin-top:0}
-  .tpl-vp .vp-inz .vp-body,.tpl-vp .vp-inz .vp-rechts{display:contents}
-  .tpl-vp .vp-inz .vp-kop{grid-area:kop}
-  .tpl-vp .vp-inz .vp-foto{grid-area:foto;position:static;align-self:start}
-  .tpl-vp .vp-inz .vp-foto img{aspect-ratio:750/511;object-fit:contain;height:auto}
-  .tpl-vp .vp-inz .vp-wet{grid-area:wet}
-  .tpl-vp .vp-inz .vp-bron{grid-area:bron;margin-top:0}
-  .tpl-vp .vp-inz .vp-bet{grid-area:bet;align-self:stretch}
-  .tpl-vp .vp-inz .vp-vb{grid-area:vb;align-self:stretch}
-  .tpl-vp .vp-inz .vp-onthoud{grid-area:onth}
+  .tpl-vp .vp-inz2.vpp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.2fr) minmax(0,1.25fr);column-gap:20px;row-gap:12px;
+    grid-template-rows:auto auto 1fr auto auto;
+    grid-template-areas:"kop kop kop" "foto wet wet" "foto bron bron" "bet bet vb" "ond ond ond";align-items:start}
+  .tpl-vp .vp-inz2.vpp>*+*{margin-top:0}
+  .tpl-vp .vp-inz2 .vp-body,.tpl-vp .vp-inz2 .vp-rechts{display:contents}
+  .tpl-vp .vp-inz2 .vp-kop{grid-area:kop}
+  .tpl-vp .vp-inz2 .vp-foto{grid-area:foto;align-self:start}
+  .tpl-vp .vp-inz2 .vp-wet{grid-area:wet}
+  .tpl-vp .vp-inz2 .vp-bron{grid-area:bron}
+  .tpl-vp .vp-inz2 .vp-bet{grid-area:bet;align-self:stretch}
+  .tpl-vp .vp-inz2 .vp-vb{grid-area:vb;align-self:stretch}
+  .tpl-vp .vp-inz2 .vp-onthoud{grid-area:ond}
 }
-/* Wettekst artikel 19: duidelijk onderscheid tussen lid 1 en lid 2, zonder aanhalingstekens. */
-.tpl-vp .vp-inz .vp-wt p{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;align-items:start}
-.tpl-vp .vp-inz .vp-wt p .vp-lid{display:inline-grid;place-items:center}
+@media (min-width:1001px) and (max-height:860px){.tpl-vp .vp-inz2 .vp-t{flex-basis:100%;margin-top:4px}}
+@media (min-width:1001px) and (max-width:1099px){.tpl-vp .vp-inz2 .vp-foto{position:static}}
+@media (max-width:1000px){.tpl-vp .vp-inz2 .vp-foto img{aspect-ratio:750/511}}
+@media (max-width:760px){.tpl-vp .vp-inz2 .vp-kaart{padding:12px 14px}.tpl-vp .vp-inz2 .vp-onthoud{grid-template-columns:36px minmax(0,1fr)}.tpl-vp .vp-inz2 .vp-onthoud .vp-o-ic{width:36px;height:36px}.tpl-vp .vp-inz2 .iz-lid{padding:10px 12px}}
+.tpl-vp .vp-inz2 p.vp-onthoud,.tpl-vp .vp-inz2 .vp-kaart p,.tpl-vp .vp-inz2 .vp-wt p{max-width:none}
+@media (min-width:1700px){.tpl-vp .vp-inz2.vpp{grid-template-columns:minmax(0,.75fr) minmax(0,.25fr) minmax(0,1.4fr)}}

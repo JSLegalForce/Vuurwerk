@@ -409,8 +409,32 @@ Technisch: `assets/soorten.css` (alleen nieuwe regels onder `.vp-ib` binnen `@me
 Status: **Goedgekeurd door Jan; gemerged via pull request #144 (merge-commit `01d8dd19cd751af81cf40f2b351042ec9c00b2e7`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css, app.js en foto identiek aan `main`; cacheversie `soorten.css` `vw261123e` geladen; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave (820 en 390 px ook identiek aan de vorige live versie); paginahoogte 1440 px: 1621 px; Vorige/Volgende en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie.
 
 
-### Hoofdstuk 4 – Pagina 6 van 10 – Inzage van gegevens en bescheiden vorderen (concept, 23 november 2026)
+### Hoofdstuk 4 – Pagina 6 van 10 – Inzage van gegevens en bescheiden vorderen
 
-Branch: `h4p6-inzage-herzien-20261123`. Alleen pagina H4 p6 aangepast: artikel 19 lid 1 en lid 2 WED als afzonderlijke wettelijke tekstregels zonder « »; heldere boa-uitleg over opsporingstaak, noodzakelijkheid en kopieën; praktijkvoorbeeld met bestuurder die zelf kofferbak opent en factuur die dient voor onderzoek naar aankoop/herkomst (niet als sluitend bewijs van vuurwerkcategorie); specifiek Onthoud-kader. Desktopindeling vanaf 1100 px compacter met foto/wetsuitleg boven en twee informatiekaders naast elkaar, mobiel ongewijzigde structuur. Originele foto en alle andere lespagina's behouden. Cacheversie `soorten.css?v=vw261123f`.
+Branch: `h4p6-inzage-herzien-20261123` (PR #146; basis: `main` @ `e3fe46c`). Eerste concept in deze PR (commits `33c5feb`, `5d1b478`, `e00acd3`) op 23 november 2026 herzien volgens de nieuwe referentiedia van Jan (nieuwe commits, geen force-push).
 
-Status: **Concept in nieuwe PR; niet gemerged of gepubliceerd.**
+Wijzigingen:
+
+- Titel, badge ‘Art. 19 WED’ en introductie over de volle breedte; daaronder de originele foto links naast het witte kader ‘Wat zegt de wet? – artikel 19 WED’ met lid 1 en lid 2 als afzonderlijke blokken (donkerblauwe nummerrondjes, eigen kop ‘Artikel 19 lid 1 WED’ / ‘Artikel 19 lid 2 WED’, zonder « ») en daaronder de bronlink.
+- Daaronder naast elkaar twee lichtblauwe kaders van gelijke hoogte: ‘Wat betekent dit voor jou als boa?’ (vier punten met blauwe vinkjes) en ‘Voorbeeld uit de praktijk’ (nieuwe tekst volgens opdracht).
+- Geel ‘Onthoud’ over de volle breedte (nieuwe tekst volgens opdracht).
+- Foto `assets/images/h4-inzage-gegevens.webp` ongewijzigd (zelfde bestand, alt-tekst en cacheversie), volledig zichtbaar in de eigen beeldverhouding 750×511.
+- Desktop vanaf 1100 px CSS Grid (vanaf 1700 px smallere fotokolom); tablet/mobiel onder elkaar in de volgorde titel, foto, wet, bron, betekenis, voorbeeld, Onthoud.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (WED geldend vanaf 10-11-2026): art. 19 lid 1 en 2 WED letterlijk overgenomen.
+
+Afwijkingen van de aangeleverde tekst, met reden:
+
+1. Vierde punt ‘Het geeft je geen algemene bevoegdheid om zonder wettelijke grondslag een telefoon, computer of andere gegevensdrager te doorzoeken.’ is geworden: ‘Artikel 19 WED geeft je geen bevoegdheid om zelf een telefoon, computer of andere gegevensdrager te doorzoeken.’ Reden: art. 19 WED geeft alleen een bevoegdheid tot het vorderen van inzage (de betrokkene laat de gegevens zien) en het maken van kopieën; het geeft geen enkele doorzoekingsbevoegdheid, ook geen beperkte. ‘Het’ had geen duidelijk onderwerp en ‘algemene … zonder wettelijke grondslag’ kon suggereren dat art. 19 wel een beperkte doorzoekingsbevoegdheid geeft.
+2. Praktijkvoorbeeld: zin toegevoegd ‘Een factuur bewijst niet automatisch tot welke categorie het vuurwerk behoort.’ (opgenomen als ‘Belangrijk’ in de opdracht).
+
+Aandachtspunten (niet op de pagina):
+
+- Art. 19 lid 3 WED: als kopiëren ter plaatse niet kan, mag de opsporingsambtenaar de gegevens en bescheiden voor korte tijd meenemen tegen een schriftelijk bewijs.
+- Art. 24a WED: iedereen is verplicht mee te werken aan een redelijke vordering; art. 24a lid 2: verschoningsrecht bij geheimhoudingsplicht.
+
+Paginahoogte op 1440 px: live versie 1029 px, nieuwe versie 1193 px (+164 px), door meer inhoud (vier punten in plaats van een korte alinea, langer praktijkvoorbeeld, lidkoppen). Op 1920 px: 1101 px.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123g`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-inz2`; de eerdere conceptregels uit deze PR vervangen; geen bestaande regels uit `main` gewijzigd). Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; Vorige/Volgende en voortgangsopslag getest.
+
+Status: **PR #146 bijgewerkt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
