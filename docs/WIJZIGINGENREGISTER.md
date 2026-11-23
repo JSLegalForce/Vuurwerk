@@ -344,4 +344,6 @@ Juridische controle (wetten.overheid.nl, 23 november 2026):
 
 Technisch: `index.html` (alleen de HTML van deze pagina; cacheversie `soorten.css` nu `vw261123b`); `assets/soorten.css` (alleen `.hd-num`). Foto ongewijzigd (zelfde bestand, zelfde checksum). Lettergrootte niet verkleind; het kader is hoger geworden. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
-Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
+Laatste correctie 23 november 2026 (opdracht Jan): in punt 3 van ‘Wat betekent dit voor jou als boa?’ de zin ‘Geef daarbij ook de voorwerpen af die je bij de verdachte hebt aangetroffen’ volledig verwijderd; de verwijzing ‘(artikel 53 lid 3 Sv)’ staat nu achter ‘meestal de politie’. Geen vervangende tekst. Punt 1, 2 en 4, wetteksten (art. 53 lid 1–2 en art. 128 lid 1 Sv, ongewijzigd) en overige inhoud ongewijzigd. Juridisch gecontroleerd tegen art. 53 lid 1–3 en art. 142 lid 2 Sv: punt 3 beschrijft juist dat de boa buiten zijn opsporingsbevoegdheid aanhoudt als ‘een ieder’ (lid 1) en de aangehoudene moet overleveren aan een opsporingsambtenaar (lid 3); de afgifte van voorwerpen uit lid 3 wordt op verzoek van Jan bewust niet op deze dia behandeld. Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Definitief goedgekeurd door Jan; gemerged via pull request #140 en gepubliceerd op 23 november 2026** (merge-commit: zie aanvulling hieronder of in de documentatie-PR).
