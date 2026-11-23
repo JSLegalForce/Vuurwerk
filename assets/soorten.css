@@ -2933,3 +2933,66 @@
 @media (max-width:760px){.tpl-bev .bvp-v2 .bv-groep{margin:10px 14px 2px}.tpl-bev .bvp-v2 .bv-wed,.tpl-bev .bvp-v2 .bv-bel{grid-template-columns:36px minmax(0,1fr);padding:12px 14px}}
 @media (min-width:1181px){.tpl-bev .bvp-v2 .bv-kols{grid-template-columns:minmax(0,1.4fr) minmax(0,1.1fr) minmax(0,1fr)}}
 .tpl-bev .bvp-v2 .bv-r{padding:7px 0}
+/* ══ H4 p4 "Aanhouden op heterdaad" – vernieuwd 23-11-2026 (alleen .vp-hd2): referentiedia zonder vuurwapens;
+   links foto + 'Let op!', rechts wet, betekenis, praktijkvoorbeeld en geel 'Onthoud'; mobiel: foto bovenaan ══ */
+.tpl-vp .vp-hd2.vpp>*+*{margin-top:14px}
+.tpl-vp .vp-hd2 .vp-kop-t .vp-art{order:3;margin-top:2px}
+.tpl-vp .vp-hd2 .vp-intro{margin-top:8px}
+.tpl-vp .vp-hd2 .vp-body{grid-template-columns:minmax(0,1fr) minmax(0,1.32fr);gap:22px}
+.tpl-vp .vp-hd2 .vp-links{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tpl-vp .vp-hd2 .vp-foto{position:static;border-radius:18px}
+.tpl-vp .vp-hd2 .vp-foto img{aspect-ratio:1250/998;object-fit:cover;height:auto}
+.tpl-vp .vp-hd2 .vp-rechts{gap:12px}
+.tpl-vp .vp-hd2 .vp-kaart{padding:14px 18px}
+.tpl-vp .vp-hd2 .vp-kaart h3{font-size:1.14rem;margin-bottom:8px}
+.tpl-vp .vp-hd2 .vp-kaart p+p{margin-top:6px}
+/* wit kader 'Wat zegt de wet?' */
+.tpl-vp .vp-hd2 .vp-wet{background:#fff;border:1.5px solid #b9cdef;border-left:5px solid var(--navy)}
+.tpl-vp .vp-hd2 .vp-wt p{font-family:var(--txt);font-size:1rem;line-height:1.48;color:var(--navy)}
+.tpl-vp .vp-hd2 .vp-wt p.hd-art{display:inline-block;font-family:var(--ui);font-weight:800;font-size:.98rem;line-height:1.3;color:var(--navy);background:var(--blue-l);border-radius:6px;padding:3px 10px;margin:2px 0 6px}
+.tpl-vp .vp-hd2 .vp-wt p.hd-lid+p.hd-art{margin-top:12px}
+.tpl-vp .vp-hd2 .vp-wt p.hd-lid{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;margin:0 0 6px}
+.tpl-vp .vp-hd2 .vp-wt p.hd-lid .vp-lid{margin:2px 0 0;min-width:24px;height:24px}
+/* lichtblauw kader 'Wat betekent dit voor jou als boa?' */
+.tpl-vp .vp-hd2 .vp-bet{background:var(--blue-ll);border-color:#c9d9f2}
+.tpl-vp .vp-hd2 .hd-vink{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tpl-vp .vp-hd2 .hd-vink li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:1rem;line-height:1.48;color:var(--navy)}
+.tpl-vp .vp-hd2 .hd-v{width:22px;height:22px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:1px}
+.tpl-vp .vp-hd2 .hd-v .di,.tpl-vp .vp-hd2 .hd-v svg{width:14px;height:14px;color:#fff;--duo:transparent}
+/* kader 'Voorbeeld uit de praktijk' */
+.tpl-vp .vp-hd2 .vp-vb{background:var(--blue-ll);border-color:#c9d9f2}
+/* lichtblauw kader 'Let op!' met blauw informatiepictogram */
+.tpl-vp .vp-hd2 .hd-letop{background:#e4eefc;border:1px solid #bcd0f1}
+.tpl-vp .vp-hd2 .hd-info{width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--blue);color:#fff;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-style:normal;font-size:1.12rem;line-height:1;box-shadow:0 0 0 3px #cfdffa}
+/* geel kader 'Onthoud' */
+.tpl-vp .vp-hd2 .hd-onthoud{order:5;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start;background:#fff4dd;border:1px solid #f3d59b;border-radius:16px;padding:14px 18px}
+.tpl-vp .vp-hd2 .hd-onthoud .vp-o-ic{width:40px;height:40px}
+.tpl-vp .vp-hd2 .hd-onthoud h3{font-family:var(--ui);font-weight:800;font-size:1.14rem;line-height:1.25;color:var(--navy);margin:6px 0 6px}
+.tpl-vp .vp-hd2 .hd-onthoud p{font-size:1rem;line-height:1.48;color:var(--navy);margin:0;max-width:none}
+.tpl-vp .vp-hd2 .hd-onthoud p+p{margin-top:4px}
+.tpl-vp .vp-hd2 .vp-bronnen{display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:.95rem;color:var(--navy)}
+.tpl-vp .vp-hd2 .vp-bronnen a{display:inline-flex;align-items:center;gap:6px}
+.tpl-vp .vp-hd2 .vp-bn{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--blue-l);color:var(--navy);font-family:var(--ui);font-weight:800;font-size:.76rem;flex:none}
+@media (min-width:1001px) and (max-width:1300px){
+  .tpl-vp .vp-hd2 .vp-body{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:18px}
+}
+/* tablet en mobiel: één kolom; foto bovenaan, daarna wet, betekenis, voorbeeld, Let op!, Onthoud en bronnen */
+@media (max-width:1000px){
+  .tpl-vp .vp-hd2 .vp-body{display:flex;flex-direction:column;gap:12px}
+  .tpl-vp .vp-hd2 .vp-links,.tpl-vp .vp-hd2 .vp-rechts{display:contents}
+  .tpl-vp .vp-hd2 .vp-foto{order:1}
+  .tpl-vp .vp-hd2 .vp-wet{order:2}
+  .tpl-vp .vp-hd2 .vp-bet{order:3}
+  .tpl-vp .vp-hd2 .vp-vb{order:4}
+  .tpl-vp .vp-hd2 .hd-letop{order:5}
+  .tpl-vp .vp-hd2 .hd-onthoud{order:6}
+  .tpl-vp .vp-hd2 .vp-bronnen{order:7;flex-direction:column;align-items:flex-start}
+  .tpl-vp .vp-hd2 .vp-foto img{aspect-ratio:1250/998}
+}
+@media (max-width:760px){
+  .tpl-vp .vp-hd2 .vp-kaart,.tpl-vp .vp-hd2 .hd-onthoud{padding:12px 14px}
+  .tpl-vp .vp-hd2 .hd-onthoud{grid-template-columns:36px minmax(0,1fr);gap:10px}
+  .tpl-vp .vp-hd2 .hd-onthoud .vp-o-ic{width:36px;height:36px}
+  .tpl-vp .vp-hd2 .vp-wt p.hd-art{font-size:.94rem}
+}
+@media (min-width:1001px) and (max-height:860px){.tpl-vp .vp-hd2 .vp-t{flex-basis:100%;margin-top:4px}}

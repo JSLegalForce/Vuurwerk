@@ -301,3 +301,31 @@ Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `s
 Correctie 22 november 2026 (akkoord Jan op aandachtspunt 1): toelichting bij art. 23 WED nu ‘Vorder dat de bestuurder het vervoermiddel stilhoudt. Onderzoek vervolgens, als aan de wettelijke voorwaarden is voldaan, het vervoermiddel en de lading.’ Titel en badge ongewijzigd. Gecontroleerd tegen art. 23 lid 1, 2 en 4 WED (geldend vanaf 10-11-2026). Aandachtspunten 2 en 3 (art. 24a lid 2 en art. 18 lid 2 WED) bewust niet op deze pagina; bewaard voor uitgebreidere lesstof.
 
 Status: **Goedgekeurd door Jan; gemerged via pull request #138 (merge-commit `0df8e0fed0c9407688ee6edd1e5c723111ce19e6`) en gepubliceerd op 22 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (cacheversie `soorten.css` `vw261122b`; 1440, 1280, 820 en 390 px) en via de Vuurwerk-launcher (ongewijzigd).
+
+### Hoofdstuk 4 – Pagina 4 van 10 – Aanhouden op heterdaad
+
+Branch: `h4p4-aanhouden-heterdaad` (basis: `main` @ `2dcfabe`).
+
+Wijzigingen (volgens opdracht en definitief goedgekeurde referentiedia zonder pistolen van 23 november 2026):
+
+- **Afbeelding vervangen:** de foto uit de referentiedia (`Aanhouden_op_heterdaad_zonder_wapens.png`, 1536×1024) is zonder tekst, kaders of andere onderdelen uitgesneden (625×499, alleen de witte dia-rand en de afgeronde hoeken binnen de rand weggelaten) en technisch 2× vergroot naar `assets/images/h4-heterdaad-aanhouden-zonder-wapens.webp` (1250×998). Geen nieuwe of gegenereerde afbeelding; personen en situatie ongewijzigd. Oorspronkelijke beeldverhouding behouden op alle schermformaten (geen bijsnijden via CSS). Oude bestand `h4-heterdaad-aanhouden.webp` niet verwijderd (niet meer gebruikt). Alt-tekst aangepast.
+- Titel, artikelbadge ‘Art. 53 Sv’ en nieuwe introductie (‘het strafbare feit … direct daarna’).
+- Wit kader ‘Wat zegt de wet?’ met boekpictogram: art. 53 lid 1 en 2 Sv en art. 128 lid 1 Sv, met artikelkop en lidnummers, zonder « ».
+- Lichtblauw kader ‘Wat betekent dit voor jou als boa?’ (schildpictogram, drie punten met vinkje).
+- Kader ‘Voorbeeld uit de praktijk’ (pictogram twee personen), korte alinea's; de passage over proportionaliteit en geweld is verwijderd.
+- Lichtblauw kader ‘Let op!’ met blauw informatiepictogram onder de foto; geel kader ‘Onthoud’ met lamp rechtsonder.
+- Bronnenlijst (art. 53 en art. 128 Sv) onder ‘Let op!’ behouden.
+- Mobiel en tablet: één kolom met de foto bovenaan, daarna wet, betekenis, voorbeeld, Let op!, Onthoud en bronnen.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (23 november 2026): Sv art. 27, 53 en 128 (geldend vanaf 01-07-2026); Wm art. 9.2.2.1a (geldend vanaf 10-11-2026); Regeling domeinlijsten, Domein I, onderdeel 9 (geldend vanaf 08-09-2026).
+
+Afwijking van de aangeleverde tekst (officiële wettekst gaat voor): art. 128 lid 1 Sv luidt officieel ‘Ontdekking op **heeter daad** heeft plaats, …’ (oude spelling). Deze officiële formulering is letterlijk overgenomen; de artikelkop gebruikt ‘Ontdekking op heterdaad’.
+
+Aandachtspunten (tekst niet zelfstandig gewijzigd, wacht op besluit Jan):
+
+1. Art. 53 lid 2 Sv geldt voor de opsporingsambtenaar. Houdt een boa iemand aan voor een feit waarvoor hij níet opsporingsbevoegd is, dan houdt hij aan als ‘een ieder’ en geldt lid 3: onverwijld overleveren aan een opsporingsambtenaar (bijv. de politie). Het tweede punt van ‘Wat betekent dit voor jou als boa?’ noemt alleen de situatie van lid 2. Voorstel: ‘Houd jij als boa een verdachte aan voor een feit waarvoor je opsporingsbevoegd bent? Dan zorg je ervoor dat hij zo snel mogelijk wordt overgebracht naar de plaats voor verhoor, voor voorgeleiding aan de (hulp)officier van justitie. Ben je dat niet, dan draag je hem zo snel mogelijk over aan een opsporingsambtenaar die dat wel is (artikel 53 lid 3 Sv).’
+2. ‘Let op!’ gebruikt ‘bezit of gebruik’; de wettelijke term in art. 9.2.2.1a lid 1 Wm is ‘bezit en gebruik’. Inhoudelijk juist (verboden bezit óf verboden gebruik); zelfde notatie als H4 p1. Desgewenst: ‘het verboden bezit en gebruik (waaronder afsteken) van F2- en F3-vuurwerk’.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `soorten.css`, nu `vw261123a`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-hd2`); nieuw beeldbestand. Geen wijzigingen in `app.js`. Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
