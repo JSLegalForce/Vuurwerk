@@ -328,4 +328,20 @@ Aandachtspunten (tekst niet zelfstandig gewijzigd, wacht op besluit Jan):
 
 Technisch: `index.html` (alleen de HTML van deze pagina en de cacheversie van `soorten.css`, nu `vw261123a`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-hd2`); nieuw beeldbestand. Geen wijzigingen in `app.js`. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
+Correcties 23 november 2026 (opdracht Jan na beoordeling PR #140; vormgeving, foto, wetteksten, praktijkvoorbeeld, Onthoud, bronnen en navigatie ongewijzigd):
+
+1. **‘Wat betekent dit voor jou als boa?’** vervangen door vier genummerde punten: (1) Aanhouden op heterdaad (art. 53 lid 1 Sv); (2) Aanhouden als opsporingsambtenaar (art. 53 lid 2 Sv); (3) Aanhouden buiten je opsporingsbevoegdheid (art. 53 lid 3 Sv); (4) Bevoegdheid is geen verplichting. Afwijkingen van de aangeleverde tekst, met reden:
+   - Punt 2: ‘als bevoegde opsporingsambtenaar’ verduidelijkt tot ‘als opsporingsambtenaar … voor een strafbaar feit waarvoor je opsporingsbevoegd bent’: de boa is alleen opsporingsambtenaar voor de feiten uit zijn akte/domein (art. 142 lid 2 Sv); ‘bevoegd’ alleen kon gelezen worden als ‘bevoegd tot aanhouden’ (dat is iedereen).
+   - Punt 3: toegevoegd dat de boa dan aanhoudt op grond van de bevoegdheid die iedereen heeft, ‘meestal de politie’ en de afgifte van bij de verdachte aangetroffen voorwerpen (art. 53 lid 3 Sv: ‘onder afgifte aan deze van bij de verdachte aangetroffen voorwerpen’).
+   - Wetsverwijzingen per punt toegevoegd (art. 53 lid 1, 2 en 3 Sv).
+2. **‘Let op!’**: ‘bezit of gebruik’ vervangen door ‘bezit en gebruik (waaronder afsteken) van F2- en F3-vuurwerk, op grond van …’. Overige tekst en verwijzingen ongewijzigd.
+
+Juridische controle (wetten.overheid.nl, 23 november 2026):
+- Art. 53 lid 1–4 Sv (geldend vanaf 01-07-2026). Lid 3: ‘Geschiedt de aanhouding door een ander dan een opsporingsambtenaar, dan levert deze de aangehoudene onverwijld aan een opsporingsambtenaar over, onder afgifte aan deze van bij de verdachte aangetroffen voorwerpen. …’ Lid 4 (beoordeling verdere vrijheidsbeneming door de (hulp)officier bij voorgeleiding) is niet op de pagina opgenomen: het richt zich tot de (hulp)officier, niet tot de boa.
+- Art. 142 lid 1 en 2 Sv: een boa is met de opsporing belast voor de feiten uit zijn akte of aanwijzing (domein). Buiten die feiten is hij voor dat feit geen opsporingsambtenaar en houdt hij aan op grond van art. 53 lid 1 (‘een ieder’); dan geldt lid 3.
+- Beleidsregels Buitengewoon Opsporingsambtenaar (wijziging Stcrt. 2022, 24259): boa’s kunnen bij incidenten buiten hun taak ‘niet de hoedanigheid van opsporingsambtenaar aannemen’, wel ‘een zogenaamde burgeraanhouding verrichten en de verdachte overdragen aan de politie’. Dit bevestigt de lezing van punt 3.
+- Uitzondering (niet op de pagina, ter informatie): volgens de Beleidsregels (wijziging Stcrt. 2022, 17353, § 4.1 ‘Veilige publieke taak’) zijn boa’s die betrokken zijn bij een heterdaad van bepaalde misdrijven tegen henzelf (art. 177, 179–182, 284, 285, 300 jo. 304 onder 3° Sr) bevoegd aan te houden als opsporingsambtenaar, als het optreden van de politie redelijkerwijs niet kan worden afgewacht. Niet opgenomen omdat de opdracht geen tekst over geweld wil; bij de eindredactie van hoofdstuk 5 eventueel benoemen. De actuele geconsolideerde tekst van deze paragraaf is niet afzonderlijk gecontroleerd.
+
+Technisch: `index.html` (alleen de HTML van deze pagina; cacheversie `soorten.css` nu `vw261123b`); `assets/soorten.css` (alleen `.hd-num`). Foto ongewijzigd (zelfde bestand, zelfde checksum). Lettergrootte niet verkleind; het kader is hoger geworden. Gecontroleerd op 1440, 1280, 820 en 390 px.
+
 Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
