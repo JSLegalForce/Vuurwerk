@@ -407,3 +407,10 @@ Paginahoogte (volledige pagina incl. navigatie): 1440 px: 1946 → 1621 px (−3
 Technisch: `assets/soorten.css` (alleen nieuwe regels onder `.vp-ib` binnen `@media (min-width:1100px)` en `@media (min-width:1800px)`; geen bestaande regels gewijzigd); `index.html` (alleen cacheversie). Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; navigatie Vorige/Volgende en voortgangsopslag getest.
 
 Status: **Goedgekeurd door Jan; gemerged via pull request #144 (merge-commit `01d8dd19cd751af81cf40f2b351042ec9c00b2e7`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css, app.js en foto identiek aan `main`; cacheversie `soorten.css` `vw261123e` geladen; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave (820 en 390 px ook identiek aan de vorige live versie); paginahoogte 1440 px: 1621 px; Vorige/Volgende en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie.
+
+
+### Hoofdstuk 4 – Pagina 6 van 10 – Inzage van gegevens en bescheiden vorderen (concept, 23 november 2026)
+
+Branch: `h4p6-inzage-herzien-20261123`. Alleen pagina H4 p6 aangepast: artikel 19 lid 1 en lid 2 WED als afzonderlijke wettelijke tekstregels zonder « »; heldere boa-uitleg over opsporingstaak, noodzakelijkheid en kopieën; praktijkvoorbeeld met bestuurder die zelf kofferbak opent en factuur die dient voor onderzoek naar aankoop/herkomst (niet als sluitend bewijs van vuurwerkcategorie); specifiek Onthoud-kader. Desktopindeling vanaf 1100 px compacter met foto/wetsuitleg boven en twee informatiekaders naast elkaar, mobiel ongewijzigde structuur. Originele foto en alle andere lespagina's behouden. Cacheversie `soorten.css?v=vw261123f`.
+
+Status: **Concept in nieuwe PR; niet gemerged of gepubliceerd.**
