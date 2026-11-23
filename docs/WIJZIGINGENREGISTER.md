@@ -438,3 +438,31 @@ Paginahoogte op 1440 px: live versie 1029 px, nieuwe versie 1193 px (+164 px), d
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123g`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-inz2`; de eerdere conceptregels uit deze PR vervangen; geen bestaande regels uit `main` gewijzigd). Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; Vorige/Volgende en voortgangsopslag getest.
 
 Status: **Definitief goedgekeurd door Jan; gemerged via pull request #146 (merge-commit `029093dad981ab32152ef89862b95213418d4a89`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css, app.js en foto identiek aan `main`; cacheversie `soorten.css` `vw261123g` geladen; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave; paginahoogte 1440 px: 1193 px; wetskader met lid 1 en 2, vier uitlegpunten, praktijkvoorbeeld en Onthoud correct; Volgende naar pagina 7, Vorige naar pagina 5 en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie en toont H4 p6 correct.
+
+### Hoofdstuk 4 – Pagina 7 van 10 – Plaatsen betreden
+
+Branch: `h4p7-plaatsen-betreden` (basis: `main` @ `9e48685`).
+
+Wijzigingen (volgens opdracht en goedgekeurde referentiedia van 23 november 2026), opbouw zoals H4 p6:
+
+- Titel, badge ‘Art. 20 WED’ en introductie (nu met ‘winkel’) over de volle breedte.
+- **Foto:** de goedgekeurde scène met de twee mannen met kleine kartonnen dozen bestaat alleen in de referentiedia (het repo-bestand `h4-plaatsen-betreden.webp` toont dezelfde scène zonder dozen). Het fotogedeelte is daarom zonder tekst of kaders uit de referentiedia gesneden (618×239 px, binnen de afgeronde hoeken) en technisch 2× vergroot naar `assets/images/h4-plaatsen-betreden-dozen.webp` (1236×478); inhoud niet gewijzigd, eigen beeldverhouding, niet bijgesneden via CSS. Oude bestand niet verwijderd (niet meer gebruikt). Alt-tekst aangepast. Kwaliteitsbeperking: de bron is klein, waardoor de foto op schermen met hoge pixeldichtheid iets zachter oogt; het originele bestand met dozen kan later 1-op-1 worden ingewisseld.
+- Wit kader ‘Wat zegt de wet? – artikel 20 WED’ met nummerblok en kop ‘Artikel 20 WED’, zonder « »; bronlink behouden.
+- Lichtblauw ‘Wat betekent dit voor jou als boa?’ (vier vinkjes) en lichtblauw ‘Voorbeeld uit de praktijk’ (bestaande casus in vier genummerde stappen + ‘Let op’) naast elkaar, gelijke hoogte.
+- Geel ‘Onthoud’ over de volle breedte.
+- Desktop vanaf 1100 px CSS Grid (twee gelijke kolommen); tablet/mobiel onder elkaar: titel, foto, wet, bron, betekenis, voorbeeld, Onthoud.
+
+Juridisch gecontroleerd (wetten.overheid.nl, 23 november 2026): art. 20 WED (één lid, letterlijk); art. 21 WED (onderzoeken van zaken, apart van betreden); art. 1a onder 1° WED en art. 9.2.2.1a Wm; Regeling domeinlijsten, Domein I, onderdeel 9.
+
+Spelling: teksten volgens opdracht; fouten uit de referentiedia niet overgenomen (‘jis surveillance’ → ‘je surveillance’; ‘de staande houding’ → ‘het staande houden’).
+
+Aandachtspunten:
+
+1. ‘Let op: artikel 20 WED vormt de grondslag voor het betreden. Het staande houden en een eventuele inbeslagneming vereisen daarnaast hun eigen wettelijke grondslag en voorwaarden.’ is op de pagina opgenomen (in de opdracht als ‘Belangrijk’ bij de casus). Grondslagen: staande houden art. 52 Sv (verdachte, identiteit), inbeslagneming art. 18 WED jo. art. 94 Sv.
+2. Art. 20 WED is als bevoegdheid niet beperkt tot de openbare ruimte (‘elke plaats’). Voor binnentreden in een woning zonder toestemming geldt de Awbi. De loods in de casus is geen woning; dat volgt uit de casus, maar wordt niet expliciet genoemd.
+3. De zinsnede ‘met inachtneming van het VNG-handelingskader en de lokale afspraken’ (tweede vinkje) betreft taakuitvoering, geen bevoegdheidsgrondslag; de bevoegdheid volgt uit art. 20 WED en domein I, onderdeel 9. Het VNG-handelingskader is niet openbaar en niet zelf geraadpleegd.
+4. In de praktijk (veiligheid, achtervolging) kan het handelingskader of lokaal beleid voorschrijven dat de boa bij wegrennen naar een besloten ruimte eerst de politie inschakelt; de pagina zegt alleen dat de boa mag betreden ‘als aan de voorwaarden is voldaan’.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123h`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-pb2`); nieuw beeldbestand. Geen wijzigingen in `app.js`. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; Vorige/Volgende en voortgangsopslag getest.
+
+Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
