@@ -375,4 +375,9 @@ Aandachtspunten (tekst niet zelfstandig gewijzigd):
 
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123d`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-ib`). Geen wijzigingen in `app.js` en geen nieuwe of gewijzigde afbeeldingen. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
+Correcties 23 november 2026 (opdracht Jan na beoordeling PR #142; overige inhoud, vormgeving en foto ongewijzigd):
+
+1. ‘Wat betekent dit voor jou als boa?’, derde voorwaarde: ‘Inbeslagneming redelijkerwijs nodig is voor de opsporing.’ vervangen door ‘De inbeslagneming is in het belang van de opsporing en redelijkerwijs nodig voor de vervulling van je taak.’ Sluit inhoudelijk aan bij art. 18 lid 1 WED (‘in het belang van de opsporing’ … ‘redelijkerwijs voor de vervulling van hun taak nodig’). Taalkundig gemeld: na ‘als:’ staan de andere voorwaarden in bijzinsvolgorde (‘Je bevoegd bent …’, ‘Het voorwerp vatbaar is …’); deze zin heeft hoofdzinsvolgorde. Voorstel: ‘De inbeslagneming in het belang van de opsporing is en redelijkerwijs nodig is voor de vervulling van je taak.’ Tekst exact volgens opdracht overgenomen; wacht op besluit Jan.
+2. ‘Onthoud’: tekst vervangen; nieuwe laatste regel (vet) ‘Maak bij inbeslagneming een kennisgeving van inbeslagneming (KVI) op (artikel 94 lid 3 Sv).’ De regel ‘Leg vervolgens vast wat je doet en op welke wettelijke grondslag.’ is volgens de opdrachttekst vervallen. Gecontroleerd tegen art. 94 lid 3 Sv (‘… wordt … door de opsporingsambtenaar een kennisgeving van inbeslagneming opgemaakt.’). De nieuwe tekst suggereert niet dat verboden vuurwerk automatisch aan het verkeer wordt onttrokken; de kaders over art. 94 lid 1 en 2 Sv zijn ongewijzigd.
+
 Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
