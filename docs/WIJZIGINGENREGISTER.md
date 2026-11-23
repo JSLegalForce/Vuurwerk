@@ -347,3 +347,32 @@ Technisch: `index.html` (alleen de HTML van deze pagina; cacheversie `soorten.cs
 Laatste correctie 23 november 2026 (opdracht Jan): in punt 3 van ‘Wat betekent dit voor jou als boa?’ de zin ‘Geef daarbij ook de voorwerpen af die je bij de verdachte hebt aangetroffen’ volledig verwijderd; de verwijzing ‘(artikel 53 lid 3 Sv)’ staat nu achter ‘meestal de politie’. Geen vervangende tekst. Punt 1, 2 en 4, wetteksten (art. 53 lid 1–2 en art. 128 lid 1 Sv, ongewijzigd) en overige inhoud ongewijzigd. Juridisch gecontroleerd tegen art. 53 lid 1–3 en art. 142 lid 2 Sv: punt 3 beschrijft juist dat de boa buiten zijn opsporingsbevoegdheid aanhoudt als ‘een ieder’ (lid 1) en de aangehoudene moet overleveren aan een opsporingsambtenaar (lid 3); de afgifte van voorwerpen uit lid 3 wordt op verzoek van Jan bewust niet op deze dia behandeld. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
 Status: **Definitief goedgekeurd door Jan; gemerged via pull request #140 (merge-commit `1e134c524a5081849e7fb623e718405a04f2614b`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (index.html, soorten.css en app.js identiek aan `main`; cacheversie `soorten.css` `vw261123b`; 1440, 1280, 820 en 390 px; navigatie Vorige/Volgende en voortgangsopslag getest in een schone browsersessie) en via de Vuurwerk-launcher (ongewijzigd, opent de cursus correct).
+
+### Hoofdstuk 4 – Pagina 5 van 10 – Inbeslagneming en uitlevering vorderen
+
+Branch: `h4p5-inbeslagneming` (basis: `main` @ `54e0b80`).
+
+Wijzigingen (volgens opdracht en goedgekeurde referentiedia van 23 november 2026):
+
+- Opzet zoals H4 p4: links label ‘Bevoegdheid’, titel, badge ‘Art. 18 WED’, introductie en de bestaande originele foto; rechts zes kaders.
+- Foto `assets/images/03-01-boa-kofferbak.webp` **ongewijzigd** (zelfde bestand, zelfde checksum, zelfde alt-tekst en cacheversie); volledig zichtbaar in de eigen beeldverhouding (579×560), niet bijgesneden.
+- ‘Wat zegt de wet?’: art. 18 lid 1 WED letterlijk, zonder « », lidnummer 1, lichtgele markering van ‘in het belang van de opsporing’ en ‘redelijkerwijs voor de vervulling van hun taak nodig’; bestaande bronlink behouden.
+- ‘Wat betekent dit voor jou als boa?’: drie voorwaarden met blauwe vinkjes en de zin over uitlevering vorderen.
+- Nieuw kader ‘Vatbaarheid voor inbeslagneming – artikel 94 Sv’ met (1) waarheidsvinding – lid 1 en (2) onttrekking aan het verkeer – lid 2.
+- Nieuw praktijkvoorbeeld (parkeerplaats, bestuurder opent zelf de kofferbak, F2).
+- Nieuw tweekoloms kader ‘Uitlevering vorderen’ / ‘In beslag nemen’ en geel kader ‘Onthoud’.
+- Mobiel/tablet: één kolom, foto bovenaan.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (23 november 2026): WED art. 18 en art. 1a (geldend vanaf 10-11-2026; art. 9.2.2.1a Wm staat in art. 1a onder 1°); Sv art. 94 (geldend vanaf 01-07-2026); Sr art. 36b en 36c; Wm art. 9.2.2.1a; Regeling domeinlijsten, Domein I, onderdeel 9.
+
+Aandachtspunten (tekst niet zelfstandig gewijzigd):
+
+1. Art. 94 lid 2 Sv: onttrekking aan het verkeer wordt opgelegd door de rechter of bij strafbeschikking (art. 36b Sr) en vereist dat het ongecontroleerde bezit ‘in strijd is met de wet of met het algemeen belang’ (art. 36c Sr). Het voorbeeld (‘kan … in strijd zijn’) en ‘kan worden bevolen’ sluiten hierop aan.
+2. Art. 94 lid 1 Sv noemt ook het aantonen van wederrechtelijk verkregen voordeel; lid 2 ook verbeurdverklaring. Bewust niet op deze overzichtspagina.
+3. Art. 94 lid 3 Sv: na inbeslagneming maakt de opsporingsambtenaar een kennisgeving van inbeslagneming op. ‘Leg vervolgens vast …’ in Onthoud dekt dit in algemene zin. Desgewenst: ‘Maak een kennisgeving van inbeslagneming op (artikel 94 lid 3 Sv).’
+4. Art. 18 lid 2 WED (machtiging officier van justitie bij inbeslagneming ter verbeurdverklaring uit hoofde van art. 7, onder e) niet genoemd; geen gevolgen voor deze pagina.
+5. Derde vinkje ‘Inbeslagneming redelijkerwijs nodig is voor de opsporing’ is een vereenvoudiging van ‘in het belang van de opsporing … redelijkerwijs voor de vervulling van hun taak nodig’. Inhoudelijk aanvaardbaar; strakker alternatief: ‘Inbeslagneming in het belang van de opsporing is en redelijkerwijs nodig is voor jouw taak.’
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123d`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-ib`). Geen wijzigingen in `app.js` en geen nieuwe of gewijzigde afbeeldingen. Gecontroleerd op 1440, 1280, 820 en 390 px.
+
+Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
