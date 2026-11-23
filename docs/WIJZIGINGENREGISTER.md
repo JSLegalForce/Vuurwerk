@@ -388,3 +388,22 @@ Definitieve correcties 23 november 2026 (opdracht Jan, met toestemming tot merge
 Juridisch gecontroleerd tegen art. 18 lid 1 WED en art. 94 lid 1, 2 en 3 Sv: beslagbevoegdheid (art. 18 WED) en vatbaarheid (art. 94 Sv) correct onderscheiden; waarheidsvinding bij lid 1, onttrekking aan het verkeer bij lid 2, kennisgeving van inbeslagneming bij lid 3; de tekst suggereert niet dat verboden vuurwerk automatisch aan het verkeer wordt onttrokken. Gecontroleerd op 1440, 1280, 820 en 390 px.
 
 Status: **Definitief goedgekeurd door Jan; gemerged via pull request #142 (merge-commit `390c30c0cfe8b68782a55d85b84eae2eef448f64`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ (index.html, soorten.css, app.js en foto identiek aan `main`; geladen cacheversie `soorten.css` `vw261123d`; 1440, 1280, 820 en 390 px; navigatie naar pagina 6 en terug en voortgangsopslag getest in een schone browsersessie) en via de Vuurwerk-launcher (ongewijzigd; opent de cursus en toont H4 p5 correct).
+
+### Hoofdstuk 4 – Pagina 5 van 10 – Compacte desktopindeling
+
+Branch: `h4p5-desktop-compact` (basis: `main` @ `b5dcc1a`).
+
+Wijziging (opdracht Jan, 23 november 2026): alleen de desktopindeling vanaf 1100 px. Met CSS Grid worden de bestaande blokken over de breedte verdeeld:
+
+- Kop (label, titel, badge, introductie) bovenaan; daaronder de foto links naast ‘Wat zegt de wet?’ en ‘Wat betekent dit voor jou als boa?’ (het tweede kader sluit onderaan gelijk af met de foto).
+- Daaronder ‘Vatbaarheid voor inbeslagneming – artikel 94 Sv’ (iets breder) naast ‘Voorbeeld uit de praktijk’, beide even hoog.
+- Daaronder ‘Uitlevering vorderen / In beslag nemen’ en het gele ‘Onthoud’ over de volle breedte.
+- Vanaf 1800 px is de fotokolom iets smaller, zodat foto en kaders in balans blijven.
+
+Geen tekst-, HTML- of lettergroottewijziging: `index.html` verschilt van `main` alleen in de cacheversie van `soorten.css` (nu `vw261123e`). Foto `03-01-boa-kofferbak.webp` ongewijzigd en niet bijgesneden (eigen beeldverhouding). Onder 1100 px (tablet en mobiel) is de weergave pixel-identiek aan de live versie.
+
+Paginahoogte (volledige pagina incl. navigatie): 1440 px: 1946 → 1621 px (−325 px, −16,7 %); 1280 px: 1874 → 1548 px (−17,4 %); 1920 px: 1853 → 1571 px (−15,2 %); 1100 px: 1988 → 1607 px (−19,2 %).
+
+Technisch: `assets/soorten.css` (alleen nieuwe regels onder `.vp-ib` binnen `@media (min-width:1100px)` en `@media (min-width:1800px)`; geen bestaande regels gewijzigd); `index.html` (alleen cacheversie). Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; navigatie Vorige/Volgende en voortgangsopslag getest.
+
+Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**

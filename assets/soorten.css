@@ -3066,3 +3066,24 @@
   .tpl-vp .vp-ib .ib-onthoud{grid-template-columns:36px minmax(0,1fr);gap:10px}
   .tpl-vp .vp-ib .ib-onthoud .vp-o-ic{width:36px;height:36px}
 }
+/* H4 p5 compacte desktopindeling (23-11-2026; alleen .vp-ib, vanaf 1100 px). Geen HTML- of tekstwijziging:
+   de bestaande blokken worden met CSS Grid over de breedte verdeeld. Kop over de volle breedte; foto links naast
+   wet + betekenis; daaronder vatbaarheid (breder) en praktijkvoorbeeld naast elkaar; daaronder uitlevering/beslag
+   en Onthoud over de volle breedte. Tablet en mobiel ongewijzigd. */
+@media (min-width:1100px){
+  .tpl-vp .vp-ib.vpp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.25fr) minmax(0,1fr);column-gap:22px;row-gap:14px;
+    grid-template-rows:auto auto 1fr auto auto auto;
+    grid-template-areas:"kop kop kop" "foto wet wet" "foto bet bet" "vatb vatb vb" "twee twee twee" "ond ond ond";align-items:start}
+  .tpl-vp .vp-ib.vpp>*+*{margin-top:0}
+  .tpl-vp .vp-ib .vp-body,.tpl-vp .vp-ib .vp-links,.tpl-vp .vp-ib .vp-rechts{display:contents}
+  .tpl-vp .vp-ib .vp-kop{grid-area:kop}
+  .tpl-vp .vp-ib .vp-foto{grid-area:foto;align-self:start;position:static}
+  .tpl-vp .vp-ib .vp-wet{grid-area:wet}
+  .tpl-vp .vp-ib .vp-bet{grid-area:bet;align-self:stretch}
+  .tpl-vp .vp-ib .ib-vatb{grid-area:vatb;align-self:stretch}
+  .tpl-vp .vp-ib .vp-vb{grid-area:vb;align-self:stretch}
+  .tpl-vp .vp-ib .ib-twee{grid-area:twee}
+  .tpl-vp .vp-ib .ib-onthoud{grid-area:ond}
+}
+/* zeer brede schermen: fotokolom iets smaller, zodat foto en de kaders ernaast in balans blijven (foto niet bijgesneden) */
+@media (min-width:1800px){.tpl-vp .vp-ib.vpp{grid-template-columns:minmax(0,.7fr) minmax(0,.35fr) minmax(0,1.15fr)}}
