@@ -465,4 +465,10 @@ Aandachtspunten:
 
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261123h`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-pb2`); nieuw beeldbestand. Geen wijzigingen in `app.js`. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px; Vorige/Volgende en voortgangsopslag getest.
 
+Beeldkwaliteit (23 november 2026, opdracht Jan): onderzocht of de foto scherper kan.
+- Geen hogere-resolutiebron beschikbaar: de referentiedia (1584×993) is de enige bron met de dozen; het fotogedeelte daarin is 618×239 px. Het repo-bestand `h4-plaatsen-betreden.webp` (730×510) toont de scène zonder dozen en is daarom niet bruikbaar.
+- Methode: dezelfde uitsnede opnieuw Lanczos 2× vergroot (1236×478, ongewijzigde afmetingen en beeldverhouding) met een milde unsharp mask (straal 1,2 px, 60 %, drempel 2); geen generatieve AI, geen retouche. Inhoud ongewijzigd (gemiddeld kleurverschil na lichte vervaging 0,85 op 255).
+- Resultaat: randen (silhouetten, embleem, koppel, dozen) iets scherper; gemeten scherpte (Laplace-variantie) 74 → 97. Er komen geen nieuwe details bij; een wezenlijk scherpere foto vraagt het originele beeldbestand met de dozen.
+- Alleen het beeldbestand en de cacheversie van de foto in `index.html` (`?v=vw261123b`) gewijzigd.
+
 Status: **Pull request aangemaakt; wacht op beoordeling door Jan. Niet gemerged, niet gepubliceerd.**
