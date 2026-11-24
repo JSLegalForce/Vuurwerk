@@ -559,3 +559,21 @@ Paginahoogte: 1440 px 1225 px; 1920 px 1199 px. Op 1100–1920 px blijft onder d
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124c`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-mw2`; geen bestaande regels gewijzigd; de bestaande klasse `.vp-mw` blijft op de pagina staan). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Vorige naar pagina 9, Volgende naar de eerste oefenvraag van hoofdstuk 4 en voortgangsopslag getest; alle overige cursusstappen op 1440 en 390 px pixel-identiek aan `main`.
 
 Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd (wacht op beoordeling door Jan).**
+
+### Hoofdstuk 4 – Oefenvraag 11 van 18 – Staande houden (art. 27 en 52 Sv)
+
+Branch: `h4-oefenvraag11-staande-houden` (basis: `main` @ `028efa2`).
+
+Wijzigingen (volgens opdracht en de voorlaatste referentiedia van 24 november 2026, zonder art. 8 lid 2 Politiewet 2012):
+
+- Vraag: ‘Je ziet een jongen naast een tas staan. Je hebt geen redelijk vermoeden van schuld aan enig strafbaar feit. Mag je hem op grond van artikel 52 Sv staande houden?’
+- Antwoord C: ‘Nee, je kunt wel aanspreken. Staande houden kan alleen bij een redelijk vermoeden van schuld aan enig strafbaar feit.’ Antwoorden A, B en D en het juiste antwoord (C) ongewijzigd.
+- Toelichting in twee alinea’s volgens opdracht; bron ‘Wetboek van Strafvordering, art. 27 en 52.’ ongewijzigd.
+- Vormgeving (alleen deze vraag, via selector op de eigen foto): geen voetnootcijfer in de toelichting, toelichtingstekst iets groter, boekpictogram bij ‘Bron’, broncitaat cursief, dunne scheidingslijn tussen vraag- en feedbackkolom op desktop.
+- Originele foto `assets/images/04-q1-staande-houden-tas.webp` ongewijzigd (SHA-256 `f8e5dd02…c1d882`, 679×610), na beantwoorden volledig zichtbaar in de eigen beeldverhouding. De referentiedia toont een bijgesneden, bredere uitsnede; die is bewust niet overgenomen (opdracht: geen ongewenst bijsnijden).
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (Sv geldend vanaf 01-07-2026, geraadpleegd 24-11-2026): art. 52 Sv (identiteit van de verdachte vaststellen en hem daartoe staande houden) en art. 27 lid 1 Sv (verdachte: redelijk vermoeden van schuld aan een strafbaar feit). Art. 27 lid 1 spreekt van ‘een strafbaar feit’; de opdracht gebruikt ‘enig strafbaar feit’ (gangbare formulering, zelfde betekenis) en is zo overgenomen. Geen andere bevoegdheden toegevoegd; art. 8 Politiewet 2012 nergens opgenomen.
+
+Technisch: `index.html` (alleen de velden vraag, opties en uitleg van deze vraag en cacheversie `soorten.css`, nu `vw261124d`); `assets/soorten.css` (alleen nieuwe regels met de selector op de foto van deze vraag; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js` of afbeeldingen. Antwoordlogica ongewijzigd: vóór beantwoorden alle vier antwoorden neutraal, geen feedback; A, B en D geven ‘Helaas, dat is niet het juiste antwoord.’ met C als juiste antwoord; C geeft ‘Helemaal goed!’. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Vorige naar H4 p10, Volgende vraag naar oefenvraag 12 en opslag van het antwoord na herladen getest; alle overige stappen en oefenvragen (vóór en na beantwoorden) op 1440 en 390 px pixel-identiek aan `main`.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd (wacht op beoordeling door Jan).**

@@ -3351,3 +3351,14 @@
 @media (min-width:1001px) and (max-height:860px){.tpl-vp .vp-mw2 .vp-t{flex-basis:100%;margin-top:4px}}
 @media (max-width:1000px){.tpl-vp .vp-mw2 .vp-foto img{aspect-ratio:730/517}}
 @media (max-width:760px){.tpl-vp .vp-mw2 .vp-kaart{padding:12px 14px}.tpl-vp .vp-mw2 .mw-onthoud{grid-template-columns:36px minmax(0,1fr);padding:12px 14px}.tpl-vp .vp-mw2 .mw-onthoud .vp-o-ic{width:36px;height:36px}.tpl-vp .vp-mw2 .mw-lid{padding:10px 12px}}
+/* ══ H4 oefenvraag 11 "Staande houden" (art. 27 en 52 Sv) – vernieuwd 24-11-2026 volgens referentiedia. Alleen deze vraag:
+   selector op de eigen foto (04-q1-staande-houden-tas.webp, uitsluitend door deze vraag gebruikt); gedeelde opmaak en app.js ongewijzigd.
+   Foto blijft na beantwoorden volledig zichtbaar (eigen beeldverhouding 679×610, niet bijgesneden). ══ */
+.qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]) .fbx-uit sup.fn{display:none}
+.qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]).answered .fbx-uit .fb-p{font-size:1.06rem;line-height:1.5}
+.qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]).answered .fbx-bron .bb-t{display:flex;align-items:center;gap:12px;margin:0 0 6px;line-height:40px}
+.qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]).answered .fbx-bron .bb-t::before{content:"";flex:none;width:40px;height:40px;border-radius:50%;background:#dbe7fb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='%23112558' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 10h13c2.5 0 4 1.5 4 4v26c-1-2-3-3-5-3H8zM40 10H27c-2.5 0-4 1.5-4 4v26c1-2 3-3 5-3h12z'/%3E%3Cpath d='M28 17h7M28 23h7'/%3E%3C/svg%3E") center/28px 28px no-repeat}
+.qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]).answered .fbx-bron .bb-l li{font-style:italic;font-size:1.02rem}
+@media (min-width:1001px){
+  .qcard:has(.qv-foto img[src*="04-q1-staande-houden-tas"]).answered #fb{border-left:1px solid var(--line);padding-left:24px}
+}
