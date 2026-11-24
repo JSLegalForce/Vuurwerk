@@ -531,3 +531,31 @@ Correcties na beoordeling door Jan (24 november 2026, alleen tekst; CSS, foto en
 2. Praktijkvoorbeeld stap 1 en 2 in chronologische volgorde: stap 1 ‘Tijdens je surveillance zie je een persoon vuurwerk afsteken. Vervolgens zie je dat hij een doos met vuurwerk in de topkoffer van zijn scooter plaatst.’; stap 2 ‘De bestuurder stapt op de scooter en rijdt weg.’ Stap 3 en 4 ongewijzigd.
 
 Status: **Definitief goedgekeurd door Jan (inclusief beide correcties); gemerged via pull request #152 (merge-commit `108b413305d143814a83fac91faf069677be5ed4`) en gepubliceerd op 24 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css en app.js identiek aan `main`; `h4-vervoermiddel.webp` ongewijzigd (SHA-256 `1a961ce6…6c205770`, 734×554, volledig zichtbaar); geladen `soorten.css?v=vw261124b`; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave, geen horizontaal scrollen; paginahoogte 1440 px: 1530 px; art. 23 lid 1, 2 en 4 WED, vier uitlegpunten (met gecorrigeerd punt lid 4), vier stappen (nieuwe volgorde stap 1 en 2) en Onthoud correct; Volgende naar pagina 10, Vorige naar pagina 8 en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie en toont H4 p9 correct.
+
+### Hoofdstuk 4 – Pagina 10 van 10 – Medewerking vorderen
+
+Branch: `h4p10-medewerking-vorderen` (basis: `main` @ `036e9a8`).
+
+Wijzigingen (volgens opdracht en referentiedia van 24 november 2026), opbouw zoals H4 p9:
+
+- Titel, badge ‘Art. 24a lid 1 WED’ en introductie over de volle breedte (tekst ongewijzigd).
+- Originele foto `assets/images/h4-medewerking.webp` links, ongewijzigd (zelfde bestand, alt-tekst en cacheversie; SHA-256 `514b1908…cbc920`), volledig zichtbaar in de eigen beeldverhouding 730×517; breedte en hoogte als attribuut toegevoegd.
+- Wit kader ‘Wat zegt de wet? – artikel 24a lid 1 WED’ met lid 1 als lichtblauw blok met donkerblauw nummerblokje ‘1’, zonder « »; bronlink behouden.
+- Lichtblauw ‘Wat betekent dit voor jou als boa?’ (drie vinkjes met vetgedrukt label) en lichtblauw ‘Voorbeeld uit de praktijk’ (drie genummerde stappen) even breed naast elkaar, gelijke hoogte. Pictogrammen gelijk aan p9 (schild, document).
+- Geel ‘Onthoud’ over de volle breedte (nieuwe tekst volgens opdracht).
+- Desktop vanaf 1100 px CSS Grid (foto ±45 %, vanaf 1700 px ±40 % om het lege vlak onder de bron te beperken); tablet/mobiel onder elkaar: titel, foto, wet, bron, betekenis, voorbeeld, Onthoud.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (WED geldend vanaf 10-11-2026, geraadpleegd 24-11-2026): art. 24a lid 1 WED letterlijk en volledig overgenomen. De referentiedia schrijft ‘de hun krachtens deze titel’; de officiële tekst luidt ‘de hen krachtens deze titel’ (overgenomen). Art. 24a telt drie leden (lid 2 verschoningsrecht bij geheimhoudingsplicht, lid 3 feitelijk handelen op kosten van de overtreder); niet op de dia opgenomen. Opzettelijk niet voldoen aan de vordering is strafbaar via art. 26 WED (behandeld in H4 p1 en de eindtoets).
+
+Afwijkingen van de aangeleverde tekst, met reden:
+
+1. Uitlegpunt 1: toegevoegd ‘Artikel 24a WED geeft je zelf geen onderzoeksbevoegdheid.’ (juridisch aandachtspunt uit de opdracht expliciet in de uitleg).
+2. Uitlegpunt 2: toegevoegd ‘Je vordert niet meer dan die bevoegdheid toelaat.’ (gevorderde medewerking gaat niet verder dan de bevoegdheid waarvoor deze wordt gevraagd).
+3. Praktijkvoorbeeld stap 1: ‘…en wilt op grond van artikel 23 WED de lading in de topkoffer onderzoeken’ → ‘Je bent bevoegd om op grond van artikel 23 WED de lading in de topkoffer te onderzoeken en wilt dat doen.’ (maakt de bestaande onderzoeksbevoegdheid expliciet).
+4. Praktijkvoorbeeld stap 3: begint met ‘Omdat dit redelijkerwijs nodig is voor je onderzoek, …’ (voorwaarde ‘redelijkerwijs nodig’ zichtbaar in de casus).
+
+Paginahoogte: 1440 px 1225 px; 1920 px 1199 px. Op 1100–1920 px blijft onder de bron een leeg vlak (circa 150–170 px), omdat de wettekst lager is dan de niet-bijgesneden foto (zoals in de referentiedia).
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124c`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-mw2`; geen bestaande regels gewijzigd; de bestaande klasse `.vp-mw` blijft op de pagina staan). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Vorige naar pagina 9, Volgende naar de eerste oefenvraag van hoofdstuk 4 en voortgangsopslag getest; alle overige cursusstappen op 1440 en 390 px pixel-identiek aan `main`.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd (wacht op beoordeling door Jan).**
