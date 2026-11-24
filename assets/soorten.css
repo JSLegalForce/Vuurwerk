@@ -3195,8 +3195,7 @@
 .tpl-vp .vp-pb2 .pb-onthoud p,.tpl-vp .vp-pb2 .vp-kop p.vp-intro,.tpl-vp .vp-pb2 .vp-kaart p.pb-let{max-width:none}
 /* ══ H4 p8 "Zaken onderzoeken en monsters nemen" – vernieuwd 24-11-2026 volgens referentiedia (alleen .vp-zo2): opbouw zoals
    H4 p6 en p7; titel over de volle breedte; foto links (eigen beeldverhouding 729×529, niet bijgesneden) naast wet (lid 1 en 2)
-   + bron; betekenis en praktijkvoorbeeld naast elkaar (gelijke hoogte); geel 'Onthoud' over de volle breedte.
-   Het wetskader (drie volledige leden) is hoger dan bij p8; daarom een bredere fotokolom (foto groter, kleiner leeg vlak).
+   + bron; betekenis en praktijkvoorbeeld even breed naast elkaar; geel 'Onthoud' over de volle breedte.
    Tablet/mobiel: alles onder elkaar, foto na de titel. ══ */
 .tpl-vp .vp-zo2.vpp>*+*{margin-top:14px}
 .tpl-vp .vp-zo2 .vp-kop-t .vp-art{order:3;margin-top:2px}
@@ -3250,7 +3249,8 @@
 @media (min-width:1700px){.tpl-vp .vp-zo2.vpp{grid-template-columns:minmax(0,.64fr) minmax(0,.36fr) minmax(0,1fr)}}
 /* ══ H4 p9 "Vervoermiddel stilhouden en onderzoeken" – vernieuwd 24-11-2026 volgens referentiedia (alleen .vp-vm2): opbouw zoals
    H4 p8; titel over de volle breedte; foto links (eigen beeldverhouding 734×554, niet bijgesneden) naast wet (lid 1, 2 en 4)
-   + bron; betekenis en praktijkvoorbeeld even breed naast elkaar; geel 'Onthoud' over de volle breedte.
+   + bron; betekenis en praktijkvoorbeeld naast elkaar (gelijke hoogte); geel 'Onthoud' over de volle breedte.
+   Het wetskader (drie volledige leden) is hoger dan bij p8; daarom een bredere fotokolom (foto groter, kleiner leeg vlak).
    Tablet/mobiel: alles onder elkaar, foto na de titel. ══ */
 .tpl-vp .vp-vm2.vpp>*+*{margin-top:14px}
 .tpl-vp .vp-vm2 .vp-kop-t .vp-art{order:3;margin-top:2px}
