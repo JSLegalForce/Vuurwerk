@@ -499,3 +499,30 @@ Paginahoogte: 1440 px 1195 px (gelijk aan H4 p7); 1920 px 1133 px.
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124a`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-zo2`; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Volgende naar pagina 9, Vorige naar pagina 7 en voortgangsopslag getest.
 
 Status: **Definitief goedgekeurd door Jan; gemerged via pull request #150 (merge-commit `cca316df49ae211a9a0539e7291696e9612e1212`) en gepubliceerd op 24 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css en `h4-zaken-onderzoeken.webp` identiek aan `main` (foto SHA-256 `5e300d18…a46a22`, ongewijzigd); geladen `soorten.css?v=vw261124a`; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave, foto volledig zichtbaar (729×529), geen horizontaal scrollen; paginahoogte 1440 px: 1195 px; wettekst art. 21 lid 1 en 2 WED, vier uitlegpunten, vier stappen en Onthoud correct; Volgende naar pagina 9, Vorige naar pagina 7 en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie en toont H4 p8 correct.
+
+### Hoofdstuk 4 – Pagina 9 van 10 – Vervoermiddel stilhouden en onderzoeken
+
+Branch: `h4p9-vervoermiddel` (basis: `main` @ `9955fe6`).
+
+Wijzigingen (volgens opdracht en referentiedia van 24 november 2026), opbouw zoals H4 p8:
+
+- Titel, badge ‘Art. 23 WED’ en introductie (nieuwe tekst volgens opdracht) over de volle breedte.
+- Originele foto `assets/images/h4-vervoermiddel.webp` links, ongewijzigd (zelfde bestand, alt-tekst en cacheversie), volledig zichtbaar in de eigen beeldverhouding 734×554; breedte en hoogte als attribuut toegevoegd.
+- Wit kader ‘Wat zegt de wet? – artikel 23 WED’ met lid 1, lid 2 en lid 4 als afzonderlijke lichtblauwe blokken (nummerblokjes 1, 2 en 4, kop per lid, zonder « »); lid 2 nu volledig (was ingekort met ‘(…)’); bronlink behouden.
+- Lichtblauw ‘Wat betekent dit voor jou als boa?’ (vier vinkjes met vetgedrukt label) en lichtblauw ‘Voorbeeld uit de praktijk’ (vier genummerde stappen) naast elkaar, gelijke hoogte.
+- Geel ‘Onthoud’ over de volle breedte (nieuwe tekst volgens opdracht).
+- Desktop vanaf 1100 px CSS Grid met bredere fotokolom dan p8 (het wetskader met drie volledige leden is hoger); tablet/mobiel onder elkaar: titel, foto, wet, bron, betekenis, voorbeeld, Onthoud.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (WED geldend vanaf 10-11-2026, geraadpleegd 24-11-2026): art. 23 lid 1, 2 en 4 WED letterlijk overgenomen; art. 23 telt zes leden (lid 3 inzage wettelijk voorgeschreven bescheiden, lid 5 kosten overbrenging, lid 6 bevoegdheden ook jegens personen die zaken vervoeren), niet op de dia opgenomen. Art. 1a onder 1° WED noemt art. 9.2.2.1a Wm. VNG-handelingskader niet openbaar en niet zelf geraadpleegd.
+
+Afwijkingen van de aangeleverde tekst, met reden:
+
+1. Uitlegpunt 3 (lid 2): ‘als je naar redelijk oordeel vaststelt dat zaken worden vervoerd’ → ‘als met het vervoermiddel naar jouw redelijk oordeel zaken worden vervoerd’ (sluit letterlijker aan bij lid 2; ‘vaststelt’ suggereert zekerheid).
+2. Uitlegpunt 4 (lid 4): toegevoegd dat stilhouden alleen mag om de bevoegdheden uit lid 1 of lid 2 uit te oefenen (‘met het oog op de uitoefening van deze bevoegdheden’); maakt duidelijk dat art. 23 WED geen zelfstandige bevoegdheid geeft om willekeurig voertuigen te laten stoppen.
+3. Praktijkvoorbeeld stap 4: ‘In de topkoffer tref je vuurwerk aan met de aanduiding F3. Je controleert de toepasselijke afspraken over de verdere afhandeling.’ → ‘In de topkoffer tref je vuurwerk aan; op de verpakking lees je de aanduiding F3. Voor de verdere afhandeling houd je rekening met de veiligheidsrisico’s en de lokale samenwerkingsafspraken met politie en OM.’ Reden: didactische regel ‘kijk → lees → leg vast’ (de aanduiding is een waarneming, geen eindkwalificatie) en vaste regel voor F3-afhandeling (verwijzen naar lokale samenwerkingsafspraken met politie en OM, niet stellen dat de boa zelf afhandelt).
+
+Paginahoogte: 1440 px 1524 px; 1920 px 1407 px. Op 1100–1440 px blijft onder de foto een leeg vlak (circa 150 px op 1440 px), omdat de volledige wettekst hoger is dan de niet-bijgesneden foto.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124b`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-vm2`; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Volgende naar pagina 10, Vorige naar pagina 8 en voortgangsopslag getest.
+
+Status: **Pull request aangemaakt; wacht op beoordeling en akkoord van Jan. Niet gemerged of gepubliceerd.**
