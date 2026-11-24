@@ -518,11 +518,16 @@ Juridisch gecontroleerd tegen wetten.overheid.nl (WED geldend vanaf 10-11-2026, 
 Afwijkingen van de aangeleverde tekst, met reden:
 
 1. Uitlegpunt 3 (lid 2): ‘als je naar redelijk oordeel vaststelt dat zaken worden vervoerd’ → ‘als met het vervoermiddel naar jouw redelijk oordeel zaken worden vervoerd’ (sluit letterlijker aan bij lid 2; ‘vaststelt’ suggereert zekerheid).
-2. Uitlegpunt 4 (lid 4): toegevoegd dat stilhouden alleen mag om de bevoegdheden uit lid 1 of lid 2 uit te oefenen (‘met het oog op de uitoefening van deze bevoegdheden’); maakt duidelijk dat art. 23 WED geen zelfstandige bevoegdheid geeft om willekeurig voertuigen te laten stoppen.
+2. Uitlegpunt 4 (lid 4): toegevoegd dat stilhouden alleen mag voor de uitoefening van de bevoegdheden uit artikel 23 WED (‘met het oog op de uitoefening van deze bevoegdheden’); maakt duidelijk dat art. 23 WED geen zelfstandige bevoegdheid geeft om willekeurig voertuigen te laten stoppen. (Formulering gecorrigeerd op 24-11-2026, zie hieronder.)
 3. Praktijkvoorbeeld stap 4: ‘In de topkoffer tref je vuurwerk aan met de aanduiding F3. Je controleert de toepasselijke afspraken over de verdere afhandeling.’ → ‘In de topkoffer tref je vuurwerk aan; op de verpakking lees je de aanduiding F3. Voor de verdere afhandeling houd je rekening met de veiligheidsrisico’s en de lokale samenwerkingsafspraken met politie en OM.’ Reden: didactische regel ‘kijk → lees → leg vast’ (de aanduiding is een waarneming, geen eindkwalificatie) en vaste regel voor F3-afhandeling (verwijzen naar lokale samenwerkingsafspraken met politie en OM, niet stellen dat de boa zelf afhandelt).
 
 Paginahoogte: 1440 px 1524 px; 1920 px 1407 px. Op 1100–1440 px blijft onder de foto een leeg vlak (circa 150 px op 1440 px), omdat de volledige wettekst hoger is dan de niet-bijgesneden foto.
 
 Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124b`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-vm2`; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Volgende naar pagina 10, Vorige naar pagina 8 en voortgangsopslag getest.
+
+Correcties na beoordeling door Jan (24 november 2026, alleen tekst; CSS, foto en overige onderdelen ongewijzigd):
+
+1. Uitlegpunt 4 (lid 4): ‘…naar een door jou aangewezen plaats overbrengt. Dat mag alleen om je bevoegdheden uit lid 1 of lid 2 uit te oefenen…’ → ‘…naar een aangewezen plaats overbrengt. Dit mag alleen voor de uitoefening van de bevoegdheden uit artikel 23 WED…’. Reden: lid 4 (‘deze bevoegdheden’) verwijst naar alle bevoegdheden uit art. 23 WED, dus ook naar lid 3 (inzage wettelijk voorgeschreven bescheiden), niet alleen lid 1 en 2. Na het vetgedrukte label kleine letter ‘je’, gelijk aan de andere drie punten.
+2. Praktijkvoorbeeld stap 1 en 2 in chronologische volgorde: stap 1 ‘Tijdens je surveillance zie je een persoon vuurwerk afsteken. Vervolgens zie je dat hij een doos met vuurwerk in de topkoffer van zijn scooter plaatst.’; stap 2 ‘De bestuurder stapt op de scooter en rijdt weg.’ Stap 3 en 4 ongewijzigd.
 
 Status: **Pull request aangemaakt; wacht op beoordeling en akkoord van Jan. Niet gemerged of gepubliceerd.**
