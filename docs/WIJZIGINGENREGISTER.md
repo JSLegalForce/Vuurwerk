@@ -472,3 +472,30 @@ Beeldkwaliteit (23 november 2026, opdracht Jan): onderzocht of de foto scherper 
 - Alleen het beeldbestand en de cacheversie van de foto in `index.html` (`?v=vw261123b`) gewijzigd.
 
 Status: **Definitief goedgekeurd door Jan (inclusief de verscherpte foto); gemerged via pull request #148 (merge-commit `f3ac91b97a3c865f1361cbe5e5102db591ea0050`) en gepubliceerd op 23 november 2026.** Live gecontroleerd op https://jslegalforce.github.io/Vuurwerk/ in een schone browsersessie: index.html, soorten.css, app.js en `h4-plaatsen-betreden-dozen.webp` identiek aan `main`; geladen `soorten.css?v=vw261123h` en `h4-plaatsen-betreden-dozen.webp?v=vw261123b`; weergave op 1920, 1440, 1280, 1100, 820 en 390 px pixel-identiek aan de goedgekeurde PR-weergave; paginahoogte 1440 px: 1195 px; wettekst art. 20 WED, vier uitlegpunten, vier stappen en Onthoud correct; Volgende naar pagina 8, Vorige naar pagina 6 en voortgangsopslag werken; Vuurwerk-launcher (ongewijzigd) opent de nieuwste versie en toont H4 p7 correct.
+
+### Hoofdstuk 4 – Pagina 8 van 10 – Zaken onderzoeken en monsters nemen
+
+Branch: `h4p8-zaken-onderzoeken` (basis: `main` @ `2753904`).
+
+Wijzigingen (volgens opdracht en goedgekeurde referentiedia van 24 november 2026), opbouw zoals H4 p6 en p7:
+
+- Titel, badge ‘Art. 21 WED’ en introductie over de volle breedte.
+- Originele foto `assets/images/h4-zaken-onderzoeken.webp` links, ongewijzigd (zelfde bestand en cacheversie), volledig zichtbaar in de eigen beeldverhouding 729×529; breedte en hoogte als attribuut toegevoegd. Alt-tekst ongewijzigd.
+- Wit kader ‘Wat zegt de wet? – artikel 21 WED’ met lid 1 en lid 2 als afzonderlijke lichtblauwe blokken (donkerblauwe nummerrondjes, kop ‘Artikel 21 lid 1 WED’ / ‘Artikel 21 lid 2 WED’, zonder « »); bronlink behouden.
+- Lichtblauw ‘Wat betekent dit voor jou als boa?’ (vier vinkjes) en lichtblauw ‘Voorbeeld uit de praktijk’ (vier genummerde stappen) even breed naast elkaar, gelijke hoogte.
+- Geel ‘Onthoud’ over de volle breedte (nieuwe tekst volgens opdracht).
+- Desktop vanaf 1100 px CSS Grid (vanaf 1700 px smallere fotokolom); tablet/mobiel onder elkaar: titel, foto, wet, bron, betekenis, voorbeeld, Onthoud.
+
+Juridisch gecontroleerd tegen wetten.overheid.nl (WED geldend vanaf 10-11-2026, geraadpleegd 24-11-2026): art. 21 lid 1 en 2 WED letterlijk overgenomen. Art. 21 telt zes leden; lid 3 t/m 6 (tweede monster op verzoek, zaken voor korte tijd meenemen tegen schriftelijk bewijs, teruggave monsters, uitslag op verzoek) niet op de dia opgenomen.
+
+Afwijking van de aangeleverde tekst, met reden:
+
+1. Praktijkvoorbeeld stap 3: ‘zoals het verboden voorhanden hebben van vuurwerk’ is geworden ‘zoals verboden bezit van F2- of F3-vuurwerk’. Reden: vaste terminologie-eis voor het verbod van art. 9.2.2.1a lid 1 Wm (‘bezit en gebruik’, niet ‘voorhanden hebben’) en gelijk aan de formulering op H4 p7; de toevoeging F2/F3 maakt de afbakening van Domein I zichtbaar.
+
+Spelling: fouten uit de referentiedia niet overgenomen; alle teksten gecontroleerd.
+
+Paginahoogte: 1440 px 1195 px (gelijk aan H4 p7); 1920 px 1133 px.
+
+Technisch: `index.html` (alleen de HTML van deze pagina en cacheversie `soorten.css`, nu `vw261124a`); `assets/soorten.css` (alleen nieuwe regels onder `.vp-zo2`; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js` of afbeeldingen. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (geen horizontaal scrollen, geen scriptfouten); Volgende naar pagina 9, Vorige naar pagina 7 en voortgangsopslag getest.
+
+Status: **Pull request aangemaakt; wacht op beoordeling en akkoord van Jan. Niet gemerged of gepubliceerd.**
