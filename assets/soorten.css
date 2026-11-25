@@ -3390,3 +3390,38 @@
 @media (min-width:1001px){
   .qcard:has(.qv-foto img[src*="04-q4-jongen-op-straat"]).answered #fb{border-left:1px solid var(--line);padding-left:24px}
 }
+/* ══ H5 p1 "Veiligheid: stop met zelf onderzoeken" – vernieuwd 25-11-2026 volgens referentiedia (alleen .vp-vh2, naast de bestaande .vp-vh):
+   links titel, oranje veiligheidskader, vier kaarten (2×2) en 'Veiligheid gaat voor'; rechts de originele foto (hele foto, niet bijgesneden),
+   'Toelichting' en 'Bron'. Bestaande regels ongewijzigd; app.js ongewijzigd. ══ */
+.tpl-vp .vp-vh2 .vh-body{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:28px}
+.tpl-vp .vp-vh2 .vh-links{gap:14px}
+.tpl-vp .vp-vh2 .vh-warn p .vh2-kern{display:block;margin-top:6px;font-family:var(--ui);font-weight:800}
+.tpl-vp .vp-vh2 .vh-grid{grid-auto-rows:1fr}
+.tpl-vp .vp-vh2 .vh2-rechts{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tpl-vp .vp-vh2 .vh-foto{position:static;align-self:center}
+.tpl-vp .vp-vh2 .vh-foto img{max-height:min(340px,44vh)}
+.tpl-vp .vp-vh2 .vh2-kader{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start;background:var(--blue-ll);border:1px solid #cfdcf3;border-radius:16px;padding:16px 20px;color:var(--navy)}
+.tpl-vp .vp-vh2 .vh2-kic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--blue-l)}
+.tpl-vp .vp-vh2 .vh2-kic .di{width:26px;height:26px;color:var(--navy);--duo:rgba(36,88,198,.15)}
+.tpl-vp .vp-vh2 .vh2-kader h3{font-family:var(--ui);font-weight:800;font-size:1.25rem;line-height:44px;color:var(--navy);margin:0 0 4px}
+.tpl-vp .vp-vh2 .vh2-kader p{font-size:1.04rem;line-height:1.5;margin:0}
+.tpl-vp .vp-vh2 .vh2-toel ul{margin:4px 0 10px;padding-left:22px;font-size:1.04rem;line-height:1.5}
+.tpl-vp .vp-vh2 .vh2-toel li+li{margin-top:2px}
+.tpl-vp .vp-vh2 .vh2-bron ul{list-style:none;margin:0;padding:0;font-style:italic;font-size:1.02rem;line-height:1.5}
+.tpl-vp .vp-vh2 .vh2-bron a{color:var(--navy);text-decoration:underline;text-decoration-color:rgba(17,37,88,.35);text-underline-offset:3px}
+@media (min-width:1001px){.tpl-vp .vp-vh2 .vh2-rechts{border-left:1px solid var(--line);padding-left:28px;margin-left:-14px}}
+@media (max-width:1000px){
+  .tpl-vp .vp-vh2 .vh-body{grid-template-columns:minmax(0,1fr)}
+  .tpl-vp .vp-vh2 .vh2-rechts{display:contents}
+  .tpl-vp .vp-vh2 .vh-foto{order:-1}
+  .tpl-vp .vp-vh2 .vh-links{order:0}
+  .tpl-vp .vp-vh2 .vh2-toel{order:1}.tpl-vp .vp-vh2 .vh2-bron{order:2}
+  .tpl-vp .vp-vh2 .vh-foto img{max-height:460px}
+}
+@media (max-width:620px){
+  .tpl-vp .vp-vh2 .vh-grid{grid-auto-rows:auto}
+  .tpl-vp .vp-vh2 .vh-foto img{max-height:360px}
+  .tpl-vp .vp-vh2 .vh2-kader{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:12px 14px}
+  .tpl-vp .vp-vh2 .vh2-kic{width:36px;height:36px}.tpl-vp .vp-vh2 .vh2-kic .di{width:22px;height:22px}
+  .tpl-vp .vp-vh2 .vh2-kader h3{line-height:36px;font-size:1.15rem}
+}
