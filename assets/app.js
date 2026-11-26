@@ -176,8 +176,7 @@ const L_SPEC={"0.0": {"t": "intro1", "a": "scene-intro-plein"},
 "5.0": {"t": "vp"},
 "5.1": {"t": "vp"},
 "5.2": {"t": "vp"},
-"5.3": {"t": "vp"},
-"5.4": {"t": "infographic"},
+"5.3": {"t": "infographic"},
 "6.0": {"t": "vp"},
 "6.1": {"t": "vp"},
 "6.2": {"t": "vp"},
@@ -316,7 +315,7 @@ let profiel=null, steps=[], si=0, answers={}, phase='intake';
 let ex=null, oudCert=null;
 
 const SKEY='jslf-vw-v1';
-function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:39,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify({v:40,profiel,phase,si,answers,ex,oudCert}));}catch(e){}}
 function load(){try{return JSON.parse(localStorage.getItem(SKEY)||'null');}catch(e){return null;}}
 function wis(){try{localStorage.removeItem(SKEY);}catch(e){}}
 
@@ -530,6 +529,13 @@ function hervat(sv){
      Wie op 'Artikel 17 WED' (stap 24) of later stond, schuift één op en blijft dus op dezelfde pagina. Antwoorden, eindtoets en certificaat blijven gelijk. */
   if(sv.v>=18&&sv.v<=38){
     if(si>=24)si+=1;
+    save();
+  }
+  /* v40 (26-11-2026): hoofdstuk 5 van 4 naar 3 lespagina's: p4 'Mogelijk zwaar illegaal vuurwerk' (stap 47) is verwijderd.
+     Wie op die pagina stond, komt op de eerstvolgende bestaande stap (oefenvraag 15, nu stap 47); latere posities schuiven één terug en blijven dus op dezelfde pagina. Antwoorden, eindtoets en certificaat blijven gelijk.
+     L_SPEC: de praktijktip 'Achterlaten van vuurwerkresten' schuift van pagina-index 5.4 naar 5.3 en houdt zo de infographic-sjabloon. */
+  if(sv.v>=18&&sv.v<=39){
+    if(si>=48)si-=1;
     save();
   }
   if(phase==='leren'){buildSteps();render();}
