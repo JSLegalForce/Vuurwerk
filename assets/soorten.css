@@ -3425,3 +3425,57 @@
   .tpl-vp .vp-vh2 .vh2-kic{width:36px;height:36px}.tpl-vp .vp-vh2 .vh2-kic .di{width:22px;height:22px}
   .tpl-vp .vp-vh2 .vh2-kader h3{line-height:36px;font-size:1.15rem}
 }
+/* ══ H5 p2 "Taak en beleid: wat wordt van jou verwacht?" – vernieuwd 26-11-2026 volgens referentiedia (alleen .vp-tb2, naast de bestaande .vp-tb):
+   links badge, titel, introductie en vijf lichtblauwe informatiekaders; rechts de originele foto (hele foto, niet bijgesneden),
+   het oranje kader 'Belangrijk' en het lichtblauwe bronkader. Mobiel: titel/intro, foto, vijf kaders, 'Belangrijk', bronnen.
+   Bestaande regels ongewijzigd; app.js ongewijzigd. ══ */
+.tpl-vp .vp-tb2 .tb-body{grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:28px}
+.tpl-vp .vp-tb2 .tb-links{gap:12px}
+.tpl-vp .vp-tb2 .tb-intro{font-size:1.08rem;line-height:1.5;margin:0 0 2px}
+.tpl-vp .vp-tb2 .tb-k{background:linear-gradient(180deg,#f7faff,#f1f6fe);border:1px solid #d3e0f4;border-radius:16px;align-items:start;padding:14px 20px 14px 0}
+.tpl-vp .vp-tb2 .tb-ic{width:58px;height:58px;margin-top:2px;background:#dfe9fa}
+.tpl-vp .vp-tb2 .tb-ic .di{width:34px;height:34px}
+.tpl-vp .vp-tb2 .tb-ic .di svg{width:100%;height:100%;display:block}
+.tpl-vp .vp-tb2 .tb-k h3{font-size:1.12rem;margin:0 0 4px}
+.tpl-vp .vp-tb2 .tb-k p,.tpl-vp .vp-tb2 .tb-ul{font-size:1.02rem;line-height:1.48}
+.tpl-vp .vp-tb2 .tb-k p+p{margin-top:6px}
+.tpl-vp .vp-tb2 .tb2-noot{font-style:italic;color:#33466f}
+.tpl-vp .vp-tb2 .tb2-slot{margin-top:8px;font-family:var(--ui)}
+.tpl-vp .vp-tb2 .tb2-slot b{font-weight:800}
+.tpl-vp .vp-tb2 .tb2-rechts{display:flex;flex-direction:column;gap:16px;min-width:0}
+.tpl-vp .vp-tb2 .tb-foto{position:static;justify-self:auto;align-self:center;width:fit-content;max-width:100%}
+.tpl-vp .vp-tb2 .tb-foto img{max-height:min(460px,56vh)}
+.tpl-vp .vp-tb2 .tb2-warn,.tpl-vp .vp-tb2 .tb2-bron{display:grid;grid-template-columns:46px minmax(0,1fr);gap:14px;align-items:start;border-radius:16px;padding:16px 20px;color:var(--navy)}
+.tpl-vp .vp-tb2 .tb2-warn{background:linear-gradient(180deg,#fff4dd,#fffaf0);border:2px solid #f2b860}
+.tpl-vp .vp-tb2 .tb2-bron{background:var(--blue-ll);border:1px solid #cfdcf3}
+.tpl-vp .vp-tb2 .tb2-wic,.tpl-vp .vp-tb2 .tb2-bic{width:46px;height:46px;display:grid;place-items:center}
+.tpl-vp .vp-tb2 .tb2-wic .di{width:40px;height:40px;color:#d9780a;--duo:rgba(230,161,51,.2)}
+.tpl-vp .vp-tb2 .tb2-bic{border-radius:50%;background:var(--blue-l)}
+.tpl-vp .vp-tb2 .tb2-bic .di{width:26px;height:26px;color:var(--navy);--duo:rgba(36,88,198,.15)}
+.tpl-vp .vp-tb2 .tb2-warn h3,.tpl-vp .vp-tb2 .tb2-bron h3{font-family:var(--ui);font-weight:800;font-size:1.3rem;line-height:46px;margin:0 0 2px}
+.tpl-vp .vp-tb2 .tb2-warn h3{color:#d9780a}
+.tpl-vp .vp-tb2 .tb2-bron h3{color:var(--navy)}
+.tpl-vp .vp-tb2 .tb2-warn p{font-size:1.06rem;line-height:1.5;margin:0}
+.tpl-vp .vp-tb2 .tb2-warn p+p{margin-top:6px}
+.tpl-vp .vp-tb2 .tb2-bron ul{margin:0;padding-left:20px;font-size:1rem;line-height:1.5}
+.tpl-vp .vp-tb2 .tb2-bron li+li{margin-top:3px}
+.tpl-vp .vp-tb2 .tb2-bron a{color:var(--navy);text-decoration:underline;text-decoration-color:rgba(17,37,88,.35);text-underline-offset:3px}
+@media (min-width:1001px){.tpl-vp .vp-tb2 .tb2-rechts{border-left:1px solid var(--line);padding-left:28px;margin-left:-14px}}
+@media (max-width:1000px){
+  .tpl-vp .vp-tb2 .tb-body{grid-template-columns:minmax(0,1fr);gap:12px}
+  .tpl-vp .vp-tb2 .tb-links,.tpl-vp .vp-tb2 .tb2-rechts{display:contents}
+  .tpl-vp .vp-tb2 .vp-chip{justify-self:start}
+  .tpl-vp .vp-tb2 .tb-foto{order:1;justify-self:center;margin:4px 0}
+  .tpl-vp .vp-tb2 .tb-k{order:2}
+  .tpl-vp .vp-tb2 .tb2-warn{order:3}.tpl-vp .vp-tb2 .tb2-bron{order:4}
+  .tpl-vp .vp-tb2 .tb-foto img{max-height:460px}
+}
+@media (max-width:620px){
+  .tpl-vp .vp-tb2 .tb-foto img{max-height:360px}
+  .tpl-vp .vp-tb2 .tb-k{grid-template-columns:58px minmax(0,1fr);gap:12px;padding:12px 14px 12px 0}
+  .tpl-vp .vp-tb2 .tb-ic{width:44px;height:44px;margin-left:12px}.tpl-vp .vp-tb2 .tb-ic .di{width:22px;height:22px}
+  .tpl-vp .vp-tb2 .tb2-warn,.tpl-vp .vp-tb2 .tb2-bron{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:12px 14px}
+  .tpl-vp .vp-tb2 .tb2-wic,.tpl-vp .vp-tb2 .tb2-bic{width:36px;height:36px}
+  .tpl-vp .vp-tb2 .tb2-wic .di{width:32px;height:32px}.tpl-vp .vp-tb2 .tb2-bic .di{width:22px;height:22px}
+  .tpl-vp .vp-tb2 .tb2-warn h3,.tpl-vp .vp-tb2 .tb2-bron h3{line-height:36px;font-size:1.18rem}
+}
