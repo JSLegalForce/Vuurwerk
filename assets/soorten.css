@@ -3479,3 +3479,66 @@
   .tpl-vp .vp-tb2 .tb2-wic .di{width:32px;height:32px}.tpl-vp .vp-tb2 .tb2-bic .di{width:22px;height:22px}
   .tpl-vp .vp-tb2 .tb2-warn h3,.tpl-vp .vp-tb2 .tb2-bron h3{line-height:36px;font-size:1.18rem}
 }
+/* ══ H5 p3 "Politie: wanneer schakel je in?" – vernieuwd 26-11-2026 volgens referentiedia (alleen .vp-pl2; de oude .vp-pl-regels blijven ongewijzigd):
+   links badge, titel, introductie en vier gekleurde kaders (zelf optreden, politie inschakelen, overdragen, openbare orde);
+   rechts de originele foto (hele foto, niet bijgesneden), het oranje kader 'Belangrijk' en het bronkader.
+   Mobiel: titel/intro, foto, vier kaders, 'Belangrijk', bronnen. app.js ongewijzigd. ══ */
+.tpl-vp .vp-pl2 .pl2-body{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);gap:28px;align-items:start}
+.tpl-vp .vp-pl2 .pl2-links{display:flex;flex-direction:column;gap:12px;min-width:0;align-items:flex-start}
+.tpl-vp .vp-pl2 .vp-t{flex-basis:auto;margin:2px 0 0}
+.tpl-vp .vp-pl2 .pl2-intro{font-size:1.08rem;line-height:1.5;color:var(--navy);margin:0 0 2px;max-width:none}
+.tpl-vp .vp-pl2 .pl2-k{align-self:stretch;display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:start;border-radius:16px;padding:14px 20px 14px 0;box-shadow:var(--sh-s);color:var(--navy)}
+.tpl-vp .vp-pl2 .pl2-groen{background:linear-gradient(180deg,#f2faf5,#ecf7f0);border:1px solid #bfe3cd}
+.tpl-vp .vp-pl2 .pl2-oranje{background:linear-gradient(180deg,#fff8ec,#fff4e2);border:1px solid #f3d59b}
+.tpl-vp .vp-pl2 .pl2-paars{background:linear-gradient(180deg,#f7f5fd,#f2eefb);border:1px solid #dcd3f2}
+.tpl-vp .vp-pl2 .pl2-blauw{background:linear-gradient(180deg,#f7faff,#f1f6fe);border:1px solid #d3e0f4}
+.tpl-vp .vp-pl2 .pl2-ic{width:58px;height:58px;margin:2px 0 0 14px;border-radius:50%;display:grid;place-items:center;background:#dfe9fa}
+.tpl-vp .vp-pl2 .pl2-ic .di{width:34px;height:34px;color:var(--navy);--duo:rgba(36,88,198,.15)}
+.tpl-vp .vp-pl2 .pl2-ic .di svg,.tpl-vp .vp-pl2 .pl2-ic svg{width:100%;height:100%;display:block}
+.tpl-vp .vp-pl2 .pl2-groen .pl2-ic{background:#d7f0e0}.tpl-vp .vp-pl2 .pl2-groen .pl2-ic .di,.tpl-vp .vp-pl2 .pl2-groen .pl2-ic{color:var(--green-d);--duo:rgba(27,150,87,.15)}
+.tpl-vp .vp-pl2 .pl2-oranje .pl2-ic{background:#fde8c4}
+.tpl-vp .vp-pl2 .pl2-paars .pl2-ic{background:#e6dff7}.tpl-vp .vp-pl2 .pl2-paars .pl2-ic .di{color:#3b2a7a}
+.tpl-vp .vp-pl2 .pl2-k h3{font-family:var(--ui);font-weight:800;font-size:1.12rem;line-height:1.3;color:var(--navy);margin:0 0 4px}
+.tpl-vp .vp-pl2 .pl2-k p,.tpl-vp .vp-pl2 .pl2-k ul{font-size:1.02rem;line-height:1.48;color:var(--navy);margin:0;max-width:none}
+.tpl-vp .vp-pl2 .pl2-k ul{margin:4px 0 0;padding-left:20px}
+.tpl-vp .vp-pl2 .pl2-k li{margin:1px 0}
+.tpl-vp .vp-pl2 .pl2-k p+p,.tpl-vp .vp-pl2 .pl2-k ul+p,.tpl-vp .vp-pl2 .pl2-k p+ul{margin-top:6px}
+.tpl-vp .vp-pl2 .pl2-noot{font-style:italic;color:#33466f}
+.tpl-vp .vp-pl2 .pl2-rechts{display:flex;flex-direction:column;gap:16px;min-width:0}
+.tpl-vp .vp-pl2 .pl2-foto{margin:0;border-radius:18px;overflow:hidden;box-shadow:var(--sh-s);align-self:center;width:fit-content;max-width:100%}
+.tpl-vp .vp-pl2 .pl2-foto img{display:block;width:auto;height:auto;max-width:100%;max-height:min(469px,58vh);object-fit:contain}
+.tpl-vp .vp-pl2 .pl2-warn,.tpl-vp .vp-pl2 .pl2-bron{display:grid;grid-template-columns:46px minmax(0,1fr);gap:14px;align-items:start;border-radius:16px;padding:16px 20px;color:var(--navy)}
+.tpl-vp .vp-pl2 .pl2-warn{background:linear-gradient(180deg,#fff4dd,#fffaf0);border:2px solid #f2b860}
+.tpl-vp .vp-pl2 .pl2-bron{background:var(--blue-ll);border:1px solid #cfdcf3}
+.tpl-vp .vp-pl2 .pl2-wic,.tpl-vp .vp-pl2 .pl2-bic{width:46px;height:46px;display:grid;place-items:center}
+.tpl-vp .vp-pl2 .pl2-wic .di{width:40px;height:40px;color:#d9780a;--duo:rgba(230,161,51,.2)}
+.tpl-vp .vp-pl2 .pl2-bic{border-radius:50%;background:var(--blue-l)}
+.tpl-vp .vp-pl2 .pl2-bic .di{width:26px;height:26px;color:var(--navy);--duo:rgba(36,88,198,.15)}
+.tpl-vp .vp-pl2 .pl2-warn h3,.tpl-vp .vp-pl2 .pl2-bron h3{font-family:var(--ui);font-weight:800;font-size:1.3rem;line-height:46px;margin:0 0 2px}
+.tpl-vp .vp-pl2 .pl2-warn h3{color:#d9780a}
+.tpl-vp .vp-pl2 .pl2-bron h3{color:var(--navy)}
+.tpl-vp .vp-pl2 .pl2-warn p{font-size:1.06rem;line-height:1.5;margin:0}
+.tpl-vp .vp-pl2 .pl2-warn p+p{margin-top:8px}
+.tpl-vp .vp-pl2 .pl2-kern{font-family:var(--ui);font-weight:800}
+.tpl-vp .vp-pl2 .pl2-bron ul{margin:0;padding-left:20px;font-size:1rem;line-height:1.5}
+.tpl-vp .vp-pl2 .pl2-bron li+li{margin-top:3px}
+.tpl-vp .vp-pl2 .pl2-bron a{color:var(--navy);text-decoration:underline;text-decoration-color:rgba(17,37,88,.35);text-underline-offset:3px}
+@media (min-width:1001px){.tpl-vp .vp-pl2 .pl2-rechts{border-left:1px solid var(--line);padding-left:28px;margin-left:-14px}}
+@media (max-width:1000px){
+  .tpl-vp .vp-pl2 .pl2-body{grid-template-columns:minmax(0,1fr);gap:12px}
+  .tpl-vp .vp-pl2 .pl2-links,.tpl-vp .vp-pl2 .pl2-rechts{display:contents}
+  .tpl-vp .vp-pl2 .vp-chip{justify-self:start}
+  .tpl-vp .vp-pl2 .pl2-foto{order:1;justify-self:center;margin:4px 0}
+  .tpl-vp .vp-pl2 .pl2-k{order:2}
+  .tpl-vp .vp-pl2 .pl2-warn{order:3}.tpl-vp .vp-pl2 .pl2-bron{order:4}
+  .tpl-vp .vp-pl2 .pl2-foto img{max-height:469px}
+}
+@media (max-width:620px){
+  .tpl-vp .vp-pl2 .pl2-foto img{max-height:360px}
+  .tpl-vp .vp-pl2 .pl2-k{grid-template-columns:58px minmax(0,1fr);gap:12px;padding:12px 14px 12px 0}
+  .tpl-vp .vp-pl2 .pl2-ic{width:44px;height:44px;margin-left:12px}.tpl-vp .vp-pl2 .pl2-ic .di{width:24px;height:24px}
+  .tpl-vp .vp-pl2 .pl2-warn,.tpl-vp .vp-pl2 .pl2-bron{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:12px 14px}
+  .tpl-vp .vp-pl2 .pl2-wic,.tpl-vp .vp-pl2 .pl2-bic{width:36px;height:36px}
+  .tpl-vp .vp-pl2 .pl2-wic .di{width:32px;height:32px}.tpl-vp .vp-pl2 .pl2-bic .di{width:22px;height:22px}
+  .tpl-vp .vp-pl2 .pl2-warn h3,.tpl-vp .vp-pl2 .pl2-bron h3{line-height:36px;font-size:1.18rem}
+}
