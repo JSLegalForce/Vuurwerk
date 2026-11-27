@@ -3506,11 +3506,12 @@
 }
 /* ══ H5 oefenvraag 15 "Onbekend of mogelijk zwaar vuurwerk" – vernieuwd 27-11-2026 volgens referentiedia.
    Alleen deze vraag: selector op de eigen foto (05-q15-afstand-houden-vuurwerk.webp, uitsluitend door deze vraag gebruikt); app.js en gedeelde opmaak
-   ongewijzigd. Foto ongewijzigd en volledig zichtbaar, met rood waarschuwingskader als HTML/CSS-laag (niet in het beeld gebakken).
+   ongewijzigd. Foto ongewijzigd en volledig zichtbaar, met rood waarschuwingskader als HTML/CSS-laag (niet in het beeld gebakken),
+   uitsluitend na beantwoorden (bestaande klasse .answered van de vraagkaart, ook na herladen), zodat het beeld het antwoord niet vooraf verklapt.
    Toelichting: eerste alinea (en bij een fout antwoord de alinea vóór de lijst) is een tussenkop; lijstpunten krijgen de letters A, B en D. ══ */
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto{position:relative}
-.qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto::after{content:"Onveilige situatie!\A De boa zit te dicht bij het vuurwerk.";white-space:pre-line;position:absolute;top:12px;right:12px;max-width:min(62%,250px);box-sizing:border-box;padding:10px 12px 10px 44px;border-radius:12px;background:#d0211c url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23fff'/%3E%3Cpath d='M12 6.5v7' stroke='%23d0211c' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='17.3' r='1.6' fill='%23d0211c'/%3E%3C/svg%3E") 12px 11px/24px 24px no-repeat;color:#fff;font-family:var(--ui);font-weight:600;font-size:.9rem;line-height:1.35;text-align:left;box-shadow:0 6px 16px rgba(120,10,10,.35);z-index:1}
-.qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto::first-line{font-weight:800;font-size:1.02rem}
+.qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .qv-foto::after{content:"Onveilige situatie!\A De boa zit te dicht bij het vuurwerk.";white-space:pre-line;position:absolute;top:12px;right:12px;max-width:min(62%,250px);box-sizing:border-box;padding:10px 12px 10px 44px;border-radius:12px;background:#d0211c url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23fff'/%3E%3Cpath d='M12 6.5v7' stroke='%23d0211c' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='17.3' r='1.6' fill='%23d0211c'/%3E%3C/svg%3E") 12px 11px/24px 24px no-repeat;color:#fff;font-family:var(--ui);font-weight:600;font-size:.9rem;line-height:1.35;text-align:left;box-shadow:0 6px 16px rgba(120,10,10,.35);z-index:1}
+.qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .qv-foto::first-line{font-weight:800;font-size:1.02rem}
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .fbx-uit sup.fn{display:none}
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .fbx-uit .fb-h{display:none}
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .fbx-uit .fb-p:empty{display:none}
@@ -3529,7 +3530,7 @@
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .fbx-bron .bb-t::before{content:"";flex:none;width:40px;height:40px;border-radius:50%;background:#dbe7fb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='%23112558' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 10h13c2.5 0 4 1.5 4 4v26c-1-2-3-3-5-3H8zM40 10H27c-2.5 0-4 1.5-4 4v26c1-2 3-3 5-3h12z'/%3E%3Cpath d='M28 17h7M28 23h7'/%3E%3C/svg%3E") center/28px 28px no-repeat}
 .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .fbx-bron .bb-l li{font-size:1rem;margin-bottom:4px}
 @media (max-width:600px){
-  .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]) .qv-foto::after{top:10px;right:10px;max-width:68%;font-size:.84rem;padding:8px 10px 8px 38px;background-position:10px 9px;background-size:20px 20px}
+  .qcard:has(.qv-foto img[src*="05-q15-afstand-houden-vuurwerk"]).answered .qv-foto::after{top:10px;right:10px;max-width:68%;font-size:.84rem;padding:8px 10px 8px 38px;background-position:10px 9px;background-size:20px 20px}
 }
 /* H5 oefenvraag 15 – tablet (601–1000 px) vóór beantwoorden: foto boven de vraag i.p.v. een smalle foto naast de vraag, zodat het rode kader leesbaar blijft */
 @media (min-width:601px) and (max-width:1000px){
