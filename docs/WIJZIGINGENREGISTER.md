@@ -716,3 +716,19 @@ Datum: 27 november 2026. Pull request #169 (branch `verwijderen-afbeelding-05-04
 - Niet getest: het daadwerkelijke printvenster van een browser (alleen de aanroep en de PDF-uitvoer); echte cursistengegevens (bewust niet aangeraakt).
 
 Status: **Gemerged en live gecontroleerd op 27 november 2026.**
+
+### Hoofdstuk 5 – Oefenvraag 15 van 18 – Onbekend of mogelijk zwaar vuurwerk (art. 21 WED en VNG-handelingskader)
+
+Branch: `h5-oefenvraag15-onbekend-zwaar-vuurwerk` (basis: `main` @ `0cd925c`). Datum: 27 november 2026.
+
+Wijzigingen (volgens opdracht en referentiedia van 27 november 2026):
+
+- Nieuwe vraagtekst en vier nieuwe antwoorden; C (‘Je houdt afstand, onderzoekt het vuurwerk niet verder en schakelt de politie in.’) blijft het enige juiste antwoord (index ongewijzigd). Antwoord B is nu een onjuiste handelwijze (‘Je opent het vuurwerk of de verpakking …’); de zin ‘Het vuurwerk of de verpakking openen is onveilig.’ staat letterlijk in de uitleg bij B.
+- Feedback: groen kader ‘Juist!’ met de aangeleverde tekst; lichtblauw kader ‘Waarom zijn de andere antwoorden niet juist?’ met A, B en D; kader ‘Kernregel’ (weegschaal); bronkader met drie bronnen. Bij een fout antwoord: ‘Niet juist.’, jouw antwoord en het juiste antwoord, gevolgd door ‘Waarom is antwoord C juist?’ en dezelfde uitleg bij A, B en D.
+- Bronnen: Wet op de economische delicten, art. 21 (bestaande officiële link; toelichting: bevoegdheid om zaken te onderzoeken, geen plicht als dat onveilig is); VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026 (zonder hyperlink, uitdrukkelijk als handelingskader en niet als bevoegdheidsgrondslag); Handhavingsplan jaarwisseling, maart 2026 (beleid; bestaande officiële link).
+- Rood waarschuwingskader ‘Onveilige situatie! De boa zit te dicht bij het vuurwerk.’ rechtsboven op de foto, als CSS-laag (niet in het beeld), vóór en na beantwoorden, op alle breedtes.
+- Afbeelding: de nieuwe foto uit de referentiedia (kleiner vuurwerk, groep op de achtergrond) was niet als afzonderlijk bestand beschikbaar (alleen als deel van de dia, met ingebakken waarschuwing en te lage resolutie). Daarom is de bestaande foto `05-q15-afstand-houden-vuurwerk.webp` ongewijzigd behouden (SHA-256 `cc22779e…d3ff7e`, 533×620, volledig zichtbaar); alleen de alt-tekst is aangepast. Vervangen zodra het goedgekeurde beeld als los bestand wordt aangeleverd.
+
+Technisch: `index.html` (alleen het vraagobject van oefenvraag 15 en cacheversie `soorten.css`, nu `vw261127a`); `assets/soorten.css` (alleen nieuwe regels met de selector op de foto van deze vraag, inclusief een tabletregel 601–1000 px waarin de foto vóór beantwoorden boven de vraag staat; geen bestaande regels gewijzigd). Geen wijzigingen in `app.js`, opslagversie of afbeeldingsbestanden. Antwoordlogica en opslag ongewijzigd (sleutel `5-0`, juist = index 2); een eerder opgeslagen antwoord blijft geldig. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px (en 601/1000 px), vóór beantwoorden en na A, B, C en D: geen horizontaal scrollen, geen scriptfouten. Nummering ‘Vraag 15 van 18’; H5 p3 ‘Volgende’ → oefenvraag 15, ‘Vorige’ → H5 p3, ‘Volgende vraag’ → oefenvraag 16; ‘Controleer antwoord’ pas actief na een keuze; antwoord na herladen hersteld. Alle overige cursusstappen (vóór en na beantwoorden) op 1440 en 390 px gelijk aan `main`.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
