@@ -830,3 +830,14 @@ Status: **Gemerged en live gecontroleerd op 28 november 2026.**
 ### Hoofdstuk 6 – Pagina 1 – VNG-handelingskader toegevoegd aan bronnen
 
 Datum: 28 november 2026. Op H6 p1 ‘De melding’ is het VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026, praktisch handelingskader, geen bevoegdheidsgrondslag) als tweede bron toegevoegd, zonder hyperlink (geen gecontroleerde officiële URL beschikbaar). Bron 1 met link ongewijzigd; beide bronnen onder elkaar, genummerd 1 en 2 (CSS alleen voor deze pagina; `soorten.css` nu `vw261128e`). Overige inhoud ongewijzigd. Gecontroleerd op 1440 en 390 px: beide bronnen volledig zichtbaar binnen het kader, Vorige/Volgende werken, geen scriptfouten.
+
+### Hoofdstuk 6 – Pagina 5 – ‘Wat doe ik nu?’ (vraag 4 van 4): nieuwe vormgeving en VNG-handelingskader
+
+Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan (inhoud door Jan vastgesteld; geen nieuwe juridische toets).
+
+- Vormgeving: brede, compacte indeling; links situatie en vier rechthoekige antwoordkaders; rechts foto (bestand ongewijzigd) met na beantwoorden ‘Juist!’ (groen) of ‘Niet juist.’ ernaast, daaronder Toelichting, Kernregel, Handelen volgens VNG-handelingskader (lichtoranje) en Belangrijke aandachtspunten; bronnen onderaan over de volle breedte, onder elkaar genummerd. Geen sticky-elementen. Op tablet en mobiel één kolom.
+- Antwoordteksten: A noemt nu art. 52 Sv (staande houden), art. 8 lid 2 Pw (identiteitsbewijs vorderen), art. 18 WED (inbeslagneming) en art. 94 Sv (alleen bij de kennisgeving van inbeslagneming); ‘de jongen’ → ‘de personen’ in A en D, ‘zijn’ → ‘hun’ in B (en in de uitleg bij B). A blijft het enige juiste antwoord. Feedbackkop bij een fout antwoord voortaan ‘Niet juist.’ (B was ‘Bijna goed.’).
+- Feedback/kaders: nieuwe teksten Juist!, Toelichting, Kernregel, VNG-handelingskader (met de vermelding dat het geen zelfstandige wettelijke bevoegdheidsgrondslag is) en Belangrijke aandachtspunten; de oude kaders Onthoud, ‘Na de inbeslagneming’ en ‘Ter info: werkwijze politie’ vervallen.
+- Bronnen: Uitvoeringstoets Wet veilige jaarwisseling (Nationale Politie) vervangen door Handhavingsplan jaarwisseling (Ministerie van JenV, maart 2026; bestaande officiële link) en VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026 (zonder link; geen gecontroleerde URL).
+- Techniek: `index.html` (alleen deze pagina + cacheversies), `assets/soorten.css` (alleen regels voor `data-page="6.4"`, nu `vw261128f`), `assets/app.js` (één regel: optioneel attribuut `data-goedkop` voor de kop bij een juist antwoord, alleen op deze pagina gebruikt; zonder attribuut blijft ‘Goed!’; nu `vw261128a`).
+- Getest: 1440 px vóór, na A en na B; 820 px na A; 390 px vóór en na A. Alleen A juist, feedback correct, kaders netjes onder elkaar, geen horizontaal scrollen, geen scriptfouten, pagina blijft na herladen behouden, Vorige → p4 en Volgende → p6.
