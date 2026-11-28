@@ -801,4 +801,10 @@ Technisch: `assets/soorten.css` (het blok van oefenvraag 16 vervangen; alle rege
 
 Getest (lokaal): 1920, 1440, 1280, 1100, 820 en 390 px, vóór beantwoorden en na A, B, C en D (30 combinaties): ‘Juist!’ alleen bij C, ‘Niet juist.’ bij A, B en D, steeds vier informatiekaders plus Bronnen, antwoord opgeslagen onder `5-1` en na herladen hersteld, geen horizontaal scrollen, geen tekst buiten kaders of antwoordknoppen, geen scriptfouten; ‘Vraag 16 van 18’, ‘Vorige’ → vraag 15, ‘Volgende vraag’ → vraag 17. Foto op alle breedtes zichtbaar en niet buiten beeld. Alle 18 oefenvragen vóór en na beantwoorden pixel-vergeleken met `main` op 1440 px (met foto) en 390 px (vóór de foto): alleen oefenvraag 16 verschilt (bij 390 px enkele niet-reproduceerbare laadtijdverschillen die ook bij een vergelijking van `main` met zichzelf optreden). Alle cursusstappen (HTML) op 1440 px gelijk aan `main`.
 
-Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
+Gemerged: PR #175 op 28 november 2026 op verzoek van Jan (merge-commit `7a17c2e64bc0da1cc4720c97bdc5f9379a27f7ae`).
+
+Live controle (https://jslegalforce.github.io/Vuurwerk/, 28 november 2026, schone browsersessie per test): live `index.html`, `assets/soorten.css`, `assets/app.js`, `assets/images/05-q16-afspraken-vuurwerk.webp` en dit register byte-identiek aan `main` @ `7a17c2e`; `soorten.css?v=vw261128c` wordt geladen. Op 1920, 1440, 1280, 1100, 820 en 390 px, vóór beantwoorden en na A, B, C en D (30 combinaties): foto zichtbaar, ‘Juist!’ alleen bij C, ‘Niet juist.’ bij A, B en D, vier informatiekaders plus Bronnen, antwoord opgeslagen onder `5-1` en na herladen hersteld, geen horizontaal scrollen, geen tekst buiten kaders, geen scriptfouten; ‘Vraag 16 van 18’, ‘Vorige’ → vraag 15, ‘Volgende vraag’ → vraag 17.
+
+Launcher (ongewijzigd): ‘Open e-learning op groot scherm’ opent de live cursus met `soorten.css?v=vw261128c`; vraag 15 → vraag 16, antwoord D geeft ‘Niet juist.’ met vier kaders, na herladen hersteld; vraag 17 en terug werken; geen scriptfouten.
+
+Status: **Gemerged en live gecontroleerd op 28 november 2026.**
