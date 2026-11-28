@@ -852,4 +852,12 @@ Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan.
 - Techniek: `index.html` (alleen deze pagina en cacheversie `soorten.css`, nu `vw261128g`), `assets/soorten.css` (alleen `.kvi2` en regels voor `data-page="6.7"`). Geen wijzigingen in `app.js` of afbeeldingen.
 - Getest op 1440, 820 en 390 px: alle informatie zichtbaar, geen overlappende tekst, geen horizontaal scrollen, Vorige → p7 en Volgende → p9, geen scriptfouten; spelling gecontroleerd op de weergegeven tekst.
 
-Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
+Gemerged: PR #181 op 28 november 2026 (merge-commit `5341d208ddcf28f906e5514af4174c898606cbbd`).
+
+Live controle (28 november 2026, schone browsersessie): `soorten.css?v=vw261128g` wordt geladen; H6 p8 toont de nieuwe infographic met acht basisgegevens, vijf praktijktips, de drie kaders (Let op, Volgens VNG-Handelingskader, Vervolgstappen) en beide bronnen; weergegeven tekst gelijk aan de geteste versie; op 1440 en 390 px geen horizontaal scrollen of overlappende tekst; Vorige → p7, Volgende → p9; geen scriptfouten.
+
+Launcher (ongewijzigd): ‘Open e-learning op groot scherm’ opent de live cursus met `vw261128g`; H6 p8 opent correct via Volgende vanaf p7.
+
+Overige cursusonderdelen ongewijzigd: PR #181 wijzigde alleen deze pagina in `index.html`, CSS voor `.kvi2`/`data-page="6.7"` en dit register.
+
+Status: **Gemerged en live gecontroleerd op 28 november 2026.**
