@@ -1127,7 +1127,7 @@ T.vp=(P,spec,st)=>{
     opts.forEach(o=>{o.setAttribute('role','radio');o.setAttribute('aria-checked','false');o.onclick=()=>{if(q.classList.contains('cq-klaar'))return;sel=o;opts.forEach(x=>{x.classList.toggle('cq-sel',x===o);x.setAttribute('aria-checked',x===o?'true':'false');});chk.disabled=false;};});
     chk.onclick=()=>{if(!sel)return;const goed=sel.dataset.ok==='1';q.classList.add('cq-klaar',goed?'cq-ok':'cq-nok');
       opts.forEach(x=>{x.disabled=true;if(x.dataset.ok==='1')x.classList.add('cq-goed');else if(x===sel)x.classList.add('cq-fout');});
-      q.querySelector('.cq-rh').textContent=goed?'Goed!':'Helaas, dat is niet het juiste antwoord.';
+      q.querySelector('.cq-rh').textContent=goed?(q.dataset.goedkop||'Goed!'):'Helaas, dat is niet het juiste antwoord.'; /* data-goedkop (28-11-2026, H6 p5): eigen kop bij juist antwoord; zonder dit attribuut ongewijzigd */
       if(!goed&&sel.dataset.kop)q.querySelector('.cq-rh').textContent=sel.dataset.kop;
       const lt=sel.querySelector('.cq-l')?.textContent.trim();q.querySelectorAll('.cq-fbx').forEach(x=>{x.hidden=x.dataset.voor!==lt;});
       q.querySelector('.cq-ric').innerHTML=goed?vink:kruis;fb.hidden=false;chk.closest('.cq-acties').hidden=true;
