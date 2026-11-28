@@ -767,4 +767,19 @@ Wijzigingen (volgens opdracht en referentiedia van 28 november 2026):
 
 Technisch: `index.html` (alleen het vraagobject van oefenvraag 16 en cacheversie `soorten.css`, nu `vw261128a`); `assets/soorten.css` (alleen nieuwe regels met de selector op het fotovak van deze vraag); dit register. Geen wijzigingen in `app.js`, opslagversie of afbeeldingsbestanden. Gecontroleerd op 1920, 1440, 1280, 1100, 820 en 390 px, vóór beantwoorden en na A, B, C en D (30 combinaties): geen horizontaal scrollen, geen scriptfouten; antwoord opgeslagen (`5-1`) en na herladen met feedback hersteld; ‘Vraag 16 van 18’; ‘Vorige’ → vraag 15, ‘Volgende vraag’ → vraag 17. Overige cursusdata (incl. eindtoets) identiek aan `main`; alle cursusstappen vóór en na beantwoorden op 1440 px vergeleken met `main`: alleen oefenvraag 16 verschilt.
 
-Status: **Pull request #173 aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
+Juridische eindcontrole vóór de merge (28-11-2026): tekst veiligheidsfouillering opnieuw getoetst aan art. 7 lid 3 en lid 9 Pw en art. 20 lid 2, 21 en 37 Ambtsinstructie; geen correctie nodig. Het vereiste van onmiddellijk dreigend gevaar en noodzakelijkheid staat onverkort in het kader, net als de rechtmatige uitvoering en de aantekening op de akte; volgorde veiligheidsfouillering → in bewaring nemen → eventuele strafvorderlijke inbeslagneming door de politie.
+
+Gemerged: PR #173 op 28 november 2026 (merge-commit `d9eafb16b32892460336847d65d0a15abcace317`, door Jan via de GitHub-plugin in ChatGPT; de merge vanuit de Claude-sessie werd door de sessiebeveiliging geweigerd).
+
+Live controle (https://jslegalforce.github.io/Vuurwerk/, 28 november 2026, schone browsersessie per test):
+
+- Live `index.html`, `assets/soorten.css`, `assets/app.js`, `assets/app.css`, `assets/responsive.css`, `assets/illustraties/vraag.svg` en dit register byte-identiek aan `main` @ `d9eafb1`; `soorten.css?v=vw261128a` wordt geladen.
+- Op 1920, 1440, 1280, 1100, 820 en 390 px, vóór beantwoorden en na A, B, C en D (30 combinaties): ‘Vraag 16 van 18’; ‘Juist!’ alleen bij C, ‘Niet juist.’ bij A, B en D; na beantwoorden de kaders Waarom zijn de andere antwoorden niet juist? (of Waarom is antwoord C juist?), Kernregel, Samenwerkingsafspraken (lokaal) en Veiligheidsfouillering (art. 7 lid 3 Pw), plus Bronnen; antwoord opgeslagen onder `5-1` en na herladen met feedback hersteld; geen horizontaal scrollen, geen tekst buiten kaders of antwoordknoppen, geen scriptfouten.
+- Navigatie op alle zes breedtes: ‘Vorige’ → vraag 15, ‘Volgende vraag’ → vraag 17.
+- Afbeelding: de bestaande vraagtekenillustratie (`vraag.svg`, ongewijzigd) blijft voorlopig staan, op besluit van Jan; vervanging eventueel later in een aparte wijziging.
+
+Launcher (JSLegalForce/Vuurwerk-launcher, ongewijzigd): ‘Open e-learning op groot scherm’ opent https://jslegalforce.github.io/Vuurwerk/ met `soorten.css?v=vw261128a`; vraag 15 → ‘Volgende vraag’ → vraag 16 (vernieuwde vraagtekst), antwoord D geeft ‘Niet juist.’ met vier kaders, na herladen hersteld (voortgang `5-0` en `5-1` behouden); ‘Volgende vraag’ → vraag 17, ‘Vorige’ → vraag 16; geen scriptfouten.
+
+Overige cursusonderdelen ongewijzigd: PR #173 wijzigt alleen het vraagobject van oefenvraag 16 en de cacheversie in `index.html` (overige cursusdata, waaronder de eindtoets, identiek aan de versie vóór PR #173), alleen nieuwe CSS-regels voor deze vraag en dit register. Alle cursusstappen vóór en na beantwoorden op 1440 px vergeleken met `fde0f65`: alleen oefenvraag 16 verschilt. Geen wijzigingen aan `app.js`, voortgangsregistratie, certificaatfunctie, launcher of afbeeldingen.
+
+Status: **Gemerged en live gecontroleerd op 28 november 2026.**
