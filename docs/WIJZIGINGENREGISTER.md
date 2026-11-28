@@ -872,4 +872,12 @@ Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan.
 - Techniek: `index.html` (alleen deze pagina en cacheversie `soorten.css`, nu `vw261128h`), `assets/soorten.css` (alleen `.afs` en `data-page="6.8"`), drie nieuwe afbeeldingsbestanden. Geen wijzigingen in `app.js`.
 - Getest op 1440, 820 en 390 px: alles zichtbaar en leesbaar, foto's correct, geen horizontaal scrollen, Vorige → p8 en Volgende → p10, geen scriptfouten; spelling gecontroleerd op de weergegeven tekst.
 
-Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
+Gemerged: PR #183 op 28 november 2026 door Jan via ChatGPT (merge-commit `fd3fccfdf14b230a6dd7eafa3809856033fd552e`), inclusief de gecorrigeerde tekst voor 12 tot 18 jaar.
+
+Live controle (28 november 2026, schone browsersessie): `soorten.css?v=vw261128h` wordt geladen; H6 p9 toont de nieuwe infographic met drie leeftijdskaarten en foto’s, de gecorrigeerde tekst bij 12 tot 18 jaar, de drie onderste kaders (inclusief de hulpofficier van justitie bij de definitieve beslagafhandeling) en beide bronnen; op 1440 en 390 px geen horizontaal scrollen of overlappende tekst; Vorige → p8, Volgende → p10; geen scriptfouten.
+
+Launcher (ongewijzigd): ‘Open e-learning op groot scherm’ opent de live cursus met `vw261128h`; H6 p9 verschijnt correct.
+
+Overige cursusonderdelen ongewijzigd: PR #183 wijzigde alleen deze pagina in `index.html`, CSS voor `.afs`/`data-page="6.8"`, drie nieuwe fotobestanden en dit register.
+
+Status: **Gemerged en live gecontroleerd op 28 november 2026.**
