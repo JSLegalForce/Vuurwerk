@@ -3745,3 +3745,55 @@
   .card.page[data-page="6.4"] .vp-h6 .cq-klaar .cq-res{grid-column:1;grid-row:1}
   .card.page[data-page="6.4"] .vp-h6 .cq-klaar .cq-blok{grid-column:1 / -1}
 }
+/* ══ H6 p8 'Wat moet er op een KVI staan?' (28-11-2026): infographic als HTML/CSS (scherp bij vergroten, leesbare tekst),
+   volgens referentiedia; vervangt de afbeelding 06-07-kvi-overzicht.webp op deze pagina (bestand zelf ongewijzigd). Alleen .kvi2. ══ */
+.kvi2{margin-top:10px;display:flex;flex-direction:column;gap:12px;color:var(--navy)}
+.kvi2 h3,.kvi2 h4{font-family:var(--ui);font-weight:800;color:var(--navy);margin:0;line-height:1.25}
+.kvi2 p{margin:0}
+.kvi2 .kvi-lead{font-size:1.04rem;line-height:1.5;color:var(--ink,#1c2a4a)}
+.kvi2 .kvi-ic{flex:none;width:52px;height:52px;border-radius:50%;background:#dbe7fb;color:var(--navy);display:grid;place-items:center}
+.kvi2 .kvi-ic svg{width:28px;height:28px}
+.kvi2 .kvi-ic-s{width:40px;height:40px}
+.kvi2 .kvi-ic-s svg{width:22px;height:22px}
+.kvi2 .kvi-ce{font-family:var(--ui);font-weight:800;font-size:1.05rem;letter-spacing:.02em}
+.kvi2 .kvi-basis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kvi2 .kvi-kaart{display:flex;gap:14px;align-items:center;background:var(--blue-ll);border:1px solid #d9e4f5;border-radius:12px;padding:12px 16px}
+.kvi2 .kvi-kaart h3{font-size:1.12rem;margin-bottom:2px}
+.kvi2 .kvi-kaart p{font-size:.98rem;line-height:1.45}
+.kvi2 .kvi-tip{background:#eaf2fd;border:1px solid #c9daf3;border-radius:12px;padding:14px 16px}
+.kvi2 .kvi-tip-kop{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-bottom:10px}
+.kvi2 .kvi-tip-kop h3{font-size:1.18rem}
+.kvi2 .kvi-tip-bron{font-size:.9rem;font-style:italic;color:var(--ink2)}
+.kvi2 .kvi-tip-rij{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.kvi2 .kvi-tip-rij li{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:10px;row-gap:6px;align-items:center;align-content:start;background:#fff;border:1px solid #d9e4f5;border-radius:10px;padding:10px 12px}
+.kvi2 .kvi-tip-rij li>div{display:contents}
+.kvi2 .kvi-tip-rij li p{grid-column:1 / -1}
+.kvi2 .kvi-tip-rij h4{font-size:1rem;margin-bottom:2px}
+.kvi2 .kvi-tip-rij p{font-size:.92rem;line-height:1.4}
+.kvi2 .kvi-drie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch}
+.kvi2 .kvi-blok{border:1px solid;border-radius:12px;padding:12px 16px}
+.kvi2 .kvi-blok-kop{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.kvi2 .kvi-blok-kop h3{font-size:1.15rem}
+.kvi2 .kvi-blok ul{margin:0;padding-left:20px;font-size:.96rem;line-height:1.45;color:var(--ink,#1c2a4a)}
+.kvi2 .kvi-blok li+li{margin-top:5px}
+.kvi2 .kvi-blok ul ul{margin-top:4px;padding-left:18px;list-style:"– "}
+.kvi2 .kvi-blok ul ul li+li{margin-top:3px}
+.kvi2 .kvi-noot{margin-top:8px;font-size:.86rem;font-style:italic;color:var(--ink2);line-height:1.4}
+.kvi2 .kvi-letop{background:#fff6e0;border-color:#f1d79a}.kvi2 .kvi-letop .kvi-ic{background:#fde9b8;color:#9a6400}
+.kvi2 .kvi-vng{background:#fff1e3;border-color:#f3cfa5}.kvi2 .kvi-vng .kvi-ic{background:#fddcb8;color:#b35a00}
+.kvi2 .kvi-vervolg{background:var(--blue-ll);border-color:#d9e4f5}
+.card.page[data-page="6.7"] .bb-l li{display:block;margin:2px 0}
+.card.page[data-page="6.7"] .bb-l li+li{margin-top:6px}
+@media (max-width:1200px){
+  .kvi2 .kvi-tip-rij{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1000px){
+  .kvi2 .kvi-basis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kvi2 .kvi-drie{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  .kvi2 .kvi-basis,.kvi2 .kvi-tip-rij{grid-template-columns:minmax(0,1fr)}
+  .kvi2 .kvi-ic{width:44px;height:44px}.kvi2 .kvi-ic svg{width:24px;height:24px}
+  .kvi2 .kvi-ic-s{width:36px;height:36px}.kvi2 .kvi-ic-s svg{width:20px;height:20px}
+  .kvi2 .kvi-kaart{padding:10px 12px}
+}
