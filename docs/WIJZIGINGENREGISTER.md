@@ -783,3 +783,22 @@ Launcher (JSLegalForce/Vuurwerk-launcher, ongewijzigd): ‘Open e-learning op gr
 Overige cursusonderdelen ongewijzigd: PR #173 wijzigt alleen het vraagobject van oefenvraag 16 en de cacheversie in `index.html` (overige cursusdata, waaronder de eindtoets, identiek aan de versie vóór PR #173), alleen nieuwe CSS-regels voor deze vraag en dit register. Alle cursusstappen vóór en na beantwoorden op 1440 px vergeleken met `fde0f65`: alleen oefenvraag 16 verschilt. Geen wijzigingen aan `app.js`, voortgangsregistratie, certificaatfunctie, launcher of afbeeldingen.
 
 Status: **Gemerged en live gecontroleerd op 28 november 2026.**
+
+### Hoofdstuk 5 – Oefenvraag 16 van 18 – Visueel herstel en nieuwe afbeelding
+
+Branch: `h5-oefenvraag16-visueel-herstel` (basis: `main` @ `40b21bb`). Datum: 28 november 2026.
+
+Aanleiding: na publicatie (PR #173) week de vormgeving te veel af van de referentiedia (rechterkolom onrustig, kaders sloten niet op elkaar aan, tekst op onderdelen te klein, kolommen uit balans).
+
+Wijzigingen (alleen vormgeving; vraag, antwoorden, antwoordlogica, opslagsleutel `5-1` en alle juridische teksten en bronnen ongewijzigd):
+
+- Rechterkolom opnieuw opgemaakt: zes kaders (Juist!/Niet juist. – Toelichting – Kernregel – Samenwerkingsafspraken (lokaal) – Veiligheidsfouillering (art. 7 lid 3 Pw) – Bronnen) met dezelfde breedte, rand, hoekafronding (16px), binnenmarge (18px 22px) en tussenruimte (14px). Elk kader heeft een vaste pictogramkolom (44px) met de titel ernaast; de tekst lijnt uit onder de titel en loopt niet meer onder het pictogram door. Accentrand bij Samenwerkingsafspraken vervallen (alle kaders gelijk); de kernboodschap blijft halfvet navy.
+- Typografie: titels 1,22rem, tekst in de kaders 1,06rem met regelafstand 1,55; A/B/D-uitleg met letterbadges; de vijf voorwaarden bij de veiligheidsfouillering als nette opsomming onder een scheidingslijn; bronnen in de tekstkolom.
+- Balans: op desktop (≥1001px breed en ≥860px hoog) blijven afbeelding, vraag en antwoorden bij het scrollen in beeld naast de langere rechterkolom (sticky); kolomverhouding 1 : 1,14. Op mobiel één kolom met pictogram en titel naast elkaar en de tekst over de volle kaderbreedte.
+- Afbeelding: de vraagtekenillustratie is vervangen door de praktijkfoto die Jan op 28-11-2026 als los bestand aanleverde (bureau met het document ‘Afspraken aandachtspunten vuurwerk’, pen, op de achtergrond een handhaver met opschrift HANDHAVING; geen handboeien). Opgeslagen als `assets/images/05-q16-afspraken-vuurwerk.webp` (1672×941 px, ongewijzigd formaat en uitsnede, WebP-kwaliteit 82). Vóór beantwoorden en op mobiel is de hele foto zichtbaar; na beantwoorden op desktop een vak van 260 px hoog met de uitsnede rond opschrift en documenttitel. Alt-tekst beschrijft de foto zonder het antwoord te verklappen. `vraag.svg` zelf is ongewijzigd (wordt elders nog gebruikt).
+
+Technisch: `assets/soorten.css` (het blok van oefenvraag 16 vervangen; alle regels met de selector op de foto van deze vraag), `index.html` (alleen het veld `beeld` van oefenvraag 16 en de cacheversie `soorten.css`, nu `vw261128c`), nieuw bestand `assets/images/05-q16-afspraken-vuurwerk.webp` en dit register. Geen wijzigingen in `app.js` of overige cursusdata.
+
+Getest (lokaal): 1920, 1440, 1280, 1100, 820 en 390 px, vóór beantwoorden en na A, B, C en D (30 combinaties): ‘Juist!’ alleen bij C, ‘Niet juist.’ bij A, B en D, steeds vier informatiekaders plus Bronnen, antwoord opgeslagen onder `5-1` en na herladen hersteld, geen horizontaal scrollen, geen tekst buiten kaders of antwoordknoppen, geen scriptfouten; ‘Vraag 16 van 18’, ‘Vorige’ → vraag 15, ‘Volgende vraag’ → vraag 17. Foto op alle breedtes zichtbaar en niet buiten beeld. Alle 18 oefenvragen vóór en na beantwoorden pixel-vergeleken met `main` op 1440 px (met foto) en 390 px (vóór de foto): alleen oefenvraag 16 verschilt (bij 390 px enkele niet-reproduceerbare laadtijdverschillen die ook bij een vergelijking van `main` met zichzelf optreden). Alle cursusstappen (HTML) op 1440 px gelijk aan `main`.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
