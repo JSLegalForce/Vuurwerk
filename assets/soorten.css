@@ -3705,3 +3705,6 @@
   .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-sec.fbx-letop{float:left;clear:left;width:calc(50% - 5px);margin:2px 0 0}
   .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-bron{float:right;width:calc(50% - 5px);margin:2px 0 0}
 }
+/* ══ H6 p1 'De melding' (28-11-2026): twee bronnen in het bronkader onder elkaar, genummerd 1 en 2 (zoals referentiedia) ══ */
+.card.page[data-page="6.0"] .bb-l li{display:block;margin:2px 0}
+.card.page[data-page="6.0"] .bb-l li+li{margin-top:6px}
