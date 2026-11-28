@@ -841,3 +841,15 @@ Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan (inhoud door 
 - Bronnen: Uitvoeringstoets Wet veilige jaarwisseling (Nationale Politie) vervangen door Handhavingsplan jaarwisseling (Ministerie van JenV, maart 2026; bestaande officiële link) en VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026 (zonder link; geen gecontroleerde URL).
 - Techniek: `index.html` (alleen deze pagina + cacheversies), `assets/soorten.css` (alleen regels voor `data-page="6.4"`, nu `vw261128f`), `assets/app.js` (één regel: optioneel attribuut `data-goedkop` voor de kop bij een juist antwoord, alleen op deze pagina gebruikt; zonder attribuut blijft ‘Goed!’; nu `vw261128a`).
 - Getest: 1440 px vóór, na A en na B; 820 px na A; 390 px vóór en na A. Alleen A juist, feedback correct, kaders netjes onder elkaar, geen horizontaal scrollen, geen scriptfouten, pagina blijft na herladen behouden, Vorige → p4 en Volgende → p6.
+
+### Hoofdstuk 6 – Pagina 8 – KVI-infographic vernieuwd met VNG-handelingskader
+
+Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan.
+
+- De infographic is niet langer een afbeelding, maar opgebouwd in HTML/CSS (scherp bij vergroten, tekst leesbaar en doorzoekbaar). Het bestand `06-07-kvi-overzicht.webp` wordt op deze pagina niet meer gebruikt, maar is niet verwijderd.
+- Inhoud: de acht basisgegevens van de KVI (OM-instructie inbeslagneming) in drie kolommen; praktijktip bij vuurwerk (categorie, merk/type, etiket/CE, hoeveelheid, veiligheid/overdracht) als aanvulling conform het VNG-Handelingskader vuurwerk Boa Domein I (12 november 2026); drie kaders: Let op, Volgens VNG-Handelingskader (afhandelingsroute F2 lijst I tot 25 kg, 25–100 kg, F2 lijst II/F3/F4/onbekend; met de vermelding dat het handelingskader geen zelfstandige wettelijke bevoegdheidsgrondslag is) en Vervolgstappen. De hulpofficier van justitie wordt bij het VNG-kader alleen kort genoemd; de vastlegging van diens beslissing in het proces-verbaal staat bij Vervolgstappen (geen verplichting om die beslissing op de KVI te vermelden).
+- Bronnen: OM – Instructie inbeslagneming (2024I001), par. 1.1 (bestaande officiële link) en VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026 (zonder link).
+- Techniek: `index.html` (alleen deze pagina en cacheversie `soorten.css`, nu `vw261128g`), `assets/soorten.css` (alleen `.kvi2` en regels voor `data-page="6.7"`). Geen wijzigingen in `app.js` of afbeeldingen.
+- Getest op 1440, 820 en 390 px: alle informatie zichtbaar, geen overlappende tekst, geen horizontaal scrollen, Vorige → p7 en Volgende → p9, geen scriptfouten; spelling gecontroleerd op de weergegeven tekst.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
