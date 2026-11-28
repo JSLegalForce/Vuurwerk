@@ -826,3 +826,7 @@ Gemerged: PR #177 op 28 november 2026 op verzoek van Jan (merge-commit `47ad9792
 Live controle (28 november 2026): live `index.html`, `assets/soorten.css`, `assets/app.js` en de foto byte-identiek aan `main` @ `47ad979`; `soorten.css?v=vw261128d` wordt geladen. Oefenvraag 16 live op 1440 px na C en na A, 820 px na C en 390 px na C: geen horizontaal scrollen, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten. Launcher: opent de cursus met `vw261128d`; vraag 15 → 16 → 17 en terug werken, voortgang blijft behouden.
 
 Status: **Gemerged en live gecontroleerd op 28 november 2026.**
+
+### Hoofdstuk 6 – Pagina 1 – VNG-handelingskader toegevoegd aan bronnen
+
+Datum: 28 november 2026. Op H6 p1 ‘De melding’ is het VNG – Handelingskader vuurwerk Boa Domein I (12 november 2026, praktisch handelingskader, geen bevoegdheidsgrondslag) als tweede bron toegevoegd, zonder hyperlink (geen gecontroleerde officiële URL beschikbaar). Bron 1 met link ongewijzigd; beide bronnen onder elkaar, genummerd 1 en 2 (CSS alleen voor deze pagina; `soorten.css` nu `vw261128e`). Overige inhoud ongewijzigd. Gecontroleerd op 1440 en 390 px: beide bronnen volledig zichtbaar binnen het kader, Vorige/Volgende werken, geen scriptfouten.
