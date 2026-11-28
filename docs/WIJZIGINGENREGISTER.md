@@ -808,3 +808,16 @@ Live controle (https://jslegalforce.github.io/Vuurwerk/, 28 november 2026, schon
 Launcher (ongewijzigd): ‘Open e-learning op groot scherm’ opent de live cursus met `soorten.css?v=vw261128c`; vraag 15 → vraag 16, antwoord D geeft ‘Niet juist.’ met vier kaders, na herladen hersteld; vraag 17 en terug werken; geen scriptfouten.
 
 Status: **Gemerged en live gecontroleerd op 28 november 2026.**
+
+### Hoofdstuk 5 – Oefenvraag 16 van 18 – Compacte rechthoekige vormgeving
+
+Branch: `h5-q16-compacte-rechthoekige-layout` (basis: `main`). Datum: 28 november 2026.
+
+Alleen vormgeving (CSS van oefenvraag 16; cacheversie `soorten.css` nu `vw261128d`); vraaggegevens, teksten, bronnen, foto en `app.js` ongewijzigd.
+
+- Sticky-functie van de linkerkolom verwijderd; alles scrolt normaal mee, geen vaste kolomhoogtes.
+- Na beantwoorden op desktop een brede dia: links ca. 45% (foto als volledige horizontale rechthoek, badge, vraag, antwoorden), rechts ca. 55% (zes kaders).
+- Kaders compacter: hoekafronding 12px, tussenruimte 10px, binnenmarge 12px 16px, pictogrammen 36px links van de donkerblauwe titels; tekst 1,02rem.
+- Beperkte test (oefenvraag 16): 1440 px vóór, na C en na A; 820 px na C; 390 px vóór en na C. Geen horizontaal scrollen, geen overlappende tekst, antwoordknoppen werken, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
