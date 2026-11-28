@@ -821,4 +821,8 @@ Alleen vormgeving (CSS van oefenvraag 16; cacheversie `soorten.css` nu `vw261128
 - Op verzoek van Jan: op desktop (≥1001 px) staan de kaders Veiligheidsfouillering en Bronnen naast elkaar in een brede rij onder de dia (elk de helft van de breedte); de overige kaders staan rechts naast foto, vraag en antwoorden. Uitgevoerd met CSS (linkerkolom als float), zonder sticky of vaste hoogtes. Op tablet en mobiel ongewijzigd één kolom.
 - Beperkte test (oefenvraag 16): 1440 px vóór, na C en na A; 1100 px na A; 1920 px na C; 820 px na C; 390 px vóór en na C. Geen horizontaal scrollen, geen overlappende tekst, antwoordknoppen werken, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten.
 
-Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).
+Gemerged: PR #177 op 28 november 2026 op verzoek van Jan (merge-commit `47ad9792c194879af3e7216bfee4d346f8d63e3a`).
+
+Live controle (28 november 2026): live `index.html`, `assets/soorten.css`, `assets/app.js` en de foto byte-identiek aan `main` @ `47ad979`; `soorten.css?v=vw261128d` wordt geladen. Oefenvraag 16 live op 1440 px na C en na A, 820 px na C en 390 px na C: geen horizontaal scrollen, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten. Launcher: opent de cursus met `vw261128d`; vraag 15 → 16 → 17 en terug werken, voortgang blijft behouden.
+
+Status: **Gemerged en live gecontroleerd op 28 november 2026.**
