@@ -818,6 +818,7 @@ Alleen vormgeving (CSS van oefenvraag 16; cacheversie `soorten.css` nu `vw261128
 - Sticky-functie van de linkerkolom verwijderd; alles scrolt normaal mee, geen vaste kolomhoogtes.
 - Na beantwoorden op desktop een brede dia: links ca. 45% (foto als volledige horizontale rechthoek, badge, vraag, antwoorden), rechts ca. 55% (zes kaders).
 - Kaders compacter: hoekafronding 12px, tussenruimte 10px, binnenmarge 12px 16px, pictogrammen 36px links van de donkerblauwe titels; tekst 1,02rem.
-- Beperkte test (oefenvraag 16): 1440 px vóór, na C en na A; 820 px na C; 390 px vóór en na C. Geen horizontaal scrollen, geen overlappende tekst, antwoordknoppen werken, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten.
+- Op verzoek van Jan: op desktop (≥1001 px) staan de kaders Veiligheidsfouillering en Bronnen naast elkaar in een brede rij onder de dia (elk de helft van de breedte); de overige kaders staan rechts naast foto, vraag en antwoorden. Uitgevoerd met CSS (linkerkolom als float), zonder sticky of vaste hoogtes. Op tablet en mobiel ongewijzigd één kolom.
+- Beperkte test (oefenvraag 16): 1440 px vóór, na C en na A; 1100 px na A; 1920 px na C; 820 px na C; 390 px vóór en na C. Geen horizontaal scrollen, geen overlappende tekst, antwoordknoppen werken, ‘Vraag 16 van 18’, antwoord na herladen hersteld, geen scriptfouten.
 
 Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).

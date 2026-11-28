@@ -3686,3 +3686,22 @@
   .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-uit .fb-ul li{font-size:1.02rem}
   .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-letop .fb-ul li{font-size:1rem}
 }
+/* ── desktop na beantwoorden (28-11-2026): Veiligheidsfouillering en Bronnen naast elkaar in een brede rij onder de dia.
+      Linkerkolom (foto, vraag, antwoorden) als float van 45%; de kaders erboven vullen de ruimte ernaast (eigen opmaakcontext);
+      de laatste twee kaders komen onder de linkerkolom naast elkaar te staan. Geen sticky, geen vaste hoogtes; alleen CSS. ── */
+@media (min-width:1001px){
+  .card.qcard.q-foto.q-breed.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout{display:flow-root}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout>.q-side,
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout>.q-main{float:left;clear:left;width:45%;margin:0 24px 0 0;box-sizing:border-box}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout>.q-main{margin-bottom:10px}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout>.q-side{margin-bottom:12px}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .q-layout>.q-fb{display:block}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx,
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-grid{display:block}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-grid{display:contents}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-top,
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-sec,
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-bron{width:auto;margin:0 0 10px}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-sec.fbx-letop{float:left;clear:left;width:calc(50% - 5px);margin:2px 0 0}
+  .card.qcard.q-foto.answered:has(.qv-foto img[src*="05-q16-afspraken-vuurwerk"]) .fbx-bron{float:right;width:calc(50% - 5px);margin:2px 0 0}
+}
