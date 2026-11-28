@@ -861,3 +861,15 @@ Launcher (ongewijzigd): ‘Open e-learning op groot scherm’ opent de live curs
 Overige cursusonderdelen ongewijzigd: PR #181 wijzigde alleen deze pagina in `index.html`, CSS voor `.kvi2`/`data-page="6.7"` en dit register.
 
 Status: **Gemerged en live gecontroleerd op 28 november 2026.**
+
+### Hoofdstuk 6 – Pagina 9 – Afstand doen van vuurwerk vernieuwd
+
+Datum: 28 november 2026. Volgens opdracht en referentiedia van Jan.
+
+- De infographic is opgebouwd in HTML/CSS (zoals p8). De drie bestaande foto's zijn als losse uitsneden uit de bestaande infographic opgeslagen (`06-09-afstand-18plus.webp`, `06-09-afstand-onder12.webp`, `06-09-afstand-12-18.webp`); `06-09-afstand-doen-vuurwerk.webp` zelf is ongewijzigd en wordt op deze pagina niet meer gebruikt.
+- Inhoud: afstand doen is vrijwillig en wordt schriftelijk vastgelegd; de oude zin ‘tenzij duidelijk is dat het vuurwerk terug kan’ is verwijderd. Leeftijdscategorieën: 18 jaar of ouder (zelfstandig, schriftelijk; wat vastleggen), jonger dan 12 jaar (wettelijke vertegenwoordiger doet schriftelijk afstand), 12 tot 18 jaar (na correctie van 28-11-2026 volgens VNG-handelingskader par. 2.2: ‘Voor het doen van afstand is in beginsel toestemming van de wettelijke vertegenwoordiger nodig. De jongere kan schriftelijk afstand doen als hij wordt bijgestaan door zijn raadsman of wettelijke vertegenwoordiger. Laat de wettelijke vertegenwoordiger bij voorkeur medeondertekenen.’ Praktijktip: ‘Twijfel je? Overleg met de (hulp)officier van justitie.’). Onderste kaders: Praktijktip, Onthoud en Vervolgstap (altijd): ook na afstand beslist de hulpofficier van justitie; leg deze beslissing vast in het proces-verbaal (alleen in dat kader).
+- Bronnen: OM – Instructie inbeslagneming (2024I001), par. 1.2 Afstand (bestaande link) en VNG – Handelingskader vuurwerk Boa Domein I, 12 november 2026, par. 2.2 en 2.3 (zonder link).
+- Techniek: `index.html` (alleen deze pagina en cacheversie `soorten.css`, nu `vw261128h`), `assets/soorten.css` (alleen `.afs` en `data-page="6.8"`), drie nieuwe afbeeldingsbestanden. Geen wijzigingen in `app.js`.
+- Getest op 1440, 820 en 390 px: alles zichtbaar en leesbaar, foto's correct, geen horizontaal scrollen, Vorige → p8 en Volgende → p10, geen scriptfouten; spelling gecontroleerd op de weergegeven tekst.
+
+Status: **Pull request aangemaakt; nog niet gemerged of gepubliceerd** (wacht op beoordeling door Jan).

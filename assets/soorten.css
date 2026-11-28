@@ -3797,3 +3797,55 @@
   .kvi2 .kvi-ic-s{width:36px;height:36px}.kvi2 .kvi-ic-s svg{width:20px;height:20px}
   .kvi2 .kvi-kaart{padding:10px 12px}
 }
+/* ══ H6 p9 'Afstand doen van vuurwerk' (28-11-2026): infographic als HTML/CSS volgens referentiedia, zoals p8.
+   Foto's: uitsneden uit de bestaande infographic 06-09-afstand-doen-vuurwerk.webp (dat bestand zelf ongewijzigd). Alleen .afs. ══ */
+.afs{margin-top:10px;display:flex;flex-direction:column;gap:12px;color:var(--navy)}
+.afs h3,.afs h4{font-family:var(--ui);font-weight:800;color:var(--navy);margin:0;line-height:1.25}
+.afs p{margin:0}
+.afs p+p{margin-top:4px}
+.afs svg{width:22px;height:22px}
+.afs .afs-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;align-items:center}
+.afs .afs-lead{font-size:1.12rem;line-height:1.45;color:var(--blue);font-weight:600}
+.afs .afs-intro p:not(.afs-lead){font-size:1.02rem;line-height:1.5;color:var(--ink,#1c2a4a)}
+.afs .afs-info,.afs .afs-blok{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;border:1px solid #d9e4f5;border-radius:12px;padding:12px 16px;background:var(--blue-ll)}
+.afs .afs-info{background:#e6effc;border-color:#c9daf3}
+.afs .afs-info p,.afs .afs-blok p{font-size:.98rem;line-height:1.45;color:var(--ink,#1c2a4a)}
+.afs .afs-info b,.afs .afs-blok b{color:var(--navy)}
+.afs .afs-bic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#dbe7fb;color:var(--navy)}
+.afs .afs-info .afs-bic{background:var(--blue);color:#fff}
+.afs .afs-kaarten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch}
+.afs .afs-kaart{position:relative;border:1px solid;border-radius:14px;padding:10px 12px 14px;display:flex;flex-direction:column;gap:6px}
+.afs .afs-foto{position:relative;margin:0 0 22px;aspect-ratio:448/190}
+.afs .afs-foto img{display:block;width:100%;height:100%;object-fit:cover;border-radius:10px}
+.afs .afs-badge{position:absolute;left:14px;bottom:-26px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.afs .afs-badge svg{width:26px;height:26px}
+.afs .afs-kaart h3{font-size:1.32rem;margin-top:2px}
+.afs .afs-sub{font-size:1.02rem;line-height:1.4;color:var(--ink,#1c2a4a)}
+.afs .afs-vak{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:start;border-radius:10px;padding:10px 12px;margin-top:4px}
+.afs .afs-vak p{font-size:.97rem;line-height:1.45;color:var(--ink,#1c2a4a)}
+.afs .afs-vak h4{font-size:1.02rem;margin-bottom:4px}
+.afs .afs-vic{width:40px;height:40px;display:grid;place-items:center;color:var(--navy)}
+.afs .afs-vic svg{width:30px;height:30px}
+.afs .afs-vink{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.afs .afs-vink li{display:flex;gap:8px;align-items:center;font-size:.97rem;line-height:1.4;color:var(--ink,#1c2a4a)}
+.afs .afs-v{flex:none;width:20px;height:20px;border-radius:50%;background:#1b9657;color:#fff;display:grid;place-items:center}
+.afs .afs-v svg{width:13px;height:13px;stroke-width:3}
+.afs .afs-groen{background:#eef9f2;border-color:#bfe5cd}.afs .afs-groen .afs-badge{background:#1b9657}.afs .afs-groen .afs-vak{background:#dff3e7}
+.afs .afs-rood{background:#fdf0ef;border-color:#f3c9c4}.afs .afs-rood .afs-badge{background:#d64535}.afs .afs-rood .afs-vak{background:#fbe0dd}
+.afs .afs-geel{background:#fff8e6;border-color:#f3dcae}.afs .afs-geel .afs-badge{background:#f0a818}.afs .afs-geel .afs-vak{background:#fdeec8}
+.afs .afs-geel .afs-vic{color:#b57a00}
+.afs .afs-drie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch}
+.afs .afs-blok h3{font-size:1.14rem;line-height:44px;margin-bottom:0}
+.afs .afs-tip .afs-bic{background:var(--blue);color:#fff}
+.afs .afs-vervolg{background:#e6effc;border-color:#9fbbe6}
+.card.page[data-page="6.8"] .bb-l li{display:block;margin:2px 0}
+.card.page[data-page="6.8"] .bb-l li+li{margin-top:6px}
+@media (max-width:1000px){
+  .afs .afs-top,.afs .afs-drie{grid-template-columns:minmax(0,1fr)}
+  .afs .afs-kaarten{grid-template-columns:minmax(0,1fr)}
+  .afs .afs-foto{max-height:none}
+}
+@media (max-width:600px){
+  .afs .afs-kaart h3{font-size:1.2rem}
+  .afs .afs-badge{width:46px;height:46px}
+}
